@@ -1,0 +1,12 @@
+@import '../../layouts/vars';
+
+.ct {
+  max-width: $smw;
+  margin: 0 auto;
+  padding: 0 1rem;
+  margin-top: 3rem;
+
+  .intro {
+    margin-bottom: 3rem;
+  }
+}
