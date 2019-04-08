@@ -1,0 +1,94 @@
+@import '../../layouts/vars';
+
+.ct {
+  max-width: $smw;
+  margin: 0 auto;
+  padding: 0 1rem;
+  margin-top: 3rem;
+
+  .intro {
+    margin-bottom: 3rem;
+    .item {
+      position: relative;
+      padding-left: 1.6rem;
+      line-height: 2.4rem;
+      font-size: 1.2rem;
+      &:before {
+        content: '';
+        width: 0.6rem; height: 0.6rem;
+        border: solid 0.2rem #01b0ff;
+        position: absolute;
+        border-radius: 100px;
+        top: 0.7rem; left: 0;
+      }
+    }
+
+    .warn {
+      color: orange;
+    }
+
+    .support {
+      color: orange;
+      overflow: hidden;
+      .spt {
+        float: left;
+        margin-right: 1rem;
+        margin-bottom: 1rem;
+        border: 0 none;
+        img {
+          height: 8rem;
+          width: auto;
+          background-color: white;
+          border-radius: 1rem;
+        }
+      }
+    }
+
+    .helpimg {
+      margin-top: 1rem;
+      margin-bottom: 2rem;
+      a {
+        border: 0 none;
+      }
+      img {
+        width: 32rem;
+        height: auto;
+      }
+    }
+
+    .texts {
+      background-color: rgba(black, 0.2);
+      padding: 1rem;
+      border: solid 1px rgba(white, 0.2);
+      margin-bottom: 0.5rem;
+      h4 {
+        margin-top: 0;
+        color: lighten(#01b0ff, 20%);
+        font-size: 1.1rem;
+      }
+
+      p {
+        margin: 0;
+      }
+
+      img {
+        max-width: 100%;
+      }
+
+      table {
+        border: solid 2px #d7ecff;
+        border-collapse: collapse;
+        background-color:rgba(black,0.4);
+        margin-top: 1rem;
+        margin-bottom: 1rem;
+        tr {}
+        th, td {
+          width: 240px;
+          text-align: center;
+          border: solid 1px #d7ecff;
+          padding: 0.5rem;
+        }
+      }
+    }
+  }
+}

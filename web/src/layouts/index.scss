@@ -1,0 +1,30 @@
+@import '../assets/fonts/Orbitron-Bold.css';
+@import './vars';
+
+.BasicLayout {
+  color: $text-color;
+  font-size: 1rem;
+  line-height: 1.41421356237;
+
+  a { 
+    color: $link-color; 
+    border-bottom: dashed 1px #6fa2f7;
+    text-decoration: none;
+  }
+
+  .bg {
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    background: linear-gradient(to bottom, #192224 0%, #21728b 100%);
+    z-index: -1;
+
+    &:before {
+      content: '';
+      position: fixed;
+      width: 100vw;
+      height: 100vh;
+      background: url('../assets/images/bg-pattern.png') repeat;
+    }
+  }
+}

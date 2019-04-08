@@ -1,0 +1,26 @@
+@import '../layouts/vars';
+
+.ct {
+  max-width: $xsw;
+  margin: 0 auto;
+  padding: 0 1rem;
+
+  .tnalogo {
+    width: 12rem;
+    margin: 0 auto;
+    display: block;
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+
+    @media #{$xs} {
+      width: 8rem;
+      margin-top: 2rem;
+      margin-bottom: 2rem;
+    }
+  }
+
+  .intro {
+    margin-bottom: 3rem;
+    text-align: center;
+  }
+}
