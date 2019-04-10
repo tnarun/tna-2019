@@ -1,6 +1,25 @@
 $text-color: #d7ecff;
-$link-color: #6fa2f7;
+$text-color-gold: #ffef99;
+
+$link-color: lighten(#01b0ff, 20%);
 $link-color-high: gold;
+
+$light-bg-color: #01b0ff;
+
+@mixin light-title {
+  // font-family: 'Orbitron';
+  font-family: 'Cubano';
+  color: $text-color;
+  text-shadow: 0 0 1rem $light-bg-color;
+}
+
+@mixin shadow-title {
+  font-family: 'Cubano';
+  color: $text-color;
+  text-shadow: 0 0 1rem darken($light-bg-color, 20%);
+}
+
+$page-width: 66.9rem;
 
 $xs: 'screen and (max-width: 33.9em)';
 $sm: 'screen and (max-width: 47.9em)';

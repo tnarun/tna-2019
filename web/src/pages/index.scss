@@ -23,4 +23,16 @@
     margin-bottom: 3rem;
     text-align: center;
   }
+
+  a.ok, a.no {
+    font-size: 1.5rem;
+    font-family: 'DIN-Black';
+    display: block;
+    margin-bottom: 0.5rem;
+    text-decoration: underline;
+
+    &.no {
+      color: rgba(white, 0.3);
+    }
+  }
 }

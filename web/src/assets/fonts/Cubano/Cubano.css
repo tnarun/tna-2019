@@ -1,0 +1,11 @@
+@font-face {
+  font-family: 'Cubano';
+  src: url('./Cubano.eot');
+  src: url('./Cubano.eot?#iefix') format('embedded-opentype'),
+       url('./Cubano.svg#Cubano') format('svg'),
+       url('./Cubano.ttf') format('truetype'),
+       url('./Cubano.woff') format('woff'),
+       url('./Cubano.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+}

@@ -1,6 +1,12 @@
 @import '../../layouts/vars';
 
-.stg {
+.doc {
+  font-family: 'DIN-Black';
+  h1 {
+    text-align: center;
+    @include light-title;
+  }
+
   h4 {
     margin-top: 0;
     margin-bottom: 1.5rem;
@@ -8,48 +14,25 @@
     font-size: 1.1rem;
   }
 
-  a.download {
-    font-size: 1.2rem;
-    font-family: 'DIN-Black';
+  img {
+    max-width: 100%;
+    margin-top: 1.5rem;
+    border-radius: 0.3rem;
+    margin-bottom: 1.5rem;
   }
 
   table {
-    width: 100%;
     border: solid 2px #d7ecff;
     border-collapse: collapse;
     background-color:rgba(black,0.4);
     margin-top: 1rem;
     margin-bottom: 1rem;
-    tr {
-      th {
-        width: 20%;
-        &[colSpan] { color: gold }
-      }
-    }
+    tr {}
     th, td {
       width: 240px;
       text-align: center;
       border: solid 1px #d7ecff;
       padding: 0.5rem;
-      font-size: 0.9rem;
     }
-  }
-}
-
-.doc {
-  font-family: 'DIN-Black';
-
-  .warning {
-    color: lighten(red, 20%);
-    text-shadow: 0 0 .25rem red;
-    font-size: 1.2rem;
-  }
-
-  .end {
-    @include light-title;
-  }
-
-  .d1 {
-    margin-bottom: 0.5rem;
   }
 }

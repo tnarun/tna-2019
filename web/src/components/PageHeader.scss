@@ -1,43 +1,63 @@
 @import '../layouts/vars';
 
 .pgheader {
-  background-color: rgba(black, 0.5);
-  border-bottom: solid 1px rgba(lighten(#01b0ff, 30%), 0.4);
+  position: relative;
+  &:before {
+    content: '';
+    position: absolute;
+    z-index: -1;
+    left: 0; right: 0; top: 0; height: 200%;
+    background: linear-gradient($light-bg-color, transparent);
+  }
+
+  .himg {
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background-size: cover;
+    z-index: -1;
+  }
 
   .hc {
-    max-width: 960px;
+    max-width: $page-width;
     margin: 0 auto;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
 
+    $media-scale: 1.5;
+
     h1 {
-      font-family: Orbitron-Bold;
-      text-shadow: 0 0 20px #01b0ff, 0 0 10px #fff;
+      @include shadow-title;
       font-size: 3rem;
-      margin: 0;
-      margin-bottom: 1rem;
-      margin-top: 2rem;
+      margin: 2rem 0 1rem;
+      span {
+        font-size: 4rem;
+        position: relative;
+        margin-right: 0.2rem;
+        color: white;
+      }
 
       @media #{$xs} {
-        font-size: 2rem;
-        margin-top: 1.3333rem;
-        margin-bottom: 0.6666rem;
+        font-size: (3rem / $media-scale);
+        margin: (2rem / $media-scale) 0 (1rem / $media-scale);
+
+        span {
+          font-size: (4rem / $media-scale);
+          margin-right: (0.2rem / $media-scale);
+        }
       }
     }
     
     h2 {
-      margin: 0;
-      font-family: Orbitron-Bold;
-      text-shadow: 0 0 20px #01b0ff, 0 0 10px #fff;
+      @include shadow-title;
       font-size: 1.5rem;
-      margin: 0;
-      margin-bottom: 2rem;
+      margin: 0 0 2rem;
+      font-weight: normal;
 
       @media #{$xs} {
-        font-size: 1rem;
-        margin-bottom: 1.3333rem;
+        font-size: (1.5rem / $media-scale);
+        margin: 0 0 (2rem / $media-scale);
       }
     }
   }

@@ -59,6 +59,7 @@
     left: 0.5rem;
     top: 0.4rem;
   }
+  color: lighten($link-color, 10%);
 }
 
 .arrowlink .arrow {
@@ -81,6 +82,7 @@
   }
   // animation: arrow 1s linear infinite;
 }
+
 .arrowlink a {
   color: gold;
   line-height: 2.4rem;
