@@ -1,0 +1,13 @@
+.loading {
+  display: flex;
+  background-color: rgba(black, 0.4);
+  margin-top: 1rem;
+  padding: 1rem;
+  justify-content: center;
+  align-items: center;
+  // flex-direction: column;
+  .desc {
+    margin-right: 1.5rem;
+    font-size: 1.2rem;
+  }
+}

@@ -8,6 +8,8 @@
     "precommit": "lint-staged"
   },
   "dependencies": {
+    "classnames": "^2.2.6",
+    "gradient-color": "^2.0.1",
     "react": "^16.7.0",
     "react-dom": "^16.7.0"
   },
@@ -24,7 +26,7 @@
     "node-sass": "^4.11.0",
     "react-test-renderer": "^16.7.0",
     "sass-loader": "^7.1.0",
-    "umi": "^2.4.2",
+    "umi": "^2.6.13",
     "umi-plugin-react": "^1.4.0"
   },
   "lint-staged": {

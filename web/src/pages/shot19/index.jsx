@@ -3,7 +3,18 @@ import { Container, Row, FlexBox, IBox } from '../../components/FlexBox'
 import React from 'react'
 import SH3 from '../../components/StrawberryH3'
 import PHeader from '../../components/shot19/PHeader'
-import { Steps, StepMini } from '../../components/Steps'
+import { Steps, StepMini, Warning } from '../../components/Steps'
+
+const CoolLink = (props) => (
+  <div className={ css.coollink }>
+    <div className={ css.arrow }>
+      <div className={ css.a1 }></div>
+      <div className={ css.a2 }></div>
+      <div className={ css.a3 }></div>
+    </div>
+    <a { ...props }>{ props.children }</a>
+  </div>
+)
 
 const Table = ({ name, scores }) => (
   <table>
@@ -25,7 +36,7 @@ const Table = ({ name, scores }) => (
 
 const Tables = () => (
   <>
-    <Table name='大往生' scores={[ '5000万', '3亿', '8亿', '10亿', '10.8亿' ]} />
+    <Table name='大往生（黑）' scores={[ '5000万', '3亿', '8亿', '10亿', '10.8亿' ]} />
     <Table name='绊地狱（羁绊地狱群）' scores={[ '4500万', '1.2亿', '1.8亿', '2.2亿', '2.5亿' ]} />
     <Table name='圣战之翼' scores={[ '1000万', '4000万', '5500万', '6000万', '6350万' ]} />
     <Table name='虫1original模式' scores={[ '1000万', '5000万', '6300万', '6550万', '6650万' ]} />
@@ -59,6 +70,10 @@ export default class extends React.Component {
               <Tables />
             </FlexBox>
             <FlexBox flex={ 8 }>
+              <SH3>提交成绩 <span>submit record</span></SH3>
+              <IBox>
+                <CoolLink href='https://shimo.im/forms/LMlDFo1DBfoAt8SL/fill' target='_blank' rel='noopener noreferrer'>点这里提交你的成绩</CoolLink>
+              </IBox>
               <div className={ css.doc }>
                 <SH3>活动介绍 <span>intro</span></SH3>
                 <IBox>
@@ -105,6 +120,7 @@ export default class extends React.Component {
                       《虫姬》Original 模式接受 Steam 版游戏的得分，PC 版本的得分需要提交该局的实时 MP4 录像链接，并且能在游戏官方联网排行榜上能查到对应记录和流程录像。<br/><br/>
                       其余情况下，所有游戏统一使用特定版本的 MAME 模拟器(ShmupMAME 4.2) 和 ROM, 官方会打包提供统一下载。这些游戏提交的记录，需要提供 inp 文件和实时 MP4 录像链接的获取地址。<br/><br/>
                     </StepMini>
+                    <Warning>注意：所有成绩，均指游戏一周目的成绩</Warning>
                     <StepMini num='4'>
                       将通过审核的成绩提交到 tnarun 主站。获取对应的表单并填写，附上 3a 内提到的成绩资源，活动团队确认录入后，可参加当月抽奖。
                     </StepMini>

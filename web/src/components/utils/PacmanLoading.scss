@@ -1,0 +1,86 @@
+$radius: 1.5rem;
+$dotRadius: $radius * 0.4;
+
+@keyframes animcircles {
+  0% { transform:translateX(0px) }
+  100% { transform:translateX(-$radius / 3 * 4) }
+}
+
+@keyframes animtop {
+  0%, 100% { transform: rotate(0deg) }
+  50% { transform: rotate(-45deg) }
+}
+
+@keyframes animbottom {
+  0%, 100% { transform: rotate(0deg) }
+  50% { transform: rotate(45deg) }
+}
+
+.loader{
+  position: relative;
+  height: $radius * 2;
+  width: $radius * 6;
+  // background-color: black;
+
+  .circles{
+    position: absolute;
+    left: -$radius / 6; 
+    top: 0; 
+    height: $radius * 2; 
+    width: $radius * 6;
+    animation: animcircles 0.5s infinite linear;
+
+    span {
+      position: absolute;
+      top: $radius - $dotRadius / 2;
+      height: $dotRadius; width: $dotRadius;
+      border-radius: $dotRadius;
+      background-color:#EFEFEF;
+      box-shadow: 0 0 1rem .25rem white;
+
+      &.one { right: $radius / 3 * 8 }
+      &.two { right: $radius / 3 * 4 }
+      &.three { right: 0 }
+    }
+  }
+
+  .pacman {
+    position: absolute;
+    left: 0; top: 0;
+    height: $radius * 2; 
+    width: $radius * 2;
+
+    .eye {
+      position:absolute;
+      top: $radius / 3; 
+      left: $radius;
+      height: $dotRadius / 3 * 2; 
+      width: $dotRadius / 3 * 2;
+      border-radius: 100%;
+      background-color:#1C163A;
+    }
+
+    span {
+      position: absolute;
+      top: 0; left: 0;
+      height: $radius * 2; 
+      width: $radius * 2;
+
+      &:before {
+        content: "";
+        position: absolute;
+        left: 0; 
+        height: $radius; width: $radius * 2;
+        background-color: #FFFB16;
+      }
+
+      // 上半圆
+      &.top:before { top: 0; border-radius: $radius $radius 0 0; }
+      &.bottom:before { bottom: 0; border-radius: 0 0 $radius $radius; }
+      &.left:before { bottom: 0; height: $radius * 2; width: $radius; border-radius: $radius 0 0 $radius; }
+
+      &.top { animation:animtop 0.5s infinite; }
+      &.bottom { animation:animbottom 0.5s infinite; }
+    }
+  }
+}
