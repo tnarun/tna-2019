@@ -116,9 +116,9 @@ class SubTabs extends React.Component {
     console.log({ variables }, variables.data.map(x => x.scope))
     let currentVariables = variables.data
       .filter(v => {
-        let c0 = v.scope.type === 'full-game'
+        let c0 = ['global', 'full-game'].includes(v.scope.type)
         let c1 = v['is-subcategory'] === true
-        let c2 = v.category === currentCategory.id || v.category === null
+        let c2 = [null, currentCategory.id].includes(v.category)
         return c0 && c1 && c2
       })
     let selectedValues = { }
