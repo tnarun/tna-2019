@@ -3,6 +3,7 @@ import React from 'react'
 // import gameAPI from '../../api-client/gameAPI'
 import classNames from 'classnames/bind'
 import Leaderboard from '../../components/games/Leaderboard'
+// import md from 'markdown-it'
 
 class CommonTabs extends React.Component {
   render () {
@@ -190,6 +191,12 @@ class SubTabs extends React.Component {
       <div className={ css.varTabs }>
         { _tabs }
       </div>
+      {/* <div className={ css.rules }>
+        <h3>分类规则</h3>
+        <div className={ css.text } dangerouslySetInnerHTML={{ 
+          __html: md().render(currentCategory.rules).trim()
+        }}></div>
+      </div> */}
       { _debug }
       { _leaderboard }
       </>

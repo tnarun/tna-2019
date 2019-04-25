@@ -37,7 +37,7 @@ export default class GameHeader extends React.Component {
         <div className={ css.baseinfo}>
           { _name }
           <div className={ css.speedrunlink }>
-            speedrun: <a href={ sd.weblink } target='_blank' rel='noopener noreferrer'>{ sd.weblink }</a>
+            from: <a href={ sd.weblink } target='_blank' rel='noopener noreferrer'>{ sd.weblink.replace('https://www.', '') }</a>
           </div>
           <div className={ css.released }>
             发行时间：{ sd['release-date'] }

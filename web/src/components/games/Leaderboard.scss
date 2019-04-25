@@ -11,9 +11,13 @@
 
 .leaderboard {
   padding: 1rem;
-  padding-top: .5rem;
+  padding-top: .8rem;
   background-color: rgba(black, 0.5);
   margin-bottom: 2rem;
+
+  @media #{$xs} {
+    padding: .5rem;
+  }
 
   h3 {
     margin: 0;
@@ -21,6 +25,16 @@
     font-size: .9rem;
   }
 
+  .tabbox {
+    // margin: 0 -1rem;
+    @media #{$xs} {
+      margin: 0 -.5rem;
+      .table {
+        border-left: 0 none;
+        border-right: 0 none;
+      }
+    }
+  }
   .table {
     border-spacing: 0;
     border: solid 1px rgba(white, 0.3);
@@ -35,6 +49,11 @@
     th {
       color: $text-color-gold;
       text-align: left;
+      &.location, &.platform, &.submitted {
+        @media #{$xs} {
+          display: none;
+        }
+      }
     }
 
     tbody tr {
@@ -50,11 +69,11 @@
       td.tdplace, td.tdsubmitted {
         font-family: 'monaco', 'Courier New', Courier, monospace;
       }
-    }
 
-    .locations {
-      .location {
-
+      td.location, td.platform, td.tdsubmitted {
+        @media #{$xs} {
+          display: none;
+        }
       }
     }
 

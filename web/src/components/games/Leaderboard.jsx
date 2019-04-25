@@ -111,10 +111,10 @@ export default class extends React.Component {
         <tr className={ css.run } key={ run.id }>
           <td className={ css.tdplace }>{ place }</td>
           <td><Players run={ run } players={ speedrunData.players.data } /></td>
-          <td><Locations run={ run } players={ speedrunData.players.data } /></td>
+          <td className={ css.location }><Locations run={ run } players={ speedrunData.players.data } /></td>
           <td><SpeedrunPlayTime time={ run.times } /></td>
           { _extraTds }
-          <td><Platform run={ run } platforms={ speedrunData.platforms.data } /></td>
+          <td className={ css.platform }><Platform run={ run } platforms={ speedrunData.platforms.data } /></td>
           <td className={ css.tdsubmitted }>{ moment(run.submitted).locale('zh-cn').fromNow() }</td>
         </tr>
       )
@@ -130,21 +130,27 @@ export default class extends React.Component {
 
     return (
       <div className={ css.leaderboard }>
-        <h3>此排行榜上共有 { _runs.length } 名玩家</h3>
-        <table className={ css.table }>
-          <thead><tr>
-            <th>排名</th><th>玩家</th>
-            <th>国家或地区</th><th>时长</th>
-            {
-              extraFields.map(f => <th key={f.id}>{f.name}</th>)
-            }
-            <th>平台</th><th>提交时间</th>
-            {/* <th>speedrun 链接</th> */}
-          </tr></thead>
-          <tbody>
-            { _runs }
-          </tbody>
-        </table>
+        <h3>
+          <span>排行榜上共 { _runs.length } 名玩家，</span>
+          <span>数据同步于 { moment(leaderboard.updatedAt).format('MM-DD HH:mm') }</span>
+        </h3>
+        <div className={ css.tabbox }>
+          <table className={ css.table }>
+            <thead><tr>
+              <th>排名</th><th>玩家</th>
+              <th className={ css.location }>国家或地区</th><th>时长</th>
+              {
+                extraFields.map(f => <th key={f.id}>{f.name}</th>)
+              }
+              <th className={ css.platform }>平台</th>
+              <th className={ css.submitted }>提交时间</th>
+              {/* <th>speedrun 链接</th> */}
+            </tr></thead>
+            <tbody>
+              { _runs }
+            </tbody>
+          </table>
+        </div>
       </div>
     )
   }

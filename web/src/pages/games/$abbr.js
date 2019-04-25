@@ -21,16 +21,20 @@ export default class extends React.Component {
 
   render () {
     if (this.state.isLoading) {
-      return <Container>
-        <Row>
-          <FlexBox flex={ 1 }>
-            <div className={ css.loading }>
-              <div className={ css.desc }>正在加载游戏数据</div>
-              <PacmanLoading />
-            </div>
-          </FlexBox>
-        </Row>
-      </Container>
+      return (
+        <div className={ css.game }>
+          <Container>
+            <Row>
+              <FlexBox flex={ 1 }>
+                <div className={ css.loading }>
+                  <div className={ css.desc }>正在加载游戏数据</div>
+                  <PacmanLoading />
+                </div>
+              </FlexBox>
+            </Row>
+          </Container>
+        </div>
+      )
     }
 
     let { game } = this.state
@@ -41,6 +45,9 @@ export default class extends React.Component {
             <Row>
               <FlexBox flex={ 1 }>
                 <GameHeader game={ game } />
+                <div className={ css.intro }>
+                  声明：tnarun.com 所显示的全部排行榜数据均来自于 <a href='https://www.speedrun.com' target='_blank' rel='noopener noreferrer'>speedrun.com</a>, 使用 <a href='https://github.com/speedruncomorg/api' target='_blank' rel='noopener noreferrer'>speedrun API</a> 采集。
+                </div>
               </FlexBox>
             </Row>
             <Row>

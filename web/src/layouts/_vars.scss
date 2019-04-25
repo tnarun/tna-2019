@@ -5,6 +5,7 @@ $link-color: lighten(#01b0ff, 20%);
 $link-color-high: gold;
 
 $light-bg-color: #01b0ff;
+$light-bg-color-high: lighten(#01b0ff, 20%);
 
 @mixin light-title {
   // font-family: 'Orbitron';
