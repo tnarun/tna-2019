@@ -73,9 +73,9 @@
 
       @media #{$xs} {
         tr th {
-          padding: .3rem .6rem .6rem;
-          &.runner { width: 5.5rem; }
-          &.game { width: 7rem; }
+          padding: .3rem .5rem .5rem;
+          &.runner { width: 6rem; }
+          &.game { width: 7.5rem; }
         }
       }
     }
@@ -147,6 +147,11 @@
               }
             }
           }
+        }
+
+        &.prologue {
+          $c: #96df72;
+          @include spp($c);
         }
 
         &.sp {

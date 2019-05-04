@@ -1,3 +1,5 @@
+// title: KKSK 2019
+
 import React from 'react'
 import css from './index.scss'
 import { Container, Row, FlexBox } from '../../components/FlexBox'
@@ -23,13 +25,22 @@ class PlayTime extends React.Component {
     let str = [_h, _m].join(' ')
   
     return (
-      <span className={ css.playtime }>{ str }</span>
+      <span className={ css.playtime }><Iconfont name='clock' /> { str }</span>
     )
   }
 }
 
 const Table = ({ data }) => {
   let _trs = data.map((d, idx) => {
+    if (d.prologue) {
+      return <tr key={ idx } className={ css.prologue }>
+        <td colspan='3'>
+          <div>{ d.prologue }</div>
+          <div className={ css.tdsub }><Iconfont name='clock' /> { d.start } - { d.end }</div>
+        </td>
+      </tr>
+    }
+
     let _name = d.special ? d.special : 
       d.runners.length === 2 ? <span className={ css.vs0 }>{ d.runners[0] } <Iconfont name='vs' /> { d.runners[1] }</span> : <span>{ d.runners[0] }</span>
 
@@ -37,12 +48,18 @@ const Table = ({ data }) => {
       <td>
         <div>{ _name }</div>
         <div className={ css.tdsub }><Iconfont name='clock' /> { d.start } - { d.end }</div>
+        {
+          d.talker ? <div className={ css.tdsub }>{ d.talker }解说</div> : null
+        }
+        {
+          d.special ? <div className={ css.tdsub }>群众参与环节</div> : null
+        }
       </td>
     )
     let _tdgame = (
       <td className={ css.game }>
         <div className={ css.cover } style={{ backgroundImage: `url(${ images[d.abbr] })` }}></div>
-        <a href={ `/games/${ d.abbr }` } target='_blank' rel="noopener noreferrer">
+        <a href={ `/games/${ d.abbr }${ d.c ? `#${ d.c }` : ''}` } target='_blank' rel="noopener noreferrer">
           <div className={ css.zh }>{ d.game.zh }</div>
           <div className={ css.tdsub }>{ d.game.en }</div>
         </a>
@@ -58,6 +75,7 @@ const Table = ({ data }) => {
         <td>
           <div><Iconfont name='gift' /> 现场奖品</div>
           <div className={ css.tdsub }>{ d.prize }</div>
+          {/* <div className={ css.tdsub }><PlayTime time={ d.period } /></div> */}
         </td>
       </tr>
     }
@@ -67,7 +85,8 @@ const Table = ({ data }) => {
       { _tdgame }
       <td>
         <div>{ d.category.zh }</div>
-        <div className={ css.tdsub }>{ d.category.en } - <PlayTime time={ d.period } /></div>
+        <div className={ css.tdsub }>{ d.category.en }</div>
+        <div className={ css.tdsub }><PlayTime time={ d.period } /></div>
       </td>
     </tr>
   })
