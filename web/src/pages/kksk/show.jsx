@@ -88,7 +88,6 @@ const Table = ({ data }) => {
       <td>
         <div>{ d.category.zh }</div>
         <div className={ css.tdsub }>{ d.category.en }</div>
-        <div className={ css.tdsub }><PlayTime time={ d.period } /></div>
       </td>
     </tr>
   })
