@@ -1,21 +1,31 @@
 @import '../../layouts/vars';
 
 @mixin tshadow {
-  $sc: black;
-  font-weight: bold;
-  text-shadow: 
-    0px -1px $sc, 
-    1px -1px $sc, 
-    1px 0px $sc, 
-    1px 1px $sc, 
-    0px 1px $sc, 
-    -1px 1px $sc, 
-    -1px 0px $sc, 
-    -1px -1px $sc;
+  // $sc: black;
+  // font-weight: bold;
+  // text-shadow: 
+  //   0px -1px $sc, 
+  //   1px -1px $sc, 
+  //   1px 0px $sc, 
+  //   1px 1px $sc, 
+  //   0px 1px $sc, 
+  //   -1px 1px $sc, 
+  //   -1px 0px $sc, 
+  //   -1px -1px $sc;
+}
+
+.qrcode {
+  margin-top: -2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .kksk {
-  margin-bottom: 3rem;
+  // margin-bottom: 3rem;
+  width: 1080px;
+  margin: 0 auto 3rem;
+  
 
   .hh2 {
     color: white !important;
@@ -24,69 +34,53 @@
 
   h2 {
     @include light-title;
-    font-size: 2rem;
+    font-size: 1.6rem;
     text-align: center;
     color: white;
-  }
-
-  @media #{$xs} {
-    .tabc {
-      margin: 0 -.5rem;
-    }
-    h2 {
-      font-size: 1.6rem;
-    }
   }
 
   table.kksklist {
     width: 100%;
     border-spacing: 0;
-    font-size: 1.2rem;
-    border: solid .2rem $text-color;
+    font-size: .9rem;
+    border: solid .1rem $text-color;
     box-shadow: 0 0 1rem $light-bg-color;
-    font-family: 'DIN-black', '微软雅黑';
+    // font-family: 'DIN-black';
+    font-family: 'Cubano', '微软雅黑';
     margin-bottom: 3rem;
-
-    @media #{$xs} {
-      border-left: 0 none;
-      border-right: 0 none;
-      font-size: .9rem;
-    }
 
     thead {
       tr {
         background-color: rgba(black, 0.2);
         th {
-          border-bottom: solid .2rem $text-color;
-          padding: .5rem 1rem 1rem;
+          border-bottom: solid .1rem $text-color;
+          padding: .5rem .75rem .5rem;
           text-align: left;
+          color: white;
           .sub {
             opacity: 0.8;
             font-size: 1rem;
             margin-top: .3rem;
           }
 
-          &.runner { width: 12rem; }
-          &.game { width: 18rem; }
-        }
-      }
-
-      @media #{$xs} {
-        tr th {
-          padding: .3rem .5rem .5rem;
-          &.runner { width: 6rem; }
-          &.game { width: 7.5rem; }
+          &.runner { width: 8rem; }
+          &.game { width: 9rem; }
         }
       }
     }
     tbody {
       tr {
+        background-color: rgba(black, 0.2);
         td {
           border-bottom: solid 1px rgba(white, 0.3);
-          padding: .5rem 1rem .9rem;
+          // padding: .4rem .75rem .4rem;
+          padding-left: .75rem;
+          padding-right: .75rem;
+          height: 4.5rem;
+          font-weight: bold;
           .tdsub {
-            font-size: 1rem;
             margin-top: .3rem;
+            line-height: 1.5rem;
           }
 
           &.game {
@@ -99,52 +93,35 @@
               background-size: cover;
               background-position: center 15%;
               opacity: 0.5;
+              display: none;
             }
             a {
               position: relative;
             }
           }
-
-          @media #{$xs} {
-            padding: .3rem .6rem .6rem;
-            .tdsub {
-              font-size: 0.75rem;
-            }
-            &.game .cover {
-              right: 0rem;
-            }
-          }
         }
 
         @mixin spp($c) {
-          $tc: mix($c, white, 30%);
+          $tc: mix($c, white, 0%);
           color: $tc;
           a { display:block; color: $tc; }
           a:hover { text-decoration: underline; }
-          background: linear-gradient(
-            to right, 
-            rgba($c, 0.3), 
-            transparent
-          );
+          // background: linear-gradient(
+          //   to right, 
+          //   rgba($c, 0.3), 
+          //   transparent
+          // );
           @include tshadow;
           td:first-child {
             position: relative;
-            padding-left: 1.5rem;
+            // padding-left: 1rem;
             &:before {
               content: '';
               position: absolute;
               top: .2rem; left: .2rem; bottom: .2rem;
               width: .3rem; border-radius: .3rem;
               background-color: $c;
-            }
-          }
-
-          @media #{$xs} {
-            td:first-child {
-              padding-left: .9rem;
-              &:before {
-                width: .2rem;
-              }
+              display: none;
             }
           }
         }
@@ -175,9 +152,4 @@
       }
     }
   }
-}
-
-.guanzhu {
-  text-align: center;
-  font-weight: bold;
 }

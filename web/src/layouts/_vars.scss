@@ -9,7 +9,7 @@ $light-bg-color-high: lighten(#01b0ff, 20%);
 
 @mixin light-title {
   // font-family: 'Orbitron';
-  font-family: 'Cubano';
+  font-family: 'Cubano', '微软雅黑';
   color: $text-color;
   text-shadow: 0 0 1rem $light-bg-color;
 }

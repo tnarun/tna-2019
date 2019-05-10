@@ -1,32 +1,34 @@
 // title: KKSK 2019
 
 import React from 'react'
-import css from './index.scss'
+import css from './show.scss'
 import { Container, Row, FlexBox } from '../../components/FlexBox'
-import PageHeader from '../../components/PageHeader'
-import moment from 'moment'
-import { day1, day2, images } from '../../data/kksk.js'
+// import moment from 'moment'
+import { day1, day2, images } from '../../data/kksk-show.js'
 import Iconfont from '@/components/Iconfont'
+import QRCode from 'qrcode'
 
-const numberZero = (n) => {
-  return n >= 10 ? n : `0${n}`
-}
+// const numberZero = (n) => {
+//   return n >= 10 ? n : `0${n}`
+// }
 
 class PlayTime extends React.Component {
   render () {
-    let { time } = this.props
-    let duration = moment.duration(time)
+    // let { time } = this.props
+    // let duration = moment.duration(time)
   
-    let h = duration.hours()
-    let m = duration.minutes()
+    // let h = duration.hours()
+    // let m = duration.minutes()
   
-    let _h = h > 0 ? `${h} 小时` : ''
-    let _m = m > 0 ? `${numberZero(m)} 分钟` : ''
-    let str = [_h, _m].join(' ')
+    // let _h = h > 0 ? `${h} 小时` : ''
+    // let _m = m > 0 ? `${numberZero(m)} 分钟` : ''
+    // let str = [_h, _m].join(' ')
   
-    return (
-      <span className={ css.playtime }><Iconfont name='clock' /> { str }</span>
-    )
+    // return (
+    //   // <span className={ css.playtime }><Iconfont name='clock' /> { str }</span>
+    //   null
+    // )
+    return null
   }
 }
 
@@ -49,10 +51,7 @@ const Table = ({ data }) => {
         <div>{ _name }</div>
         <div className={ css.tdsub }><Iconfont name='clock' /> { d.start } - { d.end }</div>
         {
-          d.talker ? <div className={ css.tdsub }>{ d.talker }解说</div> : null
-        }
-        {
-          d.special ? <div className={ css.tdsub }>群众参与环节</div> : null
+          // d.special ? <div className={ css.tdsub }>群众参与环节</div> : null
         }
       </td>
     )
@@ -61,7 +60,10 @@ const Table = ({ data }) => {
         <div className={ css.cover } style={{ backgroundImage: `url(${ images[d.abbr] })` }}></div>
         <a href={ `/games/${ d.abbr }${ d.c ? `#${ d.c }` : ''}` } target='_blank' rel="noopener noreferrer">
           <div className={ css.zh }>{ d.game.zh }</div>
-          <div className={ css.tdsub }>{ d.game.en }</div>
+          {/* <div className={ css.tdsub }>{ d.game.en }</div> */}
+          {
+            d.talker ? <div className={ css.tdsub }>{ d.talker }解说</div> : null
+          }
         </a>
       </td>
     )
@@ -104,13 +106,21 @@ const Table = ({ data }) => {
 }
 
 export default class extends React.Component {
+  state = {
+    qrurl: null
+  }
+
+  async componentDidMount () {
+    let url = await QRCode.toDataURL('https://tnarun.com/kksk/', {
+      margin: 1,
+      width: 133
+    })
+    this.setState({ qrurl: url })
+  }
+
   render () {
     return (
       <div className={ css.kksk }>
-        <PageHeader>
-          <h1><span>K K S K</span></h1>
-          <h2 className={ css.hh2 }>看看谁快！核聚变 2019 特别线下表演活动</h2>
-        </PageHeader>
         <Container>
         <Row>
           <FlexBox flex={ 1 }>
@@ -118,16 +128,18 @@ export default class extends React.Component {
             <div className={ css.tabc }>
               <Table data={ day1 }></Table>
             </div>
+            {
+              this.state.qrurl ? <div className={ css.qrcode }>
+                <img src={ this.state.qrurl } alt='qr' />
+              </div> : null
+            }
+            
           </FlexBox>
-        </Row>
-        <Row>
+
           <FlexBox flex={ 1 }>
             <h2>第二天 · DAY TWO · 5.12</h2>
             <div className={ css.tabc }>
               <Table data={ day2 }></Table>
-            </div>
-            <div className={ css.guanzhu }>
-              欢迎未来继续关注 <a href='/'>tnarun.com</a> 网站和 <a href='/rit19'>rit19</a> 活动！
             </div>
           </FlexBox>
         </Row>
