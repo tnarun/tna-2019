@@ -28,7 +28,7 @@
     "node-sass": "^4.11.0",
     "react-test-renderer": "^16.7.0",
     "sass-loader": "^7.1.0",
-    "umi": "^2.6.14",
+    "umi": "^2.7.3",
     "umi-plugin-react": "^1.4.0"
   },
   "lint-staged": {

@@ -183,7 +183,7 @@ const day2 = [
     special: '你行你上！YCYU',
     game: { en: 'Sekiro: Shadows Die Twice', zh: '只狼：影逝二度' },
     prize: '《只狼》典藏版 × 1',
-    start: '13:30', end: '14:00',
+    start: '13:10', end: '13:40',
     abbr: 'sekiro',
     period: { hours: 1, minutes: 40 },
   },
@@ -194,7 +194,7 @@ const day2 = [
     game: { en: 'Sekiro: Shadows Die Twice', zh: '只狼：影逝二度' },
     category: { zh: '修罗无邪道', en: 'Shura Glitchless' },
     period: { minutes: 45 },
-    start: '14:00', end: '14:45',
+    start: '13:40', end: '14:25',
     abbr: 'sekiro', c: 'Shura_Ending',
     talker: '楼座、手冢文轩'
   },
@@ -206,7 +206,7 @@ const day2 = [
     game: { en: 'NieR: Automata', zh: '尼尔：机械纪元' } ,
     category: { zh: 'A 结局', en: '[A] Any%'},
     period: { hours: 1, minutes: 40 },
-    start: '14:45', end: '16:25',
+    start: '14:25', end: '16:05',
     abbr: 'na', c: 'A',
     talker: '羽毛'
   },

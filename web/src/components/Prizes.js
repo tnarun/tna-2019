@@ -3,6 +3,8 @@ import css from './Prizes.scss'
 import btaxl from '../assets/images/award/4-btaxl.png'
 import btbf from '../assets/images/award/4-btbf.png'
 import benq27 from '../assets/images/award/benq27.png'
+import gtx1660 from '../assets/images/award/gtx1660.png'
+import rtx2060 from '../assets/images/award/rtx2060.png'
 
 import Card from './Card'
 
@@ -15,7 +17,6 @@ const Prize = ({ img, link, text, count, price }) => (
     <div className={ css.prize }>
       <h5><a href={ link } target='_blank' rel='noopener noreferrer'>{ text }</a></h5>
       <div className={ css.count }>× { count }</div>
-      <div className={ css.price }>¥ { price }</div>
     </div>
   </Card>
 )
@@ -24,7 +25,7 @@ export default () => {
   return (
     <>
     <div className={ css.prizes }>
-      <h4>四月活动奖品</h4>
+      <h4>4-6 月活动奖品</h4>
 
       <Prize
         img={ btaxl }
@@ -50,6 +51,13 @@ export default () => {
         text='明基27英寸爱眼显示器EW277HDR'
         count='2'
         price='1899.00' />
+
+      <Prize
+        img={ gtx1660 }
+        link={ 'javascript:;' }
+        text='七彩虹 igame GTX 1660ti'
+        count='1'
+        price='--' />
     </div>
     </>
   )

@@ -26,6 +26,15 @@ const SpeedrunLink = () => (
   <a href='https://www.speedrun.com/' target='_blank' rel='noopener noreferrer'>speedrun.com</a>
 )
 
+const Publicity = () => (
+  <>
+  <SH3>成绩公示 <span>publicity</span></SH3>
+  <IBox>
+    <CoolLink href='/rit19/publicity' target='_blank' rel='noopener noreferrer'>点这里查看已提交的成绩</CoolLink>
+  </IBox>
+  </>
+)
+
 const First = () => (
   <div className={ css.first }>
     <Container>
@@ -43,6 +52,7 @@ const First = () => (
             <CoolLink href='https://shimo.im/forms/tGlSvtsqiJgno3Yn/fill' target='_blank' rel='noopener noreferrer'>点这里提交你的成绩</CoolLink>
           </IBox>
         </FlexBox>
+
         <FlexBox flex={ 1 }>
           <SH3>简明介绍 <span>brief intro</span></SH3>
           <div className={ css.brief }>
@@ -64,7 +74,9 @@ const Second = () => (
   <Container>
     <Row>
       <FlexBox flex={ 6 }>
-        <SH3>四月 MOD 推荐项目 <span>recommend</span></SH3>
+        <Publicity />
+
+        <SH3>本季度 (4-6 月) MOD 推荐项目 <span>recommend</span></SH3>
         <div className={ css.desc }>
           在迷茫想要打什么游戏吗？可以来看看本月的 MOD 推荐；<br />
           在对应的月份，成功提交对应的推荐游戏，可以获得额外的抽奖机会 😄
@@ -80,9 +92,9 @@ const Second = () => (
           每个月，我们都会为活动参与者准备丰富奖品，只要符合条件就可以参加月末抽奖！具体看 <a href='rule/'>活动规则</a>
         </div>
         <Prizes />
-        <Steps>
+        {/* <Steps>
           <Warning>我们正在努力筹备更多奖品，敬请期待 <span role='img' aria-label='smile'>🙂</span></Warning>
-        </Steps>
+        </Steps> */}
       </FlexBox>
     </Row>
   </Container>
@@ -128,7 +140,7 @@ export default () => {
           </FlexBox>
 
           <FlexBox flex={ 6 }>
-          <SH3>通过捐助支持我们 <span>donate</span></SH3>
+            <SH3>通过捐助支持我们 <span>donate</span></SH3>
             <div className={ css.desc }>
             TNA 希望以速通表演，线上直播，专题活动等多种形式，吸引速通玩家形成圈子，吸引更多玩家参与速通。扩大主机游戏社区的影响，让大家感受到核玩的乐趣。<br/><br/>
             我们收到的所有赞助，将用于支持我们的活动运营。

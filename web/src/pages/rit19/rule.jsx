@@ -19,6 +19,12 @@ import PHeader from '../../components/rit19/PHeader'
 // 内容参考
 // https://drive.google.com/file/d/1_LBY1FlMXH1zdjJZUxU8XUB7B6DgjUNa/view?tdsourcetag=s_pcqq_aiomsg
 
+const Change = ({ children }) => {
+  return (
+    <span style={{ color: 'gold' }}>{ children }</span>
+  )
+}
+
 export default () => {
   return (
     <div className={ css.help }>
@@ -103,7 +109,7 @@ const P1 = () => (
 
 const P2 = () => (
   <>
-  <SH3>活动参与方法与规则</SH3>
+  <SH3>活动参与方法与规则（v1.1 - 2019 年 5 月更新）</SH3>
   <div className={ css.doc }>
     <IBox>
       <h4>1. 注册 speedrun</h4>
@@ -153,11 +159,11 @@ const P2 = () => (
 
     <IBox>
       <h4>4. 将通过审核的成绩提交到 tnarun 网站</h4>
-      本网站会准备报名与提交 speedrun 成绩的表单供活动参加者填写；填写表单，并且附上有效的成绩证明，经活动团队后，参加者就可以参加当月的抽奖。需要注意的是，speedrun 的成绩同样需要是当月的；<br/><br/>
+      本网站会准备报名与提交 speedrun 成绩的表单供活动参加者填写；填写表单，并且附上有效的成绩证明，经活动团队认证后，参加者就可以在<Change>当月</Change>积累抽奖次数，并可参加<Change>当季度</Change>的抽奖。需要注意的是，speedrun 的成绩同样需要是<Change>当月</Change>的；<br/><br/>
 
-      只要在某个月份上传了成绩，就会在当月获得一次抽奖机会！<br/><br/>
+      只要在<Change>某个月份</Change>上传了成绩，就会在<Change>当季度</Change>获得一次抽奖机会！。一个季度包含三个月份，<Change>每个月份最多可由提交成绩获得一次抽奖机会</Change> :)<br/><br/>
 
-      每月结束时，活动团队会统计抽奖参与者名单；根据抽奖规则得出抽奖结果后，将获奖者名单与参与者名单一并公示；
+      <Change>每季度结束</Change>时，活动团队会统计抽奖参与者名单；根据抽奖规则得出抽奖结果后，将获奖者名单与参与者名单一并公示；
     </IBox>
 
     <IBox>
@@ -218,9 +224,15 @@ const P2 = () => (
     </IBox>
 
     <IBox>
-      <h4>特殊奖项：连续出勤奖！</h4>
+      <h4>特殊奖项：<Change>全季度全勤奖</Change>！</h4>
 
-      如果你在活动的一年内，连续八个月都在 speedrun 提交了成绩并向本活动递交了申请，那么在最后，可以参加“连续出勤奖”的特殊奖项抽奖；<br/><br/>
+      如果你在活动的一年内，<Change>每个季度都有向本活动的成绩提交，并且，其中至少有一个成绩是完整游戏分类项目的成绩，那么你可以获得 1 点全勤积分；</Change><br/><br/>
+
+      <Change>单人一个活动周期内最多可获得 3 点全勤积分（指 12 个月每个月都有成绩，且至少有 3 个成绩为完整游戏分类成绩）；</Change><br/><br/>
+      
+      那么在这一年的最后，可以参加“全季度全勤奖”的特殊奖项抽奖；<br/><br/>
+
+      <Change>全勤奖励分为 1 积分奖池与 2 积分奖池，需要消耗对应积分数来获得年度总结时的对应奖池抽奖机会，（如果有 3 积分，可以选择 2 积分池一次机会 + 1 积分池一次机会，或 1 积分池三次机会）</Change><br/><br/>
 
       奖励机会多多，大家努力地参加吧~
     </IBox>

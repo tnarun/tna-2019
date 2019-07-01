@@ -129,6 +129,10 @@ export default class extends React.Component {
             </div>
             {
               this.state.qrurl ? <div className={ css.qrcode }>
+                <div className={ css.tip }>
+                  手机扫描二维码<br/>
+                  访问节目单
+                </div>
                 <img src={ this.state.qrurl } alt='qr' />
               </div> : null
             }
