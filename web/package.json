@@ -8,6 +8,7 @@
     "precommit": "lint-staged"
   },
   "dependencies": {
+    "ben7th-oss-deploy": "^1.0.1",
     "classnames": "^2.2.6",
     "gradient-color": "^2.0.1",
     "markdown-it": "^8.4.2",
@@ -28,8 +29,8 @@
     "node-sass": "^4.11.0",
     "react-test-renderer": "^16.7.0",
     "sass-loader": "^7.1.0",
-    "umi": "^2.7.3",
-    "umi-plugin-react": "^1.4.0"
+    "umi": "^2.8.11",
+    "umi-plugin-react": "^1.9.10"
   },
   "lint-staged": {
     "*.{js,jsx}": [

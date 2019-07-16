@@ -24,5 +24,12 @@ table.records {
       border-bottom: solid 1px $text-color;
       padding: 0.5rem 0.5rem;
     }
+
+    td.new {
+      color: greenyellow;
+    }
+    td.update {
+      color: gold;
+    }
   }
 }

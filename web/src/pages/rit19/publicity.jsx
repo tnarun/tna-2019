@@ -1,5 +1,5 @@
 import React from 'react'
-import data from '../../assets/submit-data/0612.json'
+import data from '../../assets/submit-data/0630.json'
 
 import SH3 from '../../components/StrawberryH3'
 import { Container, Row, FlexBox, IBox } from '../../components/FlexBox'
@@ -21,6 +21,9 @@ export default class extends React.Component {
     let { records } = this.state
 
     let _records = records.map((x, idx) => {
+      let vd = x['videoDownload']
+      let download = vd ? <a href={ `https://www.tnarun.com/download/rit19-4-6/${vd}` } target='_blank'>下载</a> : null
+
       return (
         <tr className={ css.record }>
           <td>{ 
@@ -36,6 +39,11 @@ export default class extends React.Component {
           <td>{ x['total'] } / { x['ranking'] }</td>
           <td>
             <a href={ x['Link'] } target='_blank'>访问</a>
+          </td>
+          <td>
+            {
+              download
+            }
           </td>
         </tr>
       )
@@ -57,6 +65,7 @@ export default class extends React.Component {
                   <th>游戏</th>
                   <th>总人数/排名</th>
                   <th>成绩链接</th>
+                  <th>视频下载</th>
                 </tr>
               </thead>
               <tbody>
