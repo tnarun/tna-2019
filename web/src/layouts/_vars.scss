@@ -7,6 +7,11 @@ $link-color-high: gold;
 $light-bg-color: #01b0ff;
 $light-bg-color-high: lighten(#01b0ff, 20%);
 
+$cblue: #00eeff;
+$cgreen: #96df72;
+$corange: #fdb762;
+$cred: #ff752b;
+
 @mixin light-title {
   // font-family: 'Orbitron';
   font-family: 'Cubano', '微软雅黑';
@@ -15,19 +20,19 @@ $light-bg-color-high: lighten(#01b0ff, 20%);
 }
 
 @mixin shadow-title {
-  font-family: 'Cubano';
+  font-family: 'Cubano', '微软雅黑';
   color: $text-color;
   text-shadow: 0 0 1rem darken($light-bg-color, 20%);
 }
 
-$page-width: 66.9rem;
+$page-width: 66.9rem; // 1,070.4px
 
-$xs: 'screen and (max-width: 33.9em)';
-$sm: 'screen and (max-width: 47.9em)';
-$md: 'screen and (max-width: 61.9em)';
-$lg: 'screen and (max-width: 74.9em)';
+$xs: 'screen and (max-width: 33.9rem)';
+$sm: 'screen and (max-width: 47.9rem)';
+$md: 'screen and (max-width: 61.9rem)';
+$lg: 'screen and (max-width: 74.9rem)';
 
-$xsw: 33.9em;
-$smw: 47.9em;
-$mdw: 61.9em;
-$lgw: 74.9em;
+$xsw: 33.9rem; // 542.4px
+$smw: 47.9rem; // 766.4px
+$mdw: 61.9rem; // 990.4px
+$lgw: 74.9rem; // 1198.4px

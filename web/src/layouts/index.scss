@@ -4,6 +4,7 @@
   color: $text-color;
   font-size: 1rem;
   line-height: 1.41421356237;
+  min-height: 100vh;
 
   a { 
     color: $link-color; 
@@ -13,7 +14,7 @@
   .bg {
     position: fixed;
     width: 100vw;
-    height: 100vh;
+    height: 100%;
     background: linear-gradient(to bottom, #192224 0%, #21728b 100%);
     z-index: -1;
 
@@ -21,7 +22,7 @@
       content: '';
       position: fixed;
       width: 100vw;
-      height: 100vh;
+      height: 100%;
       background: url('../assets/images/bg-pattern.png') repeat;
     }
   }

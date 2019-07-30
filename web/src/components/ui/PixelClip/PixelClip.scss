@@ -1,0 +1,22 @@
+$sz: 5px;
+
+.PixelClip {
+  color: red;
+  display: inline-block;
+  margin-right: $sz;
+  margin-top: 3rem;
+
+  .PixelRow {
+    display: flex;
+
+    .Pixel {
+      width: $sz; height: $sz;
+      background-color: #d7ecff;
+    }
+
+    .emptyPixel {
+      width: $sz; height: $sz;
+      background-color: transparent;
+    }
+  }
+}

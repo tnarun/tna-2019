@@ -1,5 +1,5 @@
 import React from 'react'
-import data from '../../assets/submit-data/0630.json'
+import data from '../../assets/submit-data/shot19-4-6.json'
 
 import SH3 from '../../components/StrawberryH3'
 import { Container, Row, FlexBox } from '../../components/FlexBox'
@@ -9,9 +9,9 @@ import moment from 'moment'
 
 class Runner {
   constructor (d) {
-    this.speedrunId = d.Speedrunid
-    this.liveroom = d.Liveroom
-    this.biliid = d.Bilibiliid
+    this.speedrunId = d.id
+    this.liveroom = d.liveroom
+    this.biliid = d.biliid
     this.months = {
       "4": new Month("4"),
       "5": new Month("5"),
@@ -32,34 +32,32 @@ class Record {
   constructor (d) {
     Object.assign(this, d)
 
-    this._month = moment(this['时间'], 'YYYY/MM/DD HH:mm:ss').format('M')
+    this._month = moment(this['time'], 'YYYY/MM/DD HH:mm:ss').format('M')
 
     this.computeRankPlus()
   }
 
   computeRankPlus () {
+    // 计算档位奖励
+    let grade = this.grade
+
+    let gp = 0
+    if (grade === '第一档') { gp = 1 }
+    if (grade === '第二档') { gp = 2 }
+    if (grade === '第三档') { gp = 3 }
+    if (grade === '第四档') { gp = 4 }
+    if (grade === '第五档') { gp = 5 }
+
+    this.gradePlus = gp
+
     // 计算排名奖励
-    let total = ~~this.total
-    let ranking = ~~this.ranking
-    let ckValue = ~~((total - ranking) / total * 100)
+    let rp = 0
+    let rank = ~~this.rank
+    if (rank === 1) { rp = 3 }
+    if (rank >= 2 && rank <= 4) { rp = 2 }
+    if (rank >= 5 && rank <= 10) { rp = 1 }
 
-    let re = null
-    if (ckValue >= 90) { re = 3 }
-    if (ckValue >= 80 && ckValue <= 89) { re = 2 }
-    if (ckValue >= 55 && ckValue <= 79) { re = 1 }
-
-    this.rankPlus = re
-    this.ckValue = ckValue
-
-    // 计算奖杯奖励
-    let num2 = null
-    if (total > 30) {
-      if (ranking === 1) { num2 = 2 }
-      if (ranking === 2) { num2 = 1 }
-      if (ranking === 3) { num2 = 1 }
-    }
-
-    this.cupPlus = num2
+    this.rankPlus = rp
   }
 }
 
@@ -81,14 +79,6 @@ class Month {
     return bestRankPlus
   }
 
-  getBestCupPlus () {
-    let bestCupPlus = 0
-    for (let rec of this.records) {
-      bestCupPlus = Math.max(bestCupPlus, rec.cupPlus)
-    }
-    return bestCupPlus
-  }
-
   getNewRunnerPlus () {
     let newRunnerPlus = 0
     for (let rec of this.records) {
@@ -105,12 +95,18 @@ class Month {
     return modPlus
   }
 
+  getBestGradePlus () {
+    let gp = 0
+    for (let rec of this.records) {
+      gp = Math.max(gp, rec.gradePlus)
+    }
+    return gp
+  }
+
   getTotalPoint () {
     return (this.records.length > 0 ? 1 : 0)
     + this.getBestRankPlus() 
-    + this.getBestCupPlus() 
-    + this.getNewRunnerPlus() 
-    + this.getModPlus()
+    + this.getBestGradePlus()
   }
 }
 
@@ -121,7 +117,7 @@ const splitByRunner = (data) => {
 
   // 根据 runner 划分
   for (let record of records) {
-    let runnerId = record['Speedrunid']
+    let runnerId = record['id']
     if (!runners[runnerId]) {
       runners[runnerId] = new Runner(record)
       record.isNewRunner = true
@@ -231,16 +227,13 @@ class RunnerRecords extends React.Component {
             <th>月份</th>
             <th>类型</th>
             <th>游戏</th>
-            <th>总人数</th>
             <th>排名</th>
-            <th>参考值</th>
-            <th>排名奖励</th>
-            <th>奖杯奖励</th>
+            <th>档位</th>
           </tr>
         </thead>
       <tbody>
         { _months }
-        <tr><td colSpan={ 6 }>
+        <tr><td colSpan={ 3 }>
           <div style={ { fontSize: '1rem', fontWeight: 'bold' } }>
             { runner.speedrunId }
             { runner.biliid ? ` (${runner.biliid})` : null }
@@ -267,8 +260,8 @@ class RunnerMonthRecords extends React.Component {
     let lastMonth = null
 
     let _records = records.map((rec, idx) => {
-      let type = rec['Type'].includes('更新') ? '更新' : '提交'
-      let typeClass = rec['Type'].includes('更新') ? 'update' : 'new'
+      let type = rec['type'].includes('更新') ? '更新' : '提交'
+      let typeClass = rec['type'].includes('更新') ? 'update' : 'new'
 
       let isNewMonth = month !== lastMonth
       lastMonth = month
@@ -280,23 +273,19 @@ class RunnerMonthRecords extends React.Component {
         <td className={ css[typeClass] }>
           { type }
         </td>
-        <td className={ css.tdgame }>{ rec['Game'] }</td>
-        <td className={ css.tdtotal }>{ rec.total }</td>
-        <td className={ css.tdranking }>{ rec.ranking }</td>
-        <td className={ css.tdckvalue }>{ rec.ckValue }</td>
-        <td className={ css.tdnum }>{ rec.rankPlus }</td>
-        <td className={ css.tdnum }>{ rec.cupPlus }</td>
+        <td className={ css.tdgame }>{ rec.game }</td>
+        <td className={ css.tdranking }>{ rec.rank }</td>
+        <td className={ css.tdckvalue }>{ rec.grade }</td>
       </tr>
     })
 
-    let bestRankPlus = month.getBestRankPlus()
-    let bestCupPlus = month.getBestCupPlus()
     let newRunnerPlus = month.getNewRunnerPlus()
-    let modPlus = month.getModPlus()
+    let bestGradePlus = month.getBestGradePlus()
+    let bestRankPlus = month.getBestRankPlus()
 
     return mcount > 0 ? <>
       { _records }
-      <tr><td className={ css.tdpoints } colSpan={ 7 }>
+      <tr><td className={ css.tdpoints } colSpan={ 4 }>
       <span className={ css.p }><span className={ css.pn }>1</span> (参与)</span>
       {
         newRunnerPlus > 0 ? 
@@ -313,17 +302,10 @@ class RunnerMonthRecords extends React.Component {
         </>: null
       }
       {
-        bestCupPlus > 0 ? 
+        bestGradePlus > 0 ? 
         <>
           <span> ＋ </span>
-          <span className={ css.p }><span className={ css.pn }>{ bestCupPlus }</span> (最佳奖杯)</span> 
-        </>: null
-      }
-      {
-        modPlus > 0 ? 
-        <>
-          <span> ＋ </span>
-          <span className={ css.p }><span className={ css.pn }>{ modPlus }</span> (推荐游戏)</span> 
+          <span className={ css.p }><span className={ css.pn }>{ bestGradePlus }</span> (最佳档位)</span> 
         </>: null
       }
       <span> ＝ </span>

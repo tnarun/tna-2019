@@ -4,7 +4,7 @@ import btaxl from '../assets/images/award/4-btaxl.png'
 import btbf from '../assets/images/award/4-btbf.png'
 import benq27 from '../assets/images/award/benq27.png'
 import gtx1660 from '../assets/images/award/gtx1660.png'
-import rtx2060 from '../assets/images/award/rtx2060.png'
+// import rtx2060 from '../assets/images/award/rtx2060.png'
 
 import Card from './Card'
 
@@ -54,7 +54,6 @@ export default () => {
 
       <Prize
         img={ gtx1660 }
-        link={ 'javascript:;' }
         text='七彩虹 igame GTX 1660ti'
         count='1'
         price='--' />

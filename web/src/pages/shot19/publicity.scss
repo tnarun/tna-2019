@@ -73,6 +73,15 @@ table.records {
         // font-size: 1rem;
       }
     }
+
+    td.runnerPoint {
+      color: rgba(white, 0.6);
+    }
+    td.runnerPoint span {
+      color: gold;
+      font-weight: bold;
+      font-size: 1rem;
+    }
   }
 }
 

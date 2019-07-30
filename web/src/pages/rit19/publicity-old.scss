@@ -1,0 +1,35 @@
+@import '../../layouts/vars';
+
+table.records {
+  width: 100%;
+  border-spacing: 0;
+  font-size: .9rem;
+  border: solid .1rem $text-color;
+  box-shadow: 0 0 1rem $light-bg-color;
+  // font-family: 'DIN-black';
+  // font-family: 'Cubano', '微软雅黑';
+  margin-bottom: 3rem;
+  background: rgba(black, 0.5);
+
+  thead {
+    tr th {
+      border-bottom: solid 1px $text-color;
+      padding: 0.5rem 0.5rem;
+      text-align: left;
+    }
+  }
+
+  tbody {
+    tr td {
+      border-bottom: solid 1px $text-color;
+      padding: 0.5rem 0.5rem;
+    }
+
+    td.new {
+      color: greenyellow;
+    }
+    td.update {
+      color: gold;
+    }
+  }
+}

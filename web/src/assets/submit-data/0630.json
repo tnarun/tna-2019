@@ -53,12 +53,13 @@
     "videoDownload": null
   },
   {
+    "modPlus": true,
     "时间": "2019/05/31 14:11:17",
     "Speedrunid": "Arsenbor",
     "Bilibiliid": "Arsenbor",
     "Liveroom": "https://live.bilibili.com/4548508",
     "Type": "我要提交新项目的成绩",
-    "Game": "之狼  Glitchless",
+    "Game": "只狼 Glitchless",
     "total": 30,
     "ranking": 16,
     "Link": "https://www.speedrun.com/sekiro/run/zqr6kj1y",
@@ -66,6 +67,7 @@
     "videoDownload": "94518553-1-80.mp4"
   },
   {
+    "modPlus": true,
     "时间": "2019/05/30 17:21:58",
     "Speedrunid": "simeng.",
     "Bilibiliid": "痴人思梦",
@@ -105,6 +107,7 @@
     "videoDownload": "93647015-1-64.mp4"
   },
   {
+    "modPlus": true,
     "时间": "2019/05/23 19:27:46",
     "Speedrunid": "CShadowShen",
     "Bilibiliid": "我尼玛爆啊",
@@ -118,6 +121,7 @@
     "videoDownload": "sekiro-any.mp4"
   },
   {
+    "modPlus": true,
     "时间": "2019/05/22 12:52:02",
     "Speedrunid": "E1uM4y",
     "Bilibiliid": "E1uM4y",
@@ -131,6 +135,7 @@
     "videoDownload": "93101236-1-80.mp4"
   },
   {
+    "modPlus": true,
     "时间": "2019/05/22 12:49:41",
     "Speedrunid": "E1uM4y",
     "Bilibiliid": "E1uM4y",
@@ -144,6 +149,7 @@
     "videoDownload": "92316979-1-80.mp4"
   },
   {
+    "modPlus": true,
     "时间": "2019/05/21 22:27:38",
     "Speedrunid": "Hillman",
     "Bilibiliid": "爬山姗",
@@ -157,6 +163,7 @@
     "videoDownload": "celeste-2a.mp4"
   },
   {
+    "modPlus": true,
     "时间": "2019/05/14 18:12:26",
     "Speedrunid": "LetMeSees",
     "Bilibiliid": "海边油条",
@@ -170,6 +177,7 @@
     "videoDownload": "91290419-1-80.mp4"
   },
   {
+    "modPlus": true,
     "时间": "2019/05/14 12:03:45",
     "Speedrunid": "bilibili_xiaozhi",
     "Bilibiliid": "Ashes小志",
@@ -209,6 +217,7 @@
     "videoDownload": "85495893-1-80.mp4"
   },
   {
+    "modPlus": true,
     "时间": "2019/05/04 17:39:44",
     "Speedrunid": "Mazirika",
     "Bilibiliid": "YYの物语",
@@ -222,6 +231,7 @@
     "videoDownload": "90773199-1-80.mp4"
   },
   {
+    "modPlus": true,
     "时间": "2019/05/03 19:17:33",
     "Speedrunid": "Mazirika",
     "Bilibiliid": "YYの物语",
@@ -235,6 +245,7 @@
     "videoDownload": "90773199-1-80.mp4"
   },
   {
+    "modPlus": true,
     "时间": "2019/04/30 23:20:16",
     "Speedrunid": "DemoJameson",
     "Bilibiliid": "DemoJameson",
@@ -248,6 +259,7 @@
     "videoDownload": "celeste-any.mp4"
   },
   {
+    "modPlus": true,
     "时间": "2019/04/29 16:11:38",
     "Speedrunid": "skygrass",
     "Bilibiliid": "幻金皓月",
@@ -261,6 +273,7 @@
     "videoDownload": "88570099-1-64.mp4"
   },
   {
+    "modPlus": true,
     "时间": "2019/04/28 02:39:43",
     "Speedrunid": "bilibili_xiaozhi",
     "Bilibiliid": "Ashes小志",
@@ -277,7 +290,7 @@
     "时间": "2019/04/27 19:50:34",
     "Speedrunid": "LanQiu",
     "Bilibiliid": "BBBasketball丶",
-    "Liveroom": "斗鱼3075488",
+    "Liveroom": "https://www.douyu.com/3075488",
     "Type": "我要提交新项目的成绩",
     "Game": "仁王PS4版Any%",
     "total": 3,
@@ -287,6 +300,7 @@
     "videoDownload": "88139044-1-80.mp4"
   },
   {
+    "modPlus": true,
     "时间": "2019/04/27 18:40:18",
     "Speedrunid": "bilibili_xiaozhi",
     "Bilibiliid": "Ashes小志",
@@ -313,10 +327,11 @@
     "videoDownload": "songshu.mp4"
   },
   {
+    "modPlus": true,
     "时间": "2019/04/26 16:00:41",
     "Speedrunid": "Pegaiur",
     "Bilibiliid": "Pegaiur",
-    "Liveroom": "huya.com/pegaiur",
+    "Liveroom": "https://www.huya.com/pegaiur",
     "Type": "我要更新原有成绩",
     "Game": "Resident Evil 2 (2019) New Game (PC) - Leon, Standard, 120",
     "total": 112,
@@ -352,6 +367,7 @@
     "videoDownload": "dmc5-h-pro.mp4"
   },
   {
+    "modPlus": true,
     "时间": "2019/04/22 16:34:02",
     "Speedrunid": "Mazirika",
     "Bilibiliid": "YYの物语",
@@ -365,6 +381,7 @@
     "videoDownload": "90773199-1-80.mp4"
   },
   {
+    "modPlus": true,
     "时间": "2019/04/22 16:28:04",
     "Speedrunid": "Mazirika",
     "Bilibiliid": "YYの物语",
@@ -391,6 +408,7 @@
     "videoDownload": null
   },
   {
+    "modPlus": true,
     "时间": "2019/04/21 13:02:44",
     "Speedrunid": "Hillman",
     "Bilibiliid": "爬山姗",

@@ -3,17 +3,18 @@
 table.records {
   width: 100%;
   border-spacing: 0;
-  font-size: .9rem;
+  font-size: .8rem;
   border: solid .1rem $text-color;
   box-shadow: 0 0 1rem $light-bg-color;
   // font-family: 'DIN-black';
   // font-family: 'Cubano', '微软雅黑';
-  margin-bottom: 3rem;
+  margin-bottom: 1rem;
   background: rgba(black, 0.5);
 
   thead {
     tr th {
       border-bottom: solid 1px $text-color;
+      border-right: solid 1px $text-color;
       padding: 0.5rem 0.5rem;
       text-align: left;
     }
@@ -22,6 +23,7 @@ table.records {
   tbody {
     tr td {
       border-bottom: solid 1px $text-color;
+      border-right: solid 1px $text-color;
       padding: 0.5rem 0.5rem;
     }
 
@@ -31,5 +33,78 @@ table.records {
     td.update {
       color: gold;
     }
+
+    td.tdmonth {
+      width: 2.5rem;
+    }
+    td.new, td.update {
+      width: 2.5rem;
+    }
+    td.tdgame {
+      // font-size: 0.8rem;
+      width: 24rem;
+    }
+    td.tdtotal, td.tdranking, td.tdckvalue {
+      width: 2.5rem;
+    }
+    td.tdnum {
+      width: 4rem;
+      color: gold;
+      // font-weight: bold;
+    }
+
+    td.tdrunner {
+      font-weight: bold;
+      text-align: right;
+    }
+
+    td.tdpoints {
+      text-align: right;
+      span.p {
+        color: rgba(white, 0.6);
+        span.pn {
+          color: gold;
+          font-weight: bold;
+        }
+      }
+      span.finalpoint {
+        color: gold;
+        font-weight: bold;
+        // font-size: 1rem;
+      }
+    }
+
+    td.runnerPoint {
+      color: rgba(white, 0.6);
+    }
+    td.runnerPoint span {
+      color: gold;
+      font-weight: bold;
+      font-size: 1rem;
+    }
+  }
+}
+
+table.points {
+  width: 100%;
+  border-spacing: 0;
+  font-size: .8rem;
+  border: solid .1rem $text-color;
+  box-shadow: 0 0 1rem $light-bg-color;
+  // font-family: 'DIN-black';
+  // font-family: 'Cubano', '微软雅黑';
+  margin-bottom: 1rem;
+  background: rgba(black, 0.5);
+
+  tr th, tr td {
+    border-bottom: solid 1px $text-color;
+    border-right: solid 1px $text-color;
+    padding: 0.5rem 0.5rem;
+    text-align: left;
+  }
+
+  td.finalpoint {
+    color: gold;
+    font-weight: bold;
   }
 }

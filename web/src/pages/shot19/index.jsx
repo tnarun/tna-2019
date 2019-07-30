@@ -16,6 +16,15 @@ const CoolLink = (props) => (
   </div>
 )
 
+const Publicity = () => (
+  <>
+  <SH3>成绩公示 <span>publicity</span></SH3>
+  <IBox>
+    <CoolLink href='/shot19/publicity' target='_blank' rel='noopener noreferrer'>点这里查看已提交的成绩</CoolLink>
+  </IBox>
+  </>
+)
+
 const Table = ({ name, scores }) => (
   <table>
     <thead>
@@ -74,6 +83,7 @@ export default class extends React.Component {
               <IBox>
                 <CoolLink href='https://shimo.im/forms/LMlDFo1DBfoAt8SL/fill' target='_blank' rel='noopener noreferrer'>点这里提交你的成绩</CoolLink>
               </IBox>
+              <Publicity />
               <div className={ css.doc }>
                 <SH3>活动介绍 <span>intro</span></SH3>
                 <IBox>

@@ -8,30 +8,6 @@ import { day1, day2, images } from '../../data/kksk-show.js'
 import Iconfont from '@/components/Iconfont'
 import QRCode from 'qrcode'
 
-// const numberZero = (n) => {
-//   return n >= 10 ? n : `0${n}`
-// }
-
-class PlayTime extends React.Component {
-  render () {
-    // let { time } = this.props
-    // let duration = moment.duration(time)
-  
-    // let h = duration.hours()
-    // let m = duration.minutes()
-  
-    // let _h = h > 0 ? `${h} 小时` : ''
-    // let _m = m > 0 ? `${numberZero(m)} 分钟` : ''
-    // let str = [_h, _m].join(' ')
-  
-    // return (
-    //   // <span className={ css.playtime }><Iconfont name='clock' /> { str }</span>
-    //   null
-    // )
-    return null
-  }
-}
-
 const Table = ({ data }) => {
   let _trs = data.map((d, idx) => {
     if (d.prologue) {
