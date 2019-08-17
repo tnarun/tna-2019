@@ -21,8 +21,6 @@ export default class extends React.Component {
           </FlexBox>
         </Row>
       </Container>
-
-      <h3></h3>
     </div>
   }
 

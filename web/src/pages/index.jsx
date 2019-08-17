@@ -64,7 +64,7 @@ export default () => {
           <span>web 开发：</span>
           <a href='https://weibo.com/ben7th' target='_blank' rel='noopener noreferrer'>@洋气书生</a>
         </div>
-        <div>TNA 组委会 ©️ 2019</div>
+        <div>TNA 组委会 &copy; 2019</div>
       </div>
 
       {/* <div className={ css.ct }>
