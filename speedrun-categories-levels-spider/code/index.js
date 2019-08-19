@@ -17,6 +17,14 @@ const getCurrentOffset = async () => {
   return ss.currentOffset
 }
 
+const saveNewOffset = async () => {
+  let ss = await SpiderStep.findOne({ spiderName: SPIDER_NAME })
+  let newOffset = ss.currentOffset + 1
+  if (newOffset >= OFFSET_END) { newOffset = OFFSET_START }
+  ss.currentOffset = newOffset
+  await ss.save()
+}
+
 const func = async () => {
   let categories = []
   let levels = []
@@ -25,34 +33,28 @@ const func = async () => {
     let offset = await getCurrentOffset()
     let game = await Game.findOne().skip(offset)
 
-    // 分类
+    // 分类与关卡与变量
+    // embed=categories.variables,levels.variables
     if (game) {
       let { speedrunId } = game
-      let url = `https://www.speedrun.com/api/v1/games/${ speedrunId }/categories`
+      let url = `https://www.speedrun.com/api/v1/games/${ speedrunId }?embed=categories.variables,levels.variables`
       console.log({ url })
 
       let res = await fetch(url)
       let resData = await res.json()
 
-      for (let d of resData.data) {
+      let resCategories = resData.data.categories.data
+      let resLevels = resData.data.levels.data
+
+      for (let d of resCategories) {
         let category = await CategoryORM.createOrUpdate({ 
           gameId: speedrunId,
           speedrunData: d 
         })
         categories.push(category)
       }
-    }
 
-    // 关卡
-    if (game) {
-      let { speedrunId } = game
-      let url = `https://www.speedrun.com/api/v1/games/${ speedrunId }/levels`
-      console.log({ url })
-
-      let res = await fetch(url)
-      let resData = await res.json()
-
-      for (let d of resData.data) {
+      for (let d of resLevels) {
         let level = await LevelORM.createOrUpdate({ 
           gameId: speedrunId,
           speedrunData: d 
@@ -61,11 +63,7 @@ const func = async () => {
       }
     }
 
-    let ss = await SpiderStep.findOne({ spiderName: SPIDER_NAME })
-    let newOffset = ss.currentOffset + 1
-    if (newOffset >= OFFSET_END) { newOffset = OFFSET_START }
-    ss.currentOffset = newOffset
-    await ss.save()
+    await saveNewOffset()
   })
 
   return { categories, levels }
