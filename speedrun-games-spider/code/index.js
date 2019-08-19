@@ -13,7 +13,7 @@ const getSpeedrunGames = async () => {
     let spiderName = SPIDER_NAME
     let offset = await SpiderStepORM.getCurrentOffset({ spiderName })
     let max = 200
-    let url = `https://www.speedrun.com/api/v1/games?offset=${ offset }&max=${ max }`
+    let url = `https://www.speedrun.com/api/v1/games?orderby=created&direction=asc&offset=${ offset }&max=${ max }`
     console.log({ url })
 
     let res = await fetch(url)
