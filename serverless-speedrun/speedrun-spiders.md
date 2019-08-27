@@ -4,13 +4,14 @@
 
 ## 以下资源目已通过爬虫采集
 
-- categories 游戏速通规则分类
 - games 游戏
+- categories 游戏速通规则分类
+  - variables 游戏变量（规则下的子选项）
 - levels 游戏关卡
+  - variables 游戏变量（关卡下的子选项）
 - platforms 游戏平台
 - runs 速通成绩
 - series 游戏系列
-- variables 游戏变量（规则下的子选项）
 
 ## 以下资源计划通过爬虫采集
 
@@ -35,3 +36,12 @@
   <https://github.com/speedruncomorg/api/blob/master/version1/embedding.md>
 - pagination 分页查询
   <https://github.com/speedruncomorg/api/blob/master/version1/pagination.md>
+
+## 爬虫清单
+
+- speedrun-games-spider  
+  负责抓取 games 数据；共 10 个爬虫，抓取下标范围为 0-20000；每个爬虫运行的时间间隔为 10 分钟；会以 embed 的形式同时抓取 levels,categories,moderators,gametypes,platforms,regions,genres,engines,developers,publishers,variables. 保存在同一 document 里；  
+
+- speedrun-platforms-spider
+  负责抓取 platfotms 数据；1 个爬虫；运行时间间隔为 24 小时（每天 0 点）；
+  每次抓取时更新全部 platforms 记录数据（目前为 125 条）
