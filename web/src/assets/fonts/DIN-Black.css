@@ -1,0 +1,7 @@
+@font-face {
+  font-family: 'DIN-Black';
+  src: url('//tna-web.oss-ap-southeast-1.aliyuncs.com/assets/fonts/DIN-Black/din-black-webfont.woff2') format('woff2'),
+       url('//tna-web.oss-ap-southeast-1.aliyuncs.com/assets/fonts/DIN-Black/din-black-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}

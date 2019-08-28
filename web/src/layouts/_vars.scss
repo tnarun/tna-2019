@@ -1,3 +1,6 @@
+// 字体工具
+// https://www.fontsquirrel.com/tools/webfont-generator
+
 $text-color: #d7ecff;
 $text-color-gold: #ffef99;
 
@@ -11,6 +14,14 @@ $cblue: #00eeff;
 $cgreen: #96df72;
 $corange: #fdb762;
 $cred: #ff752b;
+
+$ctna: #01b0ff;
+$ckksk: #db2d4c;
+$crit: darken(#fdb762, 10%);
+
+$fontCubano: 'Cubano', '微软雅黑';
+$fontDIN: 'DIN-Black', '微软雅黑';
+$fontOrbitron: 'Orbitron', '微软雅黑';
 
 @mixin light-title {
   // font-family: 'Orbitron';

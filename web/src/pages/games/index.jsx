@@ -1,30 +1,41 @@
-const games = [
-  're2remake',
-  'Celeste',
-  'sm64',
-  'smo',
-  'supermetroid',
-  'alttp',
-  'sekiro',
-  'mhw',
-  'oot',
-  'ror2',
-  'mk8dx',
-  'goiwbf',
-  'sms',
-  'bfbb',
-  'smb1',
-  'The_Messenger',
-  'Portal',
-  'smw',
-  'gtavc',
-  'Outlast'
-]
+import React from 'react'
 
-export default () => (
-  <div style={{ backgroundColor: 'rgba(0,0,0,0.4)', padding: '1rem' }}>
-    {
-      games.map(g => <div key={ g }><a href={ `/games/${g}` }>{g}</a></div>)
-    }
-  </div>
-)
+import css from './index.scss'
+import PageHeader from '../../components/PageHeader'
+import TNALogo from '../../components/grids/TNALogo'
+import WidthContainer from '../../components/layouts/WidthContainer'
+
+export default () => {
+  return (
+    <div className={ css.games }>
+      <PH />
+      <WidthContainer>
+        <div className={ css.gamesgrids }>
+          <div className={ css.logo }>
+            <TNALogo />
+          </div>
+          <div className={ css.game }></div>
+          <div className={ css.game }></div>
+          <div className={ css.game }></div>
+          <div className={ css.game }></div>
+          <div className={ css.game }></div>
+          <div className={ css.game }></div>
+          <div className={ css.game }></div>
+          <div className={ css.game }></div>
+          <div className={ css.game }></div>
+          <div className={ css.game }></div>
+          <div className={ css.game }></div>
+          <div className={ css.game }></div>
+          <div className={ css.game }></div>
+        </div>
+      </WidthContainer>
+    </div>
+  )
+}
+
+const PH = () => {
+  return <PageHeader>
+    <h1>TNA Games</h1>
+    <h2>Game Info & Speedrun</h2>
+  </PageHeader>
+}
