@@ -1,5 +1,13 @@
 @import '../../layouts/vars';
 
+.games {
+  .hd {
+    h1, h2 {
+      text-shadow: 0 0 1rem $light-bg-color !important;
+    }
+  }
+}
+
 .gamesgrids {
   $GAP: .3rem;
   $MIN-GRID-WIDTH: 16rem;

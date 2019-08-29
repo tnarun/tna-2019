@@ -1,7 +1,7 @@
 import React from 'react'
 
 import css from './index.scss'
-import PageHeader from '../../components/PageHeader'
+import PageHeader from '../../components/layouts/PageHeaderV2'
 import TNALogo from '../../components/grids/TNALogo'
 import WidthContainer from '../../components/layouts/WidthContainer'
 
@@ -34,8 +34,8 @@ export default () => {
 }
 
 const PH = () => {
-  return <PageHeader>
-    <h1>TNA Games</h1>
-    <h2>Game Info & Speedrun</h2>
-  </PageHeader>
+  return <div className={ css.hd }><PageHeader>
+    <h1>TNA Game Reactor</h1>
+    <h2>速通反应堆</h2>
+  </PageHeader></div>
 }

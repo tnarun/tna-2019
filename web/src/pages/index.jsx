@@ -75,23 +75,12 @@ export default () => {
           <div className={ css.show }>
             <div className={ css.xgames }>
               <div className={ css.s1 }>TNA × Speedrun</div>
-              <div className={ css.s2 }>Games Stack</div>
+              <div className={ css.s2 }>Game Reactor</div>
               <div className={ css.s3 }>正在开发，即将上线</div>
             </div>
           </div>
         </div>
       </WidthContainer>
-
-      {/* <WidthContainer>
-        <div className={ css.shows }>
-          <div className={ css.logo }>
-            <TNALogo />
-          </div>
-          <SERIES data={ series.TNA } />
-          <SERIES data={ series.RIT } />
-          <SERIES data={ series.KKSK } />
-        </div>
-      </WidthContainer> */}
 
       <WidthContainer>
         <Footer />
