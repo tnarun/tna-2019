@@ -37,7 +37,6 @@ const func = async () => {
     // embed=categories.variables,levels.variables
     if (game) {
       let { speedrunId } = game
-      // speedrunId = 'o1y9zk26'
       let url = `https://www.speedrun.com/api/v1/games/${ speedrunId }?embed=categories.variables,levels.variables`
       console.log({ url })
 

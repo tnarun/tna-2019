@@ -15,6 +15,13 @@ const getCurrentOffset = async () => {
   return ss.currentOffset
 }
 
+const saveNewOffset = async ({ count }) => {
+  let ss = await SpiderStep.findOne({ spiderName: SPIDER_NAME })
+  let newOffset = ss.currentOffset + count
+  ss.currentOffset = newOffset
+  await ss.save()
+}
+
 const func = async () => {
   let runs = []
 
@@ -32,10 +39,7 @@ const func = async () => {
       runs.push(run)
     }
 
-    let count = runs.length
-    let ss = await SpiderStep.findOne({ spiderName: SPIDER_NAME })
-    ss.currentOffset = ss.currentOffset + count
-    await ss.save()
+    await saveNewOffset({ count: runs.length })
   })
 
   return runs
@@ -44,6 +48,6 @@ const func = async () => {
 module.exports.handler = (event, context, callback) => {
   console.log(new String(event))
   func().then(runs => {
-    callback(null, runs.length)
+    callback(null, { runs: runs.length })
   })
 }
