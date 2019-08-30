@@ -2,9 +2,13 @@ const Run = require('../models/Run')
 
 const _packData = ({ speedrunData }) => {
   let speedrunId = speedrunData.id
+  let gameId = speedrunData.game
+  let categoryId = speedrunData.category
+  let levelId = speedrunData.level
 
   return {
     speedrunId, 
+    gameId, categoryId, levelId,
     speedrunData, 
     updatedAt: new Date() 
   }
@@ -16,7 +20,7 @@ const _create = async ({ speedrunData }) => {
   return run
 }
 
-const _uodate = async ({ speedrunData }) => {
+const _update = async ({ speedrunData }) => {
   let d = _packData({ speedrunData })
   let run = await Run.updateOne({ speedrunId: speedrunData.id }, d)
   return run
@@ -29,7 +33,7 @@ const createOrUpdate = async ({ speedrunData }) => {
   if (!run) {
     return await _create({ speedrunData })
   } else {
-    return await _uodate({ speedrunData })
+    return await _update({ speedrunData })
   }
 }
 

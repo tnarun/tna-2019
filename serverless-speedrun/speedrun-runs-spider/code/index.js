@@ -1,25 +1,27 @@
 const fetch = require('node-fetch')
 const { db } = require('ben7th-fc-utils')
+const queryString = require('query-string')
 
 const RunORM = require('./orm/RunORM')
-const SpiderStep = require('./models/SpiderStep')
+const { getCurrentOffset, saveNewOffset } = require('./orm/SpiderStepLogic')
 
-const { SPIDER_NAME } = process.env
+const { OFFSET_END } = process.env
 
-const getCurrentOffset = async () => {
-  let spiderName = SPIDER_NAME
-  let ss = await SpiderStep.findOne({ spiderName })
-  if (!ss) {
-    ss = await SpiderStep.create({ spiderName, currentOffset: 0 })
-  }
-  return ss.currentOffset
-}
+const buildURL = ({ offset, max }) => {
+  let path = 'https://www.speedrun.com/api/v1/runs'
 
-const saveNewOffset = async ({ count }) => {
-  let ss = await SpiderStep.findOne({ spiderName: SPIDER_NAME })
-  let newOffset = ss.currentOffset + count
-  ss.currentOffset = newOffset
-  await ss.save()
+  /**
+   * 查询参数考虑：
+   * 只抓 status = verified 审核通过的成绩
+   * 按照 verify-date direction=asc 排序
+   */
+  let qstring = queryString.stringify({
+    offset, max,
+    status: 'verified',
+    orderby: 'verify-date',
+    embed: 'players'
+  })
+  return `${ path }?${ qstring }`
 }
 
 const func = async () => {
@@ -27,8 +29,12 @@ const func = async () => {
 
   await db.connectDB(async () => {
     let offset = await getCurrentOffset()
+    if (offset >= OFFSET_END) {
+      return
+    }
+
     let max = 200
-    let url = `https://www.speedrun.com/api/v1/runs?orderby=submitted&offset=${ offset }&max=${ max }`
+    let url = buildURL({ offset, max })
     console.log({ url })
 
     let res = await fetch(url)
@@ -39,7 +45,7 @@ const func = async () => {
       runs.push(run)
     }
 
-    await saveNewOffset({ count: runs.length })
+    await saveNewOffset({ add: runs.length })
   })
 
   return runs

@@ -9,8 +9,6 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "ben7th-fc-utils": "^1.0.2",
-    "node-fetch": "^2.6.0",
-    "query-string": "^6.8.2"
+    "ben7th-fc-utils": "^1.0.2"
   }
 }

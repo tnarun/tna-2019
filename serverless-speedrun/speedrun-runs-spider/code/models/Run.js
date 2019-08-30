@@ -1,8 +1,16 @@
 const mongoose = require('mongoose')
 
+// https://github.com/Automattic/mongoose/issues/6890
+mongoose.set('useCreateIndex', true)
+
 const Run = new mongoose.Schema({
   // speedrun ID
   speedrunId: { type: String, unique: true, required: true },
+
+  // speedrun Game, Category, Level ID
+  gameId: { type: String, index: true, required: true },
+  categoryId: { type: String, index: true },
+  levelId: { type: String, index: true },
 
   // speedrun 成绩元数据
   // https://www.speedrun.com/api/v1/runs res.data[0]
