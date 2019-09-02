@@ -72,6 +72,14 @@
   2019-08-30 UPDATE:
   - 由于目前已经基本爬完了，把频率调整为 15 分钟
 
+- speedrun-game-records-spider
+  数量：18 停用
+  频率：1 分钟
+  Timeout: 60
+  MemorySize: 256
+  - 18 个爬虫，每个负责反复抓取 1000 个游戏对应的记录
+  - 约 16 小时 40 分钟运行一轮，会更新所有游戏的相关数据
+
 - speedrun-categories-levels-spider
   数量：18 停用
   频率：1 分钟

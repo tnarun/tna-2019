@@ -1,5 +1,8 @@
 const mongoose = require('mongoose')
 
+// https://github.com/Automattic/mongoose/issues/6890
+mongoose.set('useCreateIndex', true)
+
 const Game = new mongoose.Schema({
   // speedrun ID
   speedrunId: { type: String, unique: true, required: true },

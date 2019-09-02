@@ -7,8 +7,8 @@ import PageHeader from '../../components/layouts/PageHeaderV2'
 import WidthContainer from '../../components/layouts/WidthContainer'
 import Logo from '../../components/grids/Logo'
 
-const BAOMING_URL = 'https://shimo.im/forms/cBvAroZP88gjbyQd/fill'
-const UPLOAD_URL = 'http://tnarun.com/tna3-upload/index.html'
+// const BAOMING_URL = 'https://shimo.im/forms/cBvAroZP88gjbyQd/fill'
+// const UPLOAD_URL = 'http://tnarun.com/tna3-upload/index.html'
 
 const HUYA_ROOM = 'https://www.huya.com/15479446'
 const BILI_ROOM = 'https://live.bilibili.com/38593'
@@ -42,9 +42,8 @@ export default class extends React.Component {
           </div>
           <div className={ css.reg }>
             <div className={ css.gridName }>报名入口</div>
-            <div className={ css.btns }>
-              <a className={ css.b1 } href={ BAOMING_URL } target='_blank' rel='noopener noreferrer'>填写报名表</a>
-              <a className={ css.b2 } href={ UPLOAD_URL } target='_blank' rel='noopener noreferrer'>上传视频</a>
+            <div className={ css.bmjz }>
+              报名已截止
             </div>
           </div>
         </div>
@@ -93,7 +92,7 @@ const Timeline = () => {
         <span>正式招募开始</span>
       </div>
     </div>
-    <div className={ css.duetimepoint }>
+    <div className={ css.timepoint }>
       <div className={ css.date }>2019-08-31</div>
       <div className={ css.event }>
         <span>报名截止</span>
