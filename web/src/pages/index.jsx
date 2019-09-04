@@ -11,7 +11,11 @@ export default () => {
   return (
     <div className={ css.index }>
       <PageTopBlue height={ '24rem' }/>
-      <PH />
+      
+      <PageHeader>
+        <h1>Together Not Alone</h1>
+        <h2 className={ css.siteCNTitle }>中文速通圈活动站</h2>
+      </PageHeader>
 
       <WidthContainer>
         <div className={ css.showGrids }>
@@ -34,7 +38,7 @@ export default () => {
             </div>
             <a className={ css.tna3 } href='/tna3'>
               <div className={ css.s1 }>Season 3</div>
-              <div className={ css.s2 }>2019-10 即将到来</div>
+              <div className={ css.s2 }>2019-10-04</div>
             </a>
           </div>
 
@@ -63,13 +67,13 @@ export default () => {
             </div>
             <a className={ css.kksk1 } href='/kksk'>
               <div className={ css.season }>
-                <div>Season 1</div>
-                <div className={ css.s }>北京场</div>
+                <div>Station 1</div>
+                <div className={ css.s }>北京站</div>
               </div>
             </a>
-            <a className={ css.kksknext } href='https://www.gcores.com/articles/113979' target='_blank' rel='noopener noreferrer'>
-              <div className={ css.s1 }>Next Season</div>
-              <div className={ css.s2 }>正在积极准备</div>
+            <a className={ css.kksknext } href='/kksk2'>
+              <div className={ css.s1 }>Station 2</div>
+              <div className={ css.s2 }>杭州站</div>
             </a>
           </div>
           <div className={ css.show }>
@@ -87,13 +91,6 @@ export default () => {
       </WidthContainer>
     </div>
   )
-}
-
-const PH = () => {
-  return <PageHeader>
-    <h1>Together Not Alone</h1>
-    <h2>中文速通圈活动站</h2>
-  </PageHeader>
 }
 
 const Footer = () => {

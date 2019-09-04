@@ -1,0 +1,14 @@
+@font-face {
+  font-family: "tna-site-title";
+  src: url("//tna-upload.oss-cn-shanghai.aliyuncs.com/assets/fonts/2019-09-04/YuWeiShuFaXingShuJianTi-1.eot"); /* IE9 */
+  src: url("//tna-upload.oss-cn-shanghai.aliyuncs.com/assets/fonts/2019-09-04/YuWeiShuFaXingShuJianTi-1.eot?#iefix") format("embedded-opentype"), /* IE6-IE8 */
+  
+  url("//tna-upload.oss-cn-shanghai.aliyuncs.com/assets/fonts/2019-09-04/YuWeiShuFaXingShuJianTi-1.woff") format("woff"), /* chrome、firefox */
+  url("//tna-upload.oss-cn-shanghai.aliyuncs.com/assets/fonts/2019-09-04/YuWeiShuFaXingShuJianTi-1.ttf") format("truetype"), /* chrome、firefox、opera、Safari, Android, iOS 4.2+ */
+  
+  url("//tna-upload.oss-cn-shanghai.aliyuncs.com/assets/fonts/2019-09-04/YuWeiShuFaXingShuJianTi-1.svg#YuWeiShuFaXingShuJianTi-1") format("svg"); /* iOS 4.1- */
+  font-style: normal;
+  font-weight: normal;
+}
+
+

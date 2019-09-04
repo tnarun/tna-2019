@@ -1,0 +1,200 @@
+---
+    -
+        cnName: I wanna be the Permanence 2
+        enName: I wanna be the Permanence 2
+        abbr: iwbtpermanence2
+        category: Any%
+        player: 凡人
+        est: PT2H30M
+        guide: code
+    -
+        cnName: 苍蓝雷霆
+        enName: Azure Strike Gunvolt
+        abbr: gunvolt
+        category: speedrun mode
+        player: 晓夜
+        est: PT1H40M
+        guide: 优雅的美美
+    -
+        cnName: 超惑星战记 ZERO
+        enName: Blaster Master Zero
+        abbr: Blaster_Master_Zero
+        category: Any%
+        player: 埃尔文
+        est: PT55M
+        guide: 
+    -
+        cnName: 超级马里奥 64
+        enName: Super Mario 64
+        abbr: sm64
+        category: 类目待定
+        player: Cheese05
+        est: 
+        guide: 
+    -
+        cnName: 打击者 1945 III（1999）
+        enName: Strikers 1945 III
+        abbr: Strikers_1945_III
+        category: 二周目通关
+        player: lest_TAQ
+        est: PT30M
+        guide: 
+    -
+        cnName: 怪物猎人：世界
+        enName: Moster Hunter：World
+        abbr: mhw
+        category: 冰原TA
+        player: 诗皖
+        est: 
+        guide: 不可燃废料
+    -
+        cnName: 空洞骑士
+        enName: Hollow Knight
+        abbr: hollowknight
+        category: 神居五门
+        player: 废料女粉
+        est: PT40M
+        guide: 港湾、微米
+    -
+        cnName: 空洞骑士
+        enName: Hollow Knight
+        abbr: hollowknight
+        category: NMG bingo race
+        player: FF
+        est: PT2H30M
+        guide: 创世、魔术师
+    -
+        cnName: 空洞骑士
+        enName: Hollow Knight
+        abbr: hollowknight
+        category: NMG bingo race
+        player: gcghvcg
+        est: PT2H30M
+        guide: 创世、魔术师
+    -
+        cnName: 精灵宝可梦：黄
+        enName: Pokemon Yellow
+        abbr: pkmnyellow
+        category: Any% Glitchless
+        player: 六魂
+        est: PT2H15M
+        guide: 
+    -
+        cnName: 决意-绊地狱
+        enName: "Ketsui: Kizuna Jigoku Tachi"
+        abbr: Ketsui_Kizuna_Jigoku_Tachi
+        category: Any %
+        player: ixix91
+        est: PT50M
+        guide: 
+    -
+        cnName: 炉石传说：纳克萨玛斯的诅咒
+        enName: "HearthStone: Curse of Naxxramas"
+        abbr: naxxramas
+        category: 英雄模式
+        player: Code
+        est: PT1H25M
+        guide: 
+    -
+        cnName: 洛可酱
+        enName: Rokko Chan
+        abbr: 
+        category: Any%
+        player: 优雅的美美
+        est: PT30M
+        guide: 优雅的美美
+        megaAbbr: rokko
+        megaPage: https://megamanleaderboards.net/index.php?game=59
+    -
+        cnName: 洛克人
+        enName: Rock man
+        abbr: 
+        category: All Stage Buster Only
+        player: 优雅的美美
+        est: PT30M
+        guide: 优雅的美美
+        megaAbbr: mm1
+        megaPage: https://megamanleaderboards.net/index.php?game=1
+    -
+        cnName: 洛克人 11
+        enName: Megaman 11
+        abbr: 
+        category: Any% No OoB 普通难度
+        player: peony
+        est: PT40M
+        guide: 
+        megaAbbr: mm11
+        megaPage: https://megamanleaderboards.net/index.php?game=143
+    -
+        cnName: 密特罗得：融合
+        enName: Metroid Fusion
+        abbr: fusion
+        category: Any %（Memory Corruption）
+        player: SORP
+        est: PT1H
+        guide: 
+    -
+        cnName: 忍者神龟 2
+        enName: Teenag Mutant Ninja Turtle 2
+        abbr: tmnt2
+        category: Any%
+        player: yangyi
+        est: PT35M
+        guide: 
+    -
+        cnName: 少年印第安纳琼斯
+        enName: The Young Indiana Jones Chronicles
+        abbr: youngindianajones
+        category: Any %
+        player: 象棋鬼降
+        est: PT16M
+        guide: 
+    -
+        cnName: 神巫女
+        enName: Kamiko
+        abbr: Kamiko
+        category: Any% Glitchless
+        player: 鲑鱼桒
+        est: PT30M
+        guide: 
+    -
+        cnName: 武士 零
+        enName: Katana Zero
+        abbr: katana_zero
+        category: All Stages/Normal
+        player: 方傀儡
+        est: PT20M
+        guide: 
+    -
+        cnName: 汐
+        enName: Shio
+        abbr: Shio
+        category: 浅梦真结局
+        player: 继烈2013
+        est: PT43M
+        guide: 
+    -
+        cnName: 只狼：影逝二度
+        enName: "Sekiro: Shadow die twice"
+        abbr: sekiro
+        category: 修罗结局 无邪道 race
+        player: 黑化由歧
+        est: PT45M
+        guide: 
+    -
+        cnName: 只狼：影逝二度
+        enName: "Sekiro: Shadow die twice"
+        abbr: sekiro
+        category: 修罗结局 无邪道 race
+        player: 星子滑落夜空
+        est: PT45M
+        guide: 
+    -
+        cnName: 只狼：影逝二度
+        enName: "Sekiro: Shadow die twice"
+        abbr: sekiro
+        category: NG 全记忆 全佛珠
+        player: Ak1Ra、24
+        est: PT1H35M
+        guide: Ashes小志
+    

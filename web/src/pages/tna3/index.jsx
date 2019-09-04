@@ -7,6 +7,12 @@ import PageHeader from '../../components/layouts/PageHeaderV2'
 import WidthContainer from '../../components/layouts/WidthContainer'
 import Logo from '../../components/grids/Logo'
 
+import { loadBaomingData } from '../../data/tna3/data'
+
+import { estTimeCN } from '../../utils/speedrunTime'
+
+import moment from 'moment'
+
 // const BAOMING_URL = 'https://shimo.im/forms/cBvAroZP88gjbyQd/fill'
 // const UPLOAD_URL = 'http://tnarun.com/tna3-upload/index.html'
 
@@ -47,6 +53,10 @@ export default class extends React.Component {
             </div>
           </div>
         </div>
+      </WidthContainer>
+
+      <WidthContainer>
+        <BaoMing />
       </WidthContainer>
 
       <WidthContainer>
@@ -96,6 +106,12 @@ const Timeline = () => {
       <div className={ css.date }>2019-08-31</div>
       <div className={ css.event }>
         <span>报名截止</span>
+      </div>
+    </div>
+    <div className={ css.timepoint }>
+      <div className={ css.date }>2019-09-03</div>
+      <div className={ css.event }>
+        <span>公示报名结果</span>
       </div>
     </div>
     <div className={ css.duetimepoint }>
@@ -176,4 +192,84 @@ const FAQ = () => {
       </div>
     </div>
   </div>
+}
+
+class BaoMing extends React.Component {
+  render () {
+    let totalTime = 0
+    this.state.data.forEach((x, idx) => {
+      if (x.est && idx < 1000) {
+        let d = moment.duration(x.est)
+        totalTime += d
+      }
+    })
+
+    let race1 = moment.duration('PT45M') + 0
+    let race2 = moment.duration('PT2H30M') + 0
+    totalTime = moment.duration(totalTime - race1 -race2) 
+
+    console.log({ race1, race2, totalTime, hour: totalTime.hours(), minute: totalTime.minutes(), count: this.state.data.length - 2 })
+
+    let _list = this.state.data.map((x, idx) => {
+      let time = x.est ? <>
+        {/* <span className={ css.label }>预计</span> */}
+        <span>{ estTimeCN(x.est) }</span>
+      </> : null
+      let guide = x.guide ? <>
+        <span className={ css.label }>解说</span>
+        <span>{ x.guide }</span>
+      </> : null
+
+      let img = x.abbr ? `url(//tna-web.oss-ap-southeast-1.aliyuncs.com/speedrun-game-assets/${ x.abbr }/cover-256.png?x-oss-process=image/resize,m_fill,w_320,h_320,limit_0)` : null
+
+      img = x.megaAbbr ? `url(//tna-upload.oss-cn-shanghai.aliyuncs.com/assets/mega-cover/${ x.megaAbbr }.png?x-oss-process=image/resize,m_fill,w_320,h_320,limit_0)` : img
+
+      return <div className={ css.showItem } key={ idx }>
+        <div className={ css.left }>
+          <div className={ css.cover }>
+            <div className={ css.coveri }>
+              <div className={ css.img } style={{ backgroundImage: img }}></div>
+            </div>
+          </div>
+          <div className={ css.name }>
+            <div>{ x.cnName }</div>
+            <div className={ css.en }>{ x.enName }</div>
+          </div>
+        </div>
+        <div className={ css.right }>
+          <div className={ css.category }>{ x.category }</div>
+          <div className={ css.player }>
+            <span className={ css.label }>表演</span>
+            <span>{ x.player }</span>
+          </div>
+          <div className={ css.time }>{ time }</div>
+          <div className={ css.guide }>{ guide }</div>
+        </div>
+      </div>
+    })
+
+    return <>
+      <div className={ css.BaoMing }>
+        <h2>报名结果公示（并非最终节目单）</h2>
+      </div>
+      <div className={ css.BaoMingList }>
+        <div className={ css.BaoMingHeader }>
+          <div className={ css.gameh }>游戏</div>
+          <div>类目与时间</div>
+          <div>表演与解说</div>
+        </div>
+        { _list }
+      </div>
+    </>
+  }
+
+  state = {
+    data: []
+  }
+
+  componentDidMount () {
+    let data = loadBaomingData()
+    console.log(data)
+    this.setState({ data })
+  }
 }

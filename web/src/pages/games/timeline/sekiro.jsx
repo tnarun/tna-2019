@@ -209,7 +209,7 @@ class Stat extends React.Component {
       let sp = moment(x.submitted) - firstD
       let lper = (sp / period) * 100
 
-      let time = speedrunTime(x.realtime)
+      // let time = speedrunTime(x.realtime)
 
       let mClassName = classNames.bind(css)({
         mark: true,

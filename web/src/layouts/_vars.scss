@@ -21,6 +21,7 @@ $crit: darken(#fdb762, 10%);
 
 $chuya: #f38c03;
 $cbili: #03b0ff;
+$cgcores: #f24827;
 
 $c1st: #FEE101;
 $c2nd: #D7D7D7;
@@ -30,6 +31,8 @@ $fontCubano: 'Cubano', '微软雅黑';
 $fontDIN: 'DIN-Black', '微软雅黑';
 $fontDINM: 'DIN-Medium', '微软雅黑';
 $fontOrbitron: 'Orbitron', '微软雅黑';
+
+$font-tna-site-title: 'tna-site-title';
 
 @mixin light-title {
   // font-family: 'Orbitron';
