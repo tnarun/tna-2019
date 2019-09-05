@@ -1,8 +1,12 @@
 @import '../../layouts/vars';
 
+$lightTNA: lighten($ctna, 40%);
+$textShadowTNA: 0 0 1rem lighten($ctna, 10%);
+$borderTNA: lighten($ctna, 10%);
+
 @mixin GridBorder {
   background-color: rgba(black, 0.3);
-  border: solid 1px rgba($text-color, 0.5);
+  border: solid 1px rgba($lightTNA, 0.5);
 }
 
 @mixin GridBorderDark {
@@ -44,11 +48,8 @@
   grid-gap: 3px;
 
   .gridName {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 0 .5rem;
-    font-size: .8rem;
+    @include flexCenter;
+    font-size: .9rem; height: 1.8rem;
     background-color: rgba($color, 0.15);
     color: lighten($color, 15%); 
   }
@@ -94,6 +95,11 @@
     text-align: center;
     font-size: 1.3rem;
   }
+  @media #{$sm} {
+    h2 {
+      font-size: 1.1rem;
+    }
+  }
 }
 
 .tna3 {
@@ -106,37 +112,25 @@
     font-family: $fontDIN;
     text-shadow: 0 0 1rem $light-bg-color;
   }
-
-  @media #{$xs} {
-    h2 {
-      font-size: 1.2rem;
-    }
-  }
 }
 
 .timeandreg {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-gap: $GRID-GAP;
+  @include genColGrids(1fr);
   margin-bottom: $GRID-GAP * 2;
 
   .info {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-    grid-gap: $GRID-GAP;
-    &:before {
-      content: ''; width: 0; padding-bottom: 75%;
-      grid-column: 1 / span 1; grid-row: 1 / span 1;
+    @include genColGrids(1fr 1fr 1fr 1fr);
+    @media #{$sm} {
+      grid-template-columns: 1fr 1fr;
     }
+
     .time {
       @include GridBorder;
       @include withGridName($cred);
-      grid-column: 1 / span 2; grid-row: 1 / span 1;
+      grid-column: span 2;
       h2 {
         margin: 0;
-        display: flex;
-        justify-content: center;
-        align-items: center;
+        @include flexCenter;
         @include titleShadow($cred);
       }
     }
@@ -162,44 +156,13 @@
       }
     }
   }
-  .reg {
-    @include GridBorder;
-    @include withGridName($ctna);
-
-    .btns {
-      display: grid;
-      grid-template-columns: 2fr 1fr;
-      grid-gap: 3px;
-
-      .b1, .b2 {
-        @include colorBtn($ctna);
-        font-size: 1.2rem;
-        font-weight: bold;
-      }
-    }
-
-    .bmjz {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      font-size: 1.2rem;
-      opacity: 0.5;
-    }
-  }
-
-  @media #{$xs} {
-    grid-template-columns: 1fr;
-
-    .reg .btns {
-      .b1, .b2 { font-size: 1rem; }
-    }
-  }
 }
 
 .faqtimeline {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-gap: $GRID-GAP;
+  @include genColGrids(1fr 1fr);
+  @media #{$sm} {
+    grid-template-columns: 1fr;
+  }
   margin-bottom: 5rem;
 
   .timeline, .faq {
@@ -214,10 +177,6 @@
     // display: grid;
     // grid-template-rows: 3rem 1fr;
     overflow: hidden;
-  }
-
-  @media #{$xs} {
-    grid-template-columns: 1fr;
   }
 }
 
@@ -338,6 +297,7 @@
 $baomingH2Color: $ctna;
 $baomingBorderColor: rgba($baomingH2Color, 0.5);
 $baomingHeaderColor: $cblue;
+$baomingPadding: .3rem .6rem;
 
 .BaoMing {
   @include GridBorder;
@@ -350,19 +310,18 @@ $baomingHeaderColor: $cblue;
 }
 
 .BaoMingHeader {
-  display: grid;
-  grid-template-columns: 3fr 2.5fr 2.5fr;
-  grid-gap: $GRID-GAP;
+  @include genColGrids(3fr 2.5fr 2.5fr);
+  margin-bottom: $GRID-GAP;
 
   div {
     @include GridBorder;
-    padding: 0.3rem 0.6rem;
+    padding: $baomingPadding;
     border-color: rgba($baomingHeaderColor, 0.5);
     background-color: rgba($baomingHeaderColor, 0.1);
-    color: lighten($cblue, 30%); 
+    color: lighten($baomingHeaderColor, 30%); 
   }
 
-  @media #{$xs} {
+  @media #{$sm} {
     grid-template-columns: 1fr 1fr;
     div.gameh {
       grid-column: span 2;
@@ -371,11 +330,7 @@ $baomingHeaderColor: $cblue;
 }
 
 .BaoMingList {
-  display: grid;
-  grid-template-columns: 1fr;
-  grid-gap: $GRID-GAP;
   margin-bottom: $GRID-GAP * 2;
-
   @include GridBorder;
   padding: $GRID-GAP;
   border-color: $baomingBorderColor;
@@ -383,13 +338,12 @@ $baomingHeaderColor: $cblue;
   border-top: 0 none;
 
   .showItem {
-    display: grid;
-    grid-template-columns: 3fr 2.5fr 2.5fr;
-    grid-gap: $GRID-GAP;
+    @include genColGrids(3fr 2.5fr 2.5fr);
 
     font-family: $fontDINM;
     border-bottom: solid 1px $baomingBorderColor;
     padding-bottom: $GRID-GAP;
+    margin-bottom: $GRID-GAP;
 
     &:last-child {
       border-bottom: 0 none;
@@ -472,8 +426,6 @@ $baomingHeaderColor: $cblue;
     }
 
     .category {
-      // font-family: $fontDIN;
-      // font-weight: bold;
       color: lighten($ctna, 15%);
     }
 
@@ -481,7 +433,7 @@ $baomingHeaderColor: $cblue;
       color: $c1st;
     }
 
-    @media #{$xs} {
+    @media #{$sm} {
       grid-template-columns: 1fr;
       .left, .right {
         grid-column: span 1;

@@ -13,7 +13,7 @@ export default () => {
       <PageTopBlue height={ '24rem' }/>
       
       <PageHeader>
-        <h1>Together Not Alone</h1>
+        <h1 className={ css.siteENTitle } >Together Not Alone</h1>
         <h2 className={ css.siteCNTitle }>中文速通圈活动站</h2>
       </PageHeader>
 

@@ -28,6 +28,7 @@ const estTime = (ptstr) => {
   s = s < 10 ? `0${s}` : s
 
   s = s === '00' ? null : s
+  m = m === '00' ? null : m
 
   return [
     h ? `${ h }h` : '',

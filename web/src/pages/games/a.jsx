@@ -1,6 +1,6 @@
 import React from 'react'
 
-import css from './index.scss'
+import css from './a.scss'
 import PageHeader from '../../components/layouts/PageHeaderV2'
 // import TNALogo from '../../components/grids/TNALogo'
 import WidthContainer from '../../components/layouts/WidthContainer'

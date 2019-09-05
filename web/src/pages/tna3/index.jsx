@@ -31,7 +31,7 @@ export default class extends React.Component {
           <div className={ css.info }>
             <div className={ css.time }>
               <div className={ css.gridName }>日期</div>
-              <h2>2019. OCT. 04</h2>
+              <h2>2019.10.04 - 10.06</h2>
             </div>
             <a className={ css.huya } href={ HUYA_ROOM } target='_blank' rel='noopener noreferrer'>
               <div className={ css.gridName }>直播</div>
@@ -45,12 +45,6 @@ export default class extends React.Component {
                 <Logo src='//tna-web.oss-ap-southeast-1.aliyuncs.com/assets/images/bililogo200.png' />
               </div>
             </a>
-          </div>
-          <div className={ css.reg }>
-            <div className={ css.gridName }>报名入口</div>
-            <div className={ css.bmjz }>
-              报名已截止
-            </div>
           </div>
         </div>
       </WidthContainer>
