@@ -1,5 +1,3 @@
-@import './grids-funcs';
-
 // 字体工具
 // https://www.fontsquirrel.com/tools/webfont-generator
 
@@ -60,3 +58,5 @@ $xsw: 33.9rem; // 542.4px
 $smw: 47.9rem; // 766.4px
 $mdw: 61.9rem; // 990.4px
 $lgw: 74.9rem; // 1198.4px
+
+@import './grids-funcs';

@@ -12,3 +12,14 @@ $GRID-GAP: .3rem;
   justify-content: center;
   align-items: center;
 }
+
+@mixin genResponsiveColGrids ($cols, $smCols) {
+  display: grid;
+  grid-gap: $GRID-GAP;
+  grid-template-columns: $cols;
+  grid-auto-rows: 1fr;
+
+  @media #{$sm} {
+    grid-template-columns: $smCols;
+  }
+}

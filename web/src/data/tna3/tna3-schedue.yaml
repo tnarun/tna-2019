@@ -15,7 +15,7 @@ DAY1:
     category: 英雄模式
     player: Code
     est: PT1H25M
-    guide: 
+    guide: Code
     time: 2019-10-04 13:55
   -
     cnName: 武士 零
@@ -24,7 +24,7 @@ DAY1:
     category: All Stages/Normal
     player: 方傀儡
     est: PT20M
-    guide: 
+    guide: 无泪的哭泣
     time: 2019-10-04 15:35
   -
     cnName: 决意-绊地狱
@@ -33,7 +33,7 @@ DAY1:
     category: Any %
     player: ixix91
     est: PT50M
-    guide: 
+    guide: 待定
     time: 2019-10-04 16:10
   -
     cnName: 洛克人
@@ -53,7 +53,7 @@ DAY1:
     category: Any% No OoB 普通难度
     player: peony
     est: PT40M
-    guide: 
+    guide: 南极猫的眼泪
     megaAbbr: mm11
     megaPage: https://megamanleaderboards.net/index.php?game=143
     time: 2019-10-04 18:05
@@ -77,7 +77,7 @@ DAY1:
       - 黑化由歧
       - 星子滑落夜空
     est: PT45M
-    guide: 
+    guide: 玉米 & 小志
     time: 2019-10-04 19:45
     type: race
   -
@@ -85,30 +85,12 @@ DAY1:
     enName: "Legend of Sword and Fairy"
     abbr: New_Legend_of_Sword_and_Fairy
     category: 待定
-    player: 待定
-    est: 待定
-    guide: 
+    player: 丿灬夜狼
+    est: PT1H25M
+    guide: shalou88沙漏哥
     time: 2019-10-04 20:45
 
 DAY2:
-  -
-    cnName: 精灵宝可梦：黄
-    enName: Pokemon Yellow
-    abbr: pkmnyellow
-    category: Any% Glitchless
-    player: 六魂
-    est: PT2H15M
-    guide: 
-    time: 2019-10-05 12:00
-  -
-    cnName: 超惑星战记 ZERO
-    enName: Blaster Master Zero
-    abbr: Blaster_Master_Zero
-    category: Any%
-    player: 埃尔文
-    est: PT55M
-    guide: 
-    time: 2019-10-05 14:30
   -
     cnName: I wanna be the Permanence 2
     enName: I wanna be the Permanence 2
@@ -117,45 +99,16 @@ DAY2:
     player: 凡人
     est: PT2H30M
     guide: code
-    time: 2019-10-05 15:40
+    time: 2019-10-05 12:00
   -
-    cnName: 忍者神龟 2
-    enName: Teenag Mutant Ninja Turtle 2
-    abbr: tmnt2
+    cnName: 超惑星战记 ZERO
+    enName: Blaster Master Zero
+    abbr: Blaster_Master_Zero
     category: Any%
-    player: yangyi
-    est: PT35M
-    guide: 
-    time: 2019-10-05 18:25
-  -
-    cnName: 苍蓝雷霆
-    enName: Azure Strike Gunvolt
-    abbr: gunvolt
-    category: speedrun mode
-    player: 晓夜
-    est: PT1H40M
-    guide: 优雅的美美
-    time: 2019-10-05 19:15
-  -
-    cnName: 超级马里奥 64
-    enName: Super Mario 64
-    abbr: sm64
-    category: 类目待定
-    player: Cheese05
-    est: 
-    guide: 
-    time: 2019-10-05 21:10
-
-DAY3:
-  -
-    cnName: 神巫女
-    enName: Kamiko
-    abbr: Kamiko
-    category: Any% Glitchless
-    player: 鲑鱼桒
-    est: PT30M
-    guide: 
-    time: 2019-10-06 12:00
+    player: 埃尔文
+    est: PT55M
+    guide: 火月的捌年
+    time: 2019-10-05 14:45
   -
     cnName: 空洞骑士
     enName: Hollow Knight
@@ -166,8 +119,46 @@ DAY3:
       - gcghvcg
     est: PT2H30M
     guide: 创世、魔术师
-    time: 2019-10-06 12:45
+    time: 2019-10-05 15:55
     type: race
+  -
+    cnName: 忍者神龟 2
+    enName: Teenag Mutant Ninja Turtle 2
+    abbr: tmnt2
+    category: Any%
+    player: yangyi
+    est: PT35M
+    guide: 南极猫的眼泪
+    time: 2019-10-05 18:40
+  -
+    cnName: 苍蓝雷霆
+    enName: Azure Strike Gunvolt
+    abbr: gunvolt
+    category: speedrun mode
+    player: 晓夜
+    est: PT1H40M
+    guide: 优雅的美美
+    time: 2019-10-05 19:30
+
+DAY3:
+  -
+    cnName: 神巫女
+    enName: Kamiko
+    abbr: Kamiko
+    category: Any% Glitchless
+    player: 鲑鱼桒
+    est: PT30M
+    guide: 鲑鱼桒
+    time: 2019-10-06 12:00
+  -
+    cnName: 精灵宝可梦：黄
+    enName: Pokemon Yellow
+    abbr: pkmnyellow
+    category: Any% Glitchless
+    player: 六魂
+    est: PT2H15M
+    guide: 六魂
+    time: 2019-10-06 12:45
   -
     cnName: 少年印第安纳琼斯
     enName: The Young Indiana Jones Chronicles
@@ -175,7 +166,7 @@ DAY3:
     category: Any %
     player: 象棋鬼降
     est: PT16M
-    guide: 
+    guide: 象棋鬼降
     time: 2019-10-06 15:30
   -
     cnName: 密特罗得：融合
@@ -184,7 +175,7 @@ DAY3:
     category: Any %（Memory Corruption）
     player: SORP
     est: PT1H
-    guide: 
+    guide: SORP
     time: 2019-10-06 16:00
   -
     cnName: 汐
@@ -193,7 +184,7 @@ DAY3:
     category: 浅梦真结局
     player: 继烈2013
     est: PT43M
-    guide: 
+    guide: 待定
     time: 2019-10-06 17:15
   -
     cnName: 只狼：影逝二度
@@ -202,7 +193,7 @@ DAY3:
     category: NG 全记忆 全佛珠
     player: Ak1Ra、24
     est: PT1H35M
-    guide: Ashes小志
+    guide: 玉米 & 小志
     time: 2019-10-06 18:15
   -
     cnName: 打击者 1945 III（1999）
@@ -211,13 +202,13 @@ DAY3:
     category: 二周目通关
     player: lest_TAQ
     est: PT30M
-    guide: 
+    guide: 待定
     time: 2019-10-06 20:05
   -
     cnName: 怪物猎人：世界
     enName: Moster Hunter：World
     abbr: mhw
-    category: 冰原TA
+    category: 冰原 TA
     player: 诗皖
     est: 
     guide: 不可燃废料
@@ -229,6 +220,16 @@ DAY3:
     category: all c
     player: 凉儿
     est: PT15M
-    guide: DJ
+    guide: DemoJameson
     time: 
     type: 'secret'
+
+  # -
+  #   cnName: 超级马里奥 64
+  #   enName: Super Mario 64
+  #   abbr: sm64
+  #   category: 类目待定
+  #   player: Cheese05
+  #   est: 
+  #   guide: 
+  #   time: 2019-10-05 21:10
