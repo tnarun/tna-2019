@@ -1,0 +1,194 @@
+@import '../../layouts/vars';
+
+$borderC: lighten($ctna, 20%);
+$lessBorderC: rgba($borderC, 0.8);
+$lessBorderC1: rgba(lighten($corange, 20%), 0.8);
+
+@mixin gbLeft ($color) {
+  position: relative;
+  &:before {
+    content: '';
+    position: absolute;
+    width: 6px;
+    left: 6px; top: 6px; bottom: 6px;
+    background-color: $color;
+  }
+}
+
+.LayoutGameName {
+  font-size: 1.5rem;
+  width: 100%; height: 100%;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 2fr 1.5fr 1.5fr;
+  overflow: hidden;
+  &.race {
+    grid-template-rows: 3fr 1fr 1fr;
+  }
+
+  .name {
+    font-size: 2.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    @include light-title;
+    @include gbLeft($ctna);
+  }
+
+  .category {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-top: solid 1px $lessBorderC;
+    font-size: 1.5rem;
+    font-weight: bold;
+    @include light-title;
+    @include gbLeft($ctna);
+  }
+
+  .info {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr;
+    border-top: solid 1px $lessBorderC;
+
+    .ii {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 1.5rem;
+      @include gbLeft($corange);
+      color: lighten($corange, 10%);
+      border-left: solid 1px $lessBorderC1;
+      &:first-child {
+        border-left: 0 none;
+      }
+      &.w {
+        grid-column: span 3;
+      }
+    }
+  }
+}
+
+.LayoutTimer {
+  font-size: 1.5rem;
+  width: 100%; height: 100%;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 2fr 3fr;
+  overflow: hidden;
+
+  .runner {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    @include light-title;
+    @include gbLeft($ctna);
+    font-size: 2.5rem;
+    font-weight: bold;
+  }
+  .timer {
+    @include gbLeft($ctna);
+    border-top: solid 1px $lessBorderC;
+  }
+}
+
+.LayoutTNA {
+  width: 100%; height: 100%;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 3fr 1fr 1fr;
+
+  .link {
+    font-size: 1.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    @include light-title;
+    @include gbLeft($ctna);
+    border-top: solid 1px $lessBorderC;
+    font-family: $fontDIN;
+  }
+}
+
+.LayoutRacePlayers {
+  width: 100%; height: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr;
+  .p1 {
+    font-size: 2.5rem;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    @include light-title;
+    // @include gbLeft($ctna);
+  }
+  .p2 {
+    font-size: 2.5rem;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    @include light-title;
+    // @include gbLeft($ctna);
+    border-left: 1px solid $lessBorderC;
+  }
+  .timer {
+    font-size: 1.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    @include light-title;
+    // @include gbLeft($ctna);
+    border-left: 1px solid $lessBorderC;
+  }
+}
+
+.LayoutNextShow {
+  font-size: 1.5rem;
+  width: 100%; height: 100%;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr 1fr;
+  overflow: hidden;
+  font-family: $fontDINM;
+
+  color: lighten($ctna, 40%);
+  &.next {
+    color: lighten($ctna, 40%);
+  }
+
+  .name {
+    font-size: 2.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    @include gbLeft($ctna);
+  }
+
+  .info {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr;
+    border-top: solid 1px $lessBorderC;
+
+    .ii {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 1.5rem;
+      border-left: solid 1px $lessBorderC;
+      &:first-child {
+        @include gbLeft($ctna);
+        border-left: 0 none;
+      }
+      &.w {
+        grid-column: span 3;
+      }
+    }
+  }
+}

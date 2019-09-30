@@ -1,7 +1,7 @@
 import css from './index.scss';
 
 const Layout = (props) => {
-  if (props.location.pathname === '/kksk2') {
+  if (props.location.pathname.startsWith('/kksk2')) {
     return <KKSK2Layout>{ props.children }</KKSK2Layout>
   }
 
@@ -16,7 +16,11 @@ const Layout = (props) => {
 const KKSK2Layout = (props) => {
   return (
     <div className={ css.KKSK2Layout }>
-      <div className={ css.bg }></div>
+      <div className={ css.bg }>
+        <video autoPlay={ true } muted={ true } loop={ true } playsInline={ true }>
+          <source src='https://alioss.gcores.com/page_resources/fusion2019_lite/videos/hangzhou.mp4' type='video/mp4' />
+        </video>
+      </div>
       { props.children }
     </div>
   )

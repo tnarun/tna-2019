@@ -17,6 +17,7 @@ const func = async () => {
     // embed=game,category,level,players,regions,platforms,variables
     if (game) {
       let { speedrunId } = game
+      // speedrunId = '268zey6p'
       let url = `https://www.speedrun.com/api/v1/games/${ speedrunId }/records?max=200&embed=game,category,level,players,regions,platforms,variables`
       console.log({ url })
 

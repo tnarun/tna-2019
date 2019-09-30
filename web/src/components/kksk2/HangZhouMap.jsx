@@ -44,10 +44,10 @@ export default class HangZhouMap extends React.Component {
 			.append("path")
 			.attr("d", path)  //パスジェネレーターを使ってd属性の値を生成している
       // .attr("fill", "#f24827")
-      .attr('fill', '#fdb762')
+      .attr('fill', '#019ef2')
 			.attr("fill-opacity", 0.1)
       // .attr("stroke", "#f24827")
-      .attr('stroke', '#fdb762')
+      .attr('stroke', '#019ef2')
       .attr("stroke-width", '1px')
 
     let pHZ = projection(HZPoint)  

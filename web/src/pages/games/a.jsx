@@ -15,12 +15,14 @@ export default () => {
     <div className={ css.games }>
       <PH />
       <WidthContainer>
-        <Game abbr='sekiro' />
-        <Game abbr='re2remake' />
+        <Game abbr='To_The_Moon' />
+        <Game abbr='sotn' />
+        <Game abbr='bscotm' />
         <Game abbr='smo' />
-        <Game abbr='Darksiders_3' />
-        <Game abbr='katana_zero' />
-        <Game abbr='Shio' />
+        <Game abbr='mm' />
+        <Game abbr='pkmnsunmoon' />
+        <Game abbr='momo4' />
+        <Game abbr='bloodborne' />
       </WidthContainer>
     </div>
   )
@@ -62,7 +64,8 @@ class Game extends React.Component {
       let _players = runs.map((y, idy) => {
         console.log(y)
         // let pname = y.run.players[0].id
-        let pname = players[idy].names.international
+        let player = players[idy]
+        let pname = player.name ? player.name : player.names.international
         let time = y.run.times.primary
 
         let _time = formatDurarion(time)

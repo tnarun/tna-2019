@@ -1,6 +1,8 @@
 // 字体工具
 // https://www.fontsquirrel.com/tools/webfont-generator
 
+@import './kksk';
+
 $text-color: #d7ecff;
 $text-color-gold: #ffef99;
 
@@ -37,6 +39,13 @@ $font-tna-site-title: 'tna-site-title';
 @mixin light-title {
   // font-family: 'Orbitron';
   font-family: 'Cubano', '微软雅黑';
+  color: $text-color;
+  text-shadow: 0 0 1rem $light-bg-color;
+}
+
+@mixin light-title-DIN {
+  // font-family: 'Orbitron';
+  font-family: 'DIN-Black', '微软雅黑';
   color: $text-color;
   text-shadow: 0 0 1rem $light-bg-color;
 }

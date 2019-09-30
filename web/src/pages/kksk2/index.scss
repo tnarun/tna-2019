@@ -1,19 +1,16 @@
 @import '../../layouts/vars';
 
-$lightKKSKC: lighten($ckksk, 40%);
-$textShadowKKSKC: 0 0 1rem lighten($ckksk, 10%);
-$borderKKSKC: lighten($ckksk, 10%);
-
 @mixin TitleBase {
   font-family: $fontDIN;
   font-weight: bold;
-  color: $lightKKSKC;
-  text-shadow: $textShadowKKSKC;
+  color: white;
+  text-shadow: 2px 2px 0 rgba(black, 0.382);
 }
 
 @mixin GridBorder {
-  background-color: rgba(black, 0.3);
-  border: solid 1px rgba($lightKKSKC, 0.5);
+  background-color: rgba(black, 0.382);
+  border: solid 1px rgba(white, 0.618);
+  box-shadow: 2px 2px 0 rgba(black, 0.382);
 }
 
 @mixin withGridName ($color) {
@@ -32,47 +29,21 @@ $borderKKSKC: lighten($ckksk, 10%);
     font-size: .8rem;
     background-color: rgba($color, 0.15);
     color: lighten($color, 15%); 
+    text-shadow: 2px 2px 0 rgba(black, 0.382);
   }
 }
 
 @mixin titleShadow ($color) {
-  text-shadow: 0 0 1rem $color;
-  color: lighten($color, 20%);
+  text-shadow: 2px 2px 0 rgba(black, 0.382);
+  color: $color;
 }
 
-@mixin colorBtn ($color) {
-  display: block;
-  background-color: $color;
-  color: white;
-  // font-family: $fontDIN;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-shadow: 0 0 0.5rem rgba(black, 0.3);
-  position: relative;
-
-  &:before {
-    content: '';
-    position: absolute;
-    pointer-events: none;
-    left: 0; right: 0; bottom: 0; top: 0;
-    // background-color: rgba(black, 0.3);
-    border-bottom: solid 1px rgba(black, 0.3);
-    border-right: solid 1px rgba(black, 0.3);
-    border-top: solid 1px rgba(white, 0.3);
-    border-left: solid 1px rgba(white, 0.3);
-  }
-  &:hover:before {
-    background-color: rgba(white, 0.3)
-  }
-}
-
-@mixin GridH2 {
+@mixin GridH2 ($color: white) {
   h2 {
     @include TitleBase;
     margin: 0; 
     padding: 1rem;
-    border-bottom: 2px solid $borderKKSKC;
+    border-bottom: 2px solid $color;
     text-align: center;
     font-size: 1.3rem;
   }
@@ -92,7 +63,7 @@ $borderKKSKC: lighten($ckksk, 10%);
       width: 9rem; height: 9rem;
       margin-right: 1rem;
       // top: 0; left: 0;
-      background-image: url('//tna-web.oss-ap-southeast-1.aliyuncs.com/assets/kksk2019b.png');
+      background-image: url('//tna-web.oss-ap-southeast-1.aliyuncs.com/assets/kksk2019tour.png');
       background-position: center;
       background-size: contain;
       background-repeat: no-repeat;
@@ -114,94 +85,52 @@ $borderKKSKC: lighten($ckksk, 10%);
 
 .timeandreg {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
   grid-gap: $GRID-GAP;
   margin-bottom: $GRID-GAP * 2;
 
-  .info {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-    grid-gap: $GRID-GAP;
-    &:before {
-      content: ''; width: 0; padding-bottom: 75%;
-      grid-column: 1 / span 1; grid-row: 1 / span 1;
+  .time {
+    @include GridBorder;
+    @include withGridName(white);
+    grid-column: span 2;
+    h2 {
+      margin: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-family: $fontDIN;
+      @include titleShadow(white);
+      height: 3rem;
     }
-    .time {
-      @include GridBorder;
-      @include withGridName($cred);
-      grid-column: 1 / span 3; grid-row: 1 / span 1;
-      h2 {
-        margin: 0;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        font-family: $fontDIN;
-        @include titleShadow($cred);
-      }
-    }
-    .huya, .bili {
-      @include GridBorder;
-      .logoi {
-        margin-top: .2rem;
-        margin-bottom: .2rem;
-      }
-    }
-    .huya {
-      @include withGridName($chuya);
-      &:hover {
-        background-color: rgba($chuya, 0.5);
-        .gridName { color: black; }
-      }
-    }
+
+    $c1: rgba($kksk2C1, 0.3);
+    $c2: rgba($kksk2C2, 0.3);
+    background: linear-gradient(-26.565deg, $c2, $c1);
   }
-  .hright {
-    display: grid;
-    grid-template-columns: 1fr 3fr;
-    grid-gap: $GRID-GAP;
+
+  .huya {
+    @include GridBorder;
+    @include withGridName(white);
+    .logoi {
+      margin-top: .3rem;
+      margin-bottom: .3rem;
+    }
+    background-color: rgba($kksk2C1, 0.3);
+    &:hover {
+      background-color: rgba($kksk2C1, 0.5);
+    }
   }
 
   .gcores {
     @include GridBorder;
-    @include withGridName($cgcores);
+    @include withGridName(white);
+    .logoi {
+      margin-top: .4rem;
+      margin-bottom: .4rem;
+    }
+    background-color: rgba($kksk2C2, 0.3);
     &:hover {
-      background-color: rgba($cgcores, 0.5);
-      .gridName { color: black; }
-    }
-  }
-  .reg {
-    @include GridBorder;
-    @include withGridName($ckksk);
-
-    .btns {
-      display: grid;
-      grid-template-columns: 1fr;
-      grid-gap: 3px;
-
-      .b {
-        @include colorBtn($ckksk);
-        font-size: 1.2rem;
-        font-weight: bold;
-
-        @media #{$xs} {
-          font-size: 1rem;
-        }
-      }
-    }
-
-    .bmjz {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      font-size: 1.2rem;
-      opacity: 0.5;
-    }
-  }
-
-  @media #{$xs} {
-    grid-template-columns: 1fr;
-
-    .reg .btns {
-      .b1, .b2 { font-size: 1rem; }
+      background-color: rgba($kksk2C2, 0.5);
     }
   }
 }
@@ -217,7 +146,7 @@ $borderKKSKC: lighten($ckksk, 10%);
   }
 
   .timeline, .faq {
-    @include GridH2;
+    @include GridH2($kksk2C2);
   }
 
   .timeline {
@@ -243,7 +172,7 @@ $borderKKSKC: lighten($ckksk, 10%);
     content: '';
     position: absolute;
     top: 0; bottom: 0; left: 112px + 16px + 8px - 1px;
-    width: 2px; background-color: $borderKKSKC;
+    width: 2px; background-color: $kksk2C2;
   }
 
   .timepoint, .duetimepoint {
@@ -266,7 +195,7 @@ $borderKKSKC: lighten($ckksk, 10%);
         content: '';
         width: 16px; height: 16px;
         border-radius: 100%;
-        background-color: $borderKKSKC;
+        background-color: $kksk2C2;
         position: absolute;
         top: 0; left: 0;
       }
@@ -351,15 +280,23 @@ $borderKKSKC: lighten($ckksk, 10%);
   grid-gap: $GRID-GAP;
   margin-bottom: $GRID-GAP;
 
-  .d {
+  .d1, .d2 {
     @include GridBorder();
-    @include GridH2;
-    color: $lightKKSKC;
+    color: white;
     div {
       padding: 0.5rem;
-      opacity: 0.5;
       text-align: center;
+      text-shadow: 2px 2px 0 rgba(black, 0.382);
     }
+  }
+
+  .d1 {
+    @include GridH2($kksk2C1);
+    background-color: rgba($kksk2C1, 0.3);
+  }
+  .d2 {
+    @include GridH2($kksk2C2);
+    background-color: rgba($kksk2C2, 0.3);
   }
 }
 

@@ -11,7 +11,7 @@ import HangZhouMap from '../../components/kksk2/HangZhouMap'
 
 import classNames from 'classnames/bind'
 
-const BAOMING_URL = 'https://shimo.im/forms/JGQ8DhRqYHT3dWhJ/fill'
+// const BAOMING_URL = 'https://shimo.im/forms/JGQ8DhRqYHT3dWhJ/fill'
 const HUYA_ROOM = 'https://www.huya.com/114514'
 
 
@@ -51,39 +51,30 @@ export default class extends React.Component {
 
 const BaseInfo = () => {
   return <div className={ css.timeandreg }>
-    <div className={ css.info }>
-      <div className={ css.time }>
-        <div className={ css.gridName }>日期</div>
-        <h2>2019. OCT. 19 - 20</h2>
+    <a className={ css.huya } href={ HUYA_ROOM } target='_blank' rel='noopener noreferrer'>
+      <div className={ css.gridName }>直播</div>
+      <div className={ css.logoi }>
+        <Logo src='//tna-upload.oss-cn-shanghai.aliyuncs.com/assets/2019-09-29/huya.png' />
       </div>
-      <a className={ css.huya } href={ HUYA_ROOM } target='_blank' rel='noopener noreferrer'>
-        <div className={ css.gridName }>直播</div>
-        <div className={ css.logoi }>
-          <Logo src='//tna-web.oss-ap-southeast-1.aliyuncs.com/assets/images/huyalogo200.png' />
-        </div>
-      </a>
+    </a>
+
+    <div className={ css.time }>
+      <div className={ css.gridName }>日期</div>
+      <h2>2019. OCT. 19 - 20</h2>
     </div>
 
-    <div className={ css.hright }>
-      <a className={ css.gcores } href='https://www.gcores.com/articles/113979' target='_blank' rel='noopener noreferrer'>
-        <div className={ css.gridName }>主办方</div>
-        <div className={ css.logoi }>
-          <Logo src='//tna-upload.oss-cn-shanghai.aliyuncs.com/assets/co-logos/gcoreslogo200.png' />
-        </div>
-      </a>
-      <div className={ css.reg }>
-        <div className={ css.gridName }>报名入口</div>
-        <div className={ css.btns }>
-          <a className={ css.b } href={ BAOMING_URL } target='_blank' rel='noopener noreferrer'>填写报名意向</a>
-        </div>
+    <a className={ css.gcores } href='https://www.gcores.com/articles/113979' target='_blank' rel='noopener noreferrer'>
+      <div className={ css.gridName }>主办方</div>
+      <div className={ css.logoi }>
+        <Logo src='//tna-upload.oss-cn-shanghai.aliyuncs.com/assets/2019-09-29/gcore.png' />
       </div>
-    </div>
+    </a>
   </div>
 }
 
 const Timeline = () => {
   return <div className={ css.Timeline }>
-    <div className={ css.timepoint }>
+    <div className={ css.duetimepoint }>
       <div className={ css.date }>2019-08-21</div>
       <div className={ css.event }>
         <span>活动公布，开始筹备</span>
@@ -113,11 +104,11 @@ const HangZhou = () => {
 class Days extends React.Component {
   render () {
     return <div className={ css.Days }>
-      <div className={ css.d }>
+      <div className={ css.d1 }>
         <h2>DAY 1</h2>
         <div>节目待定</div>
       </div>
-      <div className={ css.d }>
+      <div className={ css.d2 }>
         <h2>DAY 2</h2>
         <div>节目待定</div>
       </div>

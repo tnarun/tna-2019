@@ -35,7 +35,7 @@ export default class  extends React.Component {
 class BaoMing extends React.Component {
   render () {
     let data = this.props.data
-    let _list = data.map((x, idx) => {
+    let _list = data.filter(x => x.type !== 'omt').map((x, idx) => {
 
       let _from = ''
       let _to = ''
@@ -69,7 +69,7 @@ class BaoMing extends React.Component {
 
       let playerLabel = x.type === 'race' ? 
         <span className={ `${css.label} ${css.race}` }>竞速</span> :
-        <span className={ css.label }>表演</span>
+        <span className={ css.label }>{ x.type === 'pre' ? '主持' : '表演' }</span>
 
       if (x.type === 'secret') {
         return <div className={ `${css.showItem} ${css.secret}` } key={ idx }>
