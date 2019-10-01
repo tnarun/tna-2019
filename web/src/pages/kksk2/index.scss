@@ -1,17 +1,5 @@
 @import '../../layouts/vars';
-
-@mixin TitleBase {
-  font-family: $fontDIN;
-  font-weight: bold;
-  color: white;
-  text-shadow: 2px 2px 0 rgba(black, 0.382);
-}
-
-@mixin GridBorder {
-  background-color: rgba(black, 0.382);
-  border: solid 1px rgba(white, 0.618);
-  box-shadow: 2px 2px 0 rgba(black, 0.382);
-}
+@import '../../components/kksk2/kksk2';
 
 @mixin withGridName ($color) {
   position: relative;
@@ -36,17 +24,6 @@
 @mixin titleShadow ($color) {
   text-shadow: 2px 2px 0 rgba(black, 0.382);
   color: $color;
-}
-
-@mixin GridH2 ($color: white) {
-  h2 {
-    @include TitleBase;
-    margin: 0; 
-    padding: 1rem;
-    border-bottom: 2px solid $color;
-    text-align: center;
-    font-size: 1.3rem;
-  }
 }
 
 .kksk2 {
@@ -136,9 +113,10 @@
 }
 
 .faqtimeline {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-gap: $GRID-GAP;
+  @include genResponsiveColGrids(
+    1fr 1fr,
+    1fr
+  );
   margin-bottom: 5rem;
 
   .timeline, .faq {
@@ -271,32 +249,6 @@
       // border-bottom: dashed 1px rgba($text-color, 0.5);
       // color: lighten($ctna, 30%);
     }
-  }
-}
-
-.Days {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-gap: $GRID-GAP;
-  margin-bottom: $GRID-GAP;
-
-  .d1, .d2 {
-    @include GridBorder();
-    color: white;
-    div {
-      padding: 0.5rem;
-      text-align: center;
-      text-shadow: 2px 2px 0 rgba(black, 0.382);
-    }
-  }
-
-  .d1 {
-    @include GridH2($kksk2C1);
-    background-color: rgba($kksk2C1, 0.3);
-  }
-  .d2 {
-    @include GridH2($kksk2C2);
-    background-color: rgba($kksk2C2, 0.3);
   }
 }
 

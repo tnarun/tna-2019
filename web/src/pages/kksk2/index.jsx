@@ -8,6 +8,7 @@ import WidthContainer from '../../components/layouts/WidthContainer'
 import Logo from '../../components/grids/Logo'
 
 import HangZhouMap from '../../components/kksk2/HangZhouMap'
+import Days from '../../components/kksk2/Days'
 
 import classNames from 'classnames/bind'
 
@@ -33,7 +34,7 @@ export default class extends React.Component {
       <WidthContainer>
         <BaseInfo />
         <Days />
-        <Games />
+        {/* <Games /> */}
       </WidthContainer>
 
       <WidthContainer>
@@ -99,21 +100,6 @@ const HangZhou = () => {
   return <div className={ css.HangZhou }>
     <HangZhouMap />
   </div>
-}
-
-class Days extends React.Component {
-  render () {
-    return <div className={ css.Days }>
-      <div className={ css.d1 }>
-        <h2>DAY 1</h2>
-        <div>节目待定</div>
-      </div>
-      <div className={ css.d2 }>
-        <h2>DAY 2</h2>
-        <div>节目待定</div>
-      </div>
-    </div>
-  }
 }
 
 class Games extends React.Component {

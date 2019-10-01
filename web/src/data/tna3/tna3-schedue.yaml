@@ -2,7 +2,7 @@ DAY1:
   -
     id: 1-1
     cnName: 开幕式
-    enName: 开幕式
+    enName: Pre-Show
     abbr: tnarun
     category: Pre-Show
     player: 蹲厕的老五
@@ -56,7 +56,7 @@ DAY1:
     category: 二周目通关
     player: ixix91
     est: PT50M
-    guide: 待定
+    guide: 
     time: 2019-10-04 16:10
     layout: single-4-3
   -
@@ -119,7 +119,7 @@ DAY1:
     abbr: New_Legend_of_Sword_and_Fairy
     category: 待定
     player: 丿灬夜狼
-    est: PT147M
+    est: PT150M
     guide: shalou88沙漏哥
     time: 2019-10-04 20:45
     layout: single-4-3

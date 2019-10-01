@@ -66,10 +66,15 @@ export default class extends React.Component {
 }
 
 const PH = () => {
-  return <div className={ css.hd }><PageHeader>
-    <h1>TNA 3</h1>
-    <h2>速通直播会</h2>
-  </PageHeader></div>
+  return <PageHeader>
+    <div className={ css.hd }>
+      <div className={ css.tnalogo }></div>
+      <div>
+        <h1>TNA 3</h1>
+        <h2>线上速通直播会</h2>
+      </div>
+    </div>
+  </PageHeader>
 }
 
 const Timeline = () => {
