@@ -39,7 +39,7 @@ class Schedule extends React.Component {
     let { data } = this.props
 
     let _shows = data.map((x, idx) => {
-      let { _from, _to } = getFromTo({ show: x })
+      let { _from } = getFromTo({ show: x })
 
       return <div className={ css.show } key={ idx }>
         <div className={ css.startTime }>

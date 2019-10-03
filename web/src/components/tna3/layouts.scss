@@ -4,6 +4,8 @@ $borderC: lighten($ctna, 20%);
 $lessBorderC: rgba($borderC, 0.8);
 $lessBorderC1: rgba(lighten($corange, 20%), 0.8);
 
+$lessBorderCRED: rgba(lighten($cred, 20%), 0.8);
+
 @mixin gbLeft ($color) {
   position: relative;
   &:before {
@@ -32,7 +34,7 @@ $lessBorderC1: rgba(lighten($corange, 20%), 0.8);
     justify-content: center;
     align-items: center;
     font-weight: bold;
-    @include light-title;
+    @include light-title-DIN;
     @include gbLeft($ctna);
   }
 
@@ -43,7 +45,7 @@ $lessBorderC1: rgba(lighten($corange, 20%), 0.8);
     border-top: solid 1px $lessBorderC;
     font-size: 1.5rem;
     font-weight: bold;
-    @include light-title;
+    @include light-title-DIN;
     @include gbLeft($ctna);
   }
 
@@ -83,14 +85,18 @@ $lessBorderC1: rgba(lighten($corange, 20%), 0.8);
     display: flex;
     justify-content: center;
     align-items: center;
-    @include light-title;
+    @include light-title-DIN;
     @include gbLeft($ctna);
     font-size: 2.5rem;
     font-weight: bold;
   }
   .timer {
-    @include gbLeft($ctna);
+    // @include gbLeft($ctna);
+    // background-color: rgba(1, 176, 255, 0.2);
     border-top: solid 1px $lessBorderC;
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
 }
 
@@ -105,7 +111,7 @@ $lessBorderC1: rgba(lighten($corange, 20%), 0.8);
     display: flex;
     justify-content: center;
     align-items: center;
-    @include light-title;
+    @include light-title-DIN;
     @include gbLeft($ctna);
     border-top: solid 1px $lessBorderC;
     font-family: $fontDIN;
@@ -117,31 +123,41 @@ $lessBorderC1: rgba(lighten($corange, 20%), 0.8);
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   grid-template-rows: 1fr;
-  .p1 {
+  .p1, .pk1 {
     font-size: 2.5rem;
     font-weight: bold;
     display: flex;
     justify-content: center;
     align-items: center;
-    @include light-title;
+    @include light-title-DIN;
     // @include gbLeft($ctna);
   }
-  .p2 {
+  .p2, .pk2 {
     font-size: 2.5rem;
     font-weight: bold;
     display: flex;
     justify-content: center;
     align-items: center;
-    @include light-title;
+    @include light-title-DIN;
     // @include gbLeft($ctna);
     border-left: 1px solid $lessBorderC;
+  }
+  .pk1 {
+    background: linear-gradient(#ea85a7, #cd7292);
+    color: #333;
+    text-shadow: none;
+  }
+  .pk2 {
+    background: linear-gradient(#d8d10f, #c5be0c);
+    color: #333;
+    text-shadow: none;
   }
   .timer {
     font-size: 1.5rem;
     display: flex;
     justify-content: center;
     align-items: center;
-    @include light-title;
+    @include light-title-DIN;
     // @include gbLeft($ctna);
     border-left: 1px solid $lessBorderC;
   }
@@ -157,8 +173,10 @@ $lessBorderC1: rgba(lighten($corange, 20%), 0.8);
   font-family: $fontDINM;
 
   color: lighten($ctna, 40%);
+
   &.next {
-    color: lighten($ctna, 40%);
+    background-color: rgba($cred, 0.1);
+    color: lighten($cred, 20%);
   }
 
   .name {
@@ -168,6 +186,9 @@ $lessBorderC1: rgba(lighten($corange, 20%), 0.8);
     align-items: center;
     font-weight: bold;
     @include gbLeft($ctna);
+  }
+  &.next .name {
+    @include gbLeft($cred);
   }
 
   .info {
@@ -190,5 +211,49 @@ $lessBorderC1: rgba(lighten($corange, 20%), 0.8);
         grid-column: span 3;
       }
     }
+  }
+  &.next .info {
+    border-top: solid 1px $lessBorderCRED;
+    .ii {
+      border-left: solid 1px $lessBorderCRED;
+      &:first-child {
+        @include gbLeft($cred);
+      }
+    }
+  }
+}
+
+.LayoutAD {
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  .ad {
+    $pd: 1rem;
+    position: absolute;
+    top: $pd; left: $pd; right: $pd; bottom: $pd;
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    opacity: 0;
+
+    transition: opacity 2s ease;
+
+    &.show {
+      opacity: 1;
+    }
+  }
+}
+
+.LayoutGameCover {
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  pointer-events: none;
+  z-index: -1;
+  opacity: 0.8;
+  .img {
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
   }
 }

@@ -10,7 +10,9 @@ import Logo from '../../components/grids/Logo'
 import HangZhouMap from '../../components/kksk2/HangZhouMap'
 import Days from '../../components/kksk2/Days'
 
-import classNames from 'classnames/bind'
+// import classNames from 'classnames/bind'
+
+import net from 'net'
 
 // const BAOMING_URL = 'https://shimo.im/forms/JGQ8DhRqYHT3dWhJ/fill'
 const HUYA_ROOM = 'https://www.huya.com/114514'
@@ -47,6 +49,10 @@ export default class extends React.Component {
         </div>
       </WidthContainer>
     </div>
+  }
+
+  componentDidMount () {
+    console.log(net)
   }
 }
 
@@ -102,39 +108,39 @@ const HangZhou = () => {
   </div>
 }
 
-class Games extends React.Component {
-  render () {
-    let _list = this.state.abbrs.map((abbr, idx) => {
-      let url = abbr ? `url(//tna-web.oss-ap-southeast-1.aliyuncs.com/speedrun-game-assets/${ abbr }/cover-256.png?x-oss-process=image/resize,m_fill,w_240,h_320,limit_0)` : null
+// class Games extends React.Component {
+//   render () {
+//     let _list = this.state.abbrs.map((abbr, idx) => {
+//       let url = abbr ? `url(//tna-web.oss-ap-southeast-1.aliyuncs.com/speedrun-game-assets/${ abbr }/cover-256.png?x-oss-process=image/resize,m_fill,w_240,h_320,limit_0)` : null
 
-      if (abbr === 'mm11') {
-        url = 'url(//tna-upload.oss-cn-shanghai.aliyuncs.com/assets/mega-cover/mm11.png?x-oss-process=image/resize,m_fill,w_240,h_320,limit_0)'
-      }
+//       if (abbr === 'mm11') {
+//         url = 'url(//tna-upload.oss-cn-shanghai.aliyuncs.com/assets/mega-cover/mm11.png?x-oss-process=image/resize,m_fill,w_240,h_320,limit_0)'
+//       }
 
-      let className = classNames.bind(css)({
-        game: true,
-        ok: this.state.okAbbrs.includes(abbr)
-      })
+//       let className = classNames.bind(css)({
+//         game: true,
+//         ok: this.state.okAbbrs.includes(abbr)
+//       })
 
-      return <div className={ className } key={ idx }>
-        <div className={ css.cover } style={{ backgroundImage: url }}></div>
-        <span>?</span>
-      </div>
-    })
+//       return <div className={ className } key={ idx }>
+//         <div className={ css.cover } style={{ backgroundImage: url }}></div>
+//         <span>?</span>
+//       </div>
+//     })
 
-    return <div className={ css.Games }>
-      { _list }
-    </div>
-  }
+//     return <div className={ css.Games }>
+//       { _list }
+//     </div>
+//   }
 
-  state = {
-    abbrs: [
-      'Gun-Nac', 'ngnes', 'ai1', 'Blaster_Master_Zero', 'Dishonored_2',
-      'sekiro', 'Shio', 'mhw', 'mgrr', 'dmc5', 'katana_zero', 'dmc4',
-      'Blazing_Chrome', 'mm11', 'bloodborne', null, null, null, null, null
-    ],
-    okAbbrs: [
-      'bloodborne'
-    ]
-  }
-}
+//   state = {
+//     abbrs: [
+//       'Gun-Nac', 'ngnes', 'ai1', 'Blaster_Master_Zero', 'Dishonored_2',
+//       'sekiro', 'Shio', 'mhw', 'mgrr', 'dmc5', 'katana_zero', 'dmc4',
+//       'Blazing_Chrome', 'mm11', 'bloodborne', null, null, null, null, null
+//     ],
+//     okAbbrs: [
+//       'bloodborne'
+//     ]
+//   }
+// }

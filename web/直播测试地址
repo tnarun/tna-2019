@@ -1,29 +1,25 @@
-### 广州
+北京
 
-rtmp://push.gz.speedrua.com/test1/test1?auth_key=1569376935-0-0-e6b03a9cf4f2cca5f8761ea9b46e796a
+rtmp://push.bj.mindpin.com/tna3/tna3?auth_key=1570598753-0-0-3452845df4b9859e8e29d54fb8350665
 
-rtmp://play.gz.speedrua.com/test1/test1?auth_key=1569376935-0-0-a4a87dff3aafa8519289fd8ec37d8ad8
+rtmp://play.bj.mindpin.com/tna3/tna3?auth_key=1570598753-0-0-b57ca78cebeef2bdcff7155b729fcdc2
 
-------
+---------
 
-### 北京
+北京2
 
-rtmp://push.bj.speedrua.com/testbj/testbj?auth_key=1569377077-0-0-beb4ca4263361b8e1197c3ccd08ba09f
+rtmp://push.bj.mindpin.com/tna3-1/tna3-1?auth_key=1570618362-0-0-f7599d29b3fd07e57b5adf3e4c58160a
 
-rtmp://play.bj.speedrua.com/testbj/testbj?auth_key=1569377077-0-0-989aef38be56278c1ceb6f1b4f855967
+rtmp://play.bj.mindpin.com/tna3-1/tna3-1?auth_key=1570618362-0-0-96f37f2ec49372b4db407870172774e2
 
-------
+---------
 
-### bj2
+海外
 
-rtmp://push.bj.speedrua.com/test2/test2?auth_key=1569387847-0-0-7b5598f599b6563c6e336c90ae309f02
+rtmp://push.de.mindpin.com/tna3/tna3?auth_key=1570600264-0-0-8d5c90821bdc2e6dbee6c36a09e0fb34
 
-rtmp://play.bj.speedrua.com/test2/test2?auth_key=1569387847-0-0-2d96e6b396d3eeb4782d940ae0cb8032
+rtmp://play.de.mindpin.com/tna3/tna3?auth_key=1570600264-0-0-ec52ff30a43ee82682ac66ebf7ca4118
 
-------
 
-#### mindpin gz
-
-rtmp://push.gz.mindpin.com/test/test?auth_key=1569395871-0-0-deb53b53b7a51542b855ba12dd258b1d
-
-rtmp://play.gz.mindpin.com/test/test?auth_key=1569395871-0-0-9f232490cdba58b4948fe84f5049eea6
+超惑星 16:9 P 背景图
+密特罗德 16:9 背景图

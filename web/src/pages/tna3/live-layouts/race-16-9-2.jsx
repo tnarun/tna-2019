@@ -8,7 +8,9 @@ import { loadSchedueData } from '../../../data/tna3/data'
 
 import LayoutTNA from '../../../components/tna3/LayoutTNA'
 import LayoutGameName from '../../../components/tna3/LayoutGameName'
-import LayoutRacePlayers from '../../../components/tna3/LayoutRacePlayers'
+import LayoutRaceKnightPlayers from '../../../components/tna3/LayoutRaceKnightPlayers'
+import LayoutAD from '../../../components/tna3/LayoutAD'
+import LayoutGameCover from '../../../components/tna3/LayoutGameCover'
 
 // import TNALogo from '../../../components/grids/TNALogo'
 
@@ -18,15 +20,23 @@ export default class extends React.Component {
 
     return <div className={ css.live }>
       <div className={ css['c-16-9-race-2'] }>
-        <div className={ css.video1 }>video1 960 × 540</div>
-        <div className={ css.video2 }>video2 960 × 540</div>
-        <div className={ css.raceplayers }><LayoutRacePlayers data={ data } /></div>
+        <div className={ css.video1 }>
+          <span>960 × 540</span>
+          <LayoutGameCover data={ data } />
+        </div>
+        <div className={ css.video2 }>
+          <span>960 × 540</span>
+          <LayoutGameCover data={ data } />
+        </div>
+        <div className={ css.raceplayers }>
+          <LayoutRaceKnightPlayers data={ data } />
+        </div>
         <div className={ css.bingo }>Bingo 450 × 450</div>
         <div className={ css.st1 }>status1 735 × 230</div>
         <div className={ css.st2 }>status2 735 × 230</div>
         <div className={ css.game }><LayoutGameName data={ data } /></div>
         <div className={ css.logo }><LayoutTNA /></div>
-        <div className={ css.ad }>恰饭</div>
+        <div className={ css.ad }><LayoutAD /></div>
       </div>
     </div>
   }

@@ -8,7 +8,7 @@ export default class LayoutTimer extends React.Component {
 
     return <div className={ css.LayoutTimer }>
       <div className={ css.runner }>{ data.player }</div>
-      <div className={ css.timer }></div>
+      <div className={ css.timer }>{ this.props.s }</div>
     </div>
   }
 }

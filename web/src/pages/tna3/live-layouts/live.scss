@@ -53,7 +53,8 @@ $halfibpd: $ibpd / 2;
 
 .live {
   position: fixed;
-  overflow: scroll;
+  // overflow: scroll;
+  overflow: hidden;
   top: 0; width: 100%;
   left: 0; height: 100%;
   background-color: black;
@@ -68,7 +69,7 @@ $halfibpd: $ibpd / 2;
       @include box;
       border-top: 0 none;
       border-right: 0 none;
-      background-color: rgba($ctna, 0.2);
+      // background-color: rgba($ctna, 0.2);
     }
     // tna
     .logo {
@@ -87,6 +88,19 @@ $halfibpd: $ibpd / 2;
       @include box;
       border-left: 0 none;
       border-bottom: 0 none;
+      .adi {
+        position: absolute;
+        top: 0; left: 0; right: 0; bottom: 0;
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr;
+        .adii {
+          position: relative;
+          &:first-child {
+            border-bottom: 1px solid $borderC;
+          }
+        }
+      }
     }
 
     // 游戏信息
@@ -119,7 +133,7 @@ $halfibpd: $ibpd / 2;
       border-top: 0 none;
       border-right: 0 none;
       border-bottom: 0 none;
-      background-color: rgba($ctna, 0.2);
+      // background-color: rgba($ctna, 0.2);
     }
     .logo {
       top: 0; left: 0;
@@ -162,7 +176,7 @@ $halfibpd: $ibpd / 2;
       width: 960px; height: 541px;
       @include box;
       border-left: 0 none; border-top: 0 none;
-      background-color: rgba($ctna, 0.2);
+      // background-color: rgba($ctna, 0.2);
     }
     .video2 {
       top: 0; right: 0;
@@ -170,7 +184,7 @@ $halfibpd: $ibpd / 2;
       width: 960px; height: 541px;
       @include box;
       border-right: 0 none; border-top: 0 none;
-      background-color: rgba($ctna, 0.2);
+      // background-color: rgba($ctna, 0.2);
     }
     .logo {
       bottom: 0; left: 0;
@@ -211,7 +225,7 @@ $halfibpd: $ibpd / 2;
       width: 960px; height: 541px;
       @include box;
       border-left: 0 none; border-top: 0 none;
-      background-color: rgba($ctna, 0.2);
+      // background-color: rgba($ctna, 0.2);
     }
     .video2 {
       top: 0; right: 0;
@@ -219,7 +233,7 @@ $halfibpd: $ibpd / 2;
       width: 960px; height: 541px;
       @include box;
       border-right: 0 none; border-top: 0 none;
-      background-color: rgba($ctna, 0.2);
+      // background-color: rgba($ctna, 0.2);
     }
 
     .raceplayers {
@@ -236,7 +250,7 @@ $halfibpd: $ibpd / 2;
       height: 230px;
       @include box;
       border-left: 0 none; border-top: 0 none; border-right: 0 none;
-      background-color: rgba($ctna, 0.2);
+      background-color: black;
     }
     .st2 {
       right: 0; top: 630px;
@@ -244,7 +258,7 @@ $halfibpd: $ibpd / 2;
       height: 230px;
       @include box;
       border-right: 0 none; border-top: 0 none; border-left: 0 none;
-      background-color: rgba($ctna, 0.2);
+      background-color: black;
     }
 
     .bingo {
@@ -253,8 +267,10 @@ $halfibpd: $ibpd / 2;
       left: (1920px - $w) / 2; bottom: 0; 
       @include box;
       border-bottom: 0 none;
-      background-color: rgba($ctna, 0.2);
+      background-color: black;
       border-top: 0 none;
+      border-left: 0 none;
+      border-right: 0 none;
     }
     
     .logo {
@@ -295,7 +311,7 @@ $halfibpd: $ibpd / 2;
     .logo {
       top: 0; left: 0;
       // width: 479px; height: 540px;
-      width: 479px - $ibpd; height: 540px - $halfibpd;
+      width: 479px - $ibpd; height: 360px - $halfibpd;
       @include box;
       border-left: 0 none;
       border-top: 0 none;
@@ -303,9 +319,22 @@ $halfibpd: $ibpd / 2;
     .ad {
       left: 0; bottom: 0;
       // width: 479px; height: 540px;
-      width: 479px - $ibpd; height: 540px - $halfibpd;
+      width: 479px - $ibpd; height: 720px - $halfibpd;
       @include box;
       border-left: 0 none; border-bottom: 0 none;
+      .adi {
+        position: absolute;
+        top: 0; left: 0; right: 0; bottom: 0;
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr;
+        .adii {
+          position: relative;
+          &:first-child {
+            border-bottom: 1px solid $borderC;
+          }
+        }
+      }
     }
     .game {
       top: 360px + 240px + $halfibpd; left: 0;
@@ -338,7 +367,7 @@ $halfibpd: $ibpd / 2;
     }
     .next1 {
       bottom: 90px + $nh + 45px + $nh + 45px;
-      background-color: rgba($ctna, 0.1);
+      border-color: lighten($cred, 10%);
     }
 
     .countdown {
@@ -374,5 +403,18 @@ $halfibpd: $ibpd / 2;
       color: $text-color;
       color: lighten($ctna, 10%);
     }
+  }
+}
+
+.CountDownShow {
+  // background-color: red;
+  text-align: center;
+  .cd {
+    margin-top: .5rem;
+    font-size: 3rem;
+    color: lighten($ctna, 20%);
+    text-shadow: 0 0 1rem $light-bg-color;
+    font-weight: bold;
+    font-family: $fontDIN;
   }
 }

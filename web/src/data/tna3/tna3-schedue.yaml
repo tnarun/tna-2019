@@ -146,7 +146,7 @@ DAY2:
     est: PT55M
     guide: 火月的捌年
     time: 2019-10-05 14:45
-    layout: single-4-3
+    layout: single-16-9
   -
     id: 2-3
     cnName: 空洞骑士
@@ -154,7 +154,7 @@ DAY2:
     abbr: hollowknight
     category: NMG bingo race
     player: 
-      - FF
+      - 粥
       - gcghvcg
     est: PT2H30M
     guide: 创世、魔术师
@@ -239,7 +239,7 @@ DAY3:
     est: PT1H
     guide: SORP
     time: 2019-10-06 16:00
-    layout: single-4-3
+    layout: single-16-9
   -
     id: 3-5
     cnName: 汐
@@ -297,7 +297,7 @@ DAY3:
     type: 'secret'
     layout: single-16-9
   -
-    id: 3-9
+    id: 3-10
     cnName: 蔚蓝
     enName: Celeste
     abbr: Celeste

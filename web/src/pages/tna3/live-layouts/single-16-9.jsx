@@ -9,6 +9,9 @@ import { loadSchedueData } from '../../../data/tna3/data'
 import LayoutGameName from '../../../components/tna3/LayoutGameName'
 import LayoutTimer from '../../../components/tna3/LayoutTimer'
 import LayoutTNA from '../../../components/tna3/LayoutTNA'
+import LayoutAD from '../../../components/tna3/LayoutAD'
+import LayoutAWD from '../../../components/tna3/LayoutAWD'
+import LayoutGameCover from '../../../components/tna3/LayoutGameCover'
 
 export default class extends React.Component {
   render () {
@@ -16,11 +19,23 @@ export default class extends React.Component {
 
     return <div className={ css.live }>
       <div className={ css['c-16-9-single'] }>
-        <div className={ css.video }>1600 × 900</div>
+      <div className={ css.video }>
+          <span>1600 × 900</span>
+          <LayoutGameCover data={ data } />
+        </div>
         <div className={ css.logo }><LayoutTNA /></div>
-        <div className={ css.ad }>恰饭</div>
+        <div className={ css.ad }>
+          <div className={ css.adi }>
+            <div className={ css.adii }>
+              <LayoutAD />
+            </div>
+            <div className={ css.adii }>
+              <LayoutAWD />
+            </div>
+          </div>
+        </div>
         <div className={ css.game }><LayoutGameName data={ data } /></div>
-        <div className={ css.timer }><LayoutTimer data={ data } /></div>
+        <div className={ css.timer }><LayoutTimer data={ data } s='796 × 402 x:320' /></div>
       </div>
     </div>
   }
