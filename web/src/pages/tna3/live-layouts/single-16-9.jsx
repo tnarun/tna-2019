@@ -35,7 +35,7 @@ export default class extends React.Component {
           </div>
         </div>
         <div className={ css.game }><LayoutGameName data={ data } /></div>
-        <div className={ css.timer }><LayoutTimer data={ data } s='796 × 402 x:320' /></div>
+        <div className={ css.timer }><LayoutTimer data={ data } s='796 × 102 x:320' /></div>
       </div>
     </div>
   }

@@ -117,7 +117,7 @@ DAY1:
     cnName: 仙剑奇侠传
     enName: "Legend of Sword and Fairy"
     abbr: New_Legend_of_Sword_and_Fairy
-    category: 待定
+    category: Any%
     player: 丿灬夜狼
     est: PT150M
     guide: shalou88沙漏哥
@@ -135,7 +135,7 @@ DAY2:
     est: PT2H30M
     guide: code
     time: 2019-10-05 12:00
-    layout: single-16-9
+    layout: single-4-3
   -
     id: 2-2
     cnName: 超惑星战记 ZERO

@@ -7,7 +7,6 @@ const urls = [
   'http://tna-upload.oss-cn-shanghai.aliyuncs.com/assets/2019-10-02/ads/awd-bt.png',
   'http://tna-upload.oss-cn-shanghai.aliyuncs.com/assets/2019-10-02/ads/awd-bq.png',
   'http://tna-upload.oss-cn-shanghai.aliyuncs.com/assets/2019-10-02/ads/awd-d2.png',
-  'http://tna-upload.oss-cn-shanghai.aliyuncs.com/assets/2019-10-02/ads/awd-ls.png',
   'http://tna-upload.oss-cn-shanghai.aliyuncs.com/assets/2019-10-02/ads/awd-ds.png',
 ]
 

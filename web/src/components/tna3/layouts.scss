@@ -115,6 +115,9 @@ $lessBorderCRED: rgba(lighten($cred, 20%), 0.8);
     @include gbLeft($ctna);
     border-top: solid 1px $lessBorderC;
     font-family: $fontDIN;
+    &.large {
+      font-size: 2rem;
+    }
   }
 }
 
@@ -255,5 +258,30 @@ $lessBorderCRED: rgba(lighten($cred, 20%), 0.8);
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
+  }
+}
+
+.LayoutKMS {
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  .DAY {
+    .t {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 0.5rem 1rem;
+      border-bottom: solid 1px $borderC;
+      color: lighten($ctna, 20%);
+      font-size: 1.5rem;
+    }
+    .show {
+      display: grid;
+      grid-template-columns: 1fr 2fr 2fr 2fr;
+      font-size: 1.3rem;
+      .h {
+        border: solid 1px rgba($borderC, 0.3);
+        padding: 0.2rem 0.5rem;
+      }
+    }
   }
 }

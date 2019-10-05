@@ -8,6 +8,7 @@ const urls = [
   'http://tna-upload.oss-cn-shanghai.aliyuncs.com/assets/2019-10-02/ads/ad-afd.png',
   'http://tna-upload.oss-cn-shanghai.aliyuncs.com/assets/2019-10-02/ads/ad-cow.png',
   'http://tna-upload.oss-cn-shanghai.aliyuncs.com/assets/2019-10-02/ads/ad-destiny2.png',
+  'http://tna-upload.oss-cn-shanghai.aliyuncs.com/assets/2019-10-02/ads/ad-vg.png'
 ]
 
 export default class LayoutAD extends React.Component {

@@ -418,3 +418,46 @@ $halfibpd: $ibpd / 2;
     font-family: $fontDIN;
   }
 }
+
+.c-end {
+  @include screen;
+
+  .logo {
+    bottom: 0; left: 0;
+    width: 480px - $halfibpd; height: 760px - $halfibpd;
+    @include box;
+    border-left: 0 none;
+    border-bottom: 0 none;
+  }
+  .ads {
+    bottom: 0; right: 0;
+    width: 1440px - $halfibpd; height: 760px - $halfibpd;
+    @include box;
+    border-right: 0 none;
+    border-bottom: 0 none;
+    .adlogos {
+      position: absolute;
+      top: 0; left: 0; right: 0; bottom: 0;
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      grid-template-rows: 1fr 1fr;
+      grid-gap: 2rem;
+      padding: 2rem;
+      .cover {
+        background-size: contain;
+        background-position: center;
+        background-repeat: no-repeat;
+      }
+    }
+  }
+  .gtitle {
+    height: 320px - $halfibpd; width: 1920px;
+    @include box;
+    border-left: 0 none;
+    border-top: 0 none;
+    border-right: 0 none;
+    text-shadow: 0 0 1rem $light-bg-color;
+    font-weight: bold;
+    font-family: $fontDIN;
+  }
+}

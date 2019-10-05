@@ -17,9 +17,9 @@ export default class liveLayouts extends React.Component {
             <div className={ css.h }>解说</div>
             <div className={ css.h }>布局</div>
           </div>
-          <DAY data={ this.state.DAY1 } title='第一天 10-04' />
-          <DAY data={ this.state.DAY2 } title='第二天 10-05'/>
-          <DAY data={ this.state.DAY3 } title='第三天 10-06'/>
+          <DAY data={ this.state.DAY1 } title='第一天 10-04' type='day' />
+          <DAY data={ this.state.DAY2 } title='第二天 10-05' type='day' />
+          <DAY data={ this.state.DAY3 } title='第三天 10-06' type='end' />
         </div>
       </WidthContainer>
     </div>
@@ -62,6 +62,10 @@ class DAY extends React.Component {
       {
         _shows
       }
+      <div className={ css.title }>
+        <span>结束</span>
+        <a href={ `/tna3/live-layouts/end?type=${ this.props.type }` } target='_blank' rel='noopener noreferrer'>{ `/tna3/live-layouts/end?type=${ this.props.type }` }</a>
+      </div>
     </div>
   }
 }

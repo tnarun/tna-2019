@@ -11,6 +11,7 @@ import LayoutGameName from '../../../components/tna3/LayoutGameName'
 import LayoutTimer from '../../../components/tna3/LayoutTimer'
 import LayoutAD from '../../../components/tna3/LayoutAD'
 import LayoutGameCover from '../../../components/tna3/LayoutGameCover'
+import LayoutKMS from '../../../components/tna3/LayoutKMS'
 
 export default class extends React.Component {
   render () {
@@ -19,8 +20,15 @@ export default class extends React.Component {
     return <div className={ css.live }>
       <div className={ css['c-4-3-single'] }>
         <div className={ css.video }>
-          <span>1440 × 1080</span>
-          <LayoutGameCover data={ data } />
+          {
+            data.id === '1-1' ? <div>
+              <LayoutKMS days={ this.state.days } />
+            </div> : <>
+              <span>1440 × 1080</span>
+              <LayoutGameCover data={ data } />
+            </>
+          }
+          
         </div>
         <div className={ css.game }><LayoutGameName data={ data } /></div>
         <div className={ css.logo }><LayoutTNA /></div>
@@ -30,12 +38,16 @@ export default class extends React.Component {
     </div>
   }
 
+  state = {
+    days: []
+  }
+
   componentWillMount () {
     let { id } = this.props.location.query
     let days = loadSchedueData()
     let arr = id.split('-')
     let data = days[`DAY${ arr[0] }`][~~arr[1] - 1]
     console.log(id, data)
-    this.setState({ data })
+    this.setState({ data, days })
   }
 }
