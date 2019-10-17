@@ -5,7 +5,6 @@ import css from './layouts.scss'
 const urls = [
   'http://tna-upload.oss-cn-shanghai.aliyuncs.com/assets/2019-10-02/ads/awd-ns.png',
   'http://tna-upload.oss-cn-shanghai.aliyuncs.com/assets/2019-10-02/ads/awd-bt.png',
-  'http://tna-upload.oss-cn-shanghai.aliyuncs.com/assets/2019-10-02/ads/awd-bq.png',
   'http://tna-upload.oss-cn-shanghai.aliyuncs.com/assets/2019-10-02/ads/awd-d2.png',
   'http://tna-upload.oss-cn-shanghai.aliyuncs.com/assets/2019-10-02/ads/awd-ds.png',
 ]

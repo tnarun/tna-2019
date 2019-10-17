@@ -88,7 +88,7 @@ const Timeline = () => {
       </div>
     </div>
     <div className={ css.duetimepoint }>
-      <div className={ css.date }>时间待定</div>
+      <div className={ css.date }>2019-10-01</div>
       <div className={ css.event }>
         <span>公布节目单</span>
       </div>
@@ -107,40 +107,3 @@ const HangZhou = () => {
     <HangZhouMap />
   </div>
 }
-
-// class Games extends React.Component {
-//   render () {
-//     let _list = this.state.abbrs.map((abbr, idx) => {
-//       let url = abbr ? `url(//tna-web.oss-ap-southeast-1.aliyuncs.com/speedrun-game-assets/${ abbr }/cover-256.png?x-oss-process=image/resize,m_fill,w_240,h_320,limit_0)` : null
-
-//       if (abbr === 'mm11') {
-//         url = 'url(//tna-upload.oss-cn-shanghai.aliyuncs.com/assets/mega-cover/mm11.png?x-oss-process=image/resize,m_fill,w_240,h_320,limit_0)'
-//       }
-
-//       let className = classNames.bind(css)({
-//         game: true,
-//         ok: this.state.okAbbrs.includes(abbr)
-//       })
-
-//       return <div className={ className } key={ idx }>
-//         <div className={ css.cover } style={{ backgroundImage: url }}></div>
-//         <span>?</span>
-//       </div>
-//     })
-
-//     return <div className={ css.Games }>
-//       { _list }
-//     </div>
-//   }
-
-//   state = {
-//     abbrs: [
-//       'Gun-Nac', 'ngnes', 'ai1', 'Blaster_Master_Zero', 'Dishonored_2',
-//       'sekiro', 'Shio', 'mhw', 'mgrr', 'dmc5', 'katana_zero', 'dmc4',
-//       'Blazing_Chrome', 'mm11', 'bloodborne', null, null, null, null, null
-//     ],
-//     okAbbrs: [
-//       'bloodborne'
-//     ]
-//   }
-// }

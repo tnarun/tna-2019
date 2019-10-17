@@ -17,6 +17,11 @@ $lessBorderCRED: rgba(lighten($cred, 20%), 0.8);
   }
 }
 
+@mixin titleShadow ($color) {
+  text-shadow: 6px 6px 0 rgba(black, 0.382);
+  color: $color;
+}
+
 .LayoutGameName {
   font-size: 1.5rem;
   width: 100%; height: 100%;
@@ -103,24 +108,22 @@ $lessBorderCRED: rgba(lighten($cred, 20%), 0.8);
   }
 }
 
-.LayoutTNA {
+.LayoutKKSK2 {
   width: 100%; height: 100%;
   display: grid;
   grid-template-columns: 1fr;
-  grid-template-rows: 3fr 1fr 1fr;
+  grid-template-rows: 4fr 1fr;
 
   .link {
-    font-size: 1.5rem;
+    font-size: 3rem;
     display: flex;
     justify-content: center;
     align-items: center;
-    @include light-title-DIN;
-    @include gbLeft($ctna);
-    border-top: solid 1px $lessBorderC;
+    // @include light-title-DIN;
+    // @include gbLeft($kksk2C1);
+    // border-top: solid 1px $lessBorderC;
+    @include titleShadow(white);
     font-family: $fontDIN;
-    &.large {
-      font-size: 2rem;
-    }
   }
 }
 

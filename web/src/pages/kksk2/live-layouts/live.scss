@@ -1,0 +1,782 @@
+@import '../../../layouts/vars';
+
+$borderC: lighten($ctna, 20%);
+
+@keyframes GameName {
+  0% { transform: scale(1) }
+  50% { transform: scale(1.5) }
+  100% { transform: scale(1) }
+}
+
+@mixin boxBase {
+  position: absolute;
+
+  display: flex;
+  font-family: $fontDIN;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-size: 2rem;
+  box-sizing: border-box;
+}
+
+@mixin box ($color: $borderC) {
+  @include boxBase;
+  // border: solid 5px $color;
+  background-color: rgba(black, 1);
+  &:after {
+    content: '';
+    position: absolute;
+    width: 100%; height: 100%;
+    border: solid 5px $color;
+    background-color: rgba(darken($color, 30%), 0.3);
+    // z-index: 0;
+  }
+  span {
+    position: relative;
+    z-index: 100;
+  }
+  z-index: 1;
+}
+
+@mixin boxSpecial {
+  @include boxBase;
+  span {
+    position: relative;
+    z-index: 100;
+  }
+}
+
+@mixin boxRB {
+  @include boxBase;
+  // border: solid 5px $color;
+  background-color: rgba(black, 1);
+  &:after {
+    content: '';
+    position: absolute;
+    width: 100%; height: 100%;
+    border-top: solid 5px $kksk2C1;
+    border-left: solid 5px $kksk2C1;
+    border-bottom: solid 5px $kksk2C2;
+    border-right: solid 5px $kksk2C2;
+    $c1: rgba($kksk2C1, 1);
+    $c2: rgba($kksk2C2, 1);
+    // background: linear-gradient(90deg + 26.565deg, $c1, $c2);
+    // z-index: 0;
+  }
+  span {
+    position: relative;
+    z-index: 100;
+  }
+  z-index: 1;
+}
+
+$ibpd: 6px;
+$halfibpd: $ibpd / 2;
+@mixin innerBox {
+  @include boxBase;
+  padding: $ibpd;
+  
+  &::before {
+    content: '';
+    position: absolute;
+    top: $ibpd; left: $ibpd; right: $ibpd; bottom: $ibpd;
+    box-sizing: border-box;
+    border: solid 1px $borderC;
+    background-color: rgba(black, 0.5);
+    z-index: -1;
+  }
+}
+
+@mixin screen {
+  position: absolute;
+  top: 0; left: 0;
+  width: 1920px; height: 1080px;
+  background-color: rgba($ctna, 0.2);
+  overflow: hidden;
+}
+
+.live {
+  position: fixed;
+  // overflow: scroll;
+  overflow: hidden;
+  top: 0; width: 100%;
+  left: 0; height: 100%;
+  background-color: black;
+
+  .livebg {
+    position: absolute;
+    width: 1920px; height: 1080px;
+    background-color: black;
+    z-index: -99;
+
+    video {
+      object-fit: cover;
+      width: 100%; height: 100%;
+      opacity: 0.618;
+    }
+  }
+
+  .c-16-9-single {
+    @include screen;
+
+    // 游戏画面
+    .video {
+      top: 0px; right: 0px;
+      width: 1601px; height: 901px;
+      @include box;
+      border-top: 0 none;
+      border-right: 0 none;
+      // background-color: rgba($ctna, 0.2);
+    }
+    // tna
+    .logo {
+      top: 0; left: 0;
+      // width: 319px; height: 360px;
+      width: 319px - $ibpd; height: 360px - $halfibpd;
+      @include box;
+      border-left: 0 none;
+      border-top: 0 none;
+    }
+    // 恰饭
+    .ad {
+      bottom: 0; left: 0;
+      // width: 319px; height: 720px;
+      width: 319px - $ibpd; height: 720px - $halfibpd;
+      @include box;
+      border-left: 0 none;
+      border-bottom: 0 none;
+      .adi {
+        position: absolute;
+        top: 0; left: 0; right: 0; bottom: 0;
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr;
+        .adii {
+          position: relative;
+          &:first-child {
+            border-bottom: 1px solid $borderC;
+          }
+        }
+      }
+    }
+
+    // 游戏信息
+    .game {
+      right: 0; bottom: 0;
+      // width: 800px; height: 179px;
+      width: 800px - $halfibpd; height: 179px - $ibpd;
+      @include box;
+      border-bottom: 0 none;
+      border-right: 0 none;
+    }
+
+    // 计时器和 runner
+    .timer {
+      left: 320px - 1px; bottom: 0;
+      // width: 801px; height: 179px;
+      width: 801px - $halfibpd; height: 179px - $ibpd;
+      @include box;
+      border-bottom: 0 none;
+    }
+  }
+
+  .c-4-3-single {
+    @include screen;
+
+    .video {
+      top: 0px; right: 0;
+      width: 1441px; height: 1081px;
+      @include box;
+      border-top: 0 none;
+      border-right: 0 none;
+      border-bottom: 0 none;
+      // background-color: rgba($ctna, 0.2);
+    }
+    .logo {
+      top: 0; left: 0;
+      // width: 479px; height: 360px;
+      width: 479px - $ibpd; height: 300px - $halfibpd;
+      @include box;
+      border-left: 0 none;
+      border-top: 0 none;
+    }
+    .ad {
+      top: 300px + $halfibpd; left: 0;
+      // width: 479px; height: 360px;
+      width: 479px - $ibpd; height: 300px - $ibpd;
+      @include box;
+      border-left: 0 none;
+    }
+    .game {
+      top: 360px + 240px + $halfibpd; left: 0;
+      // width: 479px; height: 360px;
+      width: 479px - $ibpd; height: 240px - $ibpd;
+      @include box;
+      border-left: 0 none;
+    }
+    .timer {
+      bottom: 0; left: 0;
+      // width: 479px; height: 360px;
+      width: 479px - $ibpd; height: 240px - $halfibpd;
+      @include box;
+      border-bottom: 0 none;
+      border-left: 0 none;
+    }
+  }
+
+  .c-16-9-race-1 {
+    @include screen;
+
+    .video1 {
+      top: 0; left: 0;
+      // width: 960px; height: 540px;
+      width: 960px; height: 541px;
+      @include box;
+      border-left: 0 none; border-top: 0 none;
+      // background-color: rgba($ctna, 0.2);
+    }
+    .video2 {
+      top: 0; right: 0;
+      // width: 960px; height: 540px;
+      width: 960px; height: 541px;
+      @include box;
+      border-right: 0 none; border-top: 0 none;
+      // background-color: rgba($ctna, 0.2);
+    }
+    .logo {
+      bottom: 0; left: 0;
+      // width: 640px; height: 360px;
+      width: 640px - $halfibpd; height: 450px;
+      @include box;
+      border-left: 0 none; border-bottom: 0 none;
+    }
+    .ad {
+      bottom: 0; right: 0;
+      // width: 640px; height: 360px;
+      width: 640px - $halfibpd; height: 450px;
+      @include box;
+      border-right: 0 none; border-bottom: 0 none;
+    }
+    .game {
+      bottom: 0; left: 640px + $halfibpd;
+      // width: 640px; height: 360px;
+      width: 640px - $ibpd; height: 450px;
+      @include box;
+      border-bottom: 0 none;
+    }
+    .raceplayers {
+      top: 541px; left: 0;
+      // width: 1920px; height: 89px;
+      width: 1920px; height: 89px - $ibpd;
+      @include box;
+      border-left: 0 none; border-right: 0 none; border-top: 0 none;
+    }
+  }
+
+  .c-16-9-race-2 {
+    @include screen;
+
+    .video1 {
+      top: 0; left: 0;
+      // width: 960px; height: 540px;
+      width: 960px; height: 541px;
+      @include box;
+      border-left: 0 none; border-top: 0 none;
+      // background-color: rgba($ctna, 0.2);
+    }
+    .video2 {
+      top: 0; right: 0;
+      // width: 960px; height: 540px;
+      width: 960px; height: 541px;
+      @include box;
+      border-right: 0 none; border-top: 0 none;
+      // background-color: rgba($ctna, 0.2);
+    }
+
+    .raceplayers {
+      top: 541px; left: 0;
+      // width: 1920px; height: 89px;
+      width: 1920px; height: 89px;
+      @include box;
+      border-left: 0 none; border-right: 0 none; border-top: 0 none;
+    }
+
+    .st1 {
+      left: 0; top: 630px;
+      width: 735px;
+      height: 230px;
+      @include box;
+      border-left: 0 none; border-top: 0 none; border-right: 0 none;
+      background-color: black;
+    }
+    .st2 {
+      right: 0; top: 630px;
+      width: 735px;
+      height: 230px;
+      @include box;
+      border-right: 0 none; border-top: 0 none; border-left: 0 none;
+      background-color: black;
+    }
+
+    .bingo {
+      $w: 450px;
+      width: $w; height: $w;
+      left: (1920px - $w) / 2; bottom: 0; 
+      @include box;
+      border-bottom: 0 none;
+      background-color: black;
+      border-top: 0 none;
+      border-left: 0 none;
+      border-right: 0 none;
+    }
+    
+    .logo {
+      bottom: 0; right: 0;
+      width: 364px; height: 214px;
+      @include box;
+      border-bottom: 0 none;
+      border-right: 0 none;
+      border-left: 0 none;
+    }
+    .ad {
+      bottom: 0; right: 364px;
+      width: 364px; height: 214px;
+      @include box;
+      border-bottom: 0 none;
+    }
+    .game {
+      bottom: 0; left: 0;
+      width: 729px; height: 214px;
+      @include box;
+      border-bottom: 0 none;
+      border-left: 0 none;
+    }
+  }
+
+  .c-16-9-race-4p {
+    @include screen;
+
+    $vdw: 800px; $vdh: $vdw / 16 * 9; 
+    // $offx: (1920px - $vdw * 2) / 3;
+    $offx: 0;
+    $offy: (1080px - $vdh * 2) / 3;
+
+    .video1 {
+      top: $offy; left: $offx;
+      width: $vdw; height: $vdh;
+      @include box($kksk2C1);
+      // border-left: 0 none; border-top: 0 none;
+      // background-color: rgba(black, 0.6);
+    }
+    .video2 {
+      top: $offy; right: $offx;
+      width: $vdw; height: $vdh;
+      @include box($kksk2C2);
+      // border-right: 0 none; border-top: 0 none;
+      // background-color: rgba(black, 0.6);
+    }
+    .video3 {
+      bottom: $offy; right: $offx;
+      width: $vdw; height: $vdh;
+      @include box($kksk2C2);
+      // border-right: 0 none; border-bottom: 0 none;
+      // background-color: rgba(black, 0.6);
+    }
+    .video4 {
+      bottom: $offy; left: $offx;
+      width: $vdw; height: $vdh;
+      @include box($kksk2C1);
+      // border-left: 0 none; border-bottom: 0 none;
+      // background-color: rgba(black, 0.6);
+    }
+
+    .name1 {
+      position: absolute;
+      width: (1920px - $vdw * 2) - 30px;
+      height: 60px;
+      left: $vdw; top: $offy + 120px - 5px;
+      background-color: darken($kksk2C1, 15%);
+      border: solid 5px $kksk2C1;
+      transform: skew(-26.26deg, 0) translateX(-20px);
+    }
+
+    .name2 {
+      position: absolute;
+      width: (1920px - $vdw * 2) - 30px;
+      height: 60px;
+      right: $vdw; top: $offy + 240px - 5px;
+      background-color: darken($kksk2C2, 15%);
+      border: solid 5px $kksk2C2;
+      transform: skew(-26.26deg, 0) translateX(20px);
+    }
+
+    .name3 {
+      position: absolute;
+      width: (1920px - $vdw * 2) - 30px;
+      height: 60px;
+      left: $vdw; bottom: $offy + 240px - 5px;
+      background-color: darken($kksk2C1, 15%);
+      border: solid 5px $kksk2C1;
+      transform: skew(-26.26deg, 0) translateX(-20px);
+    }
+
+    .name4 {
+      position: absolute;
+      width: (1920px - $vdw * 2) - 30px;
+      height: 60px;
+      right: $vdw; bottom: $offy + 120px - 5px;
+      background-color: darken($kksk2C2, 15%);
+      border: solid 5px $kksk2C2;
+      transform: skew(-26.26deg, 0) translateX(20px);
+    }
+
+    .game {
+      position: absolute;
+      width: (1920px - $vdw * 2) - 30px;
+      height: 60px;
+      left: $vdw; top: $offy - 5px;
+      background-color: darken($kksk2C1, 15%);
+      border: solid 5px $kksk2C1;
+      transform: skew(-26.26deg, 0) translateX(-20px);
+    }
+
+    .timer {
+      position: absolute;
+      width: (1920px - $vdw * 2) - 30px;
+      height: 60px;
+      right: $vdw; bottom: $offy - 5px;
+      background-color: darken($kksk2C2, 15%);
+      border: solid 5px $kksk2C2;
+      transform: skew(-26.26deg, 0) translateX(20px);
+    }
+
+    .logo {
+      $ww: (1920px - $vdw * 2) - 20px * 2;
+      width: $ww; 
+      height: $ww;
+      left: $vdw + 20px; top: (1080px - $ww) / 2;
+      @include boxSpecial;
+      border-left: 0 none; border-bottom: 0 none;
+      // background-color: rgba(black, 0.382);
+    }
+  }
+
+  .c-16-9-race-3p {
+    @include screen;
+
+    $vdw: 800px; $vdh: $vdw / 16 * 9; 
+    // $offx: (1920px - $vdw * 2) / 3;
+    $offx: 0;
+    $offy: (1080px - $vdh * 2) / 3;
+
+    .video1 {
+      top: $offy; left: $offx;
+      width: $vdw; height: $vdh;
+      @include box($kksk2C1);
+      // border-left: 0 none; border-top: 0 none;
+      // background-color: rgba(black, 0.6);
+    }
+    .video2 {
+      top: $offy; right: $offx;
+      width: $vdw; height: $vdh;
+      @include box($kksk2C2);
+      // border-right: 0 none; border-top: 0 none;
+      // background-color: rgba(black, 0.6);
+    }
+    .video3 {
+      bottom: $offy; left: (1920px - $vdw) / 2;
+      width: $vdw; height: $vdh;
+      @include boxRB();
+      // border-right: 0 none; border-bottom: 0 none;
+      // background-color: rgba(black, 0.6);
+    }
+
+    .name1 {
+      position: absolute;
+      width: (1920px - $vdw * 2) - 30px;
+      height: 60px;
+      left: $vdw; 
+      top: $offy - 5px + 120px;
+      background-color: darken($kksk2C1, 35%);
+      border: solid 5px $kksk2C1;
+      transform: skew(-26.26deg, 0) translateX(-20px);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-weight: bold;
+      font-size: 2.4rem;
+      text-shadow: 6px 6px 0 rgba(black, 0.382);
+      color:white;
+    }
+
+    .name2 {
+      position: absolute;
+      width: (1920px - $vdw * 2) - 30px;
+      height: 60px;
+      right: $vdw; 
+      top: $offy + $vdh - 60px - 5px - 120px;
+      background-color: darken($kksk2C2, 35%);
+      border: solid 5px $kksk2C2;
+      transform: skew(-26.26deg, 0) translateX(20px);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-weight: bold;
+      font-size: 2.4rem;
+      text-shadow: 6px 6px 0 rgba(black, 0.382);
+      color:white;
+    }
+
+    .name3 {
+      position: absolute;
+      width: (1920px - $vdw * 2) - 30px;
+      height: 60px;
+      left: $vdw + (1920px - $vdw) / 2; 
+      bottom: $offy + 270px - 5px;
+      background-color: darken($kksk2C2, 35%);
+      border: solid 5px $kksk2C2;
+      transform: skew(-26.26deg, 0) translateX(-20px);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-weight: bold;
+      font-size: 2.4rem;
+      text-shadow: 6px 6px 0 rgba(black, 0.382);
+      color:white;
+    }
+
+    .game {
+      position: absolute;
+      width: (1920px - $vdw * 2) - 20px;
+      height: 60px;
+      right: -40px; 
+      bottom: $offy + 180px - 5px;
+      background-color: darken(#555, 35%);
+      border: solid 5px $corange;
+      transform: skew(-26.26deg, 0) translateX(-20px);
+      display: flex;
+      // justify-content: center;
+      padding-left: 1rem;
+      align-items: center;
+      font-weight: bold;
+      font-size: 2.4rem;
+      text-shadow: 6px 6px 0 rgba(black, 0.382);
+      color:white;
+    }
+
+    .category {
+      position: absolute;
+      width: (1920px - $vdw * 2) + 160px;
+      height: 60px;
+      right: -40px; 
+      bottom: $offy + 90px - 5px;
+      background-color: darken(#555, 35%);
+      border: solid 5px $corange;
+      transform: skew(-26.26deg, 0) translateX(-20px);
+      display: flex;
+      // justify-content: center;
+      padding-left: 1rem;
+      align-items: center;
+      font-weight: bold;
+      font-size: 2.4rem;
+      text-shadow: 6px 6px 0 rgba(black, 0.382);
+      color:white;
+    }
+
+    .timer {
+      position: absolute;
+      width: (1920px - $vdw * 2) + 100px;
+      height: 60px;
+      right: -40px; 
+      bottom: $offy - 5px;
+      background-color: darken(#555, 35%);
+      border: solid 5px $corange;
+      transform: skew(-26.26deg, 0) translateX(-20px);
+      display: flex;
+      // justify-content: center;
+      padding-left: 1rem;
+      align-items: center;
+      font-weight: bold;
+      font-size: 2.4rem;
+      text-shadow: 6px 6px 0 rgba(black, 0.382);
+      color:white;
+    }
+
+    .logo {
+      $hh: 450px;
+      width: $hh; 
+      height: $hh;
+      left: ((1920px - $vdw) / 2 - $hh) / 2; 
+      bottom: $offy;
+      @include boxSpecial;
+      border-left: 0 none; border-bottom: 0 none;
+      // background-color: rgba(black, 0.382);
+    }
+  }
+
+  .c-rest {
+    @include screen;
+
+    .video {
+      top: 0px; right: 0;
+      width: 1441px; height: 1081px;
+      @include box;
+      border-top: 0 none;
+      border-right: 0 none;
+      border-bottom: 0 none;
+      background-color: rgba($ctna, 0.2);
+    }
+    .logo {
+      top: 0; left: 0;
+      // width: 479px; height: 540px;
+      width: 479px - $ibpd; height: 360px - $halfibpd;
+      @include box;
+      border-left: 0 none;
+      border-top: 0 none;
+    }
+    .ad {
+      left: 0; bottom: 0;
+      // width: 479px; height: 540px;
+      width: 479px - $ibpd; height: 720px - $halfibpd;
+      @include box;
+      border-left: 0 none; border-bottom: 0 none;
+      .adi {
+        position: absolute;
+        top: 0; left: 0; right: 0; bottom: 0;
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr;
+        .adii {
+          position: relative;
+          &:first-child {
+            border-bottom: 1px solid $borderC;
+          }
+        }
+      }
+    }
+    .game {
+      top: 360px + 240px + $halfibpd; left: 0;
+      // width: 479px; height: 360px;
+      width: 479px - $ibpd; height: 240px - $ibpd;
+      @include box;
+      border-left: 0 none;
+    }
+    .timer {
+      bottom: 0; left: 0;
+      // width: 479px; height: 360px;
+      width: 479px - $ibpd; height: 240px - $halfibpd;
+      @include box;
+      border-bottom: 0 none;
+      border-left: 0 none;
+    }
+
+    $nh: 180px;
+    $nw: 1080px;
+    .next1, .next2, .next3 {
+      width: $nw; height: $nh;
+      right: (1440px - $nw) / 2;
+      @include box;
+    }
+    .next3 {
+      bottom: 90px;
+    }
+    .next2 {
+      bottom: 90px + $nh + 45px;
+    }
+    .next1 {
+      bottom: 90px + $nh + 45px + $nh + 45px;
+      border-color: lighten($cred, 10%);
+    }
+
+    .countdown {
+      width: $nw; height: $nh;
+      right: (1440px - $nw) / 2;
+      @include box;
+      top: 90px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      color: lighten($ctna, 40%);
+      font-family: $fontDINM;
+      h3 {
+        font-size: 2rem;
+        margin: 0;
+      }
+      .gtime {
+        font-size: 3rem;
+        margin: 0 0.5rem
+      }
+    }
+
+    .upnext {
+      width: $nw; height: 60px;
+      right: (1440px - $nw) / 2;
+      @include box; 
+      top: 90px + $nh + 30px - 12px;
+      // background-color: rgba($ctna, 0.3);
+      // color: white;
+      font-size: 1.5rem;
+      // @include light-title;
+      color: $text-color;
+      color: lighten($ctna, 10%);
+    }
+  }
+}
+
+.CountDownShow {
+  // background-color: red;
+  text-align: center;
+  .cd {
+    margin-top: .5rem;
+    font-size: 3rem;
+    color: lighten($ctna, 20%);
+    text-shadow: 0 0 1rem $light-bg-color;
+    font-weight: bold;
+    font-family: $fontDIN;
+  }
+}
+
+.c-end {
+  @include screen;
+
+  .logo {
+    bottom: 0; left: 0;
+    width: 480px - $halfibpd; height: 760px - $halfibpd;
+    @include box;
+    border-left: 0 none;
+    border-bottom: 0 none;
+  }
+  .ads {
+    bottom: 0; right: 0;
+    width: 1440px - $halfibpd; height: 760px - $halfibpd;
+    @include box;
+    border-right: 0 none;
+    border-bottom: 0 none;
+    .adlogos {
+      position: absolute;
+      top: 0; left: 0; right: 0; bottom: 0;
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      grid-template-rows: 1fr 1fr;
+      grid-gap: 2rem;
+      padding: 2rem;
+      .cover {
+        background-size: contain;
+        background-position: center;
+        background-repeat: no-repeat;
+      }
+    }
+  }
+  .gtitle {
+    height: 320px - $halfibpd; width: 1920px;
+    @include box;
+    border-left: 0 none;
+    border-top: 0 none;
+    border-right: 0 none;
+    text-shadow: 0 0 1rem $light-bg-color;
+    font-weight: bold;
+    font-family: $fontDIN;
+  }
+}
