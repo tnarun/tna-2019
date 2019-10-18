@@ -1,4 +1,4 @@
-// title: 16:9 单人，直播
+// title: 16:9 单人，舞台
 
 import React from 'react'
 
@@ -16,19 +16,15 @@ export default class extends React.Component {
     let { data } = this.state
 
     return <div className={ css.live }>
-      <div className={ css['c-16-9-single'] }>
+      <div className={ css['c-16-9-single-stage'] }>
         <div className={ css.video }>
           <span>1600 × 900</span>
           <LayoutGameCover data={ data } />
         </div>
-        <div className={ css.lattrs }>
-          <div className={ css.pv1 }>
-            选手头像
-          </div>
-          <div className={ css.logo }><LayoutLOGO /></div>
-        </div>
         <div className={ css.battrs }>
-          <div className={ css.timer }><LayoutTimer data={ data } s='796 × 102 x:320' /></div>
+          <div className={ css.pv1 }>选手头像</div>
+          <div className={ css.logo }><LayoutLOGO notext /></div>
+          <div className={ css.timer }><LayoutTimer data={ data } s='' /></div>
           <div className={ css.game }><LayoutGameName data={ data } /></div>
         </div>
       </div>

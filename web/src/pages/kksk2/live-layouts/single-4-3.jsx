@@ -1,17 +1,16 @@
-// title: 4:3 单人
+// title: 4:3 单人，直播
 
 import React from 'react'
 
 import css from './live.scss'
 
-import { loadSchedueData } from '../../../data/tna3/data'
+import { loadSchedueData } from '../../../data/kksk2/data'
 
-import LayoutTNA from '../../../components/tna3/LayoutTNA'
-import LayoutGameName from '../../../components/tna3/LayoutGameName'
-import LayoutTimer from '../../../components/tna3/LayoutTimer'
-import LayoutAD from '../../../components/tna3/LayoutAD'
-import LayoutGameCover from '../../../components/tna3/LayoutGameCover'
-import LayoutKMS from '../../../components/tna3/LayoutKMS'
+import LayoutLOGO from '../../../components/kksk2/LayoutLogoKKSK2'
+import LayoutGameName from '../../../components/kksk2/LayoutGameName'
+import LayoutTimer from '../../../components/kksk2/LayoutTimer'
+import LayoutGameCover from '../../../components/kksk2/LayoutGameCover'
+import LayoutKMS from '../../../components/kksk2/LayoutKMS'
 
 export default class extends React.Component {
   render () {
@@ -20,19 +19,15 @@ export default class extends React.Component {
     return <div className={ css.live }>
       <div className={ css['c-4-3-single'] }>
         <div className={ css.video }>
-          {
-            data.id === '1-1' ? <div>
-              <LayoutKMS days={ this.state.days } />
-            </div> : <>
-              <span>1440 × 1080</span>
-              <LayoutGameCover data={ data } />
-            </>
-          }
+          <span>1440 × 1080</span>
+          <LayoutGameCover data={ data } />
         </div>
-        <div className={ css.game }><LayoutGameName data={ data } size='s' /></div>
-        <div className={ css.logo }><LayoutTNA /></div>
-        <div className={ css.ad }><LayoutAD /></div>
-        <div className={ css.timer }><LayoutTimer data={ data } s='470 × 140' /></div>
+        <div className={ css.attrs }>
+          <div className={ css.pv1 }>选手头像</div>
+          <div className={ css.logo }><LayoutLOGO notext /></div>
+          <div className={ css.game }><LayoutGameName data={ data } size='s' /></div>
+          <div className={ css.timer }><LayoutTimer data={ data } s='470 × 140' /></div>
+        </div>
       </div>
     </div>
   }

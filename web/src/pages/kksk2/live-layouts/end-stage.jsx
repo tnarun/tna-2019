@@ -20,7 +20,7 @@ export default class extends React.Component {
     let { type } = this.props.location.query
 
     return <div className={ css.live }>
-      <div className={ css['c-end'] }>
+      <div className={ css['c-end-stage'] }>
         <div className={ css.gtitle }>
           {
             type === 'end' ? 

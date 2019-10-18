@@ -20,6 +20,7 @@ $lessBorderCRED: rgba(lighten($cred, 20%), 0.8);
 @mixin titleShadow ($color) {
   text-shadow: 6px 6px 0 rgba(black, 0.382);
   color: $color;
+  font-family: $fontDINM;
 }
 
 .LayoutGameName {
@@ -27,23 +28,17 @@ $lessBorderCRED: rgba(lighten($cred, 20%), 0.8);
   width: 100%; height: 100%;
   display: grid;
   grid-template-columns: 1fr;
-  grid-template-rows: 2fr 1.5fr 1.5fr;
+  grid-template-rows: 1fr 1fr 1fr;
   overflow: hidden;
-  &.race {
-    grid-template-rows: 3fr 1fr 1fr;
-  }
 
   .name {
-    font-size: 2.5rem;
+    font-size: 2rem;
     display: flex;
     justify-content: center;
     align-items: center;
     font-weight: bold;
-    @include light-title-DIN;
-    @include gbLeft($ctna);
-    &.s {
-      font-size: 2rem;
-    }
+    @include gbLeft($kksk2C1);
+    @include titleShadow(lighten($kksk2C1, 25%));
   }
 
   .category {
@@ -51,10 +46,10 @@ $lessBorderCRED: rgba(lighten($cred, 20%), 0.8);
     justify-content: center;
     align-items: center;
     border-top: solid 1px $lessBorderC;
-    font-size: 1.5rem;
+    font-size: 2rem;
     font-weight: bold;
-    @include light-title-DIN;
-    @include gbLeft($ctna);
+    @include gbLeft($kksk2C1);
+    @include titleShadow(lighten($kksk2C1, 25%));
   }
 
   .info {
@@ -67,9 +62,9 @@ $lessBorderCRED: rgba(lighten($cred, 20%), 0.8);
       display: flex;
       justify-content: center;
       align-items: center;
-      font-size: 1.5rem;
-      @include gbLeft($corange);
-      color: lighten($corange, 10%);
+      font-size: 2rem;
+      @include gbLeft($kksk2C2);
+      @include titleShadow(lighten($kksk2C2, 10%));
       border-left: solid 1px $lessBorderC1;
       &:first-child {
         border-left: 0 none;
@@ -82,25 +77,23 @@ $lessBorderCRED: rgba(lighten($cred, 20%), 0.8);
 }
 
 .LayoutTimer {
-  font-size: 1.5rem;
   width: 100%; height: 100%;
   display: grid;
   grid-template-columns: 1fr;
-  grid-template-rows: 2fr 3fr;
+  grid-template-rows: 1fr 2fr;
   overflow: hidden;
 
   .runner {
     display: flex;
     justify-content: center;
     align-items: center;
-    @include light-title-DIN;
-    @include gbLeft($ctna);
-    font-size: 2.5rem;
+    @include gbLeft($kksk2C1);
+    @include titleShadow(lighten($kksk2C1, 25%));
+    font-size: 2rem;
     font-weight: bold;
   }
   .timer {
-    // @include gbLeft($ctna);
-    // background-color: rgba(1, 176, 255, 0.2);
+    font-size: 2rem;
     border-top: solid 1px $lessBorderC;
     display: flex;
     justify-content: center;
@@ -112,18 +105,20 @@ $lessBorderCRED: rgba(lighten($cred, 20%), 0.8);
   width: 100%; height: 100%;
   display: grid;
   grid-template-columns: 1fr;
-  grid-template-rows: 4fr 1fr;
+  grid-template-rows: 1fr 90px;
 
   .link {
-    font-size: 3rem;
+    font-size: 2.5rem;
     display: flex;
     justify-content: center;
     align-items: center;
-    // @include light-title-DIN;
-    // @include gbLeft($kksk2C1);
-    // border-top: solid 1px $lessBorderC;
     @include titleShadow(white);
     font-family: $fontDIN;
+    border-top: solid 1px $kksk2C2;
+  }
+
+  &.notext {
+    grid-template-rows: 1fr;
   }
 }
 
@@ -138,8 +133,8 @@ $lessBorderCRED: rgba(lighten($cred, 20%), 0.8);
     display: flex;
     justify-content: center;
     align-items: center;
-    @include light-title-DIN;
-    // @include gbLeft($ctna);
+    @include titleShadow(lighten($kksk2C1, 25%));
+    border-right: 1px solid $lessBorderC;
   }
   .p2, .pk2 {
     font-size: 2.5rem;
@@ -147,8 +142,7 @@ $lessBorderCRED: rgba(lighten($cred, 20%), 0.8);
     display: flex;
     justify-content: center;
     align-items: center;
-    @include light-title-DIN;
-    // @include gbLeft($ctna);
+    @include titleShadow(lighten($kksk2C1, 25%));
     border-left: 1px solid $lessBorderC;
   }
   .pk1 {
@@ -166,9 +160,7 @@ $lessBorderCRED: rgba(lighten($cred, 20%), 0.8);
     display: flex;
     justify-content: center;
     align-items: center;
-    @include light-title-DIN;
-    // @include gbLeft($ctna);
-    border-left: 1px solid $lessBorderC;
+    @include titleShadow(white);
   }
 }
 
@@ -257,7 +249,7 @@ $lessBorderCRED: rgba(lighten($cred, 20%), 0.8);
   top: 0; left: 0; right: 0; bottom: 0;
   pointer-events: none;
   z-index: -1;
-  opacity: 0.8;
+  opacity: 0;
   .img {
     position: absolute;
     top: 0; left: 0; right: 0; bottom: 0;
@@ -282,7 +274,7 @@ $lessBorderCRED: rgba(lighten($cred, 20%), 0.8);
     }
     .show {
       display: grid;
-      grid-template-columns: 1fr 2fr 2fr 2fr;
+      grid-template-columns: 1fr 2fr 2fr;
       font-size: 1.3rem;
       .h {
         border: solid 1px rgba($borderC, 0.3);

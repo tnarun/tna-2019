@@ -2,24 +2,23 @@ import React from 'react'
 import css from './index.scss'
 
 import WidthContainer from '../../../components/layouts/WidthContainer'
-import { loadSchedueData } from '../../../data/tna3/data'
+import { loadSchedueData } from '../../../data/kksk2/data'
 
 export default class liveLayouts extends React.Component {
   render () {
     return <div className={ css.liveLayouts }>
       <WidthContainer>
-        <h3>TNA3 直播布局索引</h3>
+        <h3>KKSK2 直播布局索引</h3>
         <div className={ css.layouts }>
           <div className={ css.header }>
             <div className={ css.h }>幕前准备</div>
             <div className={ css.h }>游戏</div>
             <div className={ css.h }>表演者</div>
-            <div className={ css.h }>解说</div>
-            <div className={ css.h }>布局</div>
+            <div className={ css.h }>舞台布局</div>
+            <div className={ css.h }>直播布局</div>
           </div>
-          <DAY data={ this.state.DAY1 } title='第一天 10-04' type='day' />
-          <DAY data={ this.state.DAY2 } title='第二天 10-05' type='day' />
-          <DAY data={ this.state.DAY3 } title='第三天 10-06' type='end' />
+          <DAY data={ this.state.DAY1 } title='第一天 10-19' type='day' />
+          <DAY data={ this.state.DAY2 } title='第二天 10-20' type='end' />
         </div>
       </WidthContainer>
     </div>
@@ -46,13 +45,15 @@ class DAY extends React.Component {
 
       return <div className={ css.show } key={ idx }>
         <div className={ `${ css.h } ${ css.layout }` }>
-          <a href={ `/tna3/live-layouts/rest?id=${ x.id }` } target='_blank' rel='noopener noreferrer'>{ `/tna3/live-layouts/rest?id=${ x.id }` }</a>
+          <a href={ `/kksk2/live-layouts/rest?id=${ x.id }` } target='_blank' rel='noopener noreferrer'>{ `rest?id=${ x.id }` }</a>
         </div>
         <div className={ css.h }>{ x.cnName }</div>
         <div className={ css.h }>{ player }</div>
-        <div className={ css.h }>{ x.guide }</div>
         <div className={ `${ css.h } ${ css.layout }` }>
-          <a href={ `/tna3/live-layouts/${ x.layout }?id=${ x.id }` } target='_blank' rel='noopener noreferrer'>{ `${ x.layout }?id=${ x.id }` }</a>
+          <a href={ `/kksk2/live-layouts/${ x.layout }-stage?id=${ x.id }` } target='_blank' rel='noopener noreferrer'>{ `${ x.layout }-stage?id=${ x.id }` }</a>
+        </div>
+        <div className={ `${ css.h } ${ css.layout }` }>
+          <a href={ `/kksk2/live-layouts/${ x.layout }?id=${ x.id }` } target='_blank' rel='noopener noreferrer'>{ `${ x.layout }?id=${ x.id }` }</a>
         </div>
       </div>
     })
@@ -63,8 +64,10 @@ class DAY extends React.Component {
         _shows
       }
       <div className={ css.title }>
-        <span>结束</span>
-        <a href={ `/tna3/live-layouts/end?type=${ this.props.type }` } target='_blank' rel='noopener noreferrer'>{ `/tna3/live-layouts/end?type=${ this.props.type }` }</a>
+        <span>结束，直播 </span>
+        <a href={ `/kksk2/live-layouts/end?type=${ this.props.type }` } target='_blank' rel='noopener noreferrer'>{ `end?type=${ this.props.type }` }</a>
+        <span>感谢 </span>
+        <a href={ `/kksk2/live-layouts/thank` } target='_blank' rel='noopener noreferrer'>{ `thank` }</a>
       </div>
     </div>
   }
