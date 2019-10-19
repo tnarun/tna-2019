@@ -10,7 +10,7 @@ import LayoutLOGO from '../../../components/kksk2/LayoutLogoKKSK2'
 import LayoutGameName from '../../../components/kksk2/LayoutGameName'
 import LayoutTimer from '../../../components/kksk2/LayoutTimer'
 import LayoutGameCover from '../../../components/kksk2/LayoutGameCover'
-import LayoutKMS from '../../../components/kksk2/LayoutKMS'
+import LiveBG from '../../../components/kksk2/LiveBG'
 
 export default class extends React.Component {
   render () {
@@ -18,15 +18,21 @@ export default class extends React.Component {
 
     return <div className={ css.live }>
       <div className={ css['c-4-3-single'] }>
+        <div className={ css.bgoff }>
+          <LiveBG />
+        </div>
+
+
         <div className={ css.video }>
           <span>1440 × 1080</span>
           <LayoutGameCover data={ data } />
         </div>
+
         <div className={ css.attrs }>
           <div className={ css.pv1 }>选手头像</div>
           <div className={ css.logo }><LayoutLOGO notext /></div>
           <div className={ css.game }><LayoutGameName data={ data } size='s' /></div>
-          <div className={ css.timer }><LayoutTimer data={ data } s='470 × 140' /></div>
+          <div className={ css.timer }><LayoutTimer data={ data } s='' /></div>
         </div>
       </div>
     </div>

@@ -14,7 +14,7 @@ import QRCode from 'qrcode'
 
 export default class extends React.Component {
   render () {
-    let { DAY1, nextShow } = this.state
+    let { DAY2 } = this.state
 
     return <div className={ css.live }>
       <div className={ css['c-day'] }>
@@ -40,14 +40,9 @@ export default class extends React.Component {
               </div> : null
             }
             </div>
-            <div className={ css.countdown }>
-              {
-                nextShow ? <CountDown data={ nextShow } /> : null
-              }
-            </div>
           </div>
           <div className={ css.sch }>
-            <Schedule data={ DAY1 } />
+            <Schedule data={ DAY2 } />
           </div>
         </div>
       </div>
@@ -65,22 +60,11 @@ export default class extends React.Component {
 
     this.setState({ DAY1, DAY2 })
 
-    // qr
     let url = await QRCode.toDataURL('https://tnarun.com/kksk2/', {
       margin: 1,
       width: 133
     })
     this.setState({ qrurl: url })
-
-    // next
-    let { id } = this.props.location.query
-    if (id) {
-      let days = loadSchedueData()
-      let arr = id.split('-')
-      let nextShow = days[`DAY${ arr[0] }`][~~arr[1] - 1]
-      console.log(id, nextShow)
-      this.setState({ nextShow })
-    }
   }
 }
 
@@ -144,53 +128,4 @@ const getFromTo = ({ show }) => {
   }
 
   return { _from, _to }
-}
-
-class CountDown extends React.Component {
-  render () {
-    let { dstr } = this.state
-    let { data } = this.props
-
-    return <div className={ css.CountDownShow }>
-      <div>下一个节目：</div>
-      <div>{ data.cnName }</div>
-      <div>{ data.category }</div>
-      <div className={ css.cd }>{ dstr }</div>
-    </div>
-  }
-
-  state = {
-    today: '',
-    dstr: ''
-  }
-
-  componentDidMount () {
-    let  { data } = this.props
-    let today = moment(data.time).format('YYYY-MM-DD')
-    this.setState({ today })
-
-    this.timer = setInterval(() => {
-      let diff = moment(data.time) - moment()
-      diff = diff > 0 ? diff : 0
-      let duration = moment.duration(diff)
-
-      let d = duration.days()
-      let h = duration.hours()
-      let m = duration.minutes()
-      let s = duration.seconds() 
-  
-      let _d = d > 0 ? `${d} 天` : ''
-      let _h = `${ h } 小时`
-      let _m = `${ m } 分钟`
-      let _s = `${ s } 秒`
-  
-      let dstr = `${_d} ${_h} ${_m} ${_s}`
-  
-      this.setState({ dstr })
-    }, 50);
-  }
-
-  componentWillUnmount () {
-    clearInterval(this.timer)
-  }
 }

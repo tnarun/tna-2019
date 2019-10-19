@@ -10,6 +10,7 @@ import LayoutLOGO from '../../../components/kksk2/LayoutLogoKKSK2'
 import LayoutGameName from '../../../components/kksk2/LayoutGameName'
 import LayoutRacePlayers from '../../../components/kksk2/LayoutRacePlayers'
 import LayoutGameCover from '../../../components/kksk2/LayoutGameCover'
+import LiveBG from '../../../components/kksk2/LiveBG'
 
 export default class extends React.Component {
   render () {
@@ -17,6 +18,14 @@ export default class extends React.Component {
 
     return <div className={ css.live }>
       <div className={ css['c-16-9-race'] }>
+        <div className={ css.bgoff }>
+          <LiveBG />
+        </div>
+
+        <div className={ css.gtitle }>
+          KKSK2 看看谁快·竞速
+        </div>
+
         <div className={ css.video1 }>
           <span>960 × 540</span>
           <LayoutGameCover data={ data } />
@@ -29,13 +38,13 @@ export default class extends React.Component {
           <div className={ css.raceplayers }><LayoutRacePlayers data={ data } /></div>
           <div className={ css.battrs }>
             <div className={ css.pv1 }>选手1</div>
-            <div className={ css.logo }>
+            <div className={ `${css.logo} ${css.l}` }>
               <LayoutLOGO notext />
             </div>
             <div className={ css.game }>
               <LayoutGameName data={ data } type='race' />
             </div>
-            <div className={ css.logo }>
+            <div className={ `${css.logo} ${css.r}` }>
               <LayoutLOGO notext />
             </div>
             <div className={ css.pv2 }>选手2</div>

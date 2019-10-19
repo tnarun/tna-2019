@@ -10,6 +10,7 @@ import LayoutGameName from '../../../components/kksk2/LayoutGameName'
 import LayoutTimer from '../../../components/kksk2/LayoutTimer'
 import LayoutLOGO from '../../../components/kksk2/LayoutLogoKKSK2'
 import LayoutGameCover from '../../../components/kksk2/LayoutGameCover'
+import LiveBG from '../../../components/kksk2/LiveBG'
 
 export default class extends React.Component {
   render () {
@@ -17,6 +18,10 @@ export default class extends React.Component {
 
     return <div className={ css.live }>
       <div className={ css['c-16-9-single'] }>
+        <div className={ css.bgoff }>
+          <LiveBG />
+        </div>
+
         <div className={ css.video }>
           <span>1600 × 900</span>
           <LayoutGameCover data={ data } />
@@ -28,7 +33,7 @@ export default class extends React.Component {
           <div className={ css.logo }><LayoutLOGO /></div>
         </div>
         <div className={ css.battrs }>
-          <div className={ css.timer }><LayoutTimer data={ data } s='796 × 102 x:320' /></div>
+          <div className={ css.timer }><LayoutTimer data={ data } s='' /></div>
           <div className={ css.game }><LayoutGameName data={ data } /></div>
         </div>
       </div>

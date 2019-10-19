@@ -1,10 +1,11 @@
-// title: 4:3 单人
+// title: 结束
 
 import React from 'react'
 
 import css from './live.scss'
 
-import LayoutTNA from '../../../components/tna3/LayoutTNA'
+import LiveBG from '../../../components/kksk2/LiveBG'
+import LayoutLOGO from '../../../components/kksk2/LayoutLogoKKSK2'
 
 const urls = [
   'http://tna-upload.oss-cn-shanghai.aliyuncs.com/kksk2/ad-kksk.png',
@@ -21,11 +22,16 @@ export default class extends React.Component {
 
     return <div className={ css.live }>
       <div className={ css['c-end'] }>
+        <LiveBG />
+
+        <div className={ css.logo }>
+          <LayoutLOGO notext />
+        </div>
         <div className={ css.gtitle }>
           {
             type === 'end' ? 
-              <h1>KKSK2 杭州站活动已结束，谢谢大家！</h1> : 
-              <h1>KKSK2 杭州站今天的活动已结束，明天也精彩！</h1>
+              <span>KKSK2 杭州站活动已结束，谢谢大家！</span> : 
+              <span>KKSK2 杭州站今天的活动已结束，明天也精彩！</span>
           }
         </div>
         <div className={ css.battrs }>
@@ -103,6 +109,9 @@ export default class extends React.Component {
 
                 <span>现场摄像</span>
                 <div>阿黄</div>
+
+                <span>节奏·杂务</span>
+                <div>垃圾渣渣(D2 的大哥)</div>
               </div>
 
               <div className={ css.block }>
@@ -114,11 +123,8 @@ export default class extends React.Component {
                 <span>直播平台</span>
                 <div>虎牙直播</div>
 
-                <span>游戏采集卡设备支持</span>
+                <span>采集设备支持</span>
                 <div>圆刚游戏采集卡</div>
-
-                <span>显示设备支持</span>
-                <div>BenQ Gaming</div>
 
                 <span>显示设备支持</span>
                 <div>BenQ Gaming</div>

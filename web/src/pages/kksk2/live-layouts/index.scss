@@ -31,7 +31,7 @@ $lightTNA: lighten($ctna, 40%);
 
   .layouts {
     .header {
-      @include genColGrids(1fr 1fr 1fr 1fr 1fr);
+      @include genColGrids(1fr 1fr 1fr 1fr);
       margin-bottom: .3rem;
       .h {
         @include GridBorder;
@@ -50,7 +50,7 @@ $lightTNA: lighten($ctna, 40%);
     color: $ctna;
   }
   .show {
-    @include genColGrids(1fr 1fr 1fr 1fr 1fr);
+    @include genColGrids(1fr 1fr 1fr 1fr);
     margin-bottom: .3rem;
     .h {
       @include GridBorder;

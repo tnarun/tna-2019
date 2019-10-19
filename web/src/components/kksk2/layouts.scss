@@ -38,7 +38,8 @@ $lessBorderCRED: rgba(lighten($cred, 20%), 0.8);
     align-items: center;
     font-weight: bold;
     @include gbLeft($kksk2C1);
-    @include titleShadow(lighten($kksk2C1, 25%));
+    // @include titleShadow(lighten($kksk2C1, 25%));
+    @include titleShadow(white);
   }
 
   .category {
@@ -49,7 +50,8 @@ $lessBorderCRED: rgba(lighten($cred, 20%), 0.8);
     font-size: 2rem;
     font-weight: bold;
     @include gbLeft($kksk2C1);
-    @include titleShadow(lighten($kksk2C1, 25%));
+    // @include titleShadow(lighten($kksk2C1, 25%));
+    @include titleShadow(white);
   }
 
   .info {
@@ -64,7 +66,8 @@ $lessBorderCRED: rgba(lighten($cred, 20%), 0.8);
       align-items: center;
       font-size: 2rem;
       @include gbLeft($kksk2C2);
-      @include titleShadow(lighten($kksk2C2, 10%));
+      // @include titleShadow(lighten($kksk2C2, 10%));
+      @include titleShadow(white);
       border-left: solid 1px $lessBorderC1;
       &:first-child {
         border-left: 0 none;
@@ -88,7 +91,8 @@ $lessBorderCRED: rgba(lighten($cred, 20%), 0.8);
     justify-content: center;
     align-items: center;
     @include gbLeft($kksk2C1);
-    @include titleShadow(lighten($kksk2C1, 25%));
+    // @include titleShadow(lighten($kksk2C1, 25%));
+    @include titleShadow(white);
     font-size: 2rem;
     font-weight: bold;
   }
@@ -133,7 +137,8 @@ $lessBorderCRED: rgba(lighten($cred, 20%), 0.8);
     display: flex;
     justify-content: center;
     align-items: center;
-    @include titleShadow(lighten($kksk2C1, 25%));
+    // @include titleShadow(lighten($kksk2C1, 25%));
+    @include titleShadow(white);
     border-right: 1px solid $lessBorderC;
   }
   .p2, .pk2 {
@@ -142,7 +147,8 @@ $lessBorderCRED: rgba(lighten($cred, 20%), 0.8);
     display: flex;
     justify-content: center;
     align-items: center;
-    @include titleShadow(lighten($kksk2C1, 25%));
+    // @include titleShadow(lighten($kksk2C1, 25%));
+    @include titleShadow(white);
     border-left: 1px solid $lessBorderC;
   }
   .pk1 {

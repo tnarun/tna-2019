@@ -43,13 +43,22 @@
   .bg {
     position: fixed;
     width: 100vw; height: 100vh;
-    background-color: black;
+    // background-color: $kksk2C1;
+    background: linear-gradient(90deg, $kksk2C1, $kksk2C2);
     z-index: -99;
+    opacity: 0.382;
 
-    video {
-      object-fit: cover;
-      width: 100%; height: 100%;
-      opacity: 0.382;
-    }
+    background-image: url(//tna-upload.oss-cn-shanghai.aliyuncs.com/kksk2/kkskbg.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    
+
+    // video {
+    //   object-fit: cover;
+    //   width: 100%; height: 100%;
+    //   opacity: 0.382;
+    //   display: none;
+    // }
   }
 }

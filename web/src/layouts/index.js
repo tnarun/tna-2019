@@ -17,9 +17,9 @@ const KKSK2Layout = (props) => {
   return (
     <div className={ css.KKSK2Layout }>
       <div className={ css.bg }>
-        <video autoPlay={ true } muted={ true } loop={ true } playsInline={ true }>
+        {/* <video autoPlay={ true } muted={ true } loop={ true } playsInline={ true }>
           <source src='//alioss.gcores.com/page_resources/fusion2019_lite/videos/hangzhou.mp4' type='video/mp4' />
-        </video>
+        </video> */}
       </div>
       { props.children }
     </div>
