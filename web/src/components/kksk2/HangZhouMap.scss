@@ -1,0 +1,41 @@
+@import '../../layouts/vars';
+
+@keyframes cir {
+  from {
+    transform: scale(1);
+    opacity: 1;
+  }
+
+  to {
+    transform: scale(4);
+    opacity: 0;
+  }
+}
+
+.HangZhouMap {
+  width: 100%; height: 100%;
+  // background-color: rgba($kksk2C1, 0.382);
+  svg {
+    display: block;
+    .point {
+      fill: transparent;
+      stroke: $kksk2C1;
+      stroke-width: 4px;
+    }
+    .point1 {
+      fill: transparent;
+      stroke: $kksk2C1;
+      stroke-width: 4px;
+      transform-origin: center;
+      animation: cir 1s linear infinite;
+    }
+    .welcome {
+      fill: rgba(black, 0.5);
+      stroke: rgba($kksk2C1, 0.2);
+    }
+    .welcomeT {
+      fill: lighten($kksk2C1, 30%);
+      font-size: 14px;
+    }
+  }
+}

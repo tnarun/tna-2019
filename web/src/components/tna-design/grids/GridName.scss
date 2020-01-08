@@ -1,0 +1,18 @@
+@import '../../../layouts/vars';
+
+$bgColor: black;
+$baseColor: $ctna;
+
+.GridName {
+  margin: 3px;
+  font-size: 0.8rem;
+  padding: 0 0.5rem;
+  height: 1.875rem;
+  line-height: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: $fontDINM;
+  color: lighten($baseColor, 15%);
+  background-color: rgba($baseColor, 0.15);
+}

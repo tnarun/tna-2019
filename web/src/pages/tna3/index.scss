@@ -1,94 +1,325 @@
 @import '../../layouts/vars';
 
-.tna3 {
-  margin: 0 auto;
-  text-align: center;
-  max-width: 20rem;
+$lightTNA: lighten($ctna, 40%);
+$textShadowTNA: 0 0 1rem lighten($ctna, 10%);
+$borderTNA: lighten($ctna, 10%);
 
-  h1 {
-    font-size: 5rem;
-    @include light-title;
-    margin: 2rem 0;
-  }
+@mixin TitleBase {
+  font-family: $fontDIN;
+  text-shadow: 0 0 1rem $light-bg-color;
+}
 
-  h2 {
-    font-size: 2.5rem;
-    @include light-title;
-    margin: 1.5rem 0;
-  }
+@mixin GridBorder {
+  background-color: rgba(black, 0.3);
+  border: solid 1px rgba($lightTNA, 0.5);
+}
 
-  p {
-    font-size: 1.2rem;
-    @include light-title;
-    margin-bottom: 3rem;
+@mixin GridBorderDark {
+  background-color: rgba(black, 0.6);
+  border: solid 1px rgba($text-color, 0.5);
+}
+
+@mixin GridBorderTD {
+  background-color: rgba(black, 0.3);
+  border: solid 1px rgba($cblue, 0.15);
+}
+
+@mixin gridLightBorder ($color) {
+  position: relative;
+  padding: 3px 3px 3px 12px;
+
+  &:before {
+    content: '';
+    position: absolute;
+    width: 3px;
+    left: 3px; top: 3px; bottom: 3px;
+    background-color: $color;
   }
 }
 
-.coollink {
+@mixin textCenter {
   display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
 
-  .arrow {
-    width: 4.5rem;
+@mixin withGridName ($color) {
+  position: relative;
+  padding: 3px;
 
-    .a1, .a2, .a3 {
-      position: relative;
-      animation: cool 1s infinite;
+  display: grid;
+  grid-template-rows: 1fr 2fr;
+  grid-gap: 3px;
 
-      &:before {
-        content: '';
-        box-sizing: border-box;
-        position: absolute;
-        width: 1.2rem; height: 1.2rem;
-        border-style: solid;
-        border-right: 0 none;
-        border-bottom: 0 none;
-        // border-radius: 0;
-        border-color: white;
-        border-width: 0.4rem;
-        transform: rotate(135deg);
-        left: -0.25rem;
-        top: 1rem;
-      }
-    }
+  .gridName {
+    @include flexCenter;
+    font-size: .9rem; height: 1.8rem;
+    background-color: rgba($color, 0.15);
+    color: lighten($color, 15%); 
+  }
+}
 
-    .a1 {
-      transform: translateX(0);
-      animation-delay: 0;
-    }
-    .a2 {
-      transform: translateX(1.1rem);
-      animation-delay: .2s;
-    }
-    .a3 {
-      transform: translateX(2.2rem);
-      animation-delay: .4s;
+@mixin titleShadow ($color) {
+  text-shadow: 0 0 1rem $color;
+  color: lighten($color, 20%);
+}
+
+@mixin colorBtn ($color) {
+  display: block;
+  background-color: $color;
+  color: white;
+  // font-family: $fontDIN;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-shadow: 0 0 0.5rem rgba(black, 0.3);
+  position: relative;
+
+  &:before {
+    content: '';
+    position: absolute;
+    pointer-events: none;
+    left: 0; right: 0; bottom: 0; top: 0;
+    // background-color: rgba(black, 0.3);
+    border-bottom: solid 1px rgba(black, 0.3);
+    border-right: solid 1px rgba(black, 0.3);
+    border-top: solid 1px rgba(white, 0.3);
+    border-left: solid 1px rgba(white, 0.3);
+  }
+  &:hover:before {
+    background-color: rgba(white, 0.3)
+  }
+}
+
+@mixin GridH2 {
+  h2 {
+    margin: 0; 
+    padding: 1rem;
+    border-bottom: 2px solid rgba($ctna, 1);
+    text-align: center;
+    font-size: 1.3rem;
+  }
+  @media #{$sm} {
+    h2 {
+      font-size: 1.1rem;
     }
   }
+}
 
-  a { 
-    flex: 1;
+.tna3 {
+  h2 {
+    @include TitleBase;
+  }
+
+  .hd {
     display: flex;
-    justify-content: center;
     align-items: center;
-    background-color: $light-bg-color;
-    color: white; 
-    font-size: 1.5rem;
-    font-weight: bold;
-    border-radius: 0.5rem;
-    height: 3.2rem;
-    text-shadow: 0 0 0.5rem rgba(black, 0.3);
-    margin-right: -0.5rem;
+
+    h1, h2 {
+      @include TitleBase;
+      font-weight: bold;
+    }
+
+    .tnalogo {
+      width: 12rem; height: 9rem;
+      margin-right: 1rem;
+      background-image: url('//tna-web.oss-ap-southeast-1.aliyuncs.com/assets/logo2019.png');
+      background-position: center;
+      background-size: contain;
+      background-repeat: no-repeat;
+    }
   }
 
   @media #{$xs} {
-    a {
+    .hd .tnalogo {
+      width: 6rem; height: 6rem;
+    }
+  }
+
+  @media #{$xs} {
+    h2 {
       font-size: 1.2rem;
     }
   }
 }
 
-.formResult {
-  opacity: 0.5;
-  color: white;
-  font-size: 1rem;
+.timeandreg {
+  @include genColGrids(1fr);
+  margin-bottom: $GRID-GAP * 2;
+
+  .info {
+    @include genColGrids(1fr 1fr 1fr 1fr);
+    @media #{$sm} {
+      grid-template-columns: 1fr 1fr;
+    }
+
+    .time {
+      @include GridBorder;
+      @include withGridName($cred);
+      grid-column: span 2;
+      h2 {
+        margin: 0;
+        @include flexCenter;
+        @include titleShadow($cred);
+      }
+    }
+    .huya, .bili {
+      @include GridBorder;
+      .logoi {
+        margin-top: .2rem;
+        margin-bottom: .2rem;
+      }
+    }
+    .huya {
+      @include withGridName($chuya);
+      &:hover {
+        background-color: rgba($chuya, 0.5);
+        .gridName { color: black; }
+      }
+    }
+    .bili {
+      @include withGridName($cbili);
+      &:hover {
+        background-color: rgba($cbili, 0.5);
+        .gridName { color: black; }
+      }
+    }
+  }
+}
+
+.faqtimeline {
+  @include genColGrids(1fr 1fr);
+  @media #{$sm} {
+    grid-template-columns: 1fr;
+  }
+  margin-bottom: 5rem;
+
+  .timeline, .faq {
+    @include GridBorder();
+  }
+
+  .timeline, .faq {
+    @include GridH2;
+  }
+
+  .timeline {
+    // display: grid;
+    // grid-template-rows: 3rem 1fr;
+    overflow: hidden;
+  }
+}
+
+.Timeline {
+  display: block;
+  width: 100%;
+  height: 100%;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  position: relative;
+
+  &:before {
+    content: '';
+    position: absolute;
+    top: 0; bottom: 0; left: 112px + 16px + 8px - 1px;
+    width: 2px; background-color: rgba($ctna, 1);
+  }
+
+  .timepoint, .duetimepoint {
+    display: grid;
+    grid-template-columns: 112px 1fr;
+    padding: 0 16px 16px;
+
+    .date {
+      text-align: right;
+      font-family: $fontDIN;
+      padding-right: 1rem;
+      line-height: 2rem;
+      color: lighten($ctna, 20%);
+    }
+    .event {
+      position: relative;
+      margin-top: 0.5rem;
+
+      &:before {
+        content: '';
+        width: 16px; height: 16px;
+        border-radius: 100%;
+        background-color: $ctna;
+        position: absolute;
+        top: 0; left: 0;
+      }
+
+      span {
+        display: inline-block;
+        background-color: rgba($ctna, .15);
+        color: lighten($ctna, 30%);
+        padding: 0.5rem 1rem;
+        border-radius: 0rem .5rem .5rem .5rem;
+        position: relative;
+        margin-top: .5rem;
+        margin-left: 2.8rem;
+
+        &:before {
+          content: '';
+          position: absolute;
+          $w: .5rem;
+          border-left: solid $w transparent;
+          border-bottom: solid $w transparent;
+          border-top: solid $w rgba($ctna, .15);
+          border-right: solid $w rgba($ctna, .15);
+          top: 0; left: - $w * 2;
+        }
+      }
+    }
+  }
+
+  .duetimepoint {
+    .date { color: lighten($cred, 20%); }
+    .event {
+      &:before {
+        background-color: $cred;
+        box-shadow: 0 0 .3rem .3rem rgba($cred, 0.5);
+      }
+      span {
+        background-color: rgba($cred, .15);
+        color: lighten($cred, 30%);
+
+        &:before {
+          border-top: solid .5rem rgba($cred, .15);
+          border-right: solid .5rem rgba($cred, .15);
+        }
+      }
+    }
+  }
+}
+
+.FAQ {
+  padding: 1.5rem;
+  .qa {
+    margin-bottom: 1.5rem;
+    border-left: solid 2px rgba($ctna, 0.5);
+    padding-left: 0.6rem;
+    margin-left: -1rem;
+    // line-height: 1.414;
+
+    label {
+      font-family: $fontDIN;
+      color: $ctna;
+      // font-size: 1.2rem;
+      margin-right: .5rem;
+    }
+    span {
+      // font-size: 1.2rem;
+    }
+    div:first-child {
+      // border-bottom: dashed 1px rgba($text-color, 0.5);
+      margin-bottom: .3rem;
+      color: lighten($ctna, 20%);
+    }
+    div:last-child {
+      // border-bottom: dashed 1px rgba($text-color, 0.5);
+      // color: lighten($ctna, 30%);
+    }
+  }
 }

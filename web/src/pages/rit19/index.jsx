@@ -43,7 +43,7 @@ const First = () => (
           <SH3>我要参加 <span>i wanna join</span></SH3>
           <IBox>
             <div className={ css.desc }>准备参加之前，先看看规则吧！</div>
-            <CoolLink href='rule/'>活动简介与规则说明</CoolLink>
+            <CoolLink href='/rit19/rule/'>活动简介与规则说明</CoolLink>
           </IBox>
 
           <SH3>提交成绩 <span>submit record</span></SH3>

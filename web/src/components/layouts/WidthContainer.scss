@@ -1,0 +1,11 @@
+@import '../../layouts/vars';
+
+.WidthContainer {
+  padding: 0 1rem;
+
+  .cinner {
+    max-width: $page-width;
+    margin: 0 auto;
+    min-height: 1rem;
+  }
+}

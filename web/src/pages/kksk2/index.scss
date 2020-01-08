@@ -1,0 +1,313 @@
+@import '../../layouts/vars';
+@import '../../components/kksk2/kksk2';
+
+@mixin withGridName ($color) {
+  position: relative;
+  padding: 3px;
+
+  display: grid;
+  grid-template-rows: 1fr 2fr;
+  grid-gap: 3px;
+
+  .gridName {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 .5rem;
+    font-size: .8rem;
+    background-color: rgba($color, 0.15);
+    color: lighten($color, 15%); 
+    text-shadow: 2px 2px 0 rgba(black, 0.382);
+  }
+}
+
+@mixin titleShadow ($color) {
+  text-shadow: 2px 2px 0 rgba(black, 0.382);
+  color: $color;
+}
+
+.kksk2 {
+  .hd {
+    display: flex;
+    align-items: center;
+
+    h1, h2 {
+      @include TitleBase;
+    }
+
+    .kksklogo {
+      // position: absolute;
+      width: 9rem; height: 9rem;
+      margin-right: 1rem;
+      // top: 0; left: 0;
+      background-image: url('//tna-web.oss-ap-southeast-1.aliyuncs.com/assets/kksk2019tour.png');
+      background-position: center;
+      background-size: contain;
+      background-repeat: no-repeat;
+    }
+  }
+
+  @media #{$xs} {
+    .hd .kksklogo {
+      width: 6rem; height: 6rem;
+    }
+  }
+
+  @media #{$xs} {
+    h2 {
+      font-size: 1.2rem;
+    }
+  }
+}
+
+.timeandreg {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-gap: $GRID-GAP;
+  margin-bottom: $GRID-GAP * 2;
+
+  .time {
+    @include GridBorder;
+    @include withGridName(white);
+    grid-column: span 2;
+    h2 {
+      margin: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-family: $fontDIN;
+      @include titleShadow(white);
+      height: 3rem;
+    }
+
+    $c1: rgba($kksk2C1, 0.3);
+    $c2: rgba($kksk2C2, 0.3);
+    background: linear-gradient(-26.565deg, $c2, $c1);
+  }
+
+  .huya {
+    @include GridBorder;
+    @include withGridName(white);
+    .logoi {
+      margin-top: .3rem;
+      margin-bottom: .3rem;
+    }
+    background-color: rgba($kksk2C1, 0.3);
+    &:hover {
+      background-color: rgba($kksk2C1, 0.5);
+    }
+  }
+
+  .gcores {
+    @include GridBorder;
+    @include withGridName(white);
+    .logoi {
+      margin-top: .4rem;
+      margin-bottom: .4rem;
+    }
+    background-color: rgba($kksk2C2, 0.3);
+    &:hover {
+      background-color: rgba($kksk2C2, 0.5);
+    }
+  }
+}
+
+.faqtimeline {
+  @include genResponsiveColGrids(
+    1fr 1fr,
+    1fr
+  );
+  margin-bottom: 5rem;
+
+  .timeline, .faq {
+    @include GridBorder();
+  }
+
+  .timeline, .faq {
+    @include GridH2($kksk2C2);
+  }
+
+  .timeline {
+    // display: grid;
+    // grid-template-rows: 3rem 1fr;
+    overflow: hidden;
+  }
+
+  @media #{$xs} {
+    grid-template-columns: 1fr;
+  }
+}
+
+.Timeline {
+  display: block;
+  width: 100%;
+  height: 100%;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  position: relative;
+
+  &:before {
+    content: '';
+    position: absolute;
+    top: 0; bottom: 0; left: 112px + 16px + 8px - 1px;
+    width: 2px; background-color: $kksk2C2;
+  }
+
+  .timepoint, .duetimepoint {
+    display: grid;
+    grid-template-columns: 112px 1fr;
+    padding: 0 16px 16px;
+
+    .date {
+      text-align: right;
+      font-family: $fontDIN;
+      padding-right: 1rem;
+      line-height: 2rem;
+      color: lighten($ckksk, 20%);
+    }
+    .event {
+      position: relative;
+      margin-top: 0.5rem;
+
+      &:before {
+        content: '';
+        width: 16px; height: 16px;
+        border-radius: 100%;
+        background-color: $kksk2C2;
+        position: absolute;
+        top: 0; left: 0;
+      }
+
+      span {
+        display: inline-block;
+        background-color: rgba($ckksk, .15);
+        color: lighten($ckksk, 30%);
+        padding: 0.5rem 1rem;
+        border-radius: 0rem .5rem .5rem .5rem;
+        position: relative;
+        margin-top: .5rem;
+        margin-left: 2.8rem;
+
+        &:before {
+          content: '';
+          position: absolute;
+          $w: .5rem;
+          border-left: solid $w transparent;
+          border-bottom: solid $w transparent;
+          border-top: solid $w rgba($ckksk, .15);
+          border-right: solid $w rgba($ckksk, .15);
+          top: 0; left: - $w * 2;
+        }
+      }
+    }
+  }
+
+  .duetimepoint {
+    .date { color: lighten($cred, 20%); }
+    .event {
+      &:before {
+        background-color: $cred;
+        box-shadow: 0 0 .3rem .3rem rgba($cred, 0.5);
+      }
+      span {
+        background-color: rgba($cred, .15);
+        color: lighten($cred, 30%);
+
+        &:before {
+          border-top: solid .5rem rgba($cred, .15);
+          border-right: solid .5rem rgba($cred, .15);
+        }
+      }
+    }
+  }
+}
+
+.FAQ {
+  padding: 1.5rem;
+  .qa {
+    margin-bottom: 1.5rem;
+    border-left: solid 2px rgba($ctna, 0.5);
+    padding-left: 0.6rem;
+    margin-left: -1rem;
+    // line-height: 1.414;
+
+    label {
+      font-family: $fontDIN;
+      color: $ctna;
+      // font-size: 1.2rem;
+      margin-right: .5rem;
+    }
+    span {
+      // font-size: 1.2rem;
+    }
+    div:first-child {
+      // border-bottom: dashed 1px rgba($text-color, 0.5);
+      margin-bottom: .3rem;
+      color: lighten($ctna, 20%);
+    }
+    div:last-child {
+      // border-bottom: dashed 1px rgba($text-color, 0.5);
+      // color: lighten($ctna, 30%);
+    }
+  }
+}
+
+.HangZhou {
+  @include GridBorder();
+}
+
+.Games {
+  display: grid;
+  grid-gap: $GRID-GAP;
+  grid-template-columns: repeat(10, 1fr);
+  grid-auto-rows: 1fr;
+  margin-bottom: $GRID-GAP * 2;
+  &:before {
+    content: ''; width: 0; padding-bottom: percentage(4 / 3);
+    grid-column: 1 / span 1; grid-row: 1 / span 1;
+  }
+
+  @media #{$xs} {
+    grid-template-columns: repeat(5, 1fr);
+  }
+
+  .game:first-child {
+    grid-column: 1 / span 1; grid-row: 1 / span 1;
+  }
+
+  .game {
+    @include GridBorder;
+    position: relative;
+    border-style: dashed;
+
+    .cover {
+      position: absolute;
+      width: 100%; height: 100%;
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      opacity: 0.382;
+    }
+
+    span {
+      position: absolute;
+      width: 100%; height: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 4rem;
+      @include TitleBase;
+      pointer-events: none;
+    }
+
+    &.ok {
+      border-style: solid;
+      .cover {
+        opacity: 1;
+      }
+      span {
+        display: none;
+      }
+    }
+  }
+}

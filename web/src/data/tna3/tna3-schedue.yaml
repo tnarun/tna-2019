@@ -1,0 +1,310 @@
+DAY1:
+  -
+    id: 1-1
+    cnName: 开幕式
+    enName: Pre-Show
+    abbr: tnarun
+    category: Pre-Show
+    player: 蹲厕的老五
+    est: PT30M
+    guide: 
+    time: 2019-10-04 12:30
+    layout: single-4-3
+    type: pre
+
+  -
+    id: 1-2
+    cnName: 空洞骑士
+    enName: Hollow Knight
+    abbr: hollowknight
+    category: 神居五门
+    player: 废料女粉
+    est: PT40M
+    guide: 港湾、微米
+    time: 2019-10-04 13:00
+    layout: single-16-9
+    info:
+      platform: PC
+      year: 2017
+  -
+    id: 1-3
+    cnName: 炉石传说：纳克萨玛斯的诅咒
+    enName: "HearthStone: Curse of Naxxramas"
+    abbr: naxxramas
+    category: 英雄模式
+    player: Code
+    est: PT1H25M
+    guide: Code
+    time: 2019-10-04 13:55
+    layout: single-16-9
+  -
+    id: 1-4
+    cnName: 武士刀 · 零
+    enName: Katana Zero
+    abbr: katana_zero
+    category: All Stages/Normal
+    player: 方傀儡
+    est: PT20M
+    guide: 无泪的哭泣
+    time: 2019-10-04 15:35
+    layout: single-16-9
+  -
+    id: 1-5
+    cnName: 决意：绊地狱
+    enName: "Ketsui: Kizuna Jigoku Tachi"
+    abbr: Ketsui_Kizuna_Jigoku_Tachi
+    category: 二周目通关
+    player: ixix91
+    est: PT50M
+    guide: 
+    time: 2019-10-04 16:10
+    layout: single-4-3
+  -
+    id: 1-6
+    cnName: 洛克人
+    enName: Rock man
+    abbr: 
+    category: All Stage Buster Only
+    player: 优雅的美美
+    est: PT30M
+    guide: 优雅的美美
+    megaAbbr: mm1
+    megaPage: https://megamanleaderboards.net/index.php?game=1
+    time: 2019-10-04 17:20
+    layout: single-4-3
+  -
+    id: 1-7
+    cnName: 洛克人 11
+    enName: Megaman 11
+    abbr: 
+    category: Any% No OoB 普通难度
+    player: peony
+    est: PT40M
+    guide: 南极猫的眼泪
+    megaAbbr: mm11
+    megaPage: https://megamanleaderboards.net/index.php?game=143
+    time: 2019-10-04 18:05
+    layout: single-16-9
+  -
+    id: 1-8
+    cnName: 洛可酱
+    enName: Rokko Chan
+    abbr: 
+    category: Any%
+    player: 优雅的美美
+    est: PT30M
+    guide: 优雅的美美
+    megaAbbr: rokko
+    megaPage: https://megamanleaderboards.net/index.php?game=59
+    time: 2019-10-04 19:00
+    layout: single-4-3
+  -
+    id: 1-9
+    cnName: 只狼：影逝二度
+    enName: "Sekiro: Shadow die twice"
+    abbr: sekiro
+    category: 修罗结局 无邪道 race
+    player: 
+      - 黑化由歧
+      - 星子滑落夜空
+    est: PT45M
+    guide: 玉米 & 小志
+    time: 2019-10-04 19:45
+    type: race
+    layout: race-16-9-1
+  -
+    id: 1-10
+    cnName: 仙剑奇侠传
+    enName: "Legend of Sword and Fairy"
+    abbr: New_Legend_of_Sword_and_Fairy
+    category: Any%
+    player: 丿灬夜狼
+    est: PT150M
+    guide: shalou88沙漏哥
+    time: 2019-10-04 20:45
+    layout: single-4-3
+
+DAY2:
+  -
+    id: 2-1
+    cnName: I wanna be the Permanence 2
+    enName: I wanna be the Permanence 2
+    abbr: iwbtpermanence2
+    category: Any%
+    player: 凡人
+    est: PT2H30M
+    guide: code
+    time: 2019-10-05 12:00
+    layout: single-4-3
+  -
+    id: 2-2
+    cnName: 超惑星战记 ZERO
+    enName: Blaster Master Zero
+    abbr: Blaster_Master_Zero
+    category: Any%
+    player: 埃尔文
+    est: PT55M
+    guide: 火月的捌年
+    time: 2019-10-05 14:45
+    layout: single-16-9
+  -
+    id: 2-3
+    cnName: 空洞骑士
+    enName: Hollow Knight
+    abbr: hollowknight
+    category: NMG bingo race
+    player: 
+      - 粥
+      - gcghvcg
+    est: PT2H30M
+    guide: 创世、魔术师
+    time: 2019-10-05 15:55
+    type: race
+    layout: race-16-9-2
+  -
+    id: 2-4
+    cnName: 忍者神龟 2
+    enName: Teenag Mutant Ninja Turtle 2
+    abbr: tmnt2
+    category: Any%
+    player: yangyi
+    est: PT35M
+    guide: 南极猫的眼泪
+    time: 2019-10-05 18:40
+    layout: single-4-3
+  -
+    id: 2-5
+    cnName: 苍蓝雷霆
+    enName: Azure Strike Gunvolt
+    abbr: gunvolt
+    category: speedrun mode
+    player: 晓夜
+    est: PT1H40M
+    guide: 优雅的美美
+    time: 2019-10-05 19:30
+    layout: single-16-9
+  -
+    id: 2-6
+    cnName: 织梦岛 2019
+    enName: "The Legend of Zelda: Link's Awaking (2019)"
+    abbr: las
+    category: Any%
+    player: 羽毛
+    est: PT2H
+    guide: 
+    time: 2019-10-05 21:25
+    layout: single-16-9
+
+DAY3:
+  -
+    id: 3-1
+    cnName: 神巫女
+    enName: Kamiko
+    abbr: Kamiko
+    category: Any% Glitchless
+    player: 鲑鱼桒
+    est: PT30M
+    guide: 鲑鱼桒
+    time: 2019-10-06 12:00
+    layout: single-16-9
+  -
+    id: 3-2
+    cnName: 精灵宝可梦：黄
+    enName: Pokemon Yellow
+    abbr: pkmnyellow
+    category: Any% Glitchless
+    player: 六魂
+    est: PT2H15M
+    guide: 六魂
+    time: 2019-10-06 12:45
+    layout: single-4-3
+  -
+    id: 3-3
+    cnName: 少年印第安纳琼斯
+    enName: The Young Indiana Jones Chronicles
+    abbr: youngindianajones
+    category: Any %
+    player: 象棋鬼降
+    est: PT16M
+    guide: 象棋鬼降
+    time: 2019-10-06 15:30
+    layout: single-4-3
+  -
+    id: 3-4
+    cnName: 密特罗德：融合
+    enName: Metroid Fusion
+    abbr: fusion
+    category: Any %（Memory Corruption）
+    player: SORP
+    est: PT1H
+    guide: SORP
+    time: 2019-10-06 16:00
+    layout: single-16-9
+  -
+    id: 3-5
+    cnName: 汐
+    enName: Shio
+    abbr: Shio
+    category: 浅梦真结局
+    player: 继烈2013
+    est: PT43M
+    guide: 待定
+    time: 2019-10-06 17:15
+    layout: single-16-9
+  -
+    id: 3-6
+    cnName: 只狼：影逝二度
+    enName: "Sekiro: Shadow die twice"
+    abbr: sekiro
+    category: NG 全记忆 全佛珠
+    player: Ak1Ra、24
+    est: PT1H35M
+    guide: 玉米
+    time: 2019-10-06 18:15
+    layout: single-16-9
+  -
+    id: 3-7
+    cnName: 打击者 1945 III（1999）
+    enName: Strikers 1945 III
+    abbr: Strikers_1945_III
+    category: 二周目通关
+    player: lest_TAQ
+    est: PT30M
+    guide: 待定
+    time: 2019-10-06 20:05
+    layout: single-4-3
+  -
+    id: 3-8
+    cnName: 怪物猎人：世界
+    enName: Moster Hunter：World
+    abbr: mhw
+    category: 特定任务挑战
+    player: 诗皖
+    est: PT40M
+    guide: 不可燃废料
+    time: 2019-10-06 20:50
+    layout: single-16-9
+  -
+    id: 3-9
+    cnName: 蔚蓝
+    enName: Celeste
+    abbr: Celeste
+    category: all c
+    player: 凉儿
+    est: PT15M
+    guide: DemoJameson
+    time: 2019-10-06 21:45
+    type: 'secret'
+    layout: single-16-9
+  -
+    id: 3-10
+    cnName: 蔚蓝
+    enName: Celeste
+    abbr: Celeste
+    category: True Ending
+    player: TGH_SR
+    est: PT1H
+    guide: DemoJameson
+    time: 2019-10-06 22:15
+    type: 'omt'
+    layout: single-16-9

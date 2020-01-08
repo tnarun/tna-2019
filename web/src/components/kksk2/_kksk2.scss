@@ -1,0 +1,23 @@
+@mixin TitleBase {
+  font-family: $fontDIN;
+  font-weight: bold;
+  color: white;
+  text-shadow: 2px 2px 0 rgba(black, 0.382);
+}
+
+@mixin GridBorder {
+  background-color: rgba(black, 0.382);
+  border: solid 1px rgba(white, 0.618);
+  box-shadow: 2px 2px 0 rgba(black, 0.382);
+}
+
+@mixin GridH2 ($color: white) {
+  h2 {
+    @include TitleBase;
+    margin: 0; 
+    padding: 1rem;
+    border-bottom: 2px solid $color;
+    text-align: center;
+    font-size: 1.3rem;
+  }
+}

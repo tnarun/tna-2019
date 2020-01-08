@@ -1,0 +1,1051 @@
+@import '../../../layouts/vars';
+
+$borderC: lighten($ctna, 20%);
+
+@mixin fontBase {
+  display: flex;
+  font-family: $fontDIN;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-size: 2rem;
+}
+
+@mixin boxBase {
+  @include fontBase;
+  position: absolute;
+  box-sizing: border-box;
+}
+
+@mixin box ($color: $kksk2C1) {
+  @include boxBase;
+  // border: solid 5px $color;
+  background-color: rgba(black, 1);
+  &:before {
+    content: '';
+    position: absolute;
+    width: 100%; height: 100%;
+    border: solid 5px $color;
+    background-color: rgba(darken($color, 30%), 0.3);
+    z-index: -1;
+  }
+  span {
+    position: relative;
+    z-index: 100;
+  }
+  z-index: 1;
+}
+
+@mixin boxSpecial {
+  @include boxBase;
+  span {
+    position: relative;
+    z-index: 100;
+  }
+}
+
+@mixin boxRB {
+  @include boxBase;
+  // border: solid 5px $color;
+  background-color: rgba(black, 1);
+  &:after {
+    content: '';
+    position: absolute;
+    width: 100%; height: 100%;
+    border-top: solid 5px $kksk2C1;
+    border-left: solid 5px $kksk2C1;
+    border-bottom: solid 5px $kksk2C2;
+    border-right: solid 5px $kksk2C2;
+    $c1: rgba($kksk2C1, 1);
+    $c2: rgba($kksk2C2, 1);
+    // background: linear-gradient(90deg + 26.565deg, $c1, $c2);
+    // z-index: 0;
+  }
+  span {
+    position: relative;
+    z-index: 100;
+  }
+  z-index: 1;
+}
+
+$ibpd: 6px;
+$halfibpd: $ibpd / 2;
+@mixin innerBox {
+  @include boxBase;
+  padding: $ibpd;
+  
+  &::before {
+    content: '';
+    position: absolute;
+    top: $ibpd; left: $ibpd; right: $ibpd; bottom: $ibpd;
+    box-sizing: border-box;
+    border: solid 1px $borderC;
+    background-color: rgba(black, 0.5);
+    z-index: -1;
+  }
+}
+
+@mixin screen {
+  position: absolute;
+  top: 0; left: 0;
+  width: 1920px; height: 1080px;
+  background-color: rgba($ctna, 0.2);
+  overflow: hidden;
+}
+
+@mixin stage {
+  position: absolute;
+  top: 0; left: 0;
+  width: 1620px; height: 1080px;
+  background-color: rgba($ctna, 0.2);
+  overflow: hidden;
+}
+
+@mixin titleShadow ($color) {
+  text-shadow: 6px 6px 0 rgba(black, 0.382);
+  color: $color;
+  font-family: $fontDINM;
+}
+
+@keyframes stafff {
+  from {
+    transform: translateY(0);
+  }
+
+  to {
+    transform: translateY(-100%);
+  }
+}
+
+.live {
+  position: fixed;
+  overflow: hidden;
+  top: 0; width: 100%;
+  left: 0; height: 100%;
+  background-color: black;
+
+  .c-16-9-single {
+    @include screen;
+    $bd: 5px;
+    $halfbd: 2.5px;
+    $vw: 1600px; $vh: 900px;
+
+    .video {
+      top: 0px; right: 0px;
+      width: $vw; height: $vh;
+      @include box;
+    }
+
+    .lattrs {
+      position: absolute;
+      width: 1920px - $vw - $bd; height: 900px + $bd;
+      display: grid;
+      grid-template-rows: 1fr 1fr;
+
+      .pv1 {
+        @include fontBase;
+        border-bottom: solid $bd $kksk2C1;
+        background-color: rgba(black, 0.382);
+      }
+      .logo {
+        border-bottom: solid $bd $kksk2C1;
+      }
+    }
+
+    .battrs {
+      position: absolute;
+      bottom: 0; right: 0;
+      width: $vw + $bd; height: 1080px - $vh - $bd;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+
+      .game, .timer {
+        border-left: solid $bd $kksk2C1;
+        background-color: rgba(black, 0.382);
+      }
+    }
+
+    .qr {
+      position: absolute;
+      left: 0; bottom: 0;
+      width: 310px; height: 170px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+  }
+
+  .c-4-3-single {
+    @include screen;
+    $bd: 5px; $hbd: 2.5px;
+    $vw: 1440px; $vh: 1080px;
+
+    .bgoff {
+      position: absolute;
+      width: 1920px; height: 1080px;
+      left: - 720px;
+    }
+
+    .video {
+      top: 0px; right: 0;
+      width: $vw; height: $vh;
+      @include box;
+    }
+    .attrs {
+      position: absolute;
+      top: 0; left: 0;
+      width: 1920px - $vw - $bd;
+      height: 1080px;
+      display: grid;
+      grid-template-rows: 4fr 2fr 3fr 3fr;
+      z-index: 100;
+
+      .pv1 {
+        @include fontBase;
+        border-bottom: solid $bd $kksk2C1;
+        background-color: rgba(black, 0.382);
+      }
+      .logo {
+        border-bottom: solid $bd $kksk2C1;
+      }
+      .game {
+        border-bottom: solid $bd $kksk2C1;
+        background-color: rgba(black, 0.382);
+      }
+      .timer {
+        background-color: rgba(black, 0.382);
+      }
+    }
+  }
+
+  .c-16-9-race {
+    @include screen;
+    $vw: 960px; $vh: 540px;
+    $bd: 5px;
+    $hbd: 2.5px;
+
+    .gtitle {
+      @include boxBase;
+      height: 120px; left: 0; right: 0; top: 0;
+      font-size: 2.5rem;
+      @include titleShadow(white);
+      font-weight: bold;
+      border-bottom: solid $bd $corange;
+      font-family: $fontDIN;
+      background-color: rgba(black, 0.382);
+    }
+
+    .video1 {
+      top: 120px; left: 0;
+      width: $vw; height: $vh;
+      @include box;
+      &:before { border: solid 0px transparent; }
+    }
+    .video2 {
+      top: 120px; right: 0;
+      width: $vw; height: $vh;
+      @include box;
+      &:before { border: solid 0px transparent; }
+    }
+    .attrs {
+      position: absolute;
+      left: 0; bottom: 0;
+      width: 1920px; height: 1080px - $vh - 120px;
+      display: grid;
+      grid-template-rows: 1fr 3fr;
+
+      .raceplayers {
+        border-top: solid $bd $corange;
+        background-color: rgba(black, 0.382);
+      }
+
+      .battrs {
+        display: grid;
+        grid-template-columns: 3fr 1fr 4fr 1fr 3fr;
+        border-top: solid $bd $corange;
+
+        .pv1, .pv2 {
+          @include fontBase;
+          background-color: rgba(black, 0.382);
+        }
+        .logo {
+          border-left: solid $bd $kksk2C1;
+          border-right: solid $bd $kksk2C1;
+          &.r {
+            border-left: solid $bd $kksk2C2;
+            border-right: solid $bd $kksk2C2;
+          }
+        }
+        .game {
+          background-color: rgba(black, 0.382);
+        }
+      }
+    }
+  }
+
+  .c-16-9-race-4p {
+    @include screen;
+
+    $vdw: 800px; $vdh: $vdw / 16 * 9; 
+    // $offx: (1920px - $vdw * 2) / 3;
+    $offx: 0;
+    $offy: (1080px - $vdh * 2) / 3;
+
+    .video1 {
+      top: $offy; left: $offx;
+      width: $vdw; height: $vdh;
+      @include box($kksk2C1);
+      // border-left: 0 none; border-top: 0 none;
+      // background-color: rgba(black, 0.6);
+    }
+    .video2 {
+      top: $offy; right: $offx;
+      width: $vdw; height: $vdh;
+      @include box($kksk2C2);
+      // border-right: 0 none; border-top: 0 none;
+      // background-color: rgba(black, 0.6);
+    }
+    .video3 {
+      bottom: $offy; right: $offx;
+      width: $vdw; height: $vdh;
+      @include box($kksk2C2);
+      // border-right: 0 none; border-bottom: 0 none;
+      // background-color: rgba(black, 0.6);
+    }
+    .video4 {
+      bottom: $offy; left: $offx;
+      width: $vdw; height: $vdh;
+      @include box($kksk2C1);
+      // border-left: 0 none; border-bottom: 0 none;
+      // background-color: rgba(black, 0.6);
+    }
+
+    .name1 {
+      position: absolute;
+      width: (1920px - $vdw * 2) - 30px;
+      height: 60px;
+      left: $vdw; top: $offy + 120px - 5px;
+      background-color: darken($kksk2C1, 15%);
+      border: solid 5px $kksk2C1;
+      transform: skew(-26.26deg, 0) translateX(-20px);
+    }
+
+    .name2 {
+      position: absolute;
+      width: (1920px - $vdw * 2) - 30px;
+      height: 60px;
+      right: $vdw; top: $offy + 240px - 5px;
+      background-color: darken($kksk2C2, 15%);
+      border: solid 5px $kksk2C2;
+      transform: skew(-26.26deg, 0) translateX(20px);
+    }
+
+    .name3 {
+      position: absolute;
+      width: (1920px - $vdw * 2) - 30px;
+      height: 60px;
+      left: $vdw; bottom: $offy + 240px - 5px;
+      background-color: darken($kksk2C1, 15%);
+      border: solid 5px $kksk2C1;
+      transform: skew(-26.26deg, 0) translateX(-20px);
+    }
+
+    .name4 {
+      position: absolute;
+      width: (1920px - $vdw * 2) - 30px;
+      height: 60px;
+      right: $vdw; bottom: $offy + 120px - 5px;
+      background-color: darken($kksk2C2, 15%);
+      border: solid 5px $kksk2C2;
+      transform: skew(-26.26deg, 0) translateX(20px);
+    }
+
+    .game {
+      position: absolute;
+      width: (1920px - $vdw * 2) - 30px;
+      height: 60px;
+      left: $vdw; top: $offy - 5px;
+      background-color: darken($kksk2C1, 15%);
+      border: solid 5px $kksk2C1;
+      transform: skew(-26.26deg, 0) translateX(-20px);
+    }
+
+    .timer {
+      position: absolute;
+      width: (1920px - $vdw * 2) - 30px;
+      height: 60px;
+      right: $vdw; bottom: $offy - 5px;
+      background-color: darken($kksk2C2, 15%);
+      border: solid 5px $kksk2C2;
+      transform: skew(-26.26deg, 0) translateX(20px);
+    }
+
+    .logo {
+      $ww: (1920px - $vdw * 2) - 20px * 2;
+      width: $ww; 
+      height: $ww;
+      left: $vdw + 20px; top: (1080px - $ww) / 2;
+      @include boxSpecial;
+      border-left: 0 none; border-bottom: 0 none;
+      // background-color: rgba(black, 0.382);
+    }
+  }
+
+  .c-16-9-race-3p {
+    @include screen;
+
+    $vdw: 800px; $vdh: $vdw / 16 * 9; 
+    // $offx: (1920px - $vdw * 2) / 3;
+    $offx: 0;
+    $offy: (1080px - $vdh * 2) / 3;
+
+    .video1 {
+      top: $offy; left: $offx;
+      width: $vdw; height: $vdh;
+      @include box($kksk2C1);
+      // border-left: 0 none; border-top: 0 none;
+      // background-color: rgba(black, 0.6);
+    }
+    .video2 {
+      top: $offy; right: $offx;
+      width: $vdw; height: $vdh;
+      @include box($kksk2C2);
+      // border-right: 0 none; border-top: 0 none;
+      // background-color: rgba(black, 0.6);
+    }
+    .video3 {
+      bottom: $offy; left: (1920px - $vdw) / 2;
+      width: $vdw; height: $vdh;
+      @include boxRB();
+      // border-right: 0 none; border-bottom: 0 none;
+      // background-color: rgba(black, 0.6);
+    }
+
+    .name1 {
+      position: absolute;
+      width: (1920px - $vdw * 2) - 30px;
+      height: 60px;
+      left: $vdw; 
+      top: $offy - 5px + 120px;
+      background-color: darken($kksk2C1, 35%);
+      border: solid 5px $kksk2C1;
+      transform: skew(-26.26deg, 0) translateX(-20px);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-weight: bold;
+      font-size: 2.4rem;
+      text-shadow: 6px 6px 0 rgba(black, 0.382);
+      color:white;
+    }
+
+    .name2 {
+      position: absolute;
+      width: (1920px - $vdw * 2) - 30px;
+      height: 60px;
+      right: $vdw; 
+      top: $offy + $vdh - 60px - 5px - 120px;
+      background-color: darken($kksk2C2, 35%);
+      border: solid 5px $kksk2C2;
+      transform: skew(-26.26deg, 0) translateX(20px);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-weight: bold;
+      font-size: 2.4rem;
+      text-shadow: 6px 6px 0 rgba(black, 0.382);
+      color:white;
+    }
+
+    .name3 {
+      position: absolute;
+      width: (1920px - $vdw * 2) - 30px;
+      height: 60px;
+      left: $vdw + (1920px - $vdw) / 2; 
+      bottom: $offy + 270px - 5px;
+      background-color: darken($kksk2C2, 35%);
+      border: solid 5px $kksk2C2;
+      transform: skew(-26.26deg, 0) translateX(-20px);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-weight: bold;
+      font-size: 2.4rem;
+      text-shadow: 6px 6px 0 rgba(black, 0.382);
+      color:white;
+    }
+
+    .game {
+      position: absolute;
+      width: (1920px - $vdw * 2) - 20px;
+      height: 60px;
+      right: -40px; 
+      bottom: $offy + 180px - 5px;
+      background-color: darken(#555, 35%);
+      border: solid 5px $corange;
+      transform: skew(-26.26deg, 0) translateX(-20px);
+      display: flex;
+      // justify-content: center;
+      padding-left: 1rem;
+      align-items: center;
+      font-weight: bold;
+      font-size: 2.4rem;
+      text-shadow: 6px 6px 0 rgba(black, 0.382);
+      color:white;
+    }
+
+    .category {
+      position: absolute;
+      width: (1920px - $vdw * 2) + 160px;
+      height: 60px;
+      right: -40px; 
+      bottom: $offy + 90px - 5px;
+      background-color: darken(#555, 35%);
+      border: solid 5px $corange;
+      transform: skew(-26.26deg, 0) translateX(-20px);
+      display: flex;
+      // justify-content: center;
+      padding-left: 1rem;
+      align-items: center;
+      font-weight: bold;
+      font-size: 2.4rem;
+      text-shadow: 6px 6px 0 rgba(black, 0.382);
+      color:white;
+    }
+
+    .timer {
+      position: absolute;
+      width: (1920px - $vdw * 2) + 100px;
+      height: 60px;
+      right: -40px; 
+      bottom: $offy - 5px;
+      background-color: darken(#555, 35%);
+      border: solid 5px $corange;
+      transform: skew(-26.26deg, 0) translateX(-20px);
+      display: flex;
+      // justify-content: center;
+      padding-left: 1rem;
+      align-items: center;
+      font-weight: bold;
+      font-size: 2.4rem;
+      text-shadow: 6px 6px 0 rgba(black, 0.382);
+      color:white;
+    }
+
+    .logo {
+      $hh: 450px;
+      width: $hh; 
+      height: $hh;
+      left: ((1920px - $vdw) / 2 - $hh) / 2; 
+      bottom: $offy;
+      @include boxSpecial;
+      border-left: 0 none; border-bottom: 0 none;
+      // background-color: rgba(black, 0.382);
+    }
+  }
+
+  .c-end {
+    @include screen;
+    $bd: 5px;
+  
+    .gtitle {
+      height: 120px; left: 0; right: 0; top: 0;
+      @include boxBase;
+      border-bottom: solid $bd $corange;
+      @include titleShadow(white);
+      font-size: 2.5rem;
+    }
+
+    .logo {
+      @include boxBase;
+      width: 120px; height: 120px;
+      top: 0; left: 400px;
+      z-index: 100;
+    }
+  
+    .battrs {
+      position: absolute;
+      top: 120px; left: 0; right: 0; bottom: 0;
+      display: grid;
+      grid-template-columns: 1fr 3fr 1fr;
+
+      .staff {
+        border-left: solid $bd $kksk2C1;
+        border-right: solid $bd $kksk2C2;
+        font-family: $fontDIN;
+        overflow: hidden;
+        background-color: rgba(black, 0.618);
+
+        .list {
+          animation: stafff 180s linear infinite;
+          text-shadow: 6px 6px 0 rgba(black, 0.382);
+        }
+
+        .block {
+          text-align: center;
+          margin-bottom: 2rem;
+          padding-top: 2rem;
+          font-size: 1.5rem;
+          font-weight: bold;
+          color: white;
+
+          h2 {
+            font-size: 3rem;
+            margin: 0;
+            margin-bottom: 2rem;
+            color: lighten($kksk2C1, 20%);
+          }
+          span {
+            display: block;
+            font-size: 2.4rem;
+            margin-bottom: 0.5rem;
+            opacity: 0.618;
+          }
+          div {
+            font-size: 3rem;
+            margin-bottom: 2.5rem;
+            &.p {
+              margin-bottom: 1rem;
+            }
+          }
+        }
+        .head {
+          height: 50rem;
+        }
+        .tail {
+          height: 50rem;
+        }
+      }
+
+      .logos1, .logos2 {
+        display: grid;
+        grid-template-rows: 1fr 1fr 1fr;
+        .Logo {
+          display: grid;
+          grid-template-rows: 3fr 1fr 0.5fr;
+
+          .i {
+            margin: 0rem;
+            background-position: center;
+            background-size: contain;
+            background-repeat: no-repeat;
+          }
+          .t {
+            @include fontBase;
+          }
+        }
+      }
+      .logos1 {
+        padding-top: 4rem;
+        background-color: rgba(darken($kksk2C1, 30%), 0.382);
+        .Logo {
+          transform: translateY(6rem);
+        }
+      }
+      .logos2 {
+        background-color: rgba(darken($kksk2C2, 30%), 0.382);
+        padding-top: 4rem;
+      }
+    }
+  }
+
+  .c-thank {
+    @include screen;
+    $bd: 5px;
+  
+    .logo {
+      @include boxBase;
+      width: 180px; height: 180px;
+      top: 0; left: 500px;
+    }
+    .gtitle {
+      @include boxBase;
+      height: 180px; left: 0; right: 0; top: 0;
+      font-size: 3rem;
+      @include titleShadow(white);
+      font-weight: bold;
+      border-bottom: solid $bd $kksk2C1;
+      font-family: $fontDIN;
+    }
+  
+    .battrs {
+      position: absolute;
+      top: 180px; left: 0; right: 0; bottom: 90px;
+      display: grid;
+      grid-template-rows: 1fr 1fr;
+      border-bottom: solid $bd $kksk2C2;
+      background-color: rgba(black, 0.382);
+      padding-top: 2rem;
+      padding-bottom: 1rem;
+      grid-gap: 2rem;
+      padding-left: 10rem;
+      padding-right: 10rem;
+
+      .logos1, .logos2 {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+        .Logo {
+          display: grid;
+          grid-template-rows: 3fr 1fr 0.5fr;
+          grid-column: span 2;
+
+          .i {
+            margin: 0rem;
+            background-position: center;
+            background-size: contain;
+            background-repeat: no-repeat;
+          }
+          .t {
+            @include fontBase;
+            font-family: $fontDINM;
+            transform: translateY(1rem);
+          }
+        }
+      }
+    }
+  }
+
+  .c-day {
+    @include screen;
+    $bd: 5px;
+
+    .gtitle {
+      @include boxBase;
+      height: 120px; left: 0; right: 0; top: 0;
+      font-size: 2.5rem;
+      @include titleShadow(white);
+      font-weight: bold;
+      border-bottom: solid $bd $corange;
+      font-family: $fontDIN;
+      background-color: rgba(black, 0.382);
+    }
+
+    .logo {
+      @include boxBase;
+      width: 120px; height: 120px;
+      top: 0; left: 600px;
+      z-index: 100;
+    }
+  
+    .battrs {
+      position: absolute;
+      top: 120px; left: 0; right: 0; bottom: 0;
+      display: grid;
+      grid-template-columns: 1fr 3fr;
+      grid-gap: 1rem;
+      padding-left: 1rem;
+      padding-right: 1rem;
+
+      .sbr {
+        display: grid;
+        grid-template-rows: 380px 1fr 1fr;
+        font-size: 2rem;
+        @include titleShadow(white);
+        padding-top: 1rem;
+        grid-gap: 1rem;
+        .qr {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          text-align: center;
+          background-color: rgba(black, 0.382);
+          // padding: 1rem 0;
+          img { width: 15rem; height: 15rem; margin-top: 1rem;}
+        }
+      }
+      .countdown {
+        background-color: rgba(black, 0.382);
+        padding: 1rem 0;
+      }
+    }
+  }
+
+  .c-mhnxns {
+    @include screen;
+    $bd: 5px;
+  
+    .gtitle {
+      height: 120px; left: 0; right: 0; top: 0;
+      @include boxBase;
+      border-bottom: solid $bd $corange;
+      @include titleShadow(white);
+      font-size: 2.5rem;
+    }
+
+    .logo {
+      @include boxBase;
+      width: 120px; height: 120px;
+      top: 0; left: 400px;
+      z-index: 100;
+    }
+  
+    .battrs {
+      position: absolute;
+      top: 120px; left: 0; right: 0; bottom: 0;
+      display: grid;
+      grid-template-columns: 1fr;
+
+      .staff {
+        border-left: solid $bd $kksk2C1;
+        border-right: solid $bd $kksk2C2;
+        font-family: $fontDIN;
+        overflow: hidden;
+        background-color: rgba(black, 0.618);
+        // overflow: scroll;
+
+        .list {
+          text-shadow: 6px 6px 0 rgba(black, 0.382);
+          display: grid;
+          grid-template-columns: 1fr 1fr;
+          padding: 0 10rem;
+        }
+
+        .block {
+          text-align: center;
+          margin-bottom: 2rem;
+          padding-top: 2rem;
+          font-size: 1.5rem;
+          font-weight: bold;
+          color: white;
+
+          h2 {
+            font-size: 2.5rem;
+            margin: 0;
+            margin-bottom: 2rem;
+            color: lighten($kksk2C1, 20%);
+          }
+          span {
+            display: block;
+            font-size: 2.4rem;
+            margin-bottom: 0.5rem;
+            opacity: 0.618;
+          }
+          div {
+            font-size: 2rem;
+            margin-bottom: 2.5rem;
+            &.p {
+              margin-bottom: 1rem;
+            }
+          }
+        }
+      }
+
+      .logos1, .logos2 {
+        display: grid;
+        grid-template-rows: 1fr 1fr 1fr;
+        .Logo {
+          display: grid;
+          grid-template-rows: 3fr 1fr 0.5fr;
+
+          .i {
+            margin: 0rem;
+            background-position: center;
+            background-size: contain;
+            background-repeat: no-repeat;
+          }
+          .t {
+            @include fontBase;
+          }
+        }
+      }
+      .logos1 {
+        padding-top: 4rem;
+        background-color: rgba(darken($kksk2C1, 30%), 0.382);
+        .Logo {
+          transform: translateY(6rem);
+        }
+      }
+      .logos2 {
+        background-color: rgba(darken($kksk2C2, 30%), 0.382);
+        padding-top: 4rem;
+      }
+    }
+  }
+}
+
+.CountDownShow {
+  // background-color: red;
+  text-align: center;
+  .cd {
+    margin-top: .5rem;
+    font-size: 2.5rem;
+    color: lighten($ctna, 20%);
+    text-shadow: 0 0 1rem $light-bg-color;
+    font-weight: bold;
+    font-family: $fontDIN;
+  }
+}
+
+.Schedule {
+  margin-top: 1rem;
+  .show {
+    font-size: 2rem;
+    color: white;
+    font-family: $fontDINM;
+    background-color: rgba(black, 0.382);
+    // border-bottom: solid 1px white;
+    margin-bottom: 4px;
+    @include titleShadow(white);
+    &:last-child {
+      border-bottom: 0 none;
+    }
+
+    @include genResponsiveColGrids(
+      2fr 5fr 5.5fr,
+      2fr 5fr 5.5fr
+    );
+
+    .startTime {
+      padding: .5rem .5rem;
+
+      position: relative;
+      .cover {
+        position: absolute;
+        top: 0; left: 0; right: 0; bottom: 0;
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+        pointer-events: none;
+        opacity: 0.382;
+        background-color: rgba(black, 0.618);
+      }
+
+      .from, .to {
+        position: relative;
+      }
+    }
+
+    .NameCategory {
+      // border-left: dashed 1px $kksk2C1;
+      padding: .5rem .5rem;
+      .name {
+        display: block;
+        margin-bottom: .5rem;
+        position: relative;
+      }
+      .category {
+        position: relative;
+        font-size: 1.8rem;
+      }
+    }
+    .RunnerEST {
+      // border-left: dashed 1px $kksk2C1;
+      padding: .5rem .5rem;
+      .runner {
+        margin-bottom: .5rem;
+      }
+      .est {
+        font-size: 1.8rem;
+      }
+    }
+  }
+}
+
+  // .c-rest {
+  //   @include screen;
+
+  //   .video {
+  //     top: 0px; right: 0;
+  //     width: 1441px; height: 1081px;
+  //     @include box;
+  //     border-top: 0 none;
+  //     border-right: 0 none;
+  //     border-bottom: 0 none;
+  //     background-color: rgba($ctna, 0.2);
+  //   }
+  //   .logo {
+  //     top: 0; left: 0;
+  //     // width: 479px; height: 540px;
+  //     width: 479px - $ibpd; height: 360px - $halfibpd;
+  //     @include box;
+  //     border-left: 0 none;
+  //     border-top: 0 none;
+  //   }
+  //   .ad {
+  //     left: 0; bottom: 0;
+  //     // width: 479px; height: 540px;
+  //     width: 479px - $ibpd; height: 720px - $halfibpd;
+  //     @include box;
+  //     border-left: 0 none; border-bottom: 0 none;
+  //     .adi {
+  //       position: absolute;
+  //       top: 0; left: 0; right: 0; bottom: 0;
+  //       display: grid;
+  //       grid-template-columns: 1fr;
+  //       grid-template-rows: 1fr 1fr;
+  //       .adii {
+  //         position: relative;
+  //         &:first-child {
+  //           border-bottom: 1px solid $borderC;
+  //         }
+  //       }
+  //     }
+  //   }
+  //   .game {
+  //     top: 360px + 240px + $halfibpd; left: 0;
+  //     // width: 479px; height: 360px;
+  //     width: 479px - $ibpd; height: 240px - $ibpd;
+  //     @include box;
+  //     border-left: 0 none;
+  //   }
+  //   .timer {
+  //     bottom: 0; left: 0;
+  //     // width: 479px; height: 360px;
+  //     width: 479px - $ibpd; height: 240px - $halfibpd;
+  //     @include box;
+  //     border-bottom: 0 none;
+  //     border-left: 0 none;
+  //   }
+
+  //   $nh: 180px;
+  //   $nw: 1080px;
+  //   .next1, .next2, .next3 {
+  //     width: $nw; height: $nh;
+  //     right: (1440px - $nw) / 2;
+  //     @include box;
+  //   }
+  //   .next3 {
+  //     bottom: 90px;
+  //   }
+  //   .next2 {
+  //     bottom: 90px + $nh + 45px;
+  //   }
+  //   .next1 {
+  //     bottom: 90px + $nh + 45px + $nh + 45px;
+  //     border-color: lighten($cred, 10%);
+  //   }
+
+  //   .countdown {
+  //     width: $nw; height: $nh;
+  //     right: (1440px - $nw) / 2;
+  //     @include box;
+  //     top: 90px;
+  //     display: flex;
+  //     flex-direction: column;
+  //     justify-content: center;
+  //     align-items: center;
+  //     color: lighten($ctna, 40%);
+  //     font-family: $fontDINM;
+  //     h3 {
+  //       font-size: 2rem;
+  //       margin: 0;
+  //     }
+  //     .gtime {
+  //       font-size: 3rem;
+  //       margin: 0 0.5rem
+  //     }
+  //   }
+
+  //   .upnext {
+  //     width: $nw; height: 60px;
+  //     right: (1440px - $nw) / 2;
+  //     @include box; 
+  //     top: 90px + $nh + 30px - 12px;
+  //     // background-color: rgba($ctna, 0.3);
+  //     // color: white;
+  //     font-size: 1.5rem;
+  //     // @include light-title;
+  //     color: $text-color;
+  //     color: lighten($ctna, 10%);
+  //   }
+  // }

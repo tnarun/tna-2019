@@ -1,0 +1,9 @@
+@import '../../../layouts/vars';
+
+$bgColor: black;
+$baseColor: $ctna;
+
+.BorderGrid {
+  background-color: rgba($bgColor, 0.3);
+  border: solid 1px rgba(lighten($baseColor, 40%), 0.5);
+}

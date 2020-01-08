@@ -1,6 +1,9 @@
 @import './assets/fonts/Orbitron/Orbitron.css';
 @import './assets/fonts/Cubano/Cubano.css';
-@import './assets/fonts/DIN-Black/DIN-Black.css';
+@import './assets/fonts/DIN-Black.css';
+
+// 嵌入的中文字体
+@import './assets/fonts/embed-cn/tna-site-title.css';
 
 html, body, #root {
   height: 100%;
