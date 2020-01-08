@@ -11,6 +11,7 @@ import LayoutTimer from '../../../components/kksk2/LayoutTimer'
 import LayoutLOGO from '../../../components/kksk2/LayoutLogoKKSK2'
 import LayoutGameCover from '../../../components/kksk2/LayoutGameCover'
 import LiveBG from '../../../components/kksk2/LiveBG'
+import QRCode from 'qrcode'
 
 export default class extends React.Component {
   render () {
@@ -36,6 +37,10 @@ export default class extends React.Component {
           <div className={ css.timer }><LayoutTimer data={ data } s='' /></div>
           <div className={ css.game }><LayoutGameName data={ data } /></div>
         </div>
+
+        <div className={ css.qr }>
+          <img src={ this.state.qrurl } alt='qr' />
+        </div>
       </div>
     </div>
   }
@@ -48,5 +53,13 @@ export default class extends React.Component {
     console.log(id, data)
     this.setState({ data })
     window.document.title = data.cnName
+  }
+
+  async componentDidMount () {
+    let url = await QRCode.toDataURL('https://tnarun.com/kksk2/', {
+      margin: 1,
+      width: 133
+    })
+    this.setState({ qrurl: url })
   }
 }

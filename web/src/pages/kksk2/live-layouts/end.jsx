@@ -110,8 +110,8 @@ export default class extends React.Component {
                 <span>现场摄像</span>
                 <div>阿黄</div>
 
-                <span>节奏·杂务</span>
-                <div>垃圾渣渣(D2 的大哥)</div>
+                <span>节奏团团长</span>
+                <div>渣渣来打我呀(D2 的大哥)</div>
               </div>
 
               <div className={ css.block }>

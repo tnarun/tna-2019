@@ -14,7 +14,15 @@ import QRCode from 'qrcode'
 
 export default class extends React.Component {
   render () {
-    let { DAY1, nextShow } = this.state
+    let { DAY1, DAY2, nextShow } = this.state
+    let { id } = this.props.location.query
+
+    let DAY = DAY1
+    if (id && id.includes('2-')) {
+      DAY = DAY2
+    }
+
+
 
     return <div className={ css.live }>
       <div className={ css['c-day'] }>
@@ -33,8 +41,7 @@ export default class extends React.Component {
             {
               this.state.qrurl ? <div className={ css.qrcode }>
                 <div className={ css.tip }>
-                  手机扫描二维码<br/>
-                  访问节目单
+                  扫二维码访问节目单
                 </div>
                 <img src={ this.state.qrurl } alt='qr' />
               </div> : null
@@ -47,7 +54,7 @@ export default class extends React.Component {
             </div>
           </div>
           <div className={ css.sch }>
-            <Schedule data={ DAY1 } />
+            <Schedule data={ DAY } />
           </div>
         </div>
       </div>
@@ -152,7 +159,7 @@ class CountDown extends React.Component {
     let { data } = this.props
 
     return <div className={ css.CountDownShow }>
-      <div>下一个节目：</div>
+      <div>下一个节目</div>
       <div>{ data.cnName }</div>
       <div>{ data.category }</div>
       <div className={ css.cd }>{ dstr }</div>

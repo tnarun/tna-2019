@@ -8,7 +8,7 @@ export default class LayoutRacePlayers extends React.Component {
 
     return <div className={ css.LayoutRacePlayers }>
       <div className={ css.p1 }>{ data.players[0] }</div>
-      <div className={ css.timer }>640 × 80 x:650 y: 540</div>
+      <div className={ css.timer }></div>
       <div className={ css.p2 }>{ data.players[1]}</div>
     </div>
   }
