@@ -1,0 +1,3837 @@
+{
+    "data": {
+        "runData": {
+            "id": "y21w397z",
+            "weblink": "https://www.speedrun.com/sekiro/run/y21w397z",
+            "game": {
+                "data": {
+                    "id": "o1y9zk26",
+                    "names": {
+                        "international": "Sekiro: Shadows Die Twice",
+                        "japanese": null,
+                        "twitch": "Sekiro: Shadows Die Twice"
+                    },
+                    "abbreviation": "sekiro",
+                    "weblink": "https://www.speedrun.com/sekiro",
+                    "released": 2019,
+                    "release-date": "2019-03-22",
+                    "ruleset": {
+                        "show-milliseconds": false,
+                        "require-verification": true,
+                        "require-video": true,
+                        "run-times": [
+                            "realtime"
+                        ],
+                        "default-time": "realtime",
+                        "emulators-allowed": true
+                    },
+                    "romhack": false,
+                    "gametypes": [],
+                    "platforms": [
+                        "nzelkr6q",
+                        "o7e2mx6w",
+                        "8gej2n93"
+                    ],
+                    "regions": [
+                        "pr184lqn",
+                        "e6lxy1dz",
+                        "o316x197"
+                    ],
+                    "genres": [
+                        "jp23x26k"
+                    ],
+                    "engines": [
+                        "y572793l"
+                    ],
+                    "developers": [
+                        "rzj0p76l"
+                    ],
+                    "publishers": [
+                        "qkr2jne4"
+                    ],
+                    "moderators": {
+                        "98r7vo6j": "moderator",
+                        "7j42mzdx": "super-moderator",
+                        "v81kwmrj": "moderator",
+                        "qjngdow8": "moderator",
+                        "v8l6lgv8": "super-moderator",
+                        "1xy1remx": "super-moderator",
+                        "v8llwor8": "moderator"
+                    },
+                    "created": "2019-02-08T18:50:33Z",
+                    "assets": {
+                        "logo": {
+                            "uri": "https://www.speedrun.com/themes/sekiro/logo.png",
+                            "width": 720,
+                            "height": 128
+                        },
+                        "cover-tiny": {
+                            "uri": "https://www.speedrun.com/themes/sekiro/cover-32.png",
+                            "width": 32,
+                            "height": 45
+                        },
+                        "cover-small": {
+                            "uri": "https://www.speedrun.com/themes/sekiro/cover-64.png",
+                            "width": 64,
+                            "height": 90
+                        },
+                        "cover-medium": {
+                            "uri": "https://www.speedrun.com/themes/sekiro/cover-128.png",
+                            "width": 128,
+                            "height": 180
+                        },
+                        "cover-large": {
+                            "uri": "https://www.speedrun.com/themes/sekiro/cover-256.png",
+                            "width": 256,
+                            "height": 360
+                        },
+                        "icon": {
+                            "uri": "https://www.speedrun.com/themes/sekiro/favicon.png",
+                            "width": 64,
+                            "height": 64
+                        },
+                        "trophy-1st": {
+                            "uri": "https://www.speedrun.com/themes/Default/1st.png",
+                            "width": 64,
+                            "height": 64
+                        },
+                        "trophy-2nd": {
+                            "uri": "https://www.speedrun.com/themes/Default/2nd.png",
+                            "width": 64,
+                            "height": 64
+                        },
+                        "trophy-3rd": {
+                            "uri": "https://www.speedrun.com/themes/Default/3rd.png",
+                            "width": 64,
+                            "height": 64
+                        },
+                        "trophy-4th": null,
+                        "background": {
+                            "uri": "https://www.speedrun.com/themes/sekiro/background.png",
+                            "width": 3840,
+                            "height": 2160
+                        },
+                        "foreground": null
+                    },
+                    "links": [
+                        {
+                            "rel": "self",
+                            "uri": "https://www.speedrun.com/api/v1/games/o1y9zk26"
+                        },
+                        {
+                            "rel": "runs",
+                            "uri": "https://www.speedrun.com/api/v1/runs?game=o1y9zk26"
+                        },
+                        {
+                            "rel": "levels",
+                            "uri": "https://www.speedrun.com/api/v1/games/o1y9zk26/levels"
+                        },
+                        {
+                            "rel": "categories",
+                            "uri": "https://www.speedrun.com/api/v1/games/o1y9zk26/categories"
+                        },
+                        {
+                            "rel": "variables",
+                            "uri": "https://www.speedrun.com/api/v1/games/o1y9zk26/variables"
+                        },
+                        {
+                            "rel": "records",
+                            "uri": "https://www.speedrun.com/api/v1/games/o1y9zk26/records"
+                        },
+                        {
+                            "rel": "series",
+                            "uri": "https://www.speedrun.com/api/v1/series/yr4gon12"
+                        },
+                        {
+                            "rel": "derived-games",
+                            "uri": "https://www.speedrun.com/api/v1/games/o1y9zk26/derived-games"
+                        },
+                        {
+                            "rel": "romhacks",
+                            "uri": "https://www.speedrun.com/api/v1/games/o1y9zk26/derived-games"
+                        },
+                        {
+                            "rel": "leaderboard",
+                            "uri": "https://www.speedrun.com/api/v1/leaderboards/o1y9zk26/category/w20vw6zk"
+                        }
+                    ],
+                    "variables": {
+                        "data": [
+                            {
+                                "id": "gnxrw1jn",
+                                "name": "PC / Console",
+                                "category": null,
+                                "scope": {
+                                    "type": "global"
+                                },
+                                "mandatory": true,
+                                "user-defined": false,
+                                "obsoletes": true,
+                                "values": {
+                                    "_note": "`choices` is deprecated, please use `values` instead",
+                                    "choices": {
+                                        "21g48jm1": "PC",
+                                        "jqz5p6mq": "Console"
+                                    },
+                                    "values": {
+                                        "21g48jm1": {
+                                            "label": "PC",
+                                            "rules": "Performing the run on PC requires the **integrated game timer** available in LiveSplit to be used and **showing in your submission**.",
+                                            "flags": {
+                                                "miscellaneous": false
+                                            }
+                                        },
+                                        "jqz5p6mq": {
+                                            "label": "Console",
+                                            "rules": "Performing the run on Console requires final **In-game Time** to be **shown in your submission**. If the run ends on completing an ending, runners should select to stay in the same New Game after the credits, quit out and check IGT in their save file.",
+                                            "flags": {
+                                                "miscellaneous": false
+                                            }
+                                        }
+                                    },
+                                    "default": "21g48jm1"
+                                },
+                                "is-subcategory": true,
+                                "links": [
+                                    {
+                                        "rel": "self",
+                                        "uri": "https://www.speedrun.com/api/v1/variables/gnxrw1jn"
+                                    },
+                                    {
+                                        "rel": "game",
+                                        "uri": "https://www.speedrun.com/api/v1/games/o1y9zk26"
+                                    }
+                                ]
+                            },
+                            {
+                                "id": "68kd70ql",
+                                "name": "Patch",
+                                "category": null,
+                                "scope": {
+                                    "type": "global"
+                                },
+                                "mandatory": true,
+                                "user-defined": false,
+                                "obsoletes": true,
+                                "values": {
+                                    "_note": "`choices` is deprecated, please use `values` instead",
+                                    "choices": {
+                                        "gq74pkvq": "1.02",
+                                        "21g45yn1": "1.03",
+                                        "xqk45p4l": "1.04"
+                                    },
+                                    "values": {
+                                        "gq74pkvq": {
+                                            "label": "1.02"
+                                        },
+                                        "21g45yn1": {
+                                            "label": "1.03"
+                                        },
+                                        "xqk45p4l": {
+                                            "label": "1.04"
+                                        }
+                                    },
+                                    "default": null
+                                },
+                                "is-subcategory": false,
+                                "links": [
+                                    {
+                                        "rel": "self",
+                                        "uri": "https://www.speedrun.com/api/v1/variables/68kd70ql"
+                                    },
+                                    {
+                                        "rel": "game",
+                                        "uri": "https://www.speedrun.com/api/v1/games/o1y9zk26"
+                                    }
+                                ]
+                            },
+                            {
+                                "id": "ylqkog7l",
+                                "name": "Shura Ending Subcategories",
+                                "category": "w20vw6zk",
+                                "scope": {
+                                    "type": "global"
+                                },
+                                "mandatory": true,
+                                "user-defined": false,
+                                "obsoletes": true,
+                                "values": {
+                                    "_note": "`choices` is deprecated, please use `values` instead",
+                                    "choices": {
+                                        "jq6xpvvq": "Unrestricted",
+                                        "mln098oq": "No Airswim",
+                                        "810mp6ol": "Glitchless"
+                                    },
+                                    "values": {
+                                        "jq6xpvvq": {
+                                            "label": "Unrestricted",
+                                            "rules": "##Glitch Usage\r\n\r\nNo additional restrictions apply.",
+                                            "flags": {
+                                                "miscellaneous": false
+                                            }
+                                        },
+                                        "mln098oq": {
+                                            "label": "No Airswim",
+                                            "rules": "##Glitch Usage\r\n\r\nThe use of **[Airswimming](https://sekiroruns.com/wiki/Airswimming)** is prohibited in this category.",
+                                            "flags": {
+                                                "miscellaneous": false
+                                            }
+                                        },
+                                        "810mp6ol": {
+                                            "label": "Glitchless",
+                                            "rules": "##Glitch Usage\r\n\r\nAny use of glitches is strictly prohibited. Please consult the **[Glitchless guidelines](https://docs.google.com/document/d/1R-gRFdw_iUsZ2UJopPxp-swX0uAyN0tkPyd1_f1VhAo/edit?usp=sharing)** for more information and view the ban and allowance list.",
+                                            "flags": {
+                                                "miscellaneous": false
+                                            }
+                                        }
+                                    },
+                                    "default": "jq6xpvvq"
+                                },
+                                "is-subcategory": true,
+                                "links": [
+                                    {
+                                        "rel": "self",
+                                        "uri": "https://www.speedrun.com/api/v1/variables/ylqkog7l"
+                                    },
+                                    {
+                                        "rel": "game",
+                                        "uri": "https://www.speedrun.com/api/v1/games/o1y9zk26"
+                                    },
+                                    {
+                                        "rel": "category",
+                                        "uri": "https://www.speedrun.com/api/v1/categories/w20vw6zk"
+                                    }
+                                ]
+                            },
+                            {
+                                "id": "gnxr2z4n",
+                                "name": "IS Ending Subcategories",
+                                "category": "vdomxnv2",
+                                "scope": {
+                                    "type": "global"
+                                },
+                                "mandatory": true,
+                                "user-defined": false,
+                                "obsoletes": true,
+                                "values": {
+                                    "_note": "`choices` is deprecated, please use `values` instead",
+                                    "choices": {
+                                        "5lm4p28l": "Unrestricted",
+                                        "81wd97mq": "No Airswim",
+                                        "zqo39j5q": "Glitchless"
+                                    },
+                                    "values": {
+                                        "5lm4p28l": {
+                                            "label": "Unrestricted",
+                                            "rules": "##Glitch Usage\r\n\r\nNo additional restrictions apply.",
+                                            "flags": {
+                                                "miscellaneous": false
+                                            }
+                                        },
+                                        "81wd97mq": {
+                                            "label": "No Airswim",
+                                            "rules": "##Glitch Usage\r\n\r\nThe use of **[Airswimming](https://sekiroruns.com/wiki/Airswimming)** is prohibited in this category.",
+                                            "flags": {
+                                                "miscellaneous": false
+                                            }
+                                        },
+                                        "zqo39j5q": {
+                                            "label": "Glitchless",
+                                            "rules": "##Glitch Usage\r\n\r\nAny use of glitches is strictly prohibited. Please consult the **[Glitchless guidelines](https://docs.google.com/document/d/1R-gRFdw_iUsZ2UJopPxp-swX0uAyN0tkPyd1_f1VhAo/edit?usp=sharing)** for more information and view the ban and allowance list.",
+                                            "flags": {
+                                                "miscellaneous": false
+                                            }
+                                        }
+                                    },
+                                    "default": "5lm4p28l"
+                                },
+                                "is-subcategory": true,
+                                "links": [
+                                    {
+                                        "rel": "self",
+                                        "uri": "https://www.speedrun.com/api/v1/variables/gnxr2z4n"
+                                    },
+                                    {
+                                        "rel": "game",
+                                        "uri": "https://www.speedrun.com/api/v1/games/o1y9zk26"
+                                    },
+                                    {
+                                        "rel": "category",
+                                        "uri": "https://www.speedrun.com/api/v1/categories/vdomxnv2"
+                                    }
+                                ]
+                            },
+                            {
+                                "id": "789jd09n",
+                                "name": "All NG Memories Subcategories",
+                                "category": "wkpm0rwk",
+                                "scope": {
+                                    "type": "global"
+                                },
+                                "mandatory": true,
+                                "user-defined": false,
+                                "obsoletes": true,
+                                "values": {
+                                    "_note": "`choices` is deprecated, please use `values` instead",
+                                    "choices": {
+                                        "z199vdk1": "Unrestricted",
+                                        "p12wk4k1": "Glitchless"
+                                    },
+                                    "values": {
+                                        "z199vdk1": {
+                                            "label": "Unrestricted",
+                                            "rules": "##Glitch Usage\r\n\r\nNo additional restrictions apply.",
+                                            "flags": {
+                                                "miscellaneous": false
+                                            }
+                                        },
+                                        "p12wk4k1": {
+                                            "label": "Glitchless",
+                                            "rules": "##Glitch Usage\r\n\r\nAny use of glitches is strictly prohibited. Please consult the **[Glitchless guidelines](https://docs.google.com/document/d/1R-gRFdw_iUsZ2UJopPxp-swX0uAyN0tkPyd1_f1VhAo/edit?usp=sharing)** for more information and view the ban and allowance list.",
+                                            "flags": {
+                                                "miscellaneous": false
+                                            }
+                                        }
+                                    },
+                                    "default": "z199vdk1"
+                                },
+                                "is-subcategory": true,
+                                "links": [
+                                    {
+                                        "rel": "self",
+                                        "uri": "https://www.speedrun.com/api/v1/variables/789jd09n"
+                                    },
+                                    {
+                                        "rel": "game",
+                                        "uri": "https://www.speedrun.com/api/v1/games/o1y9zk26"
+                                    },
+                                    {
+                                        "rel": "category",
+                                        "uri": "https://www.speedrun.com/api/v1/categories/wkpm0rwk"
+                                    }
+                                ]
+                            },
+                            {
+                                "id": "2lgg107l",
+                                "name": "All NG Memories and Bead Subcategories",
+                                "category": "zdnxnen2",
+                                "scope": {
+                                    "type": "global"
+                                },
+                                "mandatory": true,
+                                "user-defined": false,
+                                "obsoletes": true,
+                                "values": {
+                                    "_note": "`choices` is deprecated, please use `values` instead",
+                                    "choices": {
+                                        "81p0z6kq": "Unrestricted",
+                                        "xqk436yl": "Glitchless"
+                                    },
+                                    "values": {
+                                        "81p0z6kq": {
+                                            "label": "Unrestricted",
+                                            "rules": "##Glitch Usage\r\n\r\nNo additional restrictions apply.",
+                                            "flags": {
+                                                "miscellaneous": false
+                                            }
+                                        },
+                                        "xqk436yl": {
+                                            "label": "Glitchless",
+                                            "rules": "##Glitch Usage\r\n\r\nAny use of glitches is strictly prohibited. Please consult the **[Glitchless guidelines](https://docs.google.com/document/d/1R-gRFdw_iUsZ2UJopPxp-swX0uAyN0tkPyd1_f1VhAo/edit?usp=sharing)** for more information and view the ban and allowance list.",
+                                            "flags": {
+                                                "miscellaneous": false
+                                            }
+                                        }
+                                    },
+                                    "default": "81p0z6kq"
+                                },
+                                "is-subcategory": true,
+                                "links": [
+                                    {
+                                        "rel": "self",
+                                        "uri": "https://www.speedrun.com/api/v1/variables/2lgg107l"
+                                    },
+                                    {
+                                        "rel": "game",
+                                        "uri": "https://www.speedrun.com/api/v1/games/o1y9zk26"
+                                    },
+                                    {
+                                        "rel": "category",
+                                        "uri": "https://www.speedrun.com/api/v1/categories/zdnxnen2"
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                }
+            },
+            "level": {
+                "data": []
+            },
+            "category": {
+                "data": {
+                    "id": "zdnxnen2",
+                    "name": "All NG Memories & All Beads",
+                    "weblink": "https://www.speedrun.com/sekiro#All_NG_Memories_and_All_Beads",
+                    "type": "per-game",
+                    "rules": "Beat the game with all of the following **Memories** or **Remnants**, as well as all 40 **Prayer Beads**:\r\n\r\n- Gyoubu\r\n- Lady Butterfly\r\n- Genichiro\r\n- Screen Monkeys\r\n- Guardian Ape\r\n- Headless Ape\r\n- Corrupted Monk\r\n- True Monk\r\n- Great Shinobi\r\n- Foster Father\r\n- Divine Dragon\r\n- Saint Isshin\r\n- Hatred Demon\r\n\r\nThe order of collecting Memories/Beads does not matter, but a requirement is that an ending is achieved somewhere in the run.\r\n\r\n##Timing\r\n\r\nThe timer starts automatically after starting New Game and stops directly after reaching the credits if Saint Isshin is the last Memory/Bead collected. If a player decides to collect another Memory/Bead other than Saint Isshin last, the player has to perform a quitout after they receive the final Memory/Bead and end the timer after quitting out.",
+                    "players": {
+                        "type": "exactly",
+                        "value": 1
+                    },
+                    "miscellaneous": false,
+                    "links": [
+                        {
+                            "rel": "self",
+                            "uri": "https://www.speedrun.com/api/v1/categories/zdnxnen2"
+                        },
+                        {
+                            "rel": "game",
+                            "uri": "https://www.speedrun.com/api/v1/games/o1y9zk26"
+                        },
+                        {
+                            "rel": "variables",
+                            "uri": "https://www.speedrun.com/api/v1/categories/zdnxnen2/variables"
+                        },
+                        {
+                            "rel": "records",
+                            "uri": "https://www.speedrun.com/api/v1/categories/zdnxnen2/records"
+                        },
+                        {
+                            "rel": "runs",
+                            "uri": "https://www.speedrun.com/api/v1/runs?category=zdnxnen2"
+                        },
+                        {
+                            "rel": "leaderboard",
+                            "uri": "https://www.speedrun.com/api/v1/leaderboards/o1y9zk26/category/zdnxnen2"
+                        }
+                    ]
+                }
+            },
+            "videos": {
+                "links": [
+                    {
+                        "uri": "https://b23.tv/av80779077"
+                    }
+                ]
+            },
+            "comment": "https://b23.tv/av80779077",
+            "status": {
+                "status": "verified",
+                "examiner": "v81kwmrj",
+                "verify-date": "2019-12-27T07:05:40Z"
+            },
+            "players": {
+                "data": [
+                    {
+                        "rel": "user",
+                        "id": "v8l3pp28",
+                        "names": {
+                            "international": "LostFeather",
+                            "japanese": null
+                        },
+                        "weblink": "https://www.speedrun.com/user/LostFeather",
+                        "name-style": {
+                            "style": "gradient",
+                            "color-from": {
+                                "light": "#EE2222",
+                                "dark": "#EE4444"
+                            },
+                            "color-to": {
+                                "light": "#EE2222",
+                                "dark": "#EE4444"
+                            }
+                        },
+                        "role": "user",
+                        "signup": "2016-12-19T10:13:36Z",
+                        "location": {
+                            "country": {
+                                "code": "cn",
+                                "names": {
+                                    "international": "China",
+                                    "japanese": null
+                                }
+                            }
+                        },
+                        "twitch": {
+                            "uri": "https://www.twitch.tv/huya.com%2FVirgooTeam"
+                        },
+                        "hitbox": null,
+                        "youtube": {
+                            "uri": "https://www.youtube.com/user/LostFeather413"
+                        },
+                        "twitter": {
+                            "uri": "https://www.twitter.com/LostFeather413"
+                        },
+                        "speedrunslive": null,
+                        "links": [
+                            {
+                                "rel": "self",
+                                "uri": "https://www.speedrun.com/api/v1/users/v8l3pp28"
+                            },
+                            {
+                                "rel": "runs",
+                                "uri": "https://www.speedrun.com/api/v1/runs?user=v8l3pp28"
+                            },
+                            {
+                                "rel": "games",
+                                "uri": "https://www.speedrun.com/api/v1/games?moderator=v8l3pp28"
+                            },
+                            {
+                                "rel": "personal-bests",
+                                "uri": "https://www.speedrun.com/api/v1/users/v8l3pp28/personal-bests"
+                            }
+                        ]
+                    }
+                ]
+            },
+            "date": "2019-12-26",
+            "submitted": "2019-12-27T00:18:18Z",
+            "times": {
+                "primary": "PT1H12M53S",
+                "primary_t": 4373,
+                "realtime": "PT1H12M53S",
+                "realtime_t": 4373,
+                "realtime_noloads": null,
+                "realtime_noloads_t": 0,
+                "ingame": null,
+                "ingame_t": 0
+            },
+            "system": {
+                "platform": "8gej2n93",
+                "emulated": false,
+                "region": null
+            },
+            "splits": null,
+            "values": {
+                "gnxrw1jn": "21g48jm1",
+                "68kd70ql": "gq74pkvq",
+                "2lgg107l": "81p0z6kq"
+            },
+            "links": [
+                {
+                    "rel": "self",
+                    "uri": "https://www.speedrun.com/api/v1/runs/y21w397z"
+                },
+                {
+                    "rel": "game",
+                    "uri": "https://www.speedrun.com/api/v1/games/o1y9zk26"
+                },
+                {
+                    "rel": "category",
+                    "uri": "https://www.speedrun.com/api/v1/categories/zdnxnen2"
+                },
+                {
+                    "rel": "platform",
+                    "uri": "https://www.speedrun.com/api/v1/platforms/8gej2n93"
+                },
+                {
+                    "rel": "examiner",
+                    "uri": "https://www.speedrun.com/api/v1/users/v81kwmrj"
+                }
+            ],
+            "region": {
+                "data": []
+            },
+            "platform": {
+                "data": {
+                    "id": "8gej2n93",
+                    "name": "PC",
+                    "released": 1970,
+                    "links": [
+                        {
+                            "rel": "self",
+                            "uri": "https://www.speedrun.com/api/v1/platforms/8gej2n93"
+                        },
+                        {
+                            "rel": "games",
+                            "uri": "https://www.speedrun.com/api/v1/games?platform=8gej2n93"
+                        },
+                        {
+                            "rel": "runs",
+                            "uri": "https://www.speedrun.com/api/v1/runs?platform=8gej2n93"
+                        }
+                    ]
+                }
+            }
+        },
+        "subCategories": [
+            {
+                "id": "gnxrw1jn",
+                "name": "PC / Console",
+                "values": {
+                    "_note": "`choices` is deprecated, please use `values` instead",
+                    "choices": {
+                        "21g48jm1": "PC",
+                        "jqz5p6mq": "Console"
+                    },
+                    "values": {
+                        "21g48jm1": {
+                            "label": "PC",
+                            "rules": "Performing the run on PC requires the **integrated game timer** available in LiveSplit to be used and **showing in your submission**.",
+                            "flags": {
+                                "miscellaneous": false
+                            }
+                        },
+                        "jqz5p6mq": {
+                            "label": "Console",
+                            "rules": "Performing the run on Console requires final **In-game Time** to be **shown in your submission**. If the run ends on completing an ending, runners should select to stay in the same New Game after the credits, quit out and check IGT in their save file.",
+                            "flags": {
+                                "miscellaneous": false
+                            }
+                        }
+                    },
+                    "default": "21g48jm1"
+                }
+            },
+            {
+                "id": "2lgg107l",
+                "name": "All NG Memories and Bead Subcategories",
+                "values": {
+                    "_note": "`choices` is deprecated, please use `values` instead",
+                    "choices": {
+                        "81p0z6kq": "Unrestricted",
+                        "xqk436yl": "Glitchless"
+                    },
+                    "values": {
+                        "81p0z6kq": {
+                            "label": "Unrestricted",
+                            "rules": "##Glitch Usage\r\n\r\nNo additional restrictions apply.",
+                            "flags": {
+                                "miscellaneous": false
+                            }
+                        },
+                        "xqk436yl": {
+                            "label": "Glitchless",
+                            "rules": "##Glitch Usage\r\n\r\nAny use of glitches is strictly prohibited. Please consult the **[Glitchless guidelines](https://docs.google.com/document/d/1R-gRFdw_iUsZ2UJopPxp-swX0uAyN0tkPyd1_f1VhAo/edit?usp=sharing)** for more information and view the ban and allowance list.",
+                            "flags": {
+                                "miscellaneous": false
+                            }
+                        }
+                    },
+                    "default": "81p0z6kq"
+                }
+            }
+        ],
+        "currentRunVars": [
+            {
+                "key": "gnxrw1jn",
+                "value": "21g48jm1",
+                "name": "PC / Console",
+                "current": {
+                    "label": "PC",
+                    "rules": "Performing the run on PC requires the **integrated game timer** available in LiveSplit to be used and **showing in your submission**.",
+                    "flags": {
+                        "miscellaneous": false
+                    }
+                },
+                "currentLabel": "PC",
+                "allLabels": [
+                    "PC",
+                    "Console"
+                ]
+            },
+            {
+                "key": "2lgg107l",
+                "value": "81p0z6kq",
+                "name": "All NG Memories and Bead Subcategories",
+                "current": {
+                    "label": "Unrestricted",
+                    "rules": "##Glitch Usage\r\n\r\nNo additional restrictions apply.",
+                    "flags": {
+                        "miscellaneous": false
+                    }
+                },
+                "currentLabel": "Unrestricted",
+                "allLabels": [
+                    "Unrestricted",
+                    "Glitchless"
+                ]
+            }
+        ],
+        "leaderboardData": {
+            "weblink": "https://www.speedrun.com/sekiro#All_NG_Memories_and_All_Beads",
+            "game": {
+                "data": {
+                    "id": "o1y9zk26",
+                    "names": {
+                        "international": "Sekiro: Shadows Die Twice",
+                        "japanese": null,
+                        "twitch": "Sekiro: Shadows Die Twice"
+                    },
+                    "abbreviation": "sekiro",
+                    "weblink": "https://www.speedrun.com/sekiro",
+                    "released": 2019,
+                    "release-date": "2019-03-22",
+                    "ruleset": {
+                        "show-milliseconds": false,
+                        "require-verification": true,
+                        "require-video": true,
+                        "run-times": [
+                            "realtime"
+                        ],
+                        "default-time": "realtime",
+                        "emulators-allowed": true
+                    },
+                    "romhack": false,
+                    "gametypes": [],
+                    "platforms": [
+                        "nzelkr6q",
+                        "o7e2mx6w",
+                        "8gej2n93"
+                    ],
+                    "regions": [
+                        "pr184lqn",
+                        "e6lxy1dz",
+                        "o316x197"
+                    ],
+                    "genres": [
+                        "jp23x26k"
+                    ],
+                    "engines": [
+                        "y572793l"
+                    ],
+                    "developers": [
+                        "rzj0p76l"
+                    ],
+                    "publishers": [
+                        "qkr2jne4"
+                    ],
+                    "moderators": {
+                        "98r7vo6j": "moderator",
+                        "7j42mzdx": "super-moderator",
+                        "v81kwmrj": "moderator",
+                        "qjngdow8": "moderator",
+                        "v8l6lgv8": "super-moderator",
+                        "1xy1remx": "super-moderator",
+                        "v8llwor8": "moderator"
+                    },
+                    "created": "2019-02-08T18:50:33Z",
+                    "assets": {
+                        "logo": {
+                            "uri": "https://www.speedrun.com/themes/sekiro/logo.png",
+                            "width": 720,
+                            "height": 128
+                        },
+                        "cover-tiny": {
+                            "uri": "https://www.speedrun.com/themes/sekiro/cover-32.png",
+                            "width": 32,
+                            "height": 45
+                        },
+                        "cover-small": {
+                            "uri": "https://www.speedrun.com/themes/sekiro/cover-64.png",
+                            "width": 64,
+                            "height": 90
+                        },
+                        "cover-medium": {
+                            "uri": "https://www.speedrun.com/themes/sekiro/cover-128.png",
+                            "width": 128,
+                            "height": 180
+                        },
+                        "cover-large": {
+                            "uri": "https://www.speedrun.com/themes/sekiro/cover-256.png",
+                            "width": 256,
+                            "height": 360
+                        },
+                        "icon": {
+                            "uri": "https://www.speedrun.com/themes/sekiro/favicon.png",
+                            "width": 64,
+                            "height": 64
+                        },
+                        "trophy-1st": {
+                            "uri": "https://www.speedrun.com/themes/Default/1st.png",
+                            "width": 64,
+                            "height": 64
+                        },
+                        "trophy-2nd": {
+                            "uri": "https://www.speedrun.com/themes/Default/2nd.png",
+                            "width": 64,
+                            "height": 64
+                        },
+                        "trophy-3rd": {
+                            "uri": "https://www.speedrun.com/themes/Default/3rd.png",
+                            "width": 64,
+                            "height": 64
+                        },
+                        "trophy-4th": null,
+                        "background": {
+                            "uri": "https://www.speedrun.com/themes/sekiro/background.png",
+                            "width": 3840,
+                            "height": 2160
+                        },
+                        "foreground": null
+                    },
+                    "links": [
+                        {
+                            "rel": "self",
+                            "uri": "https://www.speedrun.com/api/v1/games/o1y9zk26"
+                        },
+                        {
+                            "rel": "runs",
+                            "uri": "https://www.speedrun.com/api/v1/runs?game=o1y9zk26"
+                        },
+                        {
+                            "rel": "levels",
+                            "uri": "https://www.speedrun.com/api/v1/games/o1y9zk26/levels"
+                        },
+                        {
+                            "rel": "categories",
+                            "uri": "https://www.speedrun.com/api/v1/games/o1y9zk26/categories"
+                        },
+                        {
+                            "rel": "variables",
+                            "uri": "https://www.speedrun.com/api/v1/games/o1y9zk26/variables"
+                        },
+                        {
+                            "rel": "records",
+                            "uri": "https://www.speedrun.com/api/v1/games/o1y9zk26/records"
+                        },
+                        {
+                            "rel": "series",
+                            "uri": "https://www.speedrun.com/api/v1/series/yr4gon12"
+                        },
+                        {
+                            "rel": "derived-games",
+                            "uri": "https://www.speedrun.com/api/v1/games/o1y9zk26/derived-games"
+                        },
+                        {
+                            "rel": "romhacks",
+                            "uri": "https://www.speedrun.com/api/v1/games/o1y9zk26/derived-games"
+                        },
+                        {
+                            "rel": "leaderboard",
+                            "uri": "https://www.speedrun.com/api/v1/leaderboards/o1y9zk26/category/w20vw6zk"
+                        }
+                    ]
+                }
+            },
+            "category": {
+                "data": {
+                    "id": "zdnxnen2",
+                    "name": "All NG Memories & All Beads",
+                    "weblink": "https://www.speedrun.com/sekiro#All_NG_Memories_and_All_Beads",
+                    "type": "per-game",
+                    "rules": "Beat the game with all of the following **Memories** or **Remnants**, as well as all 40 **Prayer Beads**:\r\n\r\n- Gyoubu\r\n- Lady Butterfly\r\n- Genichiro\r\n- Screen Monkeys\r\n- Guardian Ape\r\n- Headless Ape\r\n- Corrupted Monk\r\n- True Monk\r\n- Great Shinobi\r\n- Foster Father\r\n- Divine Dragon\r\n- Saint Isshin\r\n- Hatred Demon\r\n\r\nThe order of collecting Memories/Beads does not matter, but a requirement is that an ending is achieved somewhere in the run.\r\n\r\n##Timing\r\n\r\nThe timer starts automatically after starting New Game and stops directly after reaching the credits if Saint Isshin is the last Memory/Bead collected. If a player decides to collect another Memory/Bead other than Saint Isshin last, the player has to perform a quitout after they receive the final Memory/Bead and end the timer after quitting out.",
+                    "players": {
+                        "type": "exactly",
+                        "value": 1
+                    },
+                    "miscellaneous": false,
+                    "links": [
+                        {
+                            "rel": "self",
+                            "uri": "https://www.speedrun.com/api/v1/categories/zdnxnen2"
+                        },
+                        {
+                            "rel": "game",
+                            "uri": "https://www.speedrun.com/api/v1/games/o1y9zk26"
+                        },
+                        {
+                            "rel": "variables",
+                            "uri": "https://www.speedrun.com/api/v1/categories/zdnxnen2/variables"
+                        },
+                        {
+                            "rel": "records",
+                            "uri": "https://www.speedrun.com/api/v1/categories/zdnxnen2/records"
+                        },
+                        {
+                            "rel": "runs",
+                            "uri": "https://www.speedrun.com/api/v1/runs?category=zdnxnen2"
+                        },
+                        {
+                            "rel": "leaderboard",
+                            "uri": "https://www.speedrun.com/api/v1/leaderboards/o1y9zk26/category/zdnxnen2"
+                        }
+                    ]
+                }
+            },
+            "level": {
+                "data": []
+            },
+            "platform": null,
+            "region": null,
+            "emulators": null,
+            "video-only": false,
+            "timing": "realtime",
+            "values": {
+                "gnxrw1jn": "21g48jm1",
+                "2lgg107l": "81p0z6kq"
+            },
+            "runs": [
+                {
+                    "place": 1,
+                    "run": {
+                        "id": "y21w397z",
+                        "weblink": "https://www.speedrun.com/sekiro/run/y21w397z",
+                        "game": "o1y9zk26",
+                        "level": null,
+                        "category": "zdnxnen2",
+                        "videos": {
+                            "links": [
+                                {
+                                    "uri": "https://b23.tv/av80779077"
+                                }
+                            ]
+                        },
+                        "comment": "https://b23.tv/av80779077",
+                        "status": {
+                            "status": "verified",
+                            "examiner": "v81kwmrj",
+                            "verify-date": "2019-12-27T07:05:40Z"
+                        },
+                        "players": [
+                            {
+                                "rel": "user",
+                                "id": "v8l3pp28",
+                                "uri": "https://www.speedrun.com/api/v1/users/v8l3pp28"
+                            }
+                        ],
+                        "date": "2019-12-26",
+                        "submitted": "2019-12-27T00:18:18Z",
+                        "times": {
+                            "primary": "PT1H12M53S",
+                            "primary_t": 4373,
+                            "realtime": "PT1H12M53S",
+                            "realtime_t": 4373,
+                            "realtime_noloads": null,
+                            "realtime_noloads_t": 0,
+                            "ingame": null,
+                            "ingame_t": 0
+                        },
+                        "system": {
+                            "platform": "8gej2n93",
+                            "emulated": false,
+                            "region": null
+                        },
+                        "splits": null,
+                        "values": {
+                            "gnxrw1jn": "21g48jm1",
+                            "68kd70ql": "gq74pkvq",
+                            "2lgg107l": "81p0z6kq"
+                        }
+                    }
+                },
+                {
+                    "place": 2,
+                    "run": {
+                        "id": "mk29ge1m",
+                        "weblink": "https://www.speedrun.com/sekiro/run/mk29ge1m",
+                        "game": "o1y9zk26",
+                        "level": null,
+                        "category": "zdnxnen2",
+                        "videos": {
+                            "links": [
+                                {
+                                    "uri": "https://www.youtube.com/watch?v=cbbIP4zRF0M"
+                                }
+                            ]
+                        },
+                        "comment": null,
+                        "status": {
+                            "status": "verified",
+                            "examiner": "1xy1remx",
+                            "verify-date": "2019-06-15T14:35:43Z"
+                        },
+                        "players": [
+                            {
+                                "rel": "user",
+                                "id": "1xyl5pwj",
+                                "uri": "https://www.speedrun.com/api/v1/users/1xyl5pwj"
+                            }
+                        ],
+                        "date": "2019-06-15",
+                        "submitted": "2019-06-15T14:35:36Z",
+                        "times": {
+                            "primary": "PT1H13M45S",
+                            "primary_t": 4425,
+                            "realtime": "PT1H13M45S",
+                            "realtime_t": 4425,
+                            "realtime_noloads": null,
+                            "realtime_noloads_t": 0,
+                            "ingame": null,
+                            "ingame_t": 0
+                        },
+                        "system": {
+                            "platform": "8gej2n93",
+                            "emulated": false,
+                            "region": null
+                        },
+                        "splits": null,
+                        "values": {
+                            "gnxrw1jn": "21g48jm1",
+                            "68kd70ql": "gq74pkvq",
+                            "2lgg107l": "81p0z6kq"
+                        }
+                    }
+                },
+                {
+                    "place": 3,
+                    "run": {
+                        "id": "yw4exgpz",
+                        "weblink": "https://www.speedrun.com/sekiro/run/yw4exgpz",
+                        "game": "o1y9zk26",
+                        "level": null,
+                        "category": "zdnxnen2",
+                        "videos": {
+                            "links": [
+                                {
+                                    "uri": "https://www.youtube.com/watch?v=NDBpnVBTH-4"
+                                }
+                            ]
+                        },
+                        "comment": null,
+                        "status": {
+                            "status": "verified",
+                            "examiner": "1xyl5pwj",
+                            "verify-date": "2019-05-25T18:38:09Z"
+                        },
+                        "players": [
+                            {
+                                "rel": "user",
+                                "id": "18qqo08n",
+                                "uri": "https://www.speedrun.com/api/v1/users/18qqo08n"
+                            }
+                        ],
+                        "date": "2019-05-25",
+                        "submitted": "2019-05-25T16:22:43Z",
+                        "times": {
+                            "primary": "PT1H14M51S",
+                            "primary_t": 4491,
+                            "realtime": "PT1H14M51S",
+                            "realtime_t": 4491,
+                            "realtime_noloads": null,
+                            "realtime_noloads_t": 0,
+                            "ingame": null,
+                            "ingame_t": 0
+                        },
+                        "system": {
+                            "platform": "8gej2n93",
+                            "emulated": false,
+                            "region": "pr184lqn"
+                        },
+                        "splits": null,
+                        "values": {
+                            "gnxrw1jn": "21g48jm1",
+                            "68kd70ql": "gq74pkvq",
+                            "2lgg107l": "81p0z6kq"
+                        }
+                    }
+                },
+                {
+                    "place": 4,
+                    "run": {
+                        "id": "y956g1nz",
+                        "weblink": "https://www.speedrun.com/sekiro/run/y956g1nz",
+                        "game": "o1y9zk26",
+                        "level": null,
+                        "category": "zdnxnen2",
+                        "videos": {
+                            "links": [
+                                {
+                                    "uri": "https://www.twitch.tv/lilaggy"
+                                },
+                                {
+                                    "uri": "https://www.twitch.tv/videos/506076285"
+                                }
+                            ]
+                        },
+                        "comment": "bit of a late submission but a pb's a pb\r\n\r\nhttps://www.twitch.tv/lilaggy",
+                        "status": {
+                            "status": "verified",
+                            "examiner": "7j42mzdx",
+                            "verify-date": "2019-11-10T21:29:09Z"
+                        },
+                        "players": [
+                            {
+                                "rel": "user",
+                                "id": "qjngdow8",
+                                "uri": "https://www.speedrun.com/api/v1/users/qjngdow8"
+                            }
+                        ],
+                        "date": "2019-10-24",
+                        "submitted": "2019-11-09T17:42:55Z",
+                        "times": {
+                            "primary": "PT1H15M50S",
+                            "primary_t": 4550,
+                            "realtime": "PT1H15M50S",
+                            "realtime_t": 4550,
+                            "realtime_noloads": null,
+                            "realtime_noloads_t": 0,
+                            "ingame": null,
+                            "ingame_t": 0
+                        },
+                        "system": {
+                            "platform": "8gej2n93",
+                            "emulated": false,
+                            "region": "pr184lqn"
+                        },
+                        "splits": null,
+                        "values": {
+                            "gnxrw1jn": "21g48jm1",
+                            "68kd70ql": "gq74pkvq",
+                            "2lgg107l": "81p0z6kq"
+                        }
+                    }
+                },
+                {
+                    "place": 5,
+                    "run": {
+                        "id": "zgkvn3dy",
+                        "weblink": "https://www.speedrun.com/sekiro/run/zgkvn3dy",
+                        "game": "o1y9zk26",
+                        "level": null,
+                        "category": "zdnxnen2",
+                        "videos": {
+                            "links": [
+                                {
+                                    "uri": "https://www.bilibili.com/video/av59502395"
+                                }
+                            ]
+                        },
+                        "comment": null,
+                        "status": {
+                            "status": "verified",
+                            "examiner": "v81kwmrj",
+                            "verify-date": "2019-07-31T14:56:11Z"
+                        },
+                        "players": [
+                            {
+                                "rel": "user",
+                                "id": "98r4e56j",
+                                "uri": "https://www.speedrun.com/api/v1/users/98r4e56j"
+                            }
+                        ],
+                        "date": "2019-07-20",
+                        "submitted": "2019-07-20T13:21:54Z",
+                        "times": {
+                            "primary": "PT1H16M13S",
+                            "primary_t": 4573,
+                            "realtime": "PT1H16M13S",
+                            "realtime_t": 4573,
+                            "realtime_noloads": null,
+                            "realtime_noloads_t": 0,
+                            "ingame": null,
+                            "ingame_t": 0
+                        },
+                        "system": {
+                            "platform": "8gej2n93",
+                            "emulated": false,
+                            "region": null
+                        },
+                        "splits": null,
+                        "values": {
+                            "gnxrw1jn": "21g48jm1",
+                            "68kd70ql": "gq74pkvq",
+                            "2lgg107l": "81p0z6kq"
+                        }
+                    }
+                },
+                {
+                    "place": 6,
+                    "run": {
+                        "id": "mk9j153z",
+                        "weblink": "https://www.speedrun.com/sekiro/run/mk9j153z",
+                        "game": "o1y9zk26",
+                        "level": null,
+                        "category": "zdnxnen2",
+                        "videos": {
+                            "links": [
+                                {
+                                    "uri": "https://youtu.be/yLAB-7Go31E"
+                                }
+                            ]
+                        },
+                        "comment": null,
+                        "status": {
+                            "status": "verified",
+                            "examiner": "1xyl5pwj",
+                            "verify-date": "2019-05-11T01:52:28Z"
+                        },
+                        "players": [
+                            {
+                                "rel": "user",
+                                "id": "5j5gyn8v",
+                                "uri": "https://www.speedrun.com/api/v1/users/5j5gyn8v"
+                            }
+                        ],
+                        "date": "2019-05-10",
+                        "submitted": "2019-05-10T13:07:25Z",
+                        "times": {
+                            "primary": "PT1H17M8S",
+                            "primary_t": 4628,
+                            "realtime": "PT1H17M8S",
+                            "realtime_t": 4628,
+                            "realtime_noloads": null,
+                            "realtime_noloads_t": 0,
+                            "ingame": null,
+                            "ingame_t": 0
+                        },
+                        "system": {
+                            "platform": "8gej2n93",
+                            "emulated": false,
+                            "region": null
+                        },
+                        "splits": null,
+                        "values": {
+                            "gnxrw1jn": "21g48jm1",
+                            "68kd70ql": "gq74pkvq",
+                            "2lgg107l": "81p0z6kq"
+                        }
+                    }
+                },
+                {
+                    "place": 7,
+                    "run": {
+                        "id": "m7q6kp9z",
+                        "weblink": "https://www.speedrun.com/sekiro/run/m7q6kp9z",
+                        "game": "o1y9zk26",
+                        "level": null,
+                        "category": "zdnxnen2",
+                        "videos": {
+                            "links": [
+                                {
+                                    "uri": "https://www.bilibili.com/video/av70875425/"
+                                }
+                            ]
+                        },
+                        "comment": null,
+                        "status": {
+                            "status": "verified",
+                            "examiner": "v81kwmrj",
+                            "verify-date": "2019-10-22T06:58:42Z"
+                        },
+                        "players": [
+                            {
+                                "rel": "user",
+                                "id": "48g7ngr8",
+                                "uri": "https://www.speedrun.com/api/v1/users/48g7ngr8"
+                            }
+                        ],
+                        "date": "2019-10-11",
+                        "submitted": "2019-10-11T11:26:15Z",
+                        "times": {
+                            "primary": "PT1H19M14S",
+                            "primary_t": 4754,
+                            "realtime": "PT1H19M14S",
+                            "realtime_t": 4754,
+                            "realtime_noloads": null,
+                            "realtime_noloads_t": 0,
+                            "ingame": null,
+                            "ingame_t": 0
+                        },
+                        "system": {
+                            "platform": "8gej2n93",
+                            "emulated": false,
+                            "region": null
+                        },
+                        "splits": null,
+                        "values": {
+                            "gnxrw1jn": "21g48jm1",
+                            "68kd70ql": "gq74pkvq",
+                            "2lgg107l": "81p0z6kq"
+                        }
+                    }
+                },
+                {
+                    "place": 8,
+                    "run": {
+                        "id": "mk29351m",
+                        "weblink": "https://www.speedrun.com/sekiro/run/mk29351m",
+                        "game": "o1y9zk26",
+                        "level": null,
+                        "category": "zdnxnen2",
+                        "videos": {
+                            "links": [
+                                {
+                                    "uri": "https://www.twitch.tv/videos/438771485"
+                                }
+                            ]
+                        },
+                        "comment": "Retirement now?",
+                        "status": {
+                            "status": "verified",
+                            "examiner": "o86l59p8",
+                            "verify-date": "2019-06-18T20:42:05Z"
+                        },
+                        "players": [
+                            {
+                                "rel": "user",
+                                "id": "dx3gly78",
+                                "uri": "https://www.speedrun.com/api/v1/users/dx3gly78"
+                            }
+                        ],
+                        "date": "2019-06-13",
+                        "submitted": "2019-06-14T03:56:38Z",
+                        "times": {
+                            "primary": "PT1H19M19S",
+                            "primary_t": 4759,
+                            "realtime": "PT1H19M19S",
+                            "realtime_t": 4759,
+                            "realtime_noloads": null,
+                            "realtime_noloads_t": 0,
+                            "ingame": null,
+                            "ingame_t": 0
+                        },
+                        "system": {
+                            "platform": "8gej2n93",
+                            "emulated": false,
+                            "region": "pr184lqn"
+                        },
+                        "splits": null,
+                        "values": {
+                            "gnxrw1jn": "21g48jm1",
+                            "68kd70ql": "gq74pkvq",
+                            "2lgg107l": "81p0z6kq"
+                        }
+                    }
+                },
+                {
+                    "place": 9,
+                    "run": {
+                        "id": "yo21xk5z",
+                        "weblink": "https://www.speedrun.com/sekiro/run/yo21xk5z",
+                        "game": "o1y9zk26",
+                        "level": null,
+                        "category": "zdnxnen2",
+                        "videos": {
+                            "links": [
+                                {
+                                    "uri": "https://www.twitch.tv/videos/422861886"
+                                }
+                            ]
+                        },
+                        "comment": "Good for now! ",
+                        "status": {
+                            "status": "verified",
+                            "examiner": "e8e7292x",
+                            "verify-date": "2019-05-11T12:56:17Z"
+                        },
+                        "players": [
+                            {
+                                "rel": "user",
+                                "id": "e8eldpj0",
+                                "uri": "https://www.speedrun.com/api/v1/users/e8eldpj0"
+                            }
+                        ],
+                        "date": "2019-05-06",
+                        "submitted": "2019-05-10T09:44:47Z",
+                        "times": {
+                            "primary": "PT1H19M46S",
+                            "primary_t": 4786,
+                            "realtime": "PT1H19M46S",
+                            "realtime_t": 4786,
+                            "realtime_noloads": null,
+                            "realtime_noloads_t": 0,
+                            "ingame": null,
+                            "ingame_t": 0
+                        },
+                        "system": {
+                            "platform": "8gej2n93",
+                            "emulated": false,
+                            "region": null
+                        },
+                        "splits": null,
+                        "values": {
+                            "gnxrw1jn": "21g48jm1",
+                            "68kd70ql": "gq74pkvq",
+                            "2lgg107l": "81p0z6kq"
+                        }
+                    }
+                },
+                {
+                    "place": 10,
+                    "run": {
+                        "id": "y21xn3jz",
+                        "weblink": "https://www.speedrun.com/sekiro/run/y21xn3jz",
+                        "game": "o1y9zk26",
+                        "level": null,
+                        "category": "zdnxnen2",
+                        "videos": {
+                            "links": [
+                                {
+                                    "uri": "https://www.youtube.com/watch?v=Exktc7xeAPk&t=477s"
+                                }
+                            ]
+                        },
+                        "comment": "Fala Galera Blz ! Vim aqui agraceder toda galera que está acompanhando as lives, em buscas de novos PBs quem sabe um WRs .Queria deixar meu agradecimento por todas tentativas de lives que não foram concluidas e toda dedicação da galera que ficava ate o final , muito obrigado sem palavras so tenho a agradecer !! E vamos melhorar esse PB !! Abraços e obrigado !",
+                        "status": {
+                            "status": "verified",
+                            "examiner": "v81kwmrj",
+                            "verify-date": "2019-09-05T09:31:48Z"
+                        },
+                        "players": [
+                            {
+                                "rel": "user",
+                                "id": "qjnedy4j",
+                                "uri": "https://www.speedrun.com/api/v1/users/qjnedy4j"
+                            }
+                        ],
+                        "date": "2019-08-22",
+                        "submitted": "2019-08-22T21:17:49Z",
+                        "times": {
+                            "primary": "PT1H20M4S",
+                            "primary_t": 4804,
+                            "realtime": "PT1H20M4S",
+                            "realtime_t": 4804,
+                            "realtime_noloads": null,
+                            "realtime_noloads_t": 0,
+                            "ingame": null,
+                            "ingame_t": 0
+                        },
+                        "system": {
+                            "platform": "8gej2n93",
+                            "emulated": false,
+                            "region": null
+                        },
+                        "splits": null,
+                        "values": {
+                            "gnxrw1jn": "21g48jm1",
+                            "68kd70ql": "gq74pkvq",
+                            "2lgg107l": "81p0z6kq"
+                        }
+                    }
+                },
+                {
+                    "place": 11,
+                    "run": {
+                        "id": "m31jv0gz",
+                        "weblink": "https://www.speedrun.com/sekiro/run/m31jv0gz",
+                        "game": "o1y9zk26",
+                        "level": null,
+                        "category": "zdnxnen2",
+                        "videos": {
+                            "links": [
+                                {
+                                    "uri": "https://www.youtube.com/watch?v=8RzA5CXbmic"
+                                }
+                            ]
+                        },
+                        "comment": null,
+                        "status": {
+                            "status": "verified",
+                            "examiner": "v8l6lgv8",
+                            "verify-date": "2020-01-05T20:57:30Z"
+                        },
+                        "players": [
+                            {
+                                "rel": "user",
+                                "id": "e8e7292x",
+                                "uri": "https://www.speedrun.com/api/v1/users/e8e7292x"
+                            }
+                        ],
+                        "date": "2020-01-04",
+                        "submitted": "2020-01-04T22:31:37Z",
+                        "times": {
+                            "primary": "PT1H20M46S",
+                            "primary_t": 4846,
+                            "realtime": "PT1H20M46S",
+                            "realtime_t": 4846,
+                            "realtime_noloads": null,
+                            "realtime_noloads_t": 0,
+                            "ingame": null,
+                            "ingame_t": 0
+                        },
+                        "system": {
+                            "platform": "8gej2n93",
+                            "emulated": false,
+                            "region": null
+                        },
+                        "splits": null,
+                        "values": {
+                            "gnxrw1jn": "21g48jm1",
+                            "68kd70ql": "gq74pkvq",
+                            "2lgg107l": "81p0z6kq"
+                        }
+                    }
+                },
+                {
+                    "place": 12,
+                    "run": {
+                        "id": "zgkel3ny",
+                        "weblink": "https://www.speedrun.com/sekiro/run/zgkel3ny",
+                        "game": "o1y9zk26",
+                        "level": null,
+                        "category": "zdnxnen2",
+                        "videos": {
+                            "links": [
+                                {
+                                    "uri": "https://www.bilibili.com/video/av76367886"
+                                }
+                            ]
+                        },
+                        "comment": null,
+                        "status": {
+                            "status": "verified",
+                            "examiner": "v81kwmrj",
+                            "verify-date": "2019-11-21T16:11:49Z"
+                        },
+                        "players": [
+                            {
+                                "rel": "user",
+                                "id": "98rz90dx",
+                                "uri": "https://www.speedrun.com/api/v1/users/98rz90dx"
+                            }
+                        ],
+                        "date": "2019-11-20",
+                        "submitted": "2019-11-21T01:15:30Z",
+                        "times": {
+                            "primary": "PT1H22M15S",
+                            "primary_t": 4935,
+                            "realtime": "PT1H22M15S",
+                            "realtime_t": 4935,
+                            "realtime_noloads": null,
+                            "realtime_noloads_t": 0,
+                            "ingame": null,
+                            "ingame_t": 0
+                        },
+                        "system": {
+                            "platform": "8gej2n93",
+                            "emulated": false,
+                            "region": null
+                        },
+                        "splits": null,
+                        "values": {
+                            "gnxrw1jn": "21g48jm1",
+                            "68kd70ql": "xqk45p4l",
+                            "2lgg107l": "81p0z6kq"
+                        }
+                    }
+                },
+                {
+                    "place": 13,
+                    "run": {
+                        "id": "yj312x3z",
+                        "weblink": "https://www.speedrun.com/sekiro/run/yj312x3z",
+                        "game": "o1y9zk26",
+                        "level": null,
+                        "category": "zdnxnen2",
+                        "videos": {
+                            "links": [
+                                {
+                                    "uri": "https://www.twitch.tv/videos/464145816"
+                                }
+                            ]
+                        },
+                        "comment": "yes",
+                        "status": {
+                            "status": "verified",
+                            "examiner": "1xyl5pwj",
+                            "verify-date": "2019-08-08T13:12:11Z"
+                        },
+                        "players": [
+                            {
+                                "rel": "user",
+                                "id": "qjooeo3j",
+                                "uri": "https://www.speedrun.com/api/v1/users/qjooeo3j"
+                            }
+                        ],
+                        "date": "2019-08-07",
+                        "submitted": "2019-08-08T03:56:47Z",
+                        "times": {
+                            "primary": "PT1H25M44S",
+                            "primary_t": 5144,
+                            "realtime": "PT1H25M44S",
+                            "realtime_t": 5144,
+                            "realtime_noloads": null,
+                            "realtime_noloads_t": 0,
+                            "ingame": null,
+                            "ingame_t": 0
+                        },
+                        "system": {
+                            "platform": "8gej2n93",
+                            "emulated": false,
+                            "region": null
+                        },
+                        "splits": null,
+                        "values": {
+                            "gnxrw1jn": "21g48jm1",
+                            "68kd70ql": "gq74pkvq",
+                            "2lgg107l": "81p0z6kq"
+                        }
+                    }
+                },
+                {
+                    "place": 14,
+                    "run": {
+                        "id": "y950jpkz",
+                        "weblink": "https://www.speedrun.com/sekiro/run/y950jpkz",
+                        "game": "o1y9zk26",
+                        "level": null,
+                        "category": "zdnxnen2",
+                        "videos": {
+                            "links": [
+                                {
+                                    "uri": "https://www.twitch.tv/videos/452989638"
+                                }
+                            ]
+                        },
+                        "comment": "I did a less sucky job, yay. Just need to learn all the little things I'm not doing and haven't got around to yet and put that in the run already.",
+                        "status": {
+                            "status": "verified",
+                            "examiner": "v8l6lgv8",
+                            "verify-date": "2019-07-17T19:43:02Z"
+                        },
+                        "players": [
+                            {
+                                "rel": "user",
+                                "id": "e8ezzq28",
+                                "uri": "https://www.speedrun.com/api/v1/users/e8ezzq28"
+                            }
+                        ],
+                        "date": "2019-07-14",
+                        "submitted": "2019-07-15T06:33:58Z",
+                        "times": {
+                            "primary": "PT1H26M6S",
+                            "primary_t": 5166,
+                            "realtime": "PT1H26M6S",
+                            "realtime_t": 5166,
+                            "realtime_noloads": null,
+                            "realtime_noloads_t": 0,
+                            "ingame": null,
+                            "ingame_t": 0
+                        },
+                        "system": {
+                            "platform": "8gej2n93",
+                            "emulated": false,
+                            "region": "pr184lqn"
+                        },
+                        "splits": null,
+                        "values": {
+                            "gnxrw1jn": "21g48jm1",
+                            "68kd70ql": "gq74pkvq",
+                            "2lgg107l": "81p0z6kq"
+                        }
+                    }
+                },
+                {
+                    "place": 15,
+                    "run": {
+                        "id": "y2qollwy",
+                        "weblink": "https://www.speedrun.com/sekiro/run/y2qollwy",
+                        "game": "o1y9zk26",
+                        "level": null,
+                        "category": "zdnxnen2",
+                        "videos": {
+                            "links": [
+                                {
+                                    "uri": "https://www.youtube.com/watch?v=V3NaRImhMHE"
+                                }
+                            ]
+                        },
+                        "comment": null,
+                        "status": {
+                            "status": "verified",
+                            "examiner": "1xyl5pwj",
+                            "verify-date": "2019-05-01T00:19:38Z"
+                        },
+                        "players": [
+                            {
+                                "rel": "user",
+                                "id": "18qp2dwx",
+                                "uri": "https://www.speedrun.com/api/v1/users/18qp2dwx"
+                            }
+                        ],
+                        "date": "2019-04-30",
+                        "submitted": "2019-04-30T21:04:08Z",
+                        "times": {
+                            "primary": "PT1H31M19S",
+                            "primary_t": 5479,
+                            "realtime": "PT1H31M19S",
+                            "realtime_t": 5479,
+                            "realtime_noloads": null,
+                            "realtime_noloads_t": 0,
+                            "ingame": null,
+                            "ingame_t": 0
+                        },
+                        "system": {
+                            "platform": "8gej2n93",
+                            "emulated": false,
+                            "region": null
+                        },
+                        "splits": null,
+                        "values": {
+                            "gnxrw1jn": "21g48jm1",
+                            "68kd70ql": "gq74pkvq",
+                            "2lgg107l": "81p0z6kq"
+                        }
+                    }
+                },
+                {
+                    "place": 16,
+                    "run": {
+                        "id": "me8ro13m",
+                        "weblink": "https://www.speedrun.com/sekiro/run/me8ro13m",
+                        "game": "o1y9zk26",
+                        "level": null,
+                        "category": "zdnxnen2",
+                        "videos": {
+                            "links": [
+                                {
+                                    "uri": "https://www.twitch.tv/videos/419750084"
+                                }
+                            ]
+                        },
+                        "comment": null,
+                        "status": {
+                            "status": "verified",
+                            "examiner": "e8e7292x",
+                            "verify-date": "2019-05-04T12:24:14Z"
+                        },
+                        "players": [
+                            {
+                                "rel": "user",
+                                "id": "48g3pzrx",
+                                "uri": "https://www.speedrun.com/api/v1/users/48g3pzrx"
+                            }
+                        ],
+                        "date": "2019-05-02",
+                        "submitted": "2019-05-03T13:58:21Z",
+                        "times": {
+                            "primary": "PT1H32M5S",
+                            "primary_t": 5525,
+                            "realtime": "PT1H32M5S",
+                            "realtime_t": 5525,
+                            "realtime_noloads": null,
+                            "realtime_noloads_t": 0,
+                            "ingame": null,
+                            "ingame_t": 0
+                        },
+                        "system": {
+                            "platform": "8gej2n93",
+                            "emulated": false,
+                            "region": "e6lxy1dz"
+                        },
+                        "splits": null,
+                        "values": {
+                            "gnxrw1jn": "21g48jm1",
+                            "68kd70ql": "gq74pkvq",
+                            "2lgg107l": "81p0z6kq"
+                        }
+                    }
+                },
+                {
+                    "place": 17,
+                    "run": {
+                        "id": "m3oend6m",
+                        "weblink": "https://www.speedrun.com/sekiro/run/m3oend6m",
+                        "game": "o1y9zk26",
+                        "level": null,
+                        "category": "zdnxnen2",
+                        "videos": {
+                            "links": [
+                                {
+                                    "uri": "https://www.twitch.tv/videos/420189720"
+                                }
+                            ]
+                        },
+                        "comment": "speedrun All Beads / Memories NG\r\n1h 34m 49s\r\nThe way to the world record.",
+                        "status": {
+                            "status": "verified",
+                            "examiner": "v8l6lgv8",
+                            "verify-date": "2019-05-08T15:05:57Z"
+                        },
+                        "players": [
+                            {
+                                "rel": "user",
+                                "id": "pj0pq5rx",
+                                "uri": "https://www.speedrun.com/api/v1/users/pj0pq5rx"
+                            }
+                        ],
+                        "date": "2019-05-04",
+                        "submitted": "2019-05-04T11:10:18Z",
+                        "times": {
+                            "primary": "PT1H34M49S",
+                            "primary_t": 5689,
+                            "realtime": "PT1H34M49S",
+                            "realtime_t": 5689,
+                            "realtime_noloads": null,
+                            "realtime_noloads_t": 0,
+                            "ingame": null,
+                            "ingame_t": 0
+                        },
+                        "system": {
+                            "platform": "8gej2n93",
+                            "emulated": false,
+                            "region": null
+                        },
+                        "splits": {
+                            "rel": "splits.io",
+                            "uri": "https://splits.io/api/v3/runs/412r"
+                        },
+                        "values": {
+                            "gnxrw1jn": "21g48jm1",
+                            "68kd70ql": "gq74pkvq",
+                            "2lgg107l": "81p0z6kq"
+                        }
+                    }
+                },
+                {
+                    "place": 18,
+                    "run": {
+                        "id": "z57o34dm",
+                        "weblink": "https://www.speedrun.com/sekiro/run/z57o34dm",
+                        "game": "o1y9zk26",
+                        "level": null,
+                        "category": "zdnxnen2",
+                        "videos": {
+                            "links": [
+                                {
+                                    "uri": "https://youtu.be/jfSX_irfKts"
+                                }
+                            ]
+                        },
+                        "comment": null,
+                        "status": {
+                            "status": "verified",
+                            "examiner": "v81kwmrj",
+                            "verify-date": "2019-06-15T11:04:00Z"
+                        },
+                        "players": [
+                            {
+                                "rel": "user",
+                                "id": "zxzevp4x",
+                                "uri": "https://www.speedrun.com/api/v1/users/zxzevp4x"
+                            }
+                        ],
+                        "date": "2019-06-02",
+                        "submitted": "2019-06-02T05:16:19Z",
+                        "times": {
+                            "primary": "PT1H36M32S",
+                            "primary_t": 5792,
+                            "realtime": "PT1H36M32S",
+                            "realtime_t": 5792,
+                            "realtime_noloads": null,
+                            "realtime_noloads_t": 0,
+                            "ingame": null,
+                            "ingame_t": 0
+                        },
+                        "system": {
+                            "platform": "8gej2n93",
+                            "emulated": false,
+                            "region": null
+                        },
+                        "splits": null,
+                        "values": {
+                            "gnxrw1jn": "21g48jm1",
+                            "68kd70ql": "gq74pkvq",
+                            "2lgg107l": "81p0z6kq"
+                        }
+                    }
+                },
+                {
+                    "place": 19,
+                    "run": {
+                        "id": "z1jj02jz",
+                        "weblink": "https://www.speedrun.com/sekiro/run/z1jj02jz",
+                        "game": "o1y9zk26",
+                        "level": null,
+                        "category": "zdnxnen2",
+                        "videos": {
+                            "links": [
+                                {
+                                    "uri": "https://www.twitch.tv/videos/448550042"
+                                }
+                            ]
+                        },
+                        "comment": "Just a single truedeath :3 .. im so happy with that! never expected me doin that. I'm done with sekiro for now xD",
+                        "status": {
+                            "status": "verified",
+                            "examiner": "1xyl5pwj",
+                            "verify-date": "2019-07-06T01:40:30Z"
+                        },
+                        "players": [
+                            {
+                                "rel": "user",
+                                "id": "18qkr6o8",
+                                "uri": "https://www.speedrun.com/api/v1/users/18qkr6o8"
+                            }
+                        ],
+                        "date": "2019-07-05",
+                        "submitted": "2019-07-05T13:02:38Z",
+                        "times": {
+                            "primary": "PT1H36M57S",
+                            "primary_t": 5817,
+                            "realtime": "PT1H36M57S",
+                            "realtime_t": 5817,
+                            "realtime_noloads": null,
+                            "realtime_noloads_t": 0,
+                            "ingame": null,
+                            "ingame_t": 0
+                        },
+                        "system": {
+                            "platform": "8gej2n93",
+                            "emulated": false,
+                            "region": "e6lxy1dz"
+                        },
+                        "splits": null,
+                        "values": {
+                            "gnxrw1jn": "21g48jm1",
+                            "68kd70ql": "gq74pkvq",
+                            "2lgg107l": "81p0z6kq"
+                        }
+                    }
+                },
+                {
+                    "place": 20,
+                    "run": {
+                        "id": "y43d0x2z",
+                        "weblink": "https://www.speedrun.com/sekiro/run/y43d0x2z",
+                        "game": "o1y9zk26",
+                        "level": null,
+                        "category": "zdnxnen2",
+                        "videos": {
+                            "links": [
+                                {
+                                    "uri": "https://youtu.be/Spcz_qJRCkM"
+                                }
+                            ]
+                        },
+                        "comment": null,
+                        "status": {
+                            "status": "verified",
+                            "examiner": "v8l6lgv8",
+                            "verify-date": "2019-04-29T12:26:45Z"
+                        },
+                        "players": [
+                            {
+                                "rel": "user",
+                                "id": "qjnnl0wj",
+                                "uri": "https://www.speedrun.com/api/v1/users/qjnnl0wj"
+                            }
+                        ],
+                        "date": "2019-04-27",
+                        "submitted": "2019-04-28T04:46:38Z",
+                        "times": {
+                            "primary": "PT1H41M53S",
+                            "primary_t": 6113,
+                            "realtime": "PT1H41M53S",
+                            "realtime_t": 6113,
+                            "realtime_noloads": null,
+                            "realtime_noloads_t": 0,
+                            "ingame": null,
+                            "ingame_t": 0
+                        },
+                        "system": {
+                            "platform": "8gej2n93",
+                            "emulated": false,
+                            "region": "pr184lqn"
+                        },
+                        "splits": null,
+                        "values": {
+                            "gnxrw1jn": "21g48jm1",
+                            "68kd70ql": "gq74pkvq",
+                            "2lgg107l": "81p0z6kq"
+                        }
+                    }
+                },
+                {
+                    "place": 21,
+                    "run": {
+                        "id": "y92rjpvz",
+                        "weblink": "https://www.speedrun.com/sekiro/run/y92rjpvz",
+                        "game": "o1y9zk26",
+                        "level": null,
+                        "category": "zdnxnen2",
+                        "videos": {
+                            "links": [
+                                {
+                                    "uri": "http://www.bilibili.com/video/av50488783"
+                                }
+                            ]
+                        },
+                        "comment": null,
+                        "status": {
+                            "status": "verified",
+                            "examiner": "v8l6lgv8",
+                            "verify-date": "2019-04-26T17:55:44Z"
+                        },
+                        "players": [
+                            {
+                                "rel": "user",
+                                "id": "y8d2z4oj",
+                                "uri": "https://www.speedrun.com/api/v1/users/y8d2z4oj"
+                            }
+                        ],
+                        "date": "2019-04-26",
+                        "submitted": "2019-04-26T06:34:06Z",
+                        "times": {
+                            "primary": "PT1H48M37S",
+                            "primary_t": 6517,
+                            "realtime": "PT1H48M37S",
+                            "realtime_t": 6517,
+                            "realtime_noloads": null,
+                            "realtime_noloads_t": 0,
+                            "ingame": null,
+                            "ingame_t": 0
+                        },
+                        "system": {
+                            "platform": "8gej2n93",
+                            "emulated": false,
+                            "region": null
+                        },
+                        "splits": null,
+                        "values": {
+                            "gnxrw1jn": "21g48jm1",
+                            "68kd70ql": "21g45yn1",
+                            "2lgg107l": "81p0z6kq"
+                        }
+                    }
+                },
+                {
+                    "place": 22,
+                    "run": {
+                        "id": "yl48wj3m",
+                        "weblink": "https://www.speedrun.com/sekiro/run/yl48wj3m",
+                        "game": "o1y9zk26",
+                        "level": null,
+                        "category": "zdnxnen2",
+                        "videos": {
+                            "links": [
+                                {
+                                    "uri": "https://youtu.be/xT6-Tbx5bok"
+                                }
+                            ]
+                        },
+                        "comment": "Bad",
+                        "status": {
+                            "status": "verified",
+                            "examiner": "o86l59p8",
+                            "verify-date": "2019-04-29T14:03:56Z"
+                        },
+                        "players": [
+                            {
+                                "rel": "user",
+                                "id": "qjn3gg1x",
+                                "uri": "https://www.speedrun.com/api/v1/users/qjn3gg1x"
+                            }
+                        ],
+                        "date": "2019-04-28",
+                        "submitted": "2019-04-29T10:53:38Z",
+                        "times": {
+                            "primary": "PT1H50M31S",
+                            "primary_t": 6631,
+                            "realtime": "PT1H50M31S",
+                            "realtime_t": 6631,
+                            "realtime_noloads": null,
+                            "realtime_noloads_t": 0,
+                            "ingame": null,
+                            "ingame_t": 0
+                        },
+                        "system": {
+                            "platform": "8gej2n93",
+                            "emulated": false,
+                            "region": "pr184lqn"
+                        },
+                        "splits": null,
+                        "values": {
+                            "gnxrw1jn": "21g48jm1",
+                            "68kd70ql": "gq74pkvq",
+                            "2lgg107l": "81p0z6kq"
+                        }
+                    }
+                },
+                {
+                    "place": 23,
+                    "run": {
+                        "id": "yv3g4ooz",
+                        "weblink": "https://www.speedrun.com/sekiro/run/yv3g4ooz",
+                        "game": "o1y9zk26",
+                        "level": null,
+                        "category": "zdnxnen2",
+                        "videos": {
+                            "links": [
+                                {
+                                    "uri": "https://www.twitch.tv/videos/431862911"
+                                }
+                            ]
+                        },
+                        "comment": "my last pb",
+                        "status": {
+                            "status": "verified",
+                            "examiner": "98r4v0dj",
+                            "verify-date": "2019-06-02T08:47:20Z"
+                        },
+                        "players": [
+                            {
+                                "rel": "user",
+                                "id": "0jmkdrnx",
+                                "uri": "https://www.speedrun.com/api/v1/users/0jmkdrnx"
+                            }
+                        ],
+                        "date": "2019-05-30",
+                        "submitted": "2019-05-30T02:10:36Z",
+                        "times": {
+                            "primary": "PT1H52M23S",
+                            "primary_t": 6743,
+                            "realtime": "PT1H52M23S",
+                            "realtime_t": 6743,
+                            "realtime_noloads": null,
+                            "realtime_noloads_t": 0,
+                            "ingame": null,
+                            "ingame_t": 0
+                        },
+                        "system": {
+                            "platform": "8gej2n93",
+                            "emulated": false,
+                            "region": null
+                        },
+                        "splits": {
+                            "rel": "splits.io",
+                            "uri": "https://splits.io/api/v3/runs/ksstylez"
+                        },
+                        "values": {
+                            "gnxrw1jn": "21g48jm1",
+                            "68kd70ql": "xqk45p4l",
+                            "2lgg107l": "81p0z6kq"
+                        }
+                    }
+                },
+                {
+                    "place": 24,
+                    "run": {
+                        "id": "yv3gpw8z",
+                        "weblink": "https://www.speedrun.com/sekiro/run/yv3gpw8z",
+                        "game": "o1y9zk26",
+                        "level": null,
+                        "category": "zdnxnen2",
+                        "videos": {
+                            "links": [
+                                {
+                                    "uri": "https://www.twitch.tv/videos/435212170"
+                                }
+                            ]
+                        },
+                        "comment": null,
+                        "status": {
+                            "status": "verified",
+                            "examiner": "7j42mzdx",
+                            "verify-date": "2019-06-13T22:12:49Z"
+                        },
+                        "players": [
+                            {
+                                "rel": "user",
+                                "id": "5j5p9dz8",
+                                "uri": "https://www.speedrun.com/api/v1/users/5j5p9dz8"
+                            }
+                        ],
+                        "date": "2019-06-05",
+                        "submitted": "2019-06-06T12:00:15Z",
+                        "times": {
+                            "primary": "PT3H16M",
+                            "primary_t": 11760,
+                            "realtime": "PT3H16M",
+                            "realtime_t": 11760,
+                            "realtime_noloads": null,
+                            "realtime_noloads_t": 0,
+                            "ingame": null,
+                            "ingame_t": 0
+                        },
+                        "system": {
+                            "platform": "8gej2n93",
+                            "emulated": false,
+                            "region": "e6lxy1dz"
+                        },
+                        "splits": null,
+                        "values": {
+                            "gnxrw1jn": "21g48jm1",
+                            "68kd70ql": "xqk45p4l",
+                            "2lgg107l": "81p0z6kq"
+                        }
+                    }
+                }
+            ],
+            "links": [
+                {
+                    "rel": "game",
+                    "uri": "https://www.speedrun.com/api/v1/games/o1y9zk26"
+                },
+                {
+                    "rel": "category",
+                    "uri": "https://www.speedrun.com/api/v1/categories/zdnxnen2"
+                }
+            ],
+            "players": {
+                "data": [
+                    {
+                        "rel": "user",
+                        "id": "v8l3pp28",
+                        "names": {
+                            "international": "LostFeather",
+                            "japanese": null
+                        },
+                        "weblink": "https://www.speedrun.com/user/LostFeather",
+                        "name-style": {
+                            "style": "gradient",
+                            "color-from": {
+                                "light": "#EE2222",
+                                "dark": "#EE4444"
+                            },
+                            "color-to": {
+                                "light": "#EE2222",
+                                "dark": "#EE4444"
+                            }
+                        },
+                        "role": "user",
+                        "signup": "2016-12-19T10:13:36Z",
+                        "location": {
+                            "country": {
+                                "code": "cn",
+                                "names": {
+                                    "international": "China",
+                                    "japanese": null
+                                }
+                            }
+                        },
+                        "twitch": {
+                            "uri": "https://www.twitch.tv/huya.com%2FVirgooTeam"
+                        },
+                        "hitbox": null,
+                        "youtube": {
+                            "uri": "https://www.youtube.com/user/LostFeather413"
+                        },
+                        "twitter": {
+                            "uri": "https://www.twitter.com/LostFeather413"
+                        },
+                        "speedrunslive": null,
+                        "links": [
+                            {
+                                "rel": "self",
+                                "uri": "https://www.speedrun.com/api/v1/users/v8l3pp28"
+                            },
+                            {
+                                "rel": "runs",
+                                "uri": "https://www.speedrun.com/api/v1/runs?user=v8l3pp28"
+                            },
+                            {
+                                "rel": "games",
+                                "uri": "https://www.speedrun.com/api/v1/games?moderator=v8l3pp28"
+                            },
+                            {
+                                "rel": "personal-bests",
+                                "uri": "https://www.speedrun.com/api/v1/users/v8l3pp28/personal-bests"
+                            }
+                        ]
+                    },
+                    {
+                        "rel": "user",
+                        "id": "1xyl5pwj",
+                        "names": {
+                            "international": "Nemz38",
+                            "japanese": null
+                        },
+                        "weblink": "https://www.speedrun.com/user/Nemz38",
+                        "name-style": {
+                            "style": "gradient",
+                            "color-from": {
+                                "light": "#DAA520",
+                                "dark": "#F0C03E"
+                            },
+                            "color-to": {
+                                "light": "#DAA520",
+                                "dark": "#F0C03E"
+                            }
+                        },
+                        "role": "user",
+                        "signup": "2016-08-18T01:38:18Z",
+                        "location": {
+                            "country": {
+                                "code": "gb",
+                                "names": {
+                                    "international": "United Kingdom",
+                                    "japanese": null
+                                }
+                            }
+                        },
+                        "twitch": {
+                            "uri": "https://www.twitch.tv/nemz38"
+                        },
+                        "hitbox": null,
+                        "youtube": {
+                            "uri": "https://www.youtube.com/user/GamodyCentral"
+                        },
+                        "twitter": {
+                            "uri": "https://www.twitter.com/Nemz38"
+                        },
+                        "speedrunslive": null,
+                        "links": [
+                            {
+                                "rel": "self",
+                                "uri": "https://www.speedrun.com/api/v1/users/1xyl5pwj"
+                            },
+                            {
+                                "rel": "runs",
+                                "uri": "https://www.speedrun.com/api/v1/runs?user=1xyl5pwj"
+                            },
+                            {
+                                "rel": "games",
+                                "uri": "https://www.speedrun.com/api/v1/games?moderator=1xyl5pwj"
+                            },
+                            {
+                                "rel": "personal-bests",
+                                "uri": "https://www.speedrun.com/api/v1/users/1xyl5pwj/personal-bests"
+                            }
+                        ]
+                    },
+                    {
+                        "rel": "user",
+                        "id": "18qqo08n",
+                        "names": {
+                            "international": "Distortion2",
+                            "japanese": null
+                        },
+                        "weblink": "https://www.speedrun.com/user/Distortion2",
+                        "name-style": {
+                            "style": "gradient",
+                            "color-from": {
+                                "light": "#DAA520",
+                                "dark": "#F0C03E"
+                            },
+                            "color-to": {
+                                "light": "#DAA520",
+                                "dark": "#F0C03E"
+                            }
+                        },
+                        "role": "user",
+                        "signup": "2015-03-11T06:22:52Z",
+                        "location": {
+                            "country": {
+                                "code": "us",
+                                "names": {
+                                    "international": "United States",
+                                    "japanese": null
+                                }
+                            },
+                            "region": {
+                                "code": "us/il/c",
+                                "names": {
+                                    "international": "Chicago, IL, USA",
+                                    "japanese": null
+                                }
+                            }
+                        },
+                        "twitch": null,
+                        "hitbox": null,
+                        "youtube": null,
+                        "twitter": null,
+                        "speedrunslive": null,
+                        "links": [
+                            {
+                                "rel": "self",
+                                "uri": "https://www.speedrun.com/api/v1/users/18qqo08n"
+                            },
+                            {
+                                "rel": "runs",
+                                "uri": "https://www.speedrun.com/api/v1/runs?user=18qqo08n"
+                            },
+                            {
+                                "rel": "games",
+                                "uri": "https://www.speedrun.com/api/v1/games?moderator=18qqo08n"
+                            },
+                            {
+                                "rel": "personal-bests",
+                                "uri": "https://www.speedrun.com/api/v1/users/18qqo08n/personal-bests"
+                            }
+                        ]
+                    },
+                    {
+                        "rel": "user",
+                        "id": "qjngdow8",
+                        "names": {
+                            "international": "LilAggy",
+                            "japanese": null
+                        },
+                        "weblink": "https://www.speedrun.com/user/LilAggy",
+                        "name-style": {
+                            "style": "gradient",
+                            "color-from": {
+                                "light": "#249BCE",
+                                "dark": "#44BBEE"
+                            },
+                            "color-to": {
+                                "light": "#249BCE",
+                                "dark": "#44BBEE"
+                            }
+                        },
+                        "role": "user",
+                        "signup": "2017-05-31T07:14:14Z",
+                        "location": {
+                            "country": {
+                                "code": "us",
+                                "names": {
+                                    "international": "United States",
+                                    "japanese": null
+                                }
+                            }
+                        },
+                        "twitch": {
+                            "uri": "https://www.twitch.tv/lilaggy"
+                        },
+                        "hitbox": null,
+                        "youtube": {
+                            "uri": "https://www.youtube.com/channel/UCx_Qyb3447P9bBaT4o8QSjQ"
+                        },
+                        "twitter": {
+                            "uri": "https://www.twitter.com/lilaggyTV"
+                        },
+                        "speedrunslive": null,
+                        "links": [
+                            {
+                                "rel": "self",
+                                "uri": "https://www.speedrun.com/api/v1/users/qjngdow8"
+                            },
+                            {
+                                "rel": "runs",
+                                "uri": "https://www.speedrun.com/api/v1/runs?user=qjngdow8"
+                            },
+                            {
+                                "rel": "games",
+                                "uri": "https://www.speedrun.com/api/v1/games?moderator=qjngdow8"
+                            },
+                            {
+                                "rel": "personal-bests",
+                                "uri": "https://www.speedrun.com/api/v1/users/qjngdow8/personal-bests"
+                            }
+                        ]
+                    },
+                    {
+                        "rel": "user",
+                        "id": "98r4e56j",
+                        "names": {
+                            "international": "Mazirika",
+                            "japanese": null
+                        },
+                        "weblink": "https://www.speedrun.com/user/Mazirika",
+                        "name-style": {
+                            "style": "gradient",
+                            "color-from": {
+                                "light": "#EE2222",
+                                "dark": "#EE4444"
+                            },
+                            "color-to": {
+                                "light": "#EE2222",
+                                "dark": "#EE4444"
+                            }
+                        },
+                        "role": "user",
+                        "signup": "2019-04-13T05:05:04Z",
+                        "location": {
+                            "country": {
+                                "code": "cn",
+                                "names": {
+                                    "international": "China",
+                                    "japanese": null
+                                }
+                            }
+                        },
+                        "twitch": null,
+                        "hitbox": null,
+                        "youtube": null,
+                        "twitter": null,
+                        "speedrunslive": null,
+                        "links": [
+                            {
+                                "rel": "self",
+                                "uri": "https://www.speedrun.com/api/v1/users/98r4e56j"
+                            },
+                            {
+                                "rel": "runs",
+                                "uri": "https://www.speedrun.com/api/v1/runs?user=98r4e56j"
+                            },
+                            {
+                                "rel": "games",
+                                "uri": "https://www.speedrun.com/api/v1/games?moderator=98r4e56j"
+                            },
+                            {
+                                "rel": "personal-bests",
+                                "uri": "https://www.speedrun.com/api/v1/users/98r4e56j/personal-bests"
+                            }
+                        ]
+                    },
+                    {
+                        "rel": "user",
+                        "id": "5j5gyn8v",
+                        "names": {
+                            "international": "Qttsix",
+                            "japanese": null
+                        },
+                        "weblink": "https://www.speedrun.com/user/Qttsix",
+                        "name-style": {
+                            "style": "gradient",
+                            "color-from": {
+                                "light": "#EE2222",
+                                "dark": "#EE4444"
+                            },
+                            "color-to": {
+                                "light": "#EE2222",
+                                "dark": "#EE4444"
+                            }
+                        },
+                        "role": "user",
+                        "signup": "2015-02-17T15:36:00Z",
+                        "location": {
+                            "country": {
+                                "code": "tw",
+                                "names": {
+                                    "international": "Taiwan",
+                                    "japanese": null
+                                }
+                            }
+                        },
+                        "twitch": {
+                            "uri": "https://www.twitch.tv/qttsix"
+                        },
+                        "hitbox": null,
+                        "youtube": {
+                            "uri": "https://www.youtube.com/user/830727roxas/playlists"
+                        },
+                        "twitter": {
+                            "uri": "https://www.twitter.com/QTTSix"
+                        },
+                        "speedrunslive": {
+                            "uri": "http://www.speedrunslive.com/profiles/#!/Qttsix"
+                        },
+                        "links": [
+                            {
+                                "rel": "self",
+                                "uri": "https://www.speedrun.com/api/v1/users/5j5gyn8v"
+                            },
+                            {
+                                "rel": "runs",
+                                "uri": "https://www.speedrun.com/api/v1/runs?user=5j5gyn8v"
+                            },
+                            {
+                                "rel": "games",
+                                "uri": "https://www.speedrun.com/api/v1/games?moderator=5j5gyn8v"
+                            },
+                            {
+                                "rel": "personal-bests",
+                                "uri": "https://www.speedrun.com/api/v1/users/5j5gyn8v/personal-bests"
+                            }
+                        ]
+                    },
+                    {
+                        "rel": "user",
+                        "id": "48g7ngr8",
+                        "names": {
+                            "international": "Ak1Ra_24",
+                            "japanese": null
+                        },
+                        "weblink": "https://www.speedrun.com/user/Ak1Ra_24",
+                        "name-style": {
+                            "style": "gradient",
+                            "color-from": {
+                                "light": "#249BCE",
+                                "dark": "#44BBEE"
+                            },
+                            "color-to": {
+                                "light": "#249BCE",
+                                "dark": "#44BBEE"
+                            }
+                        },
+                        "role": "user",
+                        "signup": "2019-04-04T11:47:33Z",
+                        "location": {
+                            "country": {
+                                "code": "cn",
+                                "names": {
+                                    "international": "China",
+                                    "japanese": null
+                                }
+                            }
+                        },
+                        "twitch": null,
+                        "hitbox": null,
+                        "youtube": null,
+                        "twitter": null,
+                        "speedrunslive": null,
+                        "links": [
+                            {
+                                "rel": "self",
+                                "uri": "https://www.speedrun.com/api/v1/users/48g7ngr8"
+                            },
+                            {
+                                "rel": "runs",
+                                "uri": "https://www.speedrun.com/api/v1/runs?user=48g7ngr8"
+                            },
+                            {
+                                "rel": "games",
+                                "uri": "https://www.speedrun.com/api/v1/games?moderator=48g7ngr8"
+                            },
+                            {
+                                "rel": "personal-bests",
+                                "uri": "https://www.speedrun.com/api/v1/users/48g7ngr8/personal-bests"
+                            }
+                        ]
+                    },
+                    {
+                        "rel": "user",
+                        "id": "dx3gly78",
+                        "names": {
+                            "international": "JayyRix",
+                            "japanese": null
+                        },
+                        "weblink": "https://www.speedrun.com/user/JayyRix",
+                        "name-style": {
+                            "style": "gradient",
+                            "color-from": {
+                                "light": "#249BCE",
+                                "dark": "#44BBEE"
+                            },
+                            "color-to": {
+                                "light": "#249BCE",
+                                "dark": "#44BBEE"
+                            }
+                        },
+                        "role": "user",
+                        "signup": "2019-05-18T16:20:56Z",
+                        "location": {
+                            "country": {
+                                "code": "us",
+                                "names": {
+                                    "international": "United States",
+                                    "japanese": null
+                                }
+                            },
+                            "region": {
+                                "code": "us/nc",
+                                "names": {
+                                    "international": "North Carolina, USA",
+                                    "japanese": null
+                                }
+                            }
+                        },
+                        "twitch": {
+                            "uri": "https://www.twitch.tv/jayyrix"
+                        },
+                        "hitbox": null,
+                        "youtube": {
+                            "uri": "https://www.youtube.com/channel/UCZoOuMGAb5lon-VtfQW3XJA"
+                        },
+                        "twitter": {
+                            "uri": "https://www.twitter.com/jayy_rix"
+                        },
+                        "speedrunslive": null,
+                        "links": [
+                            {
+                                "rel": "self",
+                                "uri": "https://www.speedrun.com/api/v1/users/dx3gly78"
+                            },
+                            {
+                                "rel": "runs",
+                                "uri": "https://www.speedrun.com/api/v1/runs?user=dx3gly78"
+                            },
+                            {
+                                "rel": "games",
+                                "uri": "https://www.speedrun.com/api/v1/games?moderator=dx3gly78"
+                            },
+                            {
+                                "rel": "personal-bests",
+                                "uri": "https://www.speedrun.com/api/v1/users/dx3gly78/personal-bests"
+                            }
+                        ]
+                    },
+                    {
+                        "rel": "user",
+                        "id": "e8eldpj0",
+                        "names": {
+                            "international": "EnsgMaster",
+                            "japanese": null
+                        },
+                        "weblink": "https://www.speedrun.com/user/EnsgMaster",
+                        "name-style": {
+                            "style": "solid",
+                            "color": {
+                                "light": "#4646CE",
+                                "dark": "#6666EE"
+                            }
+                        },
+                        "role": "user",
+                        "signup": "2015-03-17T08:11:58Z",
+                        "location": {
+                            "country": {
+                                "code": "fr",
+                                "names": {
+                                    "international": "France",
+                                    "japanese": null
+                                }
+                            }
+                        },
+                        "twitch": {
+                            "uri": "https://www.twitch.tv/ensgmaster"
+                        },
+                        "hitbox": null,
+                        "youtube": null,
+                        "twitter": null,
+                        "speedrunslive": null,
+                        "links": [
+                            {
+                                "rel": "self",
+                                "uri": "https://www.speedrun.com/api/v1/users/e8eldpj0"
+                            },
+                            {
+                                "rel": "runs",
+                                "uri": "https://www.speedrun.com/api/v1/runs?user=e8eldpj0"
+                            },
+                            {
+                                "rel": "games",
+                                "uri": "https://www.speedrun.com/api/v1/games?moderator=e8eldpj0"
+                            },
+                            {
+                                "rel": "personal-bests",
+                                "uri": "https://www.speedrun.com/api/v1/users/e8eldpj0/personal-bests"
+                            }
+                        ]
+                    },
+                    {
+                        "rel": "user",
+                        "id": "qjnedy4j",
+                        "names": {
+                            "international": "TheDarkSun",
+                            "japanese": null
+                        },
+                        "weblink": "https://www.speedrun.com/user/TheDarkSun",
+                        "name-style": {
+                            "style": "gradient",
+                            "color-from": {
+                                "light": "#7AB941",
+                                "dark": "#8AC951"
+                            },
+                            "color-to": {
+                                "light": "#7AB941",
+                                "dark": "#8AC951"
+                            }
+                        },
+                        "role": "user",
+                        "signup": "2019-02-17T05:10:48Z",
+                        "location": {
+                            "country": {
+                                "code": "br",
+                                "names": {
+                                    "international": "Brazil",
+                                    "japanese": null
+                                }
+                            },
+                            "region": {
+                                "code": "br/sp",
+                                "names": {
+                                    "international": "São Paulo, Brazil",
+                                    "japanese": null
+                                }
+                            }
+                        },
+                        "twitch": null,
+                        "hitbox": null,
+                        "youtube": null,
+                        "twitter": null,
+                        "speedrunslive": null,
+                        "links": [
+                            {
+                                "rel": "self",
+                                "uri": "https://www.speedrun.com/api/v1/users/qjnedy4j"
+                            },
+                            {
+                                "rel": "runs",
+                                "uri": "https://www.speedrun.com/api/v1/runs?user=qjnedy4j"
+                            },
+                            {
+                                "rel": "games",
+                                "uri": "https://www.speedrun.com/api/v1/games?moderator=qjnedy4j"
+                            },
+                            {
+                                "rel": "personal-bests",
+                                "uri": "https://www.speedrun.com/api/v1/users/qjnedy4j/personal-bests"
+                            }
+                        ]
+                    },
+                    {
+                        "rel": "user",
+                        "id": "e8e7292x",
+                        "names": {
+                            "international": "Morodriel",
+                            "japanese": null
+                        },
+                        "weblink": "https://www.speedrun.com/user/Morodriel",
+                        "name-style": {
+                            "style": "gradient",
+                            "color-from": {
+                                "light": "#249BCE",
+                                "dark": "#44BBEE"
+                            },
+                            "color-to": {
+                                "light": "#249BCE",
+                                "dark": "#44BBEE"
+                            }
+                        },
+                        "role": "user",
+                        "signup": "2018-03-02T00:30:05Z",
+                        "location": {
+                            "country": {
+                                "code": "fr",
+                                "names": {
+                                    "international": "France",
+                                    "japanese": null
+                                }
+                            },
+                            "region": {
+                                "code": "fr/v",
+                                "names": {
+                                    "international": "Rhône-Alpes, France",
+                                    "japanese": null
+                                }
+                            }
+                        },
+                        "twitch": {
+                            "uri": "https://www.twitch.tv/morodriel_"
+                        },
+                        "hitbox": null,
+                        "youtube": {
+                            "uri": "https://www.youtube.com/channel/UC1LUyXqz1Dsz2ZjSkGg9vAw"
+                        },
+                        "twitter": null,
+                        "speedrunslive": null,
+                        "links": [
+                            {
+                                "rel": "self",
+                                "uri": "https://www.speedrun.com/api/v1/users/e8e7292x"
+                            },
+                            {
+                                "rel": "runs",
+                                "uri": "https://www.speedrun.com/api/v1/runs?user=e8e7292x"
+                            },
+                            {
+                                "rel": "games",
+                                "uri": "https://www.speedrun.com/api/v1/games?moderator=e8e7292x"
+                            },
+                            {
+                                "rel": "personal-bests",
+                                "uri": "https://www.speedrun.com/api/v1/users/e8e7292x/personal-bests"
+                            }
+                        ]
+                    },
+                    {
+                        "rel": "user",
+                        "id": "98rz90dx",
+                        "names": {
+                            "international": "Tenload",
+                            "japanese": null
+                        },
+                        "weblink": "https://www.speedrun.com/user/Tenload",
+                        "name-style": {
+                            "style": "gradient",
+                            "color-from": {
+                                "light": "#000000",
+                                "dark": "#FFFFFF"
+                            },
+                            "color-to": {
+                                "light": "#000000",
+                                "dark": "#FFFFFF"
+                            }
+                        },
+                        "role": "user",
+                        "signup": "2019-11-19T12:04:56Z",
+                        "location": {
+                            "country": {
+                                "code": "cn",
+                                "names": {
+                                    "international": "China",
+                                    "japanese": null
+                                }
+                            }
+                        },
+                        "twitch": null,
+                        "hitbox": null,
+                        "youtube": null,
+                        "twitter": null,
+                        "speedrunslive": null,
+                        "links": [
+                            {
+                                "rel": "self",
+                                "uri": "https://www.speedrun.com/api/v1/users/98rz90dx"
+                            },
+                            {
+                                "rel": "runs",
+                                "uri": "https://www.speedrun.com/api/v1/runs?user=98rz90dx"
+                            },
+                            {
+                                "rel": "games",
+                                "uri": "https://www.speedrun.com/api/v1/games?moderator=98rz90dx"
+                            },
+                            {
+                                "rel": "personal-bests",
+                                "uri": "https://www.speedrun.com/api/v1/users/98rz90dx/personal-bests"
+                            }
+                        ]
+                    },
+                    {
+                        "rel": "user",
+                        "id": "qjooeo3j",
+                        "names": {
+                            "international": "DeekuNutz",
+                            "japanese": null
+                        },
+                        "weblink": "https://www.speedrun.com/user/DeekuNutz",
+                        "name-style": {
+                            "style": "gradient",
+                            "color-from": {
+                                "light": "#7AB941",
+                                "dark": "#8AC951"
+                            },
+                            "color-to": {
+                                "light": "#7AB941",
+                                "dark": "#8AC951"
+                            }
+                        },
+                        "role": "user",
+                        "signup": "2017-01-26T02:01:05Z",
+                        "location": {
+                            "country": {
+                                "code": "no",
+                                "names": {
+                                    "international": "Norway",
+                                    "japanese": null
+                                }
+                            }
+                        },
+                        "twitch": {
+                            "uri": "https://www.twitch.tv/DeekuNutz"
+                        },
+                        "hitbox": null,
+                        "youtube": {
+                            "uri": "https://www.youtube.com/user/DeekuNutz"
+                        },
+                        "twitter": {
+                            "uri": "https://www.twitter.com/Deekunutz"
+                        },
+                        "speedrunslive": null,
+                        "links": [
+                            {
+                                "rel": "self",
+                                "uri": "https://www.speedrun.com/api/v1/users/qjooeo3j"
+                            },
+                            {
+                                "rel": "runs",
+                                "uri": "https://www.speedrun.com/api/v1/runs?user=qjooeo3j"
+                            },
+                            {
+                                "rel": "games",
+                                "uri": "https://www.speedrun.com/api/v1/games?moderator=qjooeo3j"
+                            },
+                            {
+                                "rel": "personal-bests",
+                                "uri": "https://www.speedrun.com/api/v1/users/qjooeo3j/personal-bests"
+                            }
+                        ]
+                    },
+                    {
+                        "rel": "user",
+                        "id": "e8ezzq28",
+                        "names": {
+                            "international": "teddyras",
+                            "japanese": null
+                        },
+                        "weblink": "https://www.speedrun.com/user/teddyras",
+                        "name-style": {
+                            "style": "gradient",
+                            "color-from": {
+                                "light": "#EE2222",
+                                "dark": "#EE4444"
+                            },
+                            "color-to": {
+                                "light": "#EE2222",
+                                "dark": "#EE4444"
+                            }
+                        },
+                        "role": "user",
+                        "signup": "2017-08-31T01:53:39Z",
+                        "location": {
+                            "country": {
+                                "code": "us",
+                                "names": {
+                                    "international": "United States",
+                                    "japanese": null
+                                }
+                            },
+                            "region": {
+                                "code": "us/ca",
+                                "names": {
+                                    "international": "California, USA",
+                                    "japanese": null
+                                }
+                            }
+                        },
+                        "twitch": {
+                            "uri": "https://www.twitch.tv/teddyras"
+                        },
+                        "hitbox": null,
+                        "youtube": null,
+                        "twitter": {
+                            "uri": "https://www.twitter.com/teddyrasgames"
+                        },
+                        "speedrunslive": {
+                            "uri": "http://www.speedrunslive.com/profiles/#!/teddyras4"
+                        },
+                        "links": [
+                            {
+                                "rel": "self",
+                                "uri": "https://www.speedrun.com/api/v1/users/e8ezzq28"
+                            },
+                            {
+                                "rel": "runs",
+                                "uri": "https://www.speedrun.com/api/v1/runs?user=e8ezzq28"
+                            },
+                            {
+                                "rel": "games",
+                                "uri": "https://www.speedrun.com/api/v1/games?moderator=e8ezzq28"
+                            },
+                            {
+                                "rel": "personal-bests",
+                                "uri": "https://www.speedrun.com/api/v1/users/e8ezzq28/personal-bests"
+                            }
+                        ]
+                    },
+                    {
+                        "rel": "user",
+                        "id": "18qp2dwx",
+                        "names": {
+                            "international": "Ushebti",
+                            "japanese": null
+                        },
+                        "weblink": "https://www.speedrun.com/user/Ushebti",
+                        "name-style": {
+                            "style": "gradient",
+                            "color-from": {
+                                "light": "#EF8239",
+                                "dark": "#EF8241"
+                            },
+                            "color-to": {
+                                "light": "#EF8239",
+                                "dark": "#EF8241"
+                            }
+                        },
+                        "role": "user",
+                        "signup": "2017-07-25T21:16:50Z",
+                        "location": {
+                            "country": {
+                                "code": "dk",
+                                "names": {
+                                    "international": "Denmark",
+                                    "japanese": null
+                                }
+                            }
+                        },
+                        "twitch": {
+                            "uri": "https://www.twitch.tv/ushebti"
+                        },
+                        "hitbox": null,
+                        "youtube": null,
+                        "twitter": null,
+                        "speedrunslive": null,
+                        "links": [
+                            {
+                                "rel": "self",
+                                "uri": "https://www.speedrun.com/api/v1/users/18qp2dwx"
+                            },
+                            {
+                                "rel": "runs",
+                                "uri": "https://www.speedrun.com/api/v1/runs?user=18qp2dwx"
+                            },
+                            {
+                                "rel": "games",
+                                "uri": "https://www.speedrun.com/api/v1/games?moderator=18qp2dwx"
+                            },
+                            {
+                                "rel": "personal-bests",
+                                "uri": "https://www.speedrun.com/api/v1/users/18qp2dwx/personal-bests"
+                            }
+                        ]
+                    },
+                    {
+                        "rel": "user",
+                        "id": "48g3pzrx",
+                        "names": {
+                            "international": "Yarthow",
+                            "japanese": null
+                        },
+                        "weblink": "https://www.speedrun.com/user/Yarthow",
+                        "name-style": {
+                            "style": "gradient",
+                            "color-from": {
+                                "light": "#7AB941",
+                                "dark": "#8AC951"
+                            },
+                            "color-to": {
+                                "light": "#7AB941",
+                                "dark": "#8AC951"
+                            }
+                        },
+                        "role": "user",
+                        "signup": "2019-02-28T18:45:11Z",
+                        "location": {
+                            "country": {
+                                "code": "be",
+                                "names": {
+                                    "international": "Belgium",
+                                    "japanese": null
+                                }
+                            }
+                        },
+                        "twitch": {
+                            "uri": "https://www.twitch.tv/yarthow"
+                        },
+                        "hitbox": null,
+                        "youtube": null,
+                        "twitter": null,
+                        "speedrunslive": null,
+                        "links": [
+                            {
+                                "rel": "self",
+                                "uri": "https://www.speedrun.com/api/v1/users/48g3pzrx"
+                            },
+                            {
+                                "rel": "runs",
+                                "uri": "https://www.speedrun.com/api/v1/runs?user=48g3pzrx"
+                            },
+                            {
+                                "rel": "games",
+                                "uri": "https://www.speedrun.com/api/v1/games?moderator=48g3pzrx"
+                            },
+                            {
+                                "rel": "personal-bests",
+                                "uri": "https://www.speedrun.com/api/v1/users/48g3pzrx/personal-bests"
+                            }
+                        ]
+                    },
+                    {
+                        "rel": "user",
+                        "id": "pj0pq5rx",
+                        "names": {
+                            "international": "akD",
+                            "japanese": null
+                        },
+                        "weblink": "https://www.speedrun.com/user/akD",
+                        "name-style": {
+                            "style": "gradient",
+                            "color-from": {
+                                "light": "#DAA520",
+                                "dark": "#F0C03E"
+                            },
+                            "color-to": {
+                                "light": "#DAA520",
+                                "dark": "#F0C03E"
+                            }
+                        },
+                        "role": "user",
+                        "signup": "2019-04-26T18:03:50Z",
+                        "location": {
+                            "country": {
+                                "code": "ru",
+                                "names": {
+                                    "international": "Russia",
+                                    "japanese": null
+                                }
+                            }
+                        },
+                        "twitch": {
+                            "uri": "https://www.twitch.tv/akd_lxrd"
+                        },
+                        "hitbox": null,
+                        "youtube": {
+                            "uri": "https://www.youtube.com/channel/UCDwTXaQfkk8Outfx4P2S6gA%3Fview_assubscriber"
+                        },
+                        "twitter": null,
+                        "speedrunslive": null,
+                        "links": [
+                            {
+                                "rel": "self",
+                                "uri": "https://www.speedrun.com/api/v1/users/pj0pq5rx"
+                            },
+                            {
+                                "rel": "runs",
+                                "uri": "https://www.speedrun.com/api/v1/runs?user=pj0pq5rx"
+                            },
+                            {
+                                "rel": "games",
+                                "uri": "https://www.speedrun.com/api/v1/games?moderator=pj0pq5rx"
+                            },
+                            {
+                                "rel": "personal-bests",
+                                "uri": "https://www.speedrun.com/api/v1/users/pj0pq5rx/personal-bests"
+                            }
+                        ]
+                    },
+                    {
+                        "rel": "user",
+                        "id": "zxzevp4x",
+                        "names": {
+                            "international": "Lynn",
+                            "japanese": null
+                        },
+                        "weblink": "https://www.speedrun.com/user/Lynn",
+                        "name-style": {
+                            "style": "gradient",
+                            "color-from": {
+                                "light": "#E762B5",
+                                "dark": "#F772C5"
+                            },
+                            "color-to": {
+                                "light": "#E762B5",
+                                "dark": "#F772C5"
+                            }
+                        },
+                        "role": "user",
+                        "signup": "2019-02-08T04:54:27Z",
+                        "location": {
+                            "country": {
+                                "code": "kr",
+                                "names": {
+                                    "international": "South Korea",
+                                    "japanese": null
+                                }
+                            },
+                            "region": {
+                                "code": "kr/11",
+                                "names": {
+                                    "international": "Seoul, South Korea",
+                                    "japanese": null
+                                }
+                            }
+                        },
+                        "twitch": {
+                            "uri": "https://www.twitch.tv/lynn_bs"
+                        },
+                        "hitbox": null,
+                        "youtube": {
+                            "uri": "https://www.youtube.com/channel/UCyRquF0DqZMjCvHVcE6Y35A%3Fview_assubscriber"
+                        },
+                        "twitter": null,
+                        "speedrunslive": null,
+                        "links": [
+                            {
+                                "rel": "self",
+                                "uri": "https://www.speedrun.com/api/v1/users/zxzevp4x"
+                            },
+                            {
+                                "rel": "runs",
+                                "uri": "https://www.speedrun.com/api/v1/runs?user=zxzevp4x"
+                            },
+                            {
+                                "rel": "games",
+                                "uri": "https://www.speedrun.com/api/v1/games?moderator=zxzevp4x"
+                            },
+                            {
+                                "rel": "personal-bests",
+                                "uri": "https://www.speedrun.com/api/v1/users/zxzevp4x/personal-bests"
+                            }
+                        ]
+                    },
+                    {
+                        "rel": "user",
+                        "id": "18qkr6o8",
+                        "names": {
+                            "international": "neo___",
+                            "japanese": null
+                        },
+                        "weblink": "https://www.speedrun.com/user/neo___",
+                        "name-style": {
+                            "style": "gradient",
+                            "color-from": {
+                                "light": "#7AB941",
+                                "dark": "#8AC951"
+                            },
+                            "color-to": {
+                                "light": "#7AB941",
+                                "dark": "#8AC951"
+                            }
+                        },
+                        "role": "user",
+                        "signup": "2018-06-05T19:57:38Z",
+                        "location": {
+                            "country": {
+                                "code": "de",
+                                "names": {
+                                    "international": "Germany",
+                                    "japanese": null
+                                }
+                            }
+                        },
+                        "twitch": {
+                            "uri": "https://www.twitch.tv/neo___"
+                        },
+                        "hitbox": null,
+                        "youtube": null,
+                        "twitter": null,
+                        "speedrunslive": null,
+                        "links": [
+                            {
+                                "rel": "self",
+                                "uri": "https://www.speedrun.com/api/v1/users/18qkr6o8"
+                            },
+                            {
+                                "rel": "runs",
+                                "uri": "https://www.speedrun.com/api/v1/runs?user=18qkr6o8"
+                            },
+                            {
+                                "rel": "games",
+                                "uri": "https://www.speedrun.com/api/v1/games?moderator=18qkr6o8"
+                            },
+                            {
+                                "rel": "personal-bests",
+                                "uri": "https://www.speedrun.com/api/v1/users/18qkr6o8/personal-bests"
+                            }
+                        ]
+                    },
+                    {
+                        "rel": "user",
+                        "id": "qjnnl0wj",
+                        "names": {
+                            "international": "ApocalypsEs",
+                            "japanese": null
+                        },
+                        "weblink": "https://www.speedrun.com/user/ApocalypsEs",
+                        "name-style": {
+                            "style": "gradient",
+                            "color-from": {
+                                "light": "#249BCE",
+                                "dark": "#44BBEE"
+                            },
+                            "color-to": {
+                                "light": "#249BCE",
+                                "dark": "#44BBEE"
+                            }
+                        },
+                        "role": "user",
+                        "signup": "2019-04-09T03:17:00Z",
+                        "location": {
+                            "country": {
+                                "code": "us",
+                                "names": {
+                                    "international": "United States",
+                                    "japanese": null
+                                }
+                            },
+                            "region": {
+                                "code": "us/ny/nyc",
+                                "names": {
+                                    "international": "New York City, USA",
+                                    "japanese": null
+                                }
+                            }
+                        },
+                        "twitch": {
+                            "uri": "https://www.twitch.tv/Unseenkq"
+                        },
+                        "hitbox": null,
+                        "youtube": null,
+                        "twitter": null,
+                        "speedrunslive": null,
+                        "links": [
+                            {
+                                "rel": "self",
+                                "uri": "https://www.speedrun.com/api/v1/users/qjnnl0wj"
+                            },
+                            {
+                                "rel": "runs",
+                                "uri": "https://www.speedrun.com/api/v1/runs?user=qjnnl0wj"
+                            },
+                            {
+                                "rel": "games",
+                                "uri": "https://www.speedrun.com/api/v1/games?moderator=qjnnl0wj"
+                            },
+                            {
+                                "rel": "personal-bests",
+                                "uri": "https://www.speedrun.com/api/v1/users/qjnnl0wj/personal-bests"
+                            }
+                        ]
+                    },
+                    {
+                        "rel": "user",
+                        "id": "y8d2z4oj",
+                        "names": {
+                            "international": "skygrass",
+                            "japanese": null
+                        },
+                        "weblink": "https://www.speedrun.com/user/skygrass",
+                        "name-style": {
+                            "style": "gradient",
+                            "color-from": {
+                                "light": "#7AB941",
+                                "dark": "#8AC951"
+                            },
+                            "color-to": {
+                                "light": "#7AB941",
+                                "dark": "#8AC951"
+                            }
+                        },
+                        "role": "user",
+                        "signup": "2019-04-16T17:00:49Z",
+                        "location": {
+                            "country": {
+                                "code": "cn",
+                                "names": {
+                                    "international": "China",
+                                    "japanese": null
+                                }
+                            }
+                        },
+                        "twitch": null,
+                        "hitbox": null,
+                        "youtube": null,
+                        "twitter": null,
+                        "speedrunslive": null,
+                        "links": [
+                            {
+                                "rel": "self",
+                                "uri": "https://www.speedrun.com/api/v1/users/y8d2z4oj"
+                            },
+                            {
+                                "rel": "runs",
+                                "uri": "https://www.speedrun.com/api/v1/runs?user=y8d2z4oj"
+                            },
+                            {
+                                "rel": "games",
+                                "uri": "https://www.speedrun.com/api/v1/games?moderator=y8d2z4oj"
+                            },
+                            {
+                                "rel": "personal-bests",
+                                "uri": "https://www.speedrun.com/api/v1/users/y8d2z4oj/personal-bests"
+                            }
+                        ]
+                    },
+                    {
+                        "rel": "user",
+                        "id": "qjn3gg1x",
+                        "names": {
+                            "international": "Kfnslayer",
+                            "japanese": null
+                        },
+                        "weblink": "https://www.speedrun.com/user/Kfnslayer",
+                        "name-style": {
+                            "style": "gradient",
+                            "color-from": {
+                                "light": "#EE2222",
+                                "dark": "#EE4444"
+                            },
+                            "color-to": {
+                                "light": "#EE2222",
+                                "dark": "#EE4444"
+                            }
+                        },
+                        "role": "user",
+                        "signup": "2015-09-11T21:59:08Z",
+                        "location": {
+                            "country": {
+                                "code": "ca/qc",
+                                "names": {
+                                    "international": "Québec",
+                                    "japanese": null
+                                }
+                            }
+                        },
+                        "twitch": {
+                            "uri": "https://www.twitch.tv/kfnslayer"
+                        },
+                        "hitbox": null,
+                        "youtube": {
+                            "uri": "https://www.youtube.com/channel/UCMqV7vy03pkzu6rdJHb_Bxw"
+                        },
+                        "twitter": null,
+                        "speedrunslive": null,
+                        "links": [
+                            {
+                                "rel": "self",
+                                "uri": "https://www.speedrun.com/api/v1/users/qjn3gg1x"
+                            },
+                            {
+                                "rel": "runs",
+                                "uri": "https://www.speedrun.com/api/v1/runs?user=qjn3gg1x"
+                            },
+                            {
+                                "rel": "games",
+                                "uri": "https://www.speedrun.com/api/v1/games?moderator=qjn3gg1x"
+                            },
+                            {
+                                "rel": "personal-bests",
+                                "uri": "https://www.speedrun.com/api/v1/users/qjn3gg1x/personal-bests"
+                            }
+                        ]
+                    },
+                    {
+                        "rel": "user",
+                        "id": "0jmkdrnx",
+                        "names": {
+                            "international": "KsStyleZ",
+                            "japanese": null
+                        },
+                        "weblink": "https://www.speedrun.com/user/KsStyleZ",
+                        "name-style": {
+                            "style": "gradient",
+                            "color-from": {
+                                "light": "#7AB941",
+                                "dark": "#8AC951"
+                            },
+                            "color-to": {
+                                "light": "#7AB941",
+                                "dark": "#8AC951"
+                            }
+                        },
+                        "role": "user",
+                        "signup": "2019-05-23T03:40:25Z",
+                        "location": {
+                            "country": {
+                                "code": "ru",
+                                "names": {
+                                    "international": "Russia",
+                                    "japanese": null
+                                }
+                            }
+                        },
+                        "twitch": {
+                            "uri": "https://www.twitch.tv/ksstylez"
+                        },
+                        "hitbox": null,
+                        "youtube": null,
+                        "twitter": null,
+                        "speedrunslive": null,
+                        "links": [
+                            {
+                                "rel": "self",
+                                "uri": "https://www.speedrun.com/api/v1/users/0jmkdrnx"
+                            },
+                            {
+                                "rel": "runs",
+                                "uri": "https://www.speedrun.com/api/v1/runs?user=0jmkdrnx"
+                            },
+                            {
+                                "rel": "games",
+                                "uri": "https://www.speedrun.com/api/v1/games?moderator=0jmkdrnx"
+                            },
+                            {
+                                "rel": "personal-bests",
+                                "uri": "https://www.speedrun.com/api/v1/users/0jmkdrnx/personal-bests"
+                            }
+                        ]
+                    },
+                    {
+                        "rel": "user",
+                        "id": "5j5p9dz8",
+                        "names": {
+                            "international": "zyper",
+                            "japanese": null
+                        },
+                        "weblink": "https://www.speedrun.com/user/zyper",
+                        "name-style": {
+                            "style": "gradient",
+                            "color-from": {
+                                "light": "#009856",
+                                "dark": "#09B876"
+                            },
+                            "color-to": {
+                                "light": "#009856",
+                                "dark": "#09B876"
+                            }
+                        },
+                        "role": "user",
+                        "signup": "2017-07-05T22:18:41Z",
+                        "location": {
+                            "country": {
+                                "code": "dk",
+                                "names": {
+                                    "international": "Denmark",
+                                    "japanese": null
+                                }
+                            }
+                        },
+                        "twitch": null,
+                        "hitbox": null,
+                        "youtube": null,
+                        "twitter": null,
+                        "speedrunslive": null,
+                        "links": [
+                            {
+                                "rel": "self",
+                                "uri": "https://www.speedrun.com/api/v1/users/5j5p9dz8"
+                            },
+                            {
+                                "rel": "runs",
+                                "uri": "https://www.speedrun.com/api/v1/runs?user=5j5p9dz8"
+                            },
+                            {
+                                "rel": "games",
+                                "uri": "https://www.speedrun.com/api/v1/games?moderator=5j5p9dz8"
+                            },
+                            {
+                                "rel": "personal-bests",
+                                "uri": "https://www.speedrun.com/api/v1/users/5j5p9dz8/personal-bests"
+                            }
+                        ]
+                    }
+                ]
+            },
+            "platforms": {
+                "data": [
+                    {
+                        "id": "8gej2n93",
+                        "name": "PC",
+                        "released": 1970,
+                        "links": [
+                            {
+                                "rel": "self",
+                                "uri": "https://www.speedrun.com/api/v1/platforms/8gej2n93"
+                            },
+                            {
+                                "rel": "games",
+                                "uri": "https://www.speedrun.com/api/v1/games?platform=8gej2n93"
+                            },
+                            {
+                                "rel": "runs",
+                                "uri": "https://www.speedrun.com/api/v1/runs?platform=8gej2n93"
+                            }
+                        ]
+                    }
+                ]
+            },
+            "variables": {
+                "data": [
+                    {
+                        "id": "gnxrw1jn",
+                        "name": "PC / Console",
+                        "category": null,
+                        "scope": {
+                            "type": "global"
+                        },
+                        "mandatory": true,
+                        "user-defined": false,
+                        "obsoletes": true,
+                        "values": {
+                            "_note": "`choices` is deprecated, please use `values` instead",
+                            "choices": {
+                                "21g48jm1": "PC",
+                                "jqz5p6mq": "Console"
+                            },
+                            "values": {
+                                "21g48jm1": {
+                                    "label": "PC",
+                                    "rules": "Performing the run on PC requires the **integrated game timer** available in LiveSplit to be used and **showing in your submission**.",
+                                    "flags": {
+                                        "miscellaneous": false
+                                    }
+                                },
+                                "jqz5p6mq": {
+                                    "label": "Console",
+                                    "rules": "Performing the run on Console requires final **In-game Time** to be **shown in your submission**. If the run ends on completing an ending, runners should select to stay in the same New Game after the credits, quit out and check IGT in their save file.",
+                                    "flags": {
+                                        "miscellaneous": false
+                                    }
+                                }
+                            },
+                            "default": "21g48jm1"
+                        },
+                        "is-subcategory": true,
+                        "links": [
+                            {
+                                "rel": "self",
+                                "uri": "https://www.speedrun.com/api/v1/variables/gnxrw1jn"
+                            },
+                            {
+                                "rel": "game",
+                                "uri": "https://www.speedrun.com/api/v1/games/o1y9zk26"
+                            }
+                        ]
+                    },
+                    {
+                        "id": "68kd70ql",
+                        "name": "Patch",
+                        "category": null,
+                        "scope": {
+                            "type": "global"
+                        },
+                        "mandatory": true,
+                        "user-defined": false,
+                        "obsoletes": true,
+                        "values": {
+                            "_note": "`choices` is deprecated, please use `values` instead",
+                            "choices": {
+                                "gq74pkvq": "1.02",
+                                "21g45yn1": "1.03",
+                                "xqk45p4l": "1.04"
+                            },
+                            "values": {
+                                "gq74pkvq": {
+                                    "label": "1.02"
+                                },
+                                "21g45yn1": {
+                                    "label": "1.03"
+                                },
+                                "xqk45p4l": {
+                                    "label": "1.04"
+                                }
+                            },
+                            "default": null
+                        },
+                        "is-subcategory": false,
+                        "links": [
+                            {
+                                "rel": "self",
+                                "uri": "https://www.speedrun.com/api/v1/variables/68kd70ql"
+                            },
+                            {
+                                "rel": "game",
+                                "uri": "https://www.speedrun.com/api/v1/games/o1y9zk26"
+                            }
+                        ]
+                    },
+                    {
+                        "id": "2lgg107l",
+                        "name": "All NG Memories and Bead Subcategories",
+                        "category": "zdnxnen2",
+                        "scope": {
+                            "type": "global"
+                        },
+                        "mandatory": true,
+                        "user-defined": false,
+                        "obsoletes": true,
+                        "values": {
+                            "_note": "`choices` is deprecated, please use `values` instead",
+                            "choices": {
+                                "81p0z6kq": "Unrestricted",
+                                "xqk436yl": "Glitchless"
+                            },
+                            "values": {
+                                "81p0z6kq": {
+                                    "label": "Unrestricted",
+                                    "rules": "##Glitch Usage\r\n\r\nNo additional restrictions apply.",
+                                    "flags": {
+                                        "miscellaneous": false
+                                    }
+                                },
+                                "xqk436yl": {
+                                    "label": "Glitchless",
+                                    "rules": "##Glitch Usage\r\n\r\nAny use of glitches is strictly prohibited. Please consult the **[Glitchless guidelines](https://docs.google.com/document/d/1R-gRFdw_iUsZ2UJopPxp-swX0uAyN0tkPyd1_f1VhAo/edit?usp=sharing)** for more information and view the ban and allowance list.",
+                                    "flags": {
+                                        "miscellaneous": false
+                                    }
+                                }
+                            },
+                            "default": "81p0z6kq"
+                        },
+                        "is-subcategory": true,
+                        "links": [
+                            {
+                                "rel": "self",
+                                "uri": "https://www.speedrun.com/api/v1/variables/2lgg107l"
+                            },
+                            {
+                                "rel": "game",
+                                "uri": "https://www.speedrun.com/api/v1/games/o1y9zk26"
+                            },
+                            {
+                                "rel": "category",
+                                "uri": "https://www.speedrun.com/api/v1/categories/zdnxnen2"
+                            }
+                        ]
+                    }
+                ]
+            }
+        }
+    }
+}

@@ -1,0 +1,77 @@
+.Form {
+  background-color: rgba(black, 0.5);
+  padding: 1rem 2rem 2rem;
+  h2 {
+    margin: 0;
+    padding: 0;
+    margin-bottom: 1rem;
+  }
+  .ipt {
+    display: grid;
+    grid-template-columns: 1fr 8rem;
+    grid-gap: .5rem;
+    .urlinput {
+      border: solid 2px rgba(white, 0.4);
+      background-color: rgba(black, 1);
+      color: gold;
+      font-size: 1.2rem;
+      padding: .6rem 1rem;
+      border-radius: .5rem;
+    }
+    button {
+      background-color: #01b0ff;
+      color: white;
+      border: 0 none;
+      outline: none;
+      font-size: 1.2rem;
+      border-radius: .5rem;
+      cursor: pointer;
+      &[disabled] {
+        pointer-events: none;
+        opacity: 0.4;
+      }
+    }
+  }
+  .ok {
+    color: greenyellow;
+  }
+  .Detail {
+    font-size: 1.2rem;
+    font-family: Arial, Helvetica, sans-serif;
+    .di {
+      margin-bottom: .3rem;
+      display: grid;
+      grid-template-columns: 9rem 1fr;
+      label {
+        display: flex;
+        justify-content: flex-end;
+      }
+      label + span {
+        color: gold;
+      }
+    }
+    hr {
+      margin: .5rem 0;
+      background-color: rgba(lightcyan, 0.3);
+      border: 0 none;
+      height: 1px;
+    }
+  }
+}
+
+.CurrentRunVars {
+  .varName {
+    font-size: 1rem;
+    opacity: 0.6;
+  }
+  span.label {
+    opacity: 0.4;
+    margin-right: 1rem;
+    &.current {
+      opacity: 1;
+      color: gold;
+      background-color: rgba(gold, 0.3);
+      padding: 0 .3rem;
+    }
+  }
+}
