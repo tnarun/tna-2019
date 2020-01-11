@@ -1,0 +1,157 @@
+$outerBorderColor: rgba(#d7ecff, 1);
+$borderColor: rgba(#d7ecff, 0.5);
+$lightbg: rgba(lighten(gold, 10%), 0.2);
+
+.RunnerRecords {
+  border: solid 2px $outerBorderColor;
+  box-shadow: 0 0 1rem #01b0ff;
+  margin-bottom: 2rem;
+  background: rgba(black, 0.5);
+  // font-family: Arial, Helvetica, sans-serif;
+  font-size: .9rem;
+  color: #f1f1f1;
+
+  .head {
+    display: grid;
+    grid-template-columns: 1fr 1fr 4fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    border-bottom: solid 1px $borderColor;
+    color: #01b0ff;
+    background-color: rgba(#01b0ff, 0.3);
+    span {
+      font-weight: bold;
+      padding: .5rem;
+      border-right: solid 1px $borderColor;
+      &:last-child {
+        border-right: 0 none;
+      }
+    }
+  }
+
+  .runner {
+    // border-bottom: solid 1px $borderColor;
+    display: grid;
+    grid-template-columns: 10fr 2fr;
+    .info {
+      border-right: solid 1px $borderColor;
+      padding: .5rem;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      justify-content: center;
+      .name {
+        font-size: 1.2rem;
+        font-weight: bold;
+        margin-bottom: .5rem;
+      }
+    }
+    .sumPoint {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      background-color: $lightbg;
+      span {
+        padding: .5rem;
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+      }
+      span:last-child {
+        justify-content: center;
+        font-weight: bold;
+        color: gold;
+        font-size: 2rem;
+      }
+      // background-color: $lightbg;
+    }
+  }
+}
+
+.MonthGroup {
+  border-bottom: solid 1px $borderColor;
+  &:last-child {
+    border-bottom: 0 none;
+  }
+
+  display: grid;
+  grid-template-columns: 1fr 10fr 1fr;
+
+  .month {
+    border-right: solid 1px $borderColor;
+    padding: .5rem;
+    display: flex;
+    align-items: center;
+  }
+
+  .result {
+    padding: .5rem;
+    color: gold;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2rem;
+  }
+
+  .monthsum {
+    // background-color: $lightbg;
+    font-size: 1rem;
+    display: grid;
+    grid-template-columns: 10fr;
+    .compute {
+      border-right: solid 1px $borderColor;
+      padding: .5rem;
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+      .plus {
+        margin: 0 .3rem;
+      }
+      .p {
+        color: gold;
+        font-weight: bold;
+        margin-right: .3rem;
+      }
+      .d {
+        color: #999;
+      }
+      .eq {
+        margin-left: .3rem;
+      }
+    }
+  }
+}
+
+.Record {
+  border-bottom: solid 1px $borderColor;
+  &:last-child {
+    border-bottom: 0 none;
+  }
+
+  display: grid;
+  grid-template-columns: 1fr 4fr 1fr 1fr 1fr 1fr 1fr;
+
+  span {
+    padding: .5rem;
+    border-right: solid 1px $borderColor;
+    &.new {
+      color: greenyellow;
+    }
+    &.update {
+      color: gold;
+    }
+    &.point {
+      color: gold;
+      font-weight: bold;
+      // background-color: $lightbg;
+      &.isZero {
+        color: #666;
+        background-color: transparent;
+      }
+    }
+    &.gameDesc {
+      &.isModGame {
+        color: lighten(lightsalmon, 10%);
+        background-color: rgba(lightsalmon, 0.1);
+      }
+    }
+  }
+}

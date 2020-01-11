@@ -36,4 +36,13 @@ class IBox extends React.Component {
   }
 }
 
-export { Container, Row, FlexBox, IBox }
+class HR extends React.Component {
+  render () {
+    return <div 
+      className={ css.HR }
+      style={{ height: this.props.height }}
+    ></div>
+  }
+}
+
+export { Container, Row, FlexBox, IBox, HR }

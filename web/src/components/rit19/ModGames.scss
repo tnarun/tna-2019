@@ -1,0 +1,33 @@
+$navBdc: rgba(#d7ecff, 0.5);
+
+.ModGames {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  // grid-template-rows: 1fr 1fr 1fr 1fr;
+  grid-gap: 1rem;
+
+  .game {
+    background-color: rgba(black, 0.7);
+    border: solid 1px $navBdc;
+    // border: solid 2px #d7ecff;
+    display: grid;
+    grid-template-columns: 90px 1fr;
+    
+    .names {
+      padding: .5rem 1rem;
+      border-left: solid 1px $navBdc;
+      .cnName {
+        font-size: 1.2rem;
+      }
+      .enName {
+        font-size: .9rem;
+        opacity: 0.6;
+        margin-bottom: .2rem;
+      }
+      .category {
+        font-size: .9rem;
+        color: gold;
+      }
+    }
+  }
+}
