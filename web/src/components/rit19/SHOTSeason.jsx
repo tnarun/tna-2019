@@ -45,8 +45,9 @@ class RecordGroup extends React.Component {
 
     return <div className={ css.RunnerRecords }>
       <div className={ css.head }>
-        <span>月份</span><span>类型</span><span>游戏与分类</span><span>总人数</span>
-        <span>排名</span><span>参考值</span><span>排名奖励</span><span>奖杯奖励</span>
+        <span>月份</span><span>类型</span><span>游戏</span>
+        <span>排名</span><span>排名区间</span><span>排名奖励</span>
+        <span>分数档位</span><span>档位奖励</span>
         <span>该月积分</span>
       </div>
       { _monthGroups }
@@ -117,10 +118,10 @@ class MonthGroup extends React.Component {
             }
 
             {
-              group.推荐游戏积分 > 0 ? <span className={ css.part }>
+              group.最佳档位积分 > 0 ? <span className={ css.part }>
                 <span className={ css.plus }>＋</span>
-                <span className={ css.p }>{ group.推荐游戏积分 }</span>
-                <span className={ css.d }>(当期推荐游戏)</span>
+                <span className={ css.p }>{ group.最佳档位积分 }</span>
+                <span className={ css.d }>(最佳档位)</span>
               </span> : null
             }
 
@@ -145,12 +146,6 @@ class Record extends React.Component {
       isZero: rankPlusPoint === 0
     })
 
-    let { cupPoint } = record
-    let cpClassName = classNames.bind(css)({
-      point: true,
-      isZero: cupPoint === 0
-    })
-
     let gameDescClassName = classNames.bind(css)({
       gameDesc: true,
       isModGame: record.isModGame
@@ -160,11 +155,11 @@ class Record extends React.Component {
       { record.getSubmitTypeName(css) }
       {/* { record.data.id } */}
       <span className={ gameDescClassName }>{ record.gameDesc }</span>
-      <span>{ record.totalPersonNumber }</span>
       <span>{ record.placeNumber }</span>
-      <span>{ record.ckValue }</span>
+      <span>{ record.placeNumberLabel }</span>
       <span className={ rppClassName }>{ rankPlusPoint }</span>
-      <span className={ cpClassName }>{ cupPoint }</span>
+      <span>{ record.scoreLevelLabel }</span>
+      <span className={ css.point }>{ record.scoreLevelPoint }</span>
     </div>
   }
 }

@@ -5,12 +5,12 @@ import classNames from 'classnames/bind'
 
 export default class SeasonNav extends React.Component {
   render () {
-    let { SeasonID } = this.props
+    let { SeasonID, prefix, activityName } = this.props
 
     return <div className={ css.SeasonNav }>
       <div className={ css.navbar }>
-        <h3>RIT Seasons</h3>
-        <Seasons ActiveSeasonID={ SeasonID } />
+        <h3>{ activityName } Seasons</h3>
+        <Seasons ActiveSeasonID={ SeasonID } prefix={ prefix } />
       </div>
       <div className={ css.content }>
         { this.props.children }
@@ -27,7 +27,7 @@ class Seasons extends React.Component {
   }
 
   render () {
-    let { ActiveSeasonID } = this.props
+    let { ActiveSeasonID, prefix } = this.props
 
     let _seasons = this.store.seasons.map((s, idx) => {
       let className = classNames.bind(css)({
@@ -35,7 +35,7 @@ class Seasons extends React.Component {
         active: ActiveSeasonID === s.id
       })
 
-      return <a href={ `/rit/season/${s.id}` } className={ className } key={ idx }>
+      return <a href={ `${prefix}/season/${s.id}` } className={ className } key={ idx }>
         <span className={ css.name }>{ s.name }</span>
         <span className={ css.period }>{ s.from } 至 { s.to }</span>
       </a>

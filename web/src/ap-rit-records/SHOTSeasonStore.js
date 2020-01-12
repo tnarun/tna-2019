@@ -2,13 +2,13 @@ import moment from 'moment'
 // 这里不使用 mobx, 因为原始数据不会变化的情况下，使用 computed, observable 意义不大
 
 class SeasonStore {
-  constructor ({ ritSeason }) {
-    this.from = moment(ritSeason.from)
-    this.to = moment(ritSeason.to).add(1, 'day')
+  constructor ({ shotSeason }) {
+    this.from = moment(shotSeason.from)
+    this.to = moment(shotSeason.to).add(1, 'day')
   }
 
   async load () {
-    let res = await fetch(`//tna-web.oss-ap-southeast-1.aliyuncs.com/assets/data/2020-01-10/output-rit-runs.json?${Math.random()}`)
+    let res = await fetch(`//tna-web.oss-ap-southeast-1.aliyuncs.com/assets/data/2020-01-10/output-shot-runs.json?${Math.random()}`)
     let data = await res.json()
     this.records = data
       .filter(x => {
@@ -44,7 +44,7 @@ class RunRecord {
   }
 
   get runner () {
-    let id = this.data.speedrunName
+    let id = this.data.niyaozaoName
     let name = id
     let biliName = this.data.biliName
     let liveroom = this.data.liveroom
@@ -84,19 +84,37 @@ class RunRecord {
     return this.data.placeNumber
   }
 
-  get ckValue () {
-    let t = this.totalPersonNumber
-    let p = this.placeNumber
-    return ~~((t - p) / t * 100)
+  get placeNumberLabel () {
+    let re = '十名之外'
+    let placeNumber = this.placeNumber
+    if (placeNumber === 1) { re = '第一名' }
+    if (placeNumber >= 2 && placeNumber <= 4) { re = '二到四名' }
+    if (placeNumber >= 5 && placeNumber <= 10) { re = '五到十名' }
+    return re
   }
 
+  // 排名奖励：在当月提交的成绩的排行上，第 1 位将获得3次额外抽奖机会；第 2~4 位将获得 2 次额外抽奖机会；第 5~10 位将获得 1 次额外抽奖机会。
   get rankPlusPoint () {
     let re = 0
-    let ckValue = this.ckValue
-    if (ckValue >= 90) { re = 3 }
-    if (ckValue >= 80 && ckValue <= 89) { re = 2 }
-    if (ckValue >= 55 && ckValue <= 79) { re = 1 }
+    let placeNumber = this.placeNumber
+    if (placeNumber === 1) { re = 3 }
+    if (placeNumber >= 2 && placeNumber <= 4) { re = 2 }
+    if (placeNumber >= 5 && placeNumber <= 10) { re = 1 }
     return re
+  }
+
+  get scoreLevelLabel () {
+    return this.data.scoreLevel.label
+  }
+
+  get scoreLevelPoint () {
+    return {
+      '第一档': 1,
+      '第二档': 2,
+      '第三档': 3,
+      '第四档': 4,
+      '第五档': 5,
+    }[this.scoreLevelLabel]
   }
 
   get cupPoint () {
@@ -128,9 +146,6 @@ class RecordGroup {
 
   get runnerFullName () {
     let { runnerName, runnerOtherName } = this
-    if (!runnerOtherName) {
-      return runnerName
-    }
     if (runnerName === runnerOtherName) {
       return runnerName
     }
@@ -208,19 +223,16 @@ class MonthGroup {
     return re
   }
 
-  get 推荐游戏积分 () {
+  get 最佳档位积分 () {
     let re = 0
     for (let rec of this.records) {
-      if (rec.isModGame) {
-        re = 1
-        break
-      }
+      re = Math.max(re, rec.scoreLevelPoint)
     }
     return re
   }
 
   get 总积分 () {
-    return this.首次参与积分 + this.参与积分 + this.最佳排名积分 + this.最佳奖杯积分 + this.推荐游戏积分
+    return this.首次参与积分 + this.参与积分 + this.最佳排名积分 + this.最佳奖杯积分 + this.最佳档位积分
   }
 }
 
