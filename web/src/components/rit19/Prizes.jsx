@@ -19,9 +19,12 @@ export default class ModGames extends React.Component {
     let _prizes = this.season.prizes.map(p => {
       let { abbr } = p
       // let params = 'resize,l_128'
-      let imgURL = `${p.oss}?x-oss-process=image/resize,m_fill,h_90,w_90`
+      let imgURL = p.oss ? `${p.oss}?x-oss-process=image/resize,m_fill,h_90,w_90` : null
       return <div className={ css.prize } key={ abbr }>
-        <img src={ imgURL } alt={ abbr } />
+        {
+          imgURL ? <img src={ imgURL } alt={ abbr } /> : <span></span>
+        }
+        
         <div className={ css.name }>{ p.name }</div>
         <div className={ css.amount }>{ p.amount }</div>
       </div>

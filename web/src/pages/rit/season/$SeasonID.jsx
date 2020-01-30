@@ -44,12 +44,16 @@ export default class  extends React.Component {
             </div>
           </div>
           <HR height='1.5rem' />
-          <Row>
-            <FlexBox flex={ 6 }>
-              <SH3>各选手有效成绩与抽奖次数计算</SH3>
-              <Season store={ seasonStore } />
-            </FlexBox>
-          </Row>
+          
+          {
+            SeasonID !== 'S3' ? <Row>
+              <FlexBox flex={ 6 }>
+                <SH3>各选手有效成绩与抽奖次数计算</SH3>
+                <Season store={ seasonStore } />
+              </FlexBox>
+            </Row> : null
+          }
+          
         </Container> : null
       }
     </SeasonNav>

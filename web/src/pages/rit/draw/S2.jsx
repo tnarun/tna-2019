@@ -1,3 +1,5 @@
+// title: RIT & SHOT 第二期抽奖公示
+
 import React from 'react'
 import css from './S2.scss'
 import { Container, Row, FlexBox, HR } from '../../../components/FlexBox'
@@ -58,7 +60,10 @@ class DrawRunners extends React.Component {
   render () {
     return <div className={ css.DrawRunners }>
       <div className={ css.head }>
-        <span>选手</span><span>参与活动</span><span>抽奖积分权重</span>
+        <span>编号</span>
+        <span>选手</span>
+        <span>参与活动</span>
+        <span>抽奖积分权重</span>
       </div>
       <RITList />
       <SHOTList />
@@ -77,11 +82,16 @@ class RITList extends React.Component {
 
     let _briefGroups = seasonStore.recordGroups.map((group, idx) => {
       return <div className={ css.group } key={ idx }>
+        <span>{ idx + 1 }</span>
         <span className={ css.name }>{ group.runnerName }</span>
         <span className={ css.activity }>RIT'19 S2</span>
         <span className={ css.point }>{ group.sumPoint }</span>
       </div>
     })
+
+    // console.log(JSON.stringify(seasonStore.recordGroups.map((group, idx) => {
+    //   return { number: idx + 1, person: group.runnerName, point: group.sumPoint }
+    // })))
 
     return <div className={ css.RIT }>
       { _briefGroups }
@@ -113,11 +123,16 @@ class SHOTList extends React.Component {
 
     let _briefGroups = seasonStore.recordGroups.map((group, idx) => {
       return <div className={ css.group } key={ idx }>
+        <span>{ idx + 9 }</span>
         <span className={ css.name }>{ group.runnerName }</span>
         <span className={ css.activity }>SHOT'19 S2</span>
         <span className={ css.point }>{ group.sumPoint }</span>
       </div>
     })
+
+    // console.log(JSON.stringify(seasonStore.recordGroups.map((group, idx) => {
+    //   return { number: idx + 9, person: group.runnerName, point: group.sumPoint }
+    // })))
 
     return <div className={ css.SHOT }>
       { _briefGroups }
@@ -149,11 +164,16 @@ class TNA3List extends React.Component {
 
     let _briefGroups = store.data.map((group, idx) => {
       return <div className={ css.group } key={ idx }>
+        <span>{ idx + 21 }</span>
         <span className={ css.name }>{ group.runner }</span>
         <span className={ css.activity }>TNA3</span>
         <span className={ css.point }>1</span>
       </div>
     })
+
+    // console.log(JSON.stringify(store.data.map((group, idx) => {
+    //   return { number: idx + 21, person: group.runner, point: 1 }
+    // })))
 
     return <div className={ css.TNA3 }>
       { _briefGroups }

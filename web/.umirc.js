@@ -2,6 +2,7 @@
 // ref: https://umijs.org/config/
 export default {
   treeShaking: true,
+  hash: true,
   // sass: { },
   plugins: [
     // ref: https://umijs.org/plugin/umi-plugin-react.html

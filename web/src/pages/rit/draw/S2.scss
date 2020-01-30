@@ -27,7 +27,7 @@ $lightbg: rgba(lighten(gold, 10%), 0.2);
   @include table;
   .head {
     display: grid;
-    grid-template-columns: 1fr 2fr 8rem;
+    grid-template-columns: 8rem 1fr 2fr 8rem;
     border-bottom: solid 1px $borderColor;
     color: #01b0ff;
     background-color: rgba(#01b0ff, 0.3);
@@ -43,7 +43,7 @@ $lightbg: rgba(lighten(gold, 10%), 0.2);
 
   .group {
     display: grid;
-    grid-template-columns: 1fr 2fr 8rem;
+    grid-template-columns: 8rem 1fr 2fr 8rem;
     border-bottom: solid 1px $borderColor;
     &:last-child {
       border-bottom: 0 none;
