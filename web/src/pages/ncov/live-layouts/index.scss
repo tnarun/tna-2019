@@ -1,0 +1,40 @@
+@import '../../../layouts/vars';
+
+$lightTNA: lighten($ctna, 40%);
+
+@mixin GridBorder {
+  background-color: rgba(black, 0.6);
+  border: solid 1px rgba($lightTNA, 0.5);
+}
+
+@mixin gridLightBorder ($color) {
+  position: relative;
+  padding: 3px 3px 3px 12px;
+
+  &:before {
+    content: '';
+    position: absolute;
+    width: 3px;
+    left: 3px; top: 3px; bottom: 3px;
+    background-color: $color;
+  }
+}
+
+.Header {
+  @include genColGrids(1fr 1fr);
+  margin-bottom: .3rem;
+  span {
+    @include GridBorder;
+    @include gridLightBorder($ctna);
+    color: $ctna;
+  }
+}
+
+.LayoutItem {
+  @include genColGrids(1fr 1fr);
+  margin-bottom: .3rem;
+  span {
+    @include GridBorder;
+    padding: 3px 3px 3px 6px;
+  }
+}

@@ -1,0 +1,258 @@
+@import '../../../layouts/vars';
+
+$SCREENW: 1920px;
+$SCREENH: 1080px;
+
+@mixin redBox {
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    box-shadow: 0 0 0 5px red;
+  }
+}
+
+@mixin boxTip {
+  &::after {
+    content: "红线是边缘定位线，勿出现在 OBS 布局中";
+    width: 600px; height: 30px;
+    position: absolute;
+    color: red;
+    top: 10px; left: calc(100% + 30px);
+    transform-origin: 0 0;
+    transform: rotate(90deg);
+  }
+}
+
+@mixin box($w, $h, $l: 0, $t: 0) {
+  position: absolute;
+  top: $t; left: $l;
+  width: $w; height: $h;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.5rem;
+}
+
+@mixin innerShadow {
+  box-shadow: 0 0 0 5px gold inset;
+}
+
+@mixin innerTNA {
+  box-shadow: 0 0 0 2px $ctna inset;
+}
+
+.live.cover {
+  width: $SCREENW; height: $SCREENH;
+  position: fixed;
+  top: 0; left: 0;
+  @include redBox();
+  @include boxTip();
+
+  .Cover {
+    @include box($w: $SCREENW, $h: $SCREENH);
+    background: rgba(white, 0.1);
+  }
+}
+
+.live.l-4-3 {
+  width: $SCREENW; height: $SCREENH;
+  position: fixed;
+  top: 0; left: 0;
+  @include redBox();
+  @include boxTip();
+
+  .BackGround {
+    @include box($w: $SCREENW, $h: $SCREENH);
+    background: rgba(white, 0.1);
+  }
+
+  .Video {
+    $w: 1320px; $h: 990px;
+    $t: 0px; $l: $SCREENW - $w; 
+    @include box($w, $h, $l, $t);
+    background: rgba(white, 0.1);
+    @include innerShadow;
+  }
+
+  .TextRoll {
+    $w: 1320px; $h: ($SCREENH - 900px) / 2;
+    $t: $SCREENH - $h; $l: $SCREENW - $w; 
+    @include box($w, $h, $l, $t);
+    background: rgba(black, 0.1);
+  }
+
+  .Runner {
+    $w: 600px; $h: ($SCREENH - 900px) / 2;
+    $t: $SCREENH - $h * 4; $l: 0; 
+    @include box($w, $h, $l, $t);
+    background: rgba(black, 0.3);
+    @include innerTNA();
+  }
+
+  .Game {
+    $w: 600px; $h: ($SCREENH - 900px) / 2;
+    $t: $SCREENH - $h * 3; $l: 0; 
+    @include box($w, $h, $l, $t);
+    background: rgba(black, 0.3);
+    @include innerTNA();
+  }
+
+  .Category {
+    $w: 600px; $h: ($SCREENH - 900px) / 2;
+    $t: $SCREENH - $h * 2; $l: 0; 
+    @include box($w, $h, $l, $t);
+    background: rgba(black, 0.3);
+    @include innerTNA();
+  }
+
+  .Timer {
+    $w: 600px; $h: ($SCREENH - 900px) / 2;
+    $t: $SCREENH - $h; $l: 0; 
+    @include box($w, $h, $l, $t);
+    background: rgba(black, 0.3);
+    @include innerTNA();
+  }
+
+  .Logo {
+    $w: 300px; $h:270px;
+    $t: 0; $l: 0; 
+    @include box($w, $h, $l, $t);
+    background: rgba(white, 0.1);
+  }
+
+  .Reward {
+    $w: 600px; $h: 450px;
+    $t: 270px; $l: 0; 
+    @include box($w, $h, $l, $t);
+    background: rgba(black, 0.1);
+  }
+
+  .Support {
+    $w: 300px; $h: 270px;
+    $t: 0; $l: 300px; 
+    @include box($w, $h, $l, $t);
+    background: rgba(white, 0.1);
+  }
+
+  .Area {
+    .areaInner {
+      position: absolute;
+      top: 0; left: 0; right: 0; bottom: 0;
+      box-shadow: 0 0 0 5px gold inset;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      opacity: 0;
+      pointer-events: none;
+      color: gold;
+      font-weight: bold;
+    }
+    &:hover {
+      .areaInner {
+        opacity: 1;
+      }
+    }
+  }
+}
+
+.live.l-16-9 {
+  width: $SCREENW; height: $SCREENH;
+  position: fixed;
+  top: 0; left: 0;
+  @include redBox();
+  @include boxTip();
+
+  .BackGround {
+    @include box($w: $SCREENW, $h: $SCREENH);
+    background: rgba(white, 0.1);
+  }
+
+  .Video {
+    $w: 1600px; $h: 900px;
+    $t: 0px; $l: $SCREENW - $w; 
+    @include box($w, $h, $l, $t);
+    background: rgba(white, 0.1);
+    @include innerShadow;
+  }
+
+  .TextRoll {
+    $w: 1600px; $h: ($SCREENH - 900px) / 2;
+    $t: $SCREENH - $h; $l: $SCREENW - $w; 
+    @include box($w, $h, $l, $t);
+    background: rgba(black, 0.1);
+  }
+
+  .Logo {
+    $w: $SCREENW - 1600px; $h:270px;
+    $t: 0; $l: 0; 
+    @include box($w, $h, $l, $t);
+    background: rgba(white, 0.1);
+  }
+
+  .Runner {
+    $w: 400px; $h: ($SCREENH - 900px) / 2;
+    $t: 900px; $l: $SCREENW - 1600px; 
+    @include box($w, $h, $l, $t);
+    background: rgba(white, 0.1);
+    @include innerTNA();
+  }
+
+  .Game {
+    $w: 400px; $h: ($SCREENH - 900px) / 2;
+    $t: 900px; $l: $SCREENW - 1200px; 
+    @include box($w, $h, $l, $t);
+    background: rgba(black, 0.1);
+    @include innerTNA();
+  }
+
+  .Category {
+    $w: 400px; $h: ($SCREENH - 900px) / 2;
+    $t: 900px; $l: $SCREENW - 800px; 
+    @include box($w, $h, $l, $t);
+    background: rgba(white, 0.1);
+    @include innerTNA();
+  }
+
+  .Timer {
+    $w: 400px; $h: ($SCREENH - 900px) / 2;
+    $t: 900px; $l: $SCREENW - 400px; 
+    @include box($w, $h, $l, $t);
+    background: rgba(black, 0.1);
+    @include innerTNA();
+  }
+
+  .Reward {
+    $w: $SCREENW - 1600px; $h: $SCREENH - 270px - 270px;
+    $t: 270px; $l: 0; 
+    @include box($w, $h, $l, $t);
+    background: rgba(black, 0.1);
+  }
+
+  .Support {
+    $w: $SCREENW - 1600px; $h: 270px;
+    $t: $SCREENH - 270px; $l: 0; 
+    @include box($w, $h, $l, $t);
+    background: rgba(white, 0.1);
+  }
+
+  .Area {
+    .areaInner {
+      position: absolute;
+      top: 0; left: 0; right: 0; bottom: 0;
+      box-shadow: 0 0 0 5px gold inset;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      opacity: 0;
+      pointer-events: none;
+      color: gold;
+      font-weight: bold;
+    }
+    &:hover {
+      .areaInner {
+        opacity: 1;
+      }
+    }
+  }
+}
