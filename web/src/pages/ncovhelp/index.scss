@@ -1,0 +1,68 @@
+@import '../../layouts/vars';
+
+.index {
+  position: fixed;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background-color: #f7f7f7;
+  color: #555;
+  overflow-y: scroll;
+  h1, h2, h3 {
+    font-family: $fontDIN;
+  }
+  h1 {
+    font-size: 4rem;
+    text-align: center;
+    span {
+      color: darken(red, 10%);
+    }
+  }
+  h2 {
+    font-size: 2.4rem;
+    text-align: center;
+    span {
+      color: darken(red, 10%);
+    }
+  }
+}
+
+.ShowList {
+  margin-top: 5rem;
+  margin-bottom: 5rem;
+  h3 {
+    font-size: 1.8rem;
+    text-align: center;
+  }
+}
+
+.Day {
+  .header {
+    @include genResponsiveColGrids(
+      1fr 1fr 1fr 1fr,
+      1fr 1fr
+    );
+    margin-bottom: .5rem;
+    font-family: $fontDINM;
+    border-left: solid .3rem darken(red, 10%);
+    padding-left: .3rem;
+    span {
+      border: solid 1px #ddd;
+      padding: .3rem;
+      background-color: rgba(black, 0.05);
+      font-weight: bold;
+    }
+  }
+  .show {
+    @include genResponsiveColGrids(
+      1fr 1fr 1fr 1fr,
+      1fr 1fr
+    );
+    margin-bottom: .5rem;
+    font-family: $fontDINM;
+    border-left: solid .3rem darken(red, 10%);
+    padding-left: .3rem;
+    span {
+      border: solid 1px #ddd;
+      padding: .3rem;
+    }
+  }
+}

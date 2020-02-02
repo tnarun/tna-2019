@@ -21,7 +21,7 @@ $lightTNA: lighten($ctna, 40%);
 }
 
 .Header {
-  @include genColGrids(1fr 1fr);
+  @include genColGrids(1fr 1fr 1fr 1fr 1fr 1fr);
   margin-bottom: .3rem;
   span {
     @include GridBorder;
@@ -30,11 +30,25 @@ $lightTNA: lighten($ctna, 40%);
   }
 }
 
-.LayoutItem {
-  @include genColGrids(1fr 1fr);
-  margin-bottom: .3rem;
-  span {
-    @include GridBorder;
-    padding: 3px 3px 3px 6px;
+.Day {
+  .show {
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    margin-bottom: 1rem;
+    grid-gap: .3rem;
+    .name {
+      @include GridBorder;
+      @include gridLightBorder($ctna);
+    }
+    .layouts {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      grid-template-rows: 1fr 1fr;
+      grid-gap: .3rem;
+      span {
+        @include GridBorder;
+        @include gridLightBorder($ctna);
+      }
+    }
   }
 }
