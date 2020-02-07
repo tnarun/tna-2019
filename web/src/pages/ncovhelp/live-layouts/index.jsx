@@ -43,12 +43,12 @@ class Layouts extends React.Component {
   }
 }
 
-class Header extends React.Component {
-  render () {
-    return <div className={ css.Header }>
-    </div>
-  }
-}
+// class Header extends React.Component {
+//   render () {
+//     return <div className={ css.Header }>
+//     </div>
+//   }
+// }
 
 class Day extends React.Component {
   render () {
