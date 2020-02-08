@@ -4,6 +4,7 @@ import css from './index.scss'
 import PageHeader from '../components/layouts/PageHeaderV2'
 import TNALogo from '../components/grids/TNALogo'
 import KKSKLogo from '../components/grids/KKSKLogo'
+import TNASPLogo from '../components/grids/TNASPLogo'
 import WidthContainer from '../components/layouts/WidthContainer'
 import PageTopBlue from '../components/layouts/PageTopBlue'
 
@@ -16,6 +17,30 @@ export default () => {
         <h1 className={ css.siteENTitle } >Together Not Alone</h1>
         <h2 className={ css.siteCNTitle }>中文速通圈活动站</h2>
       </PageHeader>
+
+      <WidthContainer>
+        <div className={ css.showGrids }>
+          <div className={ css.logo }>
+            <TNASPLogo />
+          </div>
+
+          <div className={ css.show }>
+            <a className={ css.xgames } href='/ncovhelp'>
+              <div className={ css.s1 }>TNA SP</div>
+              <div className={ css.s2 }>特别直播援助活动</div>
+              <div className={ css.s3 }>加油！</div>
+            </a>
+          </div>
+
+          <div className={ css.show }>
+            <a className={ css.xgames } href='https://afdian.net/@TNAmarathon'>
+              <div className={ css.s1 }>TNA SP</div>
+              <div className={ css.s2 }>捐助地址</div>
+              <div className={ css.s3 }>afdian.net/@TNAmarathon</div>
+            </a>
+          </div>
+        </div>
+      </WidthContainer>
 
       <WidthContainer>
         <div className={ css.showGrids }>
@@ -60,6 +85,7 @@ export default () => {
           <div className={ css.logo }>
             <KKSKLogo />
           </div>
+
           <div className={ css.show }>
             <div className={ css.kkskTitle }>
               <div className={ css.actType }>线下活动</div>
@@ -75,13 +101,6 @@ export default () => {
               <div className={ css.s1 }>Station 2</div>
               <div className={ css.s2 }>杭州站</div>
             </a>
-          </div>
-          <div className={ css.show }>
-            <div className={ css.xgames }>
-              <div className={ css.s1 }>TNA × Speedrun</div>
-              <div className={ css.s2 }>Game Reactor</div>
-              <div className={ css.s3 }>正在开发，即将上线</div>
-            </div>
           </div>
         </div>
       </WidthContainer>

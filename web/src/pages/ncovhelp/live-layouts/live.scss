@@ -55,218 +55,162 @@ $SCREENH: 1080px;
   }
 }
 
-.live.l-4-3 {
+.live {
+  .Video {
+    background: rgba(white, 0.1);
+    // @include innerShadow;
+  }
+
+  .Runner, .Game, .Category, .Timer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2.5rem;
+    font-family: $fontDINM;
+    box-shadow: 0 0 0 2px rgba($ctna, 0.5) inset;
+    color: lighten($ctna, 20%);
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    &::before {
+      content: "";
+      position: absolute;
+      top: 6px; left: 6px; width: 6px; bottom: 6px;
+      background-color: lighten($ctna, 20%);
+    }
+    &.Runner {
+      color: $cred;
+    }
+    &.Game, &.Category {
+      font-size: 2rem;
+    }
+  }
+}
+
+.live {
   width: $SCREENW; height: $SCREENH;
   position: fixed;
   top: 0; left: 0;
   @include redBox();
   @include boxTip();
-  background-color: black;
+  background-color: #021d29;
+}
 
-  .BackGround {
-    @include box($w: $SCREENW, $h: $SCREENH);
-    background: rgba(white, 0.1);
-  }
+.rest {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  font-size: 2.5rem;
+  font-family: $fontDINM;
+  box-shadow: 0 0 0 2px rgba($ctna, 0.5) inset;
+  color: lighten($ctna, 20%);
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
 
-  .Video {
-    $w: 1320px; $h: 990px;
-    $t: 0px; $l: $SCREENW - $w; 
-    @include box($w, $h, $l, $t);
-    background: rgba(white, 0.1);
-    @include innerShadow;
-  }
+  .Show {
+    margin-top: 3rem;
+    border: solid 2px lighten($ctna, 10%);
+    display: grid;
+    grid-template-rows: 1fr;
+    width: 1080px;
+    font-size: 2rem;
 
-  .TextRoll {
-    $w: 1320px; $h: ($SCREENH - 900px) / 2;
-    $t: $SCREENH - $h; $l: $SCREENW - $w; 
-    @include box($w, $h, $l, $t);
-    background: rgba(black, 0.1);
-  }
-
-  .Runner {
-    $w: 600px; $h: ($SCREENH - 900px) / 2;
-    $t: $SCREENH - $h * 4; $l: 0; 
-    @include box($w, $h, $l, $t);
-    background: rgba(black, 0.3);
-    @include innerTNA();
-    font-size: 2.5rem;
-    font-family: $fontDINM;
-  }
-
-  .Game {
-    $w: 600px; $h: ($SCREENH - 900px) / 2;
-    $t: $SCREENH - $h * 3; $l: 0; 
-    @include box($w, $h, $l, $t);
-    background: rgba(black, 0.3);
-    @include innerTNA();
-    font-size: 2.5rem;
-    font-family: $fontDINM;
-  }
-
-  .Category {
-    $w: 600px; $h: ($SCREENH - 900px) / 2;
-    $t: $SCREENH - $h * 2; $l: 0; 
-    @include box($w, $h, $l, $t);
-    background: rgba(black, 0.3);
-    @include innerTNA();
-    font-size: 2.5rem;
-    font-family: $fontDINM;
-  }
-
-  .Timer {
-    $w: 600px; $h: ($SCREENH - 900px) / 2;
-    $t: $SCREENH - $h; $l: 0; 
-    @include box($w, $h, $l, $t);
-    background: rgba(black, 0.3);
-    @include innerTNA();
-  }
-
-  .Logo {
-    $w: 300px; $h:270px;
-    $t: 0; $l: 0; 
-    @include box($w, $h, $l, $t);
-    background: rgba(white, 0.1);
-  }
-
-  .Reward {
-    $w: 600px; $h: 450px;
-    $t: 270px; $l: 0; 
-    @include box($w, $h, $l, $t);
-    background: rgba(black, 0.1);
-  }
-
-  .Support {
-    $w: 300px; $h: 270px;
-    $t: 0; $l: 300px; 
-    @include box($w, $h, $l, $t);
-    background: rgba(white, 0.1);
-  }
-
-  .Area {
-    .areaInner {
-      position: absolute;
-      top: 0; left: 0; right: 0; bottom: 0;
-      box-shadow: 0 0 0 5px gold inset;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      opacity: 0;
-      pointer-events: none;
-      color: gold;
-      font-weight: bold;
+    .time {
+      text-align: center;
+      border-bottom: solid 2px lighten($ctna, 10%);
+      padding: 1rem;
     }
-    &:hover {
-      .areaInner {
-        opacity: 1;
+    .info {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      span {
+        border-right: solid 2px lighten($ctna, 10%);
+        padding: 1rem;
+        text-align: center;
+        &:last-child {
+          border: 0 none;
+        }
+      }
+    }
+
+    &.first {
+      border: solid 2px lighten($cred, 10%);
+      color: lighten($cred, 20%);
+      .time {
+        border-bottom: solid 2px lighten($cred, 10%);
+      }
+      .info {
+        span { border-right: solid 2px lighten($cred, 10%); }
       }
     }
   }
 }
 
-.live.l-16-9 {
-  width: $SCREENW; height: $SCREENH;
-  position: fixed;
-  top: 0; left: 0;
-  @include redBox();
-  @include boxTip();
-  background-color: black;
-
-  .BackGround {
-    @include box($w: $SCREENW, $h: $SCREENH);
-    background: rgba(white, 0.1);
+.CountDownShow {
+  // background-color: red;
+  text-align: center;
+  margin-bottom: 2rem;
+  h3 {
+    font-size: 2rem;
+    margin: 0;
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+    color: lighten($ctna, 30%);
   }
-
-  .Video {
-    $w: 1600px; $h: 900px;
-    $t: 0px; $l: $SCREENW - $w; 
-    @include box($w, $h, $l, $t);
-    background: rgba(white, 0.1);
-    @include innerShadow;
+  .cd {
+    margin-top: .5rem;
+    font-size: 3rem;
+    color: lighten($ctna, 20%);
+    text-shadow: 0 0 1rem $light-bg-color;
+    font-weight: bold;
+    font-family: $fontDIN;
   }
+}
 
-  .TextRoll {
-    $w: 1600px; $h: ($SCREENH - 900px) / 2;
-    $t: $SCREENH - $h; $l: $SCREENW - $w; 
-    @include box($w, $h, $l, $t);
-    background: rgba(black, 0.1);
+.ShowList {
+  width: 1080px;
+  margin: 0 auto;
+  margin-top: 5rem;
+  h3 {
+    font-size: 1.8rem;
+    text-align: center;
+    color: lighten($ctna, 20%);
+    text-shadow: 0 0 1rem $light-bg-color;
   }
+}
 
-  .Logo {
-    $w: $SCREENW - 1600px; $h:270px;
-    $t: 0; $l: 0; 
-    @include box($w, $h, $l, $t);
-    background: rgba(white, 0.1);
-  }
-
-  .Runner {
-    $w: 400px; $h: ($SCREENH - 900px) / 2;
-    $t: 900px; $l: $SCREENW - 1600px; 
-    @include box($w, $h, $l, $t);
-    background: rgba(white, 0.1);
-    @include innerTNA();
-    font-size: 2.5rem;
+.Day {
+  .header {
+    @include genResponsiveColGrids(
+      1.5fr 1.5fr 1.5fr 1fr,
+      1fr 1fr
+    );
+    margin-bottom: .5rem;
     font-family: $fontDINM;
-  }
-
-  .Game {
-    $w: 400px; $h: ($SCREENH - 900px) / 2;
-    $t: 900px; $l: $SCREENW - 1200px; 
-    @include box($w, $h, $l, $t);
-    background: rgba(black, 0.1);
-    @include innerTNA();
-    font-size: 2.5rem;
-    font-family: $fontDINM;
-  }
-
-  .Category {
-    $w: 400px; $h: ($SCREENH - 900px) / 2;
-    $t: 900px; $l: $SCREENW - 800px; 
-    @include box($w, $h, $l, $t);
-    background: rgba(white, 0.1);
-    @include innerTNA();
-    font-size: 2.5rem;
-    font-family: $fontDINM;
-  }
-
-  .Timer {
-    $w: 400px; $h: ($SCREENH - 900px) / 2;
-    $t: 900px; $l: $SCREENW - 400px; 
-    @include box($w, $h, $l, $t);
-    background: rgba(black, 0.1);
-    @include innerTNA();
-  }
-
-  .Reward {
-    $w: $SCREENW - 1600px; $h: $SCREENH - 270px - 270px;
-    $t: 270px; $l: 0; 
-    @include box($w, $h, $l, $t);
-    background: rgba(black, 0.1);
-  }
-
-  .Support {
-    $w: $SCREENW - 1600px; $h: 270px;
-    $t: $SCREENH - 270px; $l: 0; 
-    @include box($w, $h, $l, $t);
-    background: rgba(white, 0.1);
-  }
-
-  .Area {
-    .areaInner {
-      position: absolute;
-      top: 0; left: 0; right: 0; bottom: 0;
-      box-shadow: 0 0 0 5px gold inset;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      opacity: 0;
-      pointer-events: none;
-      color: gold;
+    border-left: solid .3rem darken($ctna, 10%);
+    padding-left: .3rem;
+    span {
+      border: solid 1px #ddd;
+      padding: .3rem;
+      background-color: rgba(black, 0.05);
       font-weight: bold;
+      color: lighten($ctna, 20%);
+      font-size: 1.5rem;
     }
-    &:hover {
-      .areaInner {
-        opacity: 1;
-      }
+  }
+  .show {
+    @include genResponsiveColGrids(
+      1.5fr 1.5fr 1.5fr 1fr,
+      1fr 1fr
+    );
+    margin-bottom: .5rem;
+    font-family: $fontDINM;
+    border-left: solid .3rem darken($ctna, 10%);
+    padding-left: .3rem;
+    span {
+      border: solid 1px #ddd;
+      padding: .3rem;
+      font-size: 1.5rem;
     }
   }
 }

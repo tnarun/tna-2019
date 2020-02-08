@@ -251,8 +251,8 @@
 
     .xgames {
       @include GridBorder;
-      @include gridLightBorder(#fff);
-      @include nolink();
+      @include gridLightBorder($cred);
+      @include linkHover($cred);
       grid-column: span 3;
       grid-row: span 2;
 
@@ -261,11 +261,11 @@
       justify-content: center;
       align-items: center;
       font-family: $fontDIN;
-      // color: lighten($ctna, 15%);
-      color: #fff;
+      color: $cred;
+      // color: #fff;
       .s1 { font-size: 2rem; margin-bottom: .5rem;}
       .s2 { font-size: 1.5rem; margin-bottom: 1rem;}
-      .s3 { font-size: 1rem; }
+      .s3 { font-size: 1.5rem; color: $cred; }
     }
   }
 

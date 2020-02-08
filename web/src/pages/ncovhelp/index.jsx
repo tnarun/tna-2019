@@ -23,6 +23,15 @@ export default class index extends React.Component {
         <h1>TNA <span>SP</span></h1>
         <h2>支援 2019-nCoV 新冠疫情援助<span>特别活动</span></h2>
 
+        <h2>捐助地址</h2>
+        <h3>爱发电：<a href='https://afdian.net/@TNAmarathon' target='_blank' rel='noopener noreferrer'>https://afdian.net/@TNAmarathon</a></h3>
+
+        <div className={ css.img }>
+          <img src='https://afdian.net/static/img/logo/logo.png' alt='爱发电' />
+        </div>
+
+        <br />
+        
         {/* <div className={ css.desc }>
           <p>这是一次特别的直播</p>
           <p>在这里</p>
@@ -54,13 +63,6 @@ export default class index extends React.Component {
         <h3>女王盐</h3>
         <h3>不能吃的OK酱 (vliver)</h3>
         <h3>白桃channel (vliver)</h3>
-
-        <h2>捐助地址</h2>
-        <h3>爱发电：<a href='https://afdian.net/@TNAmarathon' target='_blank' rel='noopener noreferrer'>https://afdian.net/@TNAmarathon</a></h3>
-
-        <div className={ css.img }>
-          <img src='https://afdian.net/static/img/logo/logo.png' alt='爱发电' />
-        </div>
 
         <br/><br/><br/>
         <h2>共渡难关，为武汉加油！</h2>

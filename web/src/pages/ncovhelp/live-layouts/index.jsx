@@ -1,3 +1,5 @@
+// title: TNA SP 布局索引
+
 import React from 'react'
 import css from './index.scss'
 
@@ -37,6 +39,11 @@ class Layouts extends React.Component {
     let day2 = store.days[1]
 
     return <div className={ css.Layouts }>
+      <br />
+      <div><a href={ `/ncovhelp/live-layouts/day1` } target='_blank' rel='noopener noreferrer'>第一天节目单</a></div>
+      <br />
+      <div><a href={ `/ncovhelp/live-layouts/day2` } target='_blank' rel='noopener noreferrer'>第二天节目单</a></div>
+      <br />
       <Day data={ day1 } />
       <Day data={ day2 } />
     </div>
@@ -55,14 +62,14 @@ class Day extends React.Component {
     let { data } = this.props
     let { shows } = data
     let _shows = shows.map((x, idx) => {
-      return <div className={ css.show }>
+      return <div className={ css.show } key={ idx }>
         <div className={ css.name }>{ x.name }</div>
         <div className={ css.layouts }>
-          {/* <span><a href={ `/ncovhelp/live-layouts/l-4-3-1P` } target='_blank' rel='noopener noreferrer'>幕间</a></span> */}
+          <span><a href={ `/ncovhelp/live-layouts/rest?id=${x.id}` } target='_blank' rel='noopener noreferrer'>开场等待</a></span>
           <span><a href={ `/ncovhelp/live-layouts/l-4-3-1P?id=${x.id}` } target='_blank' rel='noopener noreferrer'>4:3 1P</a></span>
           <span><a href={ `/ncovhelp/live-layouts/l-16-9-1P?id=${x.id}` } target='_blank' rel='noopener noreferrer'>16:9 1P</a></span>
-          {/* <span><a href={ `/ncovhelp/live-layouts/l-4-3-1P` } target='_blank' rel='noopener noreferrer'>4:3 2P</a></span>
-          <span><a href={ `/ncovhelp/live-layouts/l-4-3-1P` } target='_blank' rel='noopener noreferrer'>16:9 2P</a></span> */}
+          <span><a href={ `/ncovhelp/live-layouts/l-4-3-2P?id=${x.id}` } target='_blank' rel='noopener noreferrer'>4:3 2P</a></span>
+          <span><a href={ `/ncovhelp/live-layouts/l-16-9-2P?id=${x.id}` } target='_blank' rel='noopener noreferrer'>16:9 2P</a></span>
         </div>
       </div>
     })

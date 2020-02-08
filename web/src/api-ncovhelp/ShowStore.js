@@ -32,11 +32,12 @@ const days = [
 
 class ShowStore {
   load () {
-    this.days = days
-    this.days.forEach(d => {
-      d.shows = d.shows.map(s => {
+    this.days = days.map(d => {
+      let name = d.name
+      let shows = d.shows.map(s => {
         return new Show(s)
       })
+      return { name, shows }
     })
   }
 
@@ -48,6 +49,34 @@ class ShowStore {
     for (let day of this.days) {
       for (let show of day.shows) {
         if (show.id === id) { return show }
+      }
+    }
+  }
+
+  getNextShow (id) {
+    if (!id) {
+      return { }
+    }
+
+    for (let day of this.days) {
+      let idx = -1
+      for (let show of day.shows) {
+        idx += 1
+        if (show.id === id) { return day.shows[idx + 1] }
+      }
+    }
+  }
+
+  getNextNextShow (id) {
+    if (!id) {
+      return { }
+    }
+
+    for (let day of this.days) {
+      let idx = -1
+      for (let show of day.shows) {
+        idx += 1
+        if (show.id === id) { return day.shows[idx + 2] }
       }
     }
   }
@@ -77,6 +106,28 @@ class Show {
     return runner.join("，")
   }
 
+  get runner1 () {
+    let runner = this.data.runner
+    if (!runner) {
+      return ''
+    }
+    if (typeof(runner) === 'string') {
+      return runner
+    }
+    return runner[0]
+  }
+
+  get runner2 () {
+    let runner = this.data.runner
+    if (!runner) {
+      return ''
+    }
+    if (typeof(runner) === 'string') {
+      return runner
+    }
+    return runner[1]
+  }
+
   get category () {
     return this.data.category
   }
@@ -91,6 +142,11 @@ class Show {
 
   get isSecret () {
     return !!this.data.secret
+  }
+
+  get startTimeString () {
+    let day = this.data.id.includes('d1-') ? '2020-02-08' : '2020-02-09'
+    return `${ day } ${ this.data.start }`
   }
 }
 

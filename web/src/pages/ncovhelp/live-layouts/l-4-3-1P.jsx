@@ -5,6 +5,10 @@ import css from './live.scss'
 import classNames from 'classnames/bind'
 
 import ShowStore from '../../../api-ncovhelp/ShowStore'
+import LayoutArea from '../../../components/ncovhelp/LayoutArea'
+import { Logo, AFDLogo } from '../../../components/ncovhelp/Logo'
+import TextRoll from '../../../components/ncovhelp/TextRoll'
+import AFD from '../../../components/ncovhelp/AFD'
 
 export default class extends React.Component {
   constructor (props) {
@@ -22,18 +26,34 @@ export default class extends React.Component {
       'l-4-3': true
     })
     return <div className={ className }>
-      <div className={ css.BackGround }></div>
-      <div className={ css.Video }>视频区域 1320 × 990, OBS 中不要露出黄线</div>
-      <Area className={ css.TextRoll }>滚动文字区域 1600 × 90</Area>
+      <LayoutArea d={{ l: 0, t: 0, w: 1920, h: 1080 }} />
+      <LayoutArea className={ css.Video } d={{ l: 600, t: 0, w: 1320, h: 990 }} tip={ true } />
 
-      <Area className={ css.Logo }>活动 Logo 320 × 270</Area>
-      <Area className={ css.Reward }>募捐公示 320 × 540</Area>
-      <Area className={ css.Support }>支持者 320 × 270</Area>
+      <LayoutArea d={{ l: 600, t: 990, w: 1320, h: 90 }}>
+        <TextRoll />
+      </LayoutArea>
+      <LayoutArea d={{ l: 0, t: 0, w: 300, h: 270 }}>
+        <Logo />
+      </LayoutArea>
+      <LayoutArea d={{ l: 300, t: 0, w: 300, h: 270 }}>
+        <AFDLogo />
+      </LayoutArea>
+      <LayoutArea d={{ l: 0, t: 270, w: 600, h: 450 }}>
+        <AFD />
+      </LayoutArea>
 
-      <div className={ css.Runner }>{ show.runnerString }</div>
-      <div className={ css.Game }>{ show.name }</div>
-      <div className={ css.Category }>{ show.category }</div>
-      <Area className={ css.Timer }>计时器 400 × 90</Area>
+      <LayoutArea d={{ l: 0, t: 720, w: 600, h: 90 }}>
+        <div className={ css.Runner }>{ show.runnerString }</div>
+      </LayoutArea>
+      <LayoutArea d={{ l: 0, t: 810, w: 600, h: 90 }}>
+        <div className={ css.Game }>{ show.name }</div>
+      </LayoutArea>
+      <LayoutArea d={{ l: 0, t: 900, w: 600, h: 90 }}>
+        <div className={ css.Category }>{ show.category }</div>
+      </LayoutArea>
+      <LayoutArea d={{ l: 0, t: 990, w: 600, h: 90 }}>
+        <div className={ css.Timer }></div>
+      </LayoutArea>
     </div>
   }
 
@@ -46,13 +66,5 @@ export default class extends React.Component {
     console.log(store, id, show)
 
     this.setState({ store, show })
-  }
-}
-
-class Area extends React.Component {
-  render () {
-    return <div className={ `${ css.Area } ${ this.props.className }` }>
-      <div className={ css.areaInner }>{ this.props.children }</div>
-    </div>
   }
 }

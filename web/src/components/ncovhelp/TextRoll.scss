@@ -1,0 +1,33 @@
+@import '../../layouts/vars';
+
+.TextRoll {
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  display: flex;
+  // justify-content: center;
+  align-items: center;
+  box-shadow: 0 0 0 2px rgba($ctna, 0.5) inset;
+  span.web {
+    color: lighten($cred, 10%);
+    font-family: $fontDINM;
+    font-size: 2rem;
+    padding: 0 1.5rem;
+    .s {
+      font-size: 1.8rem;
+    }
+    .url {
+      // text-decoration: underline;
+    }
+  }
+
+  span.biaoyu {
+    font-size: 2rem;
+    text-align: right;
+    flex: 1;
+    padding-right: 2rem;
+    font-weight: bold;
+    > span {
+      color: $cred;
+    }
+  }
+}

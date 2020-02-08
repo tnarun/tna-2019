@@ -1,0 +1,22 @@
+.Area {
+  position: absolute;
+
+  .areaInner {
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    box-shadow: 0 0 0 5px gold inset;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    pointer-events: none;
+    color: gold;
+    font-weight: bold;
+    font-size: 1rem;
+  }
+  &:hover {
+    .areaInner {
+      opacity: 1;
+    }
+  }
+}

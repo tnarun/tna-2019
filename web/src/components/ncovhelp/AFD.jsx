@@ -1,8 +1,7 @@
 import React from 'react'
-import css from './afdian.scss'
+import css from './AFD.scss'
 
-import WidthContainer from '../../components/layouts/WidthContainer'
-import moment from 'moment'
+// import moment from 'moment'
 
 class Store {
   constructor () {
@@ -27,7 +26,7 @@ class Store {
   }
 }
 
-export default class Afdian extends React.Component {
+export default class AFD extends React.Component {
   constructor (props) {
     super(props)
     this.state = {
@@ -39,12 +38,9 @@ export default class Afdian extends React.Component {
   render () {
     let { list } = this.state
 
-    return <div className={ css.Afdian }>
-      <WidthContainer>
-        <h1>爱发电筹款情况公示</h1>
-        <h2>目前总金额： <span>¥ { this.state.total }.00</span></h2>
-        <AFDian list={ list } />
-      </WidthContainer>
+    return <div className={ css.AFD }>
+      <h2>总金额: <span>¥{ this.state.total }.00</span></h2>
+      <AFDian list={ list } />
     </div>
   }
 
@@ -71,13 +67,6 @@ class AFDian extends React.Component {
       return <Item key={ idx } data={ d } />
     })
     return <div className={ css.AFDian }>
-      <div className={ css.header }>
-        <span>捐款人</span>
-        <span>捐款项目</span>
-        <span>时间</span>
-        <span>数量</span>
-        <span>金额</span>
-      </div>
       { _list }
     </div>
   }
@@ -87,22 +76,15 @@ class Item extends React.Component {
   render () {
     let { data } = this.props
     let userName = data.user.name
-    let planName = data.plan.name
-    planName = planName ? planName : '自选赞助' 
-    let time = moment(data.create_time * 1000).format('MM-DD HH:mm:ss')
-    let count = data.month
+    // let planName = data.plan.name
+    // planName = planName ? planName : '自选赞助' 
+    // let time = moment(data.create_time * 1000).format('MM-DD HH:mm:ss')
+    // let count = data.month
     let amount = data.total_amount
-    let remark = data.remark
 
     return <div className={ css.Item }>
       <span className={ css.user }>{ userName }</span>
-      <span>{ planName }</span>
-      <span>{ time }</span>
-      <span>{ count }</span>
-      <span className={ css.amount }>¥ { amount }</span>
-      {
-        remark ? <span>{ remark }</span> : null
-      }
+      <span className={ css.amount }>¥{ amount }</span>
     </div>
   }
 }
