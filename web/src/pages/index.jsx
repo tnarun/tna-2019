@@ -21,30 +21,6 @@ export default () => {
       <WidthContainer>
         <div className={ css.showGrids }>
           <div className={ css.logo }>
-            <TNASPLogo />
-          </div>
-
-          <div className={ css.show }>
-            <a className={ css.xgames } href='/ncovhelp'>
-              <div className={ css.s1 }>TNA SP</div>
-              <div className={ css.s2 }>特别直播援助活动</div>
-              <div className={ css.s3 }>加油！</div>
-            </a>
-          </div>
-
-          <div className={ css.show }>
-            <a className={ css.xgames } href='https://afdian.net/@TNAmarathon'>
-              <div className={ css.s1 }>TNA SP</div>
-              <div className={ css.s2 }>捐助地址</div>
-              <div className={ css.s3 }>afdian.net/@TNAmarathon</div>
-            </a>
-          </div>
-        </div>
-      </WidthContainer>
-
-      <WidthContainer>
-        <div className={ css.showGrids }>
-          <div className={ css.logo }>
             <TNALogo />
           </div>
 

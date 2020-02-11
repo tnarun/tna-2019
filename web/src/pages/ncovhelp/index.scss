@@ -15,12 +15,18 @@
     span {
       color: darken(red, 10%);
     }
+    @media #{$xs} {
+      font-size: 2.4rem;
+    }
   }
   h2 {
     font-size: 2.4rem;
     text-align: center;
     span {
       color: darken(red, 10%);
+    }
+    @media #{$xs} {
+      font-size: 1.44rem;
     }
   }
   h3 {
@@ -30,6 +36,9 @@
     font-family: $fontDINM;
     a {
       color: #8d6fe7;
+    }
+    @media #{$xs} {
+      font-size: 1.2rem;
     }
   }
 
@@ -42,6 +51,9 @@
     text-align: center;
     margin-bottom: 2rem;
     font-weight: bold;
+    @media #{$xs} {
+      font-size: 1.2rem;
+    }
     p {
       margin: 0;
       margin-bottom: .5rem;
@@ -60,6 +72,7 @@
   h3 {
     font-size: 1.8rem;
     text-align: center;
+    margin-bottom: 2rem;
   }
 }
 
@@ -93,5 +106,25 @@
       border: solid 1px #ddd;
       padding: .3rem;
     }
+  }
+}
+
+.afdqr {
+  display: flex;
+  justify-content: center;
+  margin: 2rem 0;
+
+  img {
+    width: 15rem; height: 15rem;
+  }
+}
+
+.sibbay {
+  display: flex;
+  justify-content: center;
+  margin: 2rem 0;
+
+  img {
+    width: 20rem; height: auto;
   }
 }

@@ -214,3 +214,75 @@ $SCREENH: 1080px;
     }
   }
 }
+
+.thanks {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  font-size: 2.5rem;
+  font-family: $fontDINM;
+  box-shadow: 0 0 0 2px rgba($ctna, 0.5) inset;
+  color: lighten($ctna, 20%);
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  h3, h4 {
+    margin: 0;
+  }
+  h3 {
+    margin-bottom: 2rem;
+  }
+}
+
+.staffthanks {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  font-size: 2.2rem;
+  font-family: $fontDINM;
+  box-shadow: 0 0 0 2px rgba($ctna, 0.5) inset;
+  color: lighten($ctna, 20%);
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  h3, h4 {
+    margin: 0;
+  }
+  h4 {
+    font-size: 2.2rem;
+    span {
+      color: gold;
+    }
+  }
+}
+
+.stafflogo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  font-size: 2.5rem;
+  font-family: $fontDINM;
+  box-shadow: 0 0 0 2px rgba($ctna, 0.5) inset;
+  color: lighten($ctna, 20%);
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+
+  .bg1 {
+    background-image: url('//tna-upload.oss-cn-shanghai.aliyuncs.com/kksk2/tnasplogo.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    width: 90%; height: 90%;
+    opacity: 0.1;
+  }
+
+  .bg2 {
+    background-image: url('//tna-web.oss-ap-southeast-1.aliyuncs.com/assets/logo2019.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    width: 90%; height: 90%;
+    opacity: 0.1;
+  }
+}

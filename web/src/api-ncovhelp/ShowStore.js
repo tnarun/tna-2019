@@ -20,12 +20,12 @@ const days = [
       { id: 'd2-1', name: '空洞骑士', runner: '创世丶魔术师', category: 'Random Any%', start: '12:00', end: '13:00' },
       { id: 'd2-2', name: '忍龙GB', runner: '阳翼', category: 'Any%', start: '13:15', end: '13:37' },
       { id: 'd2-3', name: '忍龙2', runner: '小夏', category: 'Low%', start: '13:55', end: '16:55' },
-      { id: 'd2-4', name: '大复活黑版', runner: '教授', category: 'STG', start: '17:10', end: '17:55' },
+      { id: 'd2-4', name: '大复活黑版', runner: '汞京', category: 'STG', start: '17:10', end: '17:55' },
       { id: 'd2-5', name: '健身环', runner: '美国游戏玩家大斯', category: '一小时速打', start: '18:10', end: '19:10' },
       { id: 'd2-6', name: '马里奥创造家2', runner: ['o0水晶梦幻0o', '一笑'], category: '指定地图，初见竞速', start: '19:25', end: '20:25' },
       { id: 'd2-7', name: '怪物猎人世界', runner: '幻金皓月', category: '特定任务', start: '20:40', end: '21:10' },
       { id: 'd2-8', name: 'River City Girls', runner: '职业沙包sorp', category: 'Any% NG normal', start: '21:25', end: '22:25' },
-      { id: 'd2-9', name: '蔚蓝', runner: 'DemoJameson', category: '第九章月莓 + 金草莓', start: '21:25', end: '22:25', secret: true },
+      { id: 'd2-9', name: '蔚蓝', runner: 'DemoJameson', category: '第九章月莓 + 金草莓', start: '22:25', end: '23:25', secret: true },
     ]
   }
 ]

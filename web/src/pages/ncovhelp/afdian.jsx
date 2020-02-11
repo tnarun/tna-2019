@@ -3,6 +3,7 @@ import css from './afdian.scss'
 
 import WidthContainer from '../../components/layouts/WidthContainer'
 import moment from 'moment'
+import SItemCount from '../../components/ncovhelp/SItemCount'
 
 class Store {
   constructor () {
@@ -43,6 +44,12 @@ export default class Afdian extends React.Component {
       <WidthContainer>
         <h1>爱发电筹款情况公示</h1>
         <h2>目前总金额： <span>¥ { this.state.total }.00</span></h2>
+        <SItemCount list={ list } filter='健身环' label='健身环助力' max={ 1500 } /> 
+        <SItemCount list={ list } filter='神秘' label='神秘项目助力' /> 
+        <SItemCount list={ list } filter='雷狼龙' label='雷狼龙' /> 
+        <SItemCount list={ list } filter='黑轰龙' label='黑轰龙' plus={ 10 } /> 
+        <SItemCount list={ list } filter='马里奥' label='马造2' /> 
+        <br />
         <AFDian list={ list } />
       </WidthContainer>
     </div>

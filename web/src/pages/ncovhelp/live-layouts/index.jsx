@@ -41,8 +41,12 @@ class Layouts extends React.Component {
     return <div className={ css.Layouts }>
       <br />
       <div><a href={ `/ncovhelp/live-layouts/day1` } target='_blank' rel='noopener noreferrer'>第一天节目单</a></div>
-      <br />
       <div><a href={ `/ncovhelp/live-layouts/day2` } target='_blank' rel='noopener noreferrer'>第二天节目单</a></div>
+      <br />
+      <div><a href={ `/ncovhelp/live-layouts/end1` } target='_blank' rel='noopener noreferrer'>第一天结束</a></div>
+      <div><a href={ `/ncovhelp/live-layouts/end2` } target='_blank' rel='noopener noreferrer'>第二天结束</a></div>
+      <br />
+      <div><a href={ `/ncovhelp/live-layouts/staff` } target='_blank' rel='noopener noreferrer'>STAFF</a></div>
       <br />
       <Day data={ day1 } />
       <Day data={ day2 } />

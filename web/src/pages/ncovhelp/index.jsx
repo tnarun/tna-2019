@@ -26,6 +26,10 @@ export default class index extends React.Component {
         <h2>捐助地址</h2>
         <h3>爱发电：<a href='https://afdian.net/@TNAmarathon' target='_blank' rel='noopener noreferrer'>https://afdian.net/@TNAmarathon</a></h3>
 
+        <div className={ css.afdqr }>
+          <img src='//tna-upload.oss-cn-shanghai.aliyuncs.com/kksk2/afdqr.png' alt='qr' />
+        </div>
+
         <div className={ css.img }>
           <img src='https://afdian.net/static/img/logo/logo.png' alt='爱发电' />
         </div>
@@ -67,6 +71,10 @@ export default class index extends React.Component {
         <br/><br/><br/>
         <h2>共渡难关，为武汉加油！</h2>
         <br/><br/><br/>
+
+        <div className={ css.sibbay }>
+          <img src='//tna-upload.oss-cn-shanghai.aliyuncs.com/kksk2/sibbay.jpeg' alt='qr' />
+        </div>
       </WidthContainer>
     </div>
   }

@@ -32,3 +32,21 @@
     span { color: $ctna; }
   }
 }
+
+.Chart {
+  .item {
+    position: relative;
+    margin-bottom: 5px;
+    .bar {
+      height: 20px;
+      background-color: $ctna;
+    }
+    .time {
+      position: absolute;
+      font-size: 12px;
+      line-height: 20px;
+      left: -7rem;
+      top: 0;
+    }
+  }
+}
